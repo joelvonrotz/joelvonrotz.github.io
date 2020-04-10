@@ -1,0 +1,18 @@
+img{
+  max-width: 100%;
+
+  &.profile{
+    border-radius: 50%;
+  }
+
+  #home &{
+    width: 250px;
+  
+    align-self: center;
+  }
+
+  header &{
+    width:  60px;
+  }
+}
+

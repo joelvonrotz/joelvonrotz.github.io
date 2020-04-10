@@ -1,0 +1,8 @@
+@import "simple_life/base/base.scss";       //load base 1st -> should contain the most basic setup
+@import "simple_life/base/typography.scss"; //load typo 2nd -> defines which fonts & sizes should be applied 
+@import "simple_life/base/graphics.scss";   //load gfx  3rd -> defines sizes & form of images, figures, tables, etc.
+@import "simple_life/base/animations.scss"; //load anim 4th -> defines timing and animation sequences
+
+@import "simple_life/components/site_header.scss"; //load site header -> defines sizes and alignment of components inside the header
+
+@import "simple_life/utilities/flex.scss";  //load grid 4th -> defines flex specific classes, to reduce overall rules

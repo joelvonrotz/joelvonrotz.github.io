@@ -1,0 +1,42 @@
+
+<section class="page-heading">
+  {% if include.thumbnail %}
+    {% if include.url %}
+    <a href="{{ include.url }}">
+    {% endif %}
+      <img class="page-thumbnail" src="{{ include.thumbnail }}">
+    {% if include.url %}
+    </a>
+    {% endif %}
+  {% endif %}
+  {% if include.date || include.category%}
+  <div class="page-metadata">
+    <div class="metadata-element">
+      <svg class="metadata-icon" id="date">
+
+      </svg>
+      <span class="metadata-content">
+        {{ include.date | date: "%d.%m.%Y" }}
+      </span>
+    </div>
+    <div class="metadata-element">
+      <svg class="metadata-icon" id="category">
+        
+      </svg>
+      <span class="metadata-content">
+        {{ include.category }}
+      </span>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if include.url %}
+  <a href="{{ include.url }}">
+  {% endif %}
+    <h1 class="page-title">
+      {{include.title}}
+    </h1>
+  {% if include.url %}
+  </a>
+  {% endif %}
+</section>

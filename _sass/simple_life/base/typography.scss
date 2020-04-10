@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;600;700&display=swap');
+
+/* PARAGRAPH
+ * 
+ */
+p, li, figcaption{
+  line-height:  1.5em;
+  font-family: "PT Serif", serif;
+
+  font-size: 20px;
+}
+
+/* HYPERLINK
+ * For hyperlinks I want to go for a clean but watchable look
+ */
+a{
+  text-decoration: none;
+  outline: none;
+	text-decoration: none;
+
+  
+
+
+  
+/* SEPARATE PARAGRAPH HYPERLINKS
+ * Links that are actually texts should always have their own style.
+ * A standard hyperlink should be styleless
+ */
+  p &, footer &, nav &{
+    font-family: "PT Serif", serif;
+    color: #2061AA;
+    font-weight: 600;
+    background-color: transparent;
+
+    padding: 0px 2px;
+
+    &:hover{
+      background-color: lighten($color: #2061AA, $amount: 50);
+    }
+  }
+
+  nav &{
+    font-size: 20px;
+  }
+}
+
+/* HEADINGS
+ * 
+ */
+h1, h2, h3, h4{
+  font-family: "Volkhov", serif;
+}
+
+h1{
+  border-bottom: dotted #2061AA 2px;
+  padding-bottom: 5px;
+}
+
+/* CODE
+ * 
+ */
+code{
+  font-family: "Overpass Mono", monospace;
+  font-weight: 500;
+}
+
+
+/* OTHERS WHICH NEED TO BE SORTED OUT
+ * 
+ */
+footer a, footer{
+  color: #BDBDBD;
+}

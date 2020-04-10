@@ -1,0 +1,22 @@
+---
+---
+[
+  {% for post in site.posts %}
+    {
+
+      "title"    : "{{ post.title | escape }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "category" : "{{ post.category }}",
+      "tags"     : "{{ post.tags | join: ', ' }}",
+      "date"     : "{{ post.date }}"
+
+    },
+  {% endfor %}
+  {
+    "title"    : "Dancing roach | Live in concert",
+    "url"      : "https://www.youtube.com/watch?v=c_jomXhjUjI",
+    "category" : "future-of-2030",
+    "tags"     : "cockroach, dancing, masterpiece",
+    "date"     : "right now"
+  }
+]

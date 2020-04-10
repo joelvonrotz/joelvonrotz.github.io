@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/simple_life.css">
+    <title>{{ site.title }}</title>
+  </head>
+
+
+  <body>
+    <!-- HEADER -->
+    {% include site_header.html %}
+
+    <!-- MAIN -->
+    <main class="wrapper">
+      {{ content }}
+    </main>
+    
+    <!-- FOOTER -->
+    {% include site_footer.html %}
+    
+  </body>
+  <script src="/assets/js/function/utilities.js" type="text/javascript"></script>
+</html>

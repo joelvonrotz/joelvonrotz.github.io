@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<section id="blog">
+  {% include content_header.html title=page.title thumbnail=page.thumbnail %}
+  {% for post in site.posts %}
+  <!-- 
+   * as I might have thought, this is where previews of my posts go to.
+   ! Use a composition of building blocks
+  -->
+  {% endfor %}
+</section>
