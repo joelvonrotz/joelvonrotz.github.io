@@ -1,8 +1,12 @@
-@import "simple_life/base/base.scss";       //load base 1st -> should contain the most basic setup
-@import "simple_life/base/typography.scss"; //load typo 2nd -> defines which fonts & sizes should be applied 
-@import "simple_life/base/graphics.scss";   //load gfx  3rd -> defines sizes & form of images, figures, tables, etc.
-@import "simple_life/base/animations.scss"; //load anim 4th -> defines timing and animation sequences
+@import "simple_life/base/base.scss";       // -> should contain the most basic setup
+@import "simple_life/base/typography.scss"; // -> defines which fonts & sizes should be applied 
+@import "simple_life/base/graphics.scss";   // -> defines sizes & form of images, figures, tables, etc.
+@import "simple_life/base/animations.scss"; // -> defines timing and animation sequences
+@import "simple_life/base/code.scss";
 
-@import "simple_life/components/site_header.scss"; //load site header -> defines sizes and alignment of components inside the header
+// * CONTENT HAS TO BE LOADED CHRONOLOGICALLY (just because I want to)
+@import "simple_life/components/site_header.scss";    // -> defines sizes and alignment of components inside the site header
+@import "simple_life/components/content_header.scss"; // -> defines content header stuff.
+@import "simple_life/components/site_footer.scss";    // -> defines sizes and alignment of components inside the site footer
 
-@import "simple_life/utilities/flex.scss";  //load grid 4th -> defines flex specific classes, to reduce overall rules
+@import "simple_life/utilities/flex.scss";  // -> defines flex specific classes, to reduce overall rules

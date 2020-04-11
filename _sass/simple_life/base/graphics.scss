@@ -1,8 +1,13 @@
 img{
   max-width: 100%;
+  border-radius: 5px;
 
   &.profile{
     border-radius: 50%;
+
+    a:hover &{
+      transform: scale(1.05);
+    }
   }
 
   #home &{

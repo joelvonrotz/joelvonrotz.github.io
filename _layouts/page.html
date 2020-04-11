@@ -3,8 +3,8 @@ layout: default
 ---
 {% assign thumbnail = page.thumbnail | default: "/images/thumbnail_placeholder.jpg" %}
 <section id="page">
-  {% include content_header.html title=page.title thumbnail=thumbnail %}
-  <div class="page-content">
+  {% include content_header.html title=page.title thumbnail=thumbnail isFirst='true' %}
+  <div class="page content">
     {{ content }}
   </div>
 </section>

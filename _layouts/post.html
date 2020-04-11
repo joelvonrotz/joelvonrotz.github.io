@@ -3,8 +3,8 @@ layout: default
 ---
 
 <section id="post">
- 
-  <div class="post__content">
+  {% include content_header.html category=page.category date=page.date title=page.title thumbnail=page.thumbnail %}
+  <div class="post content">
     {{ content }}
   </div>
 </section>

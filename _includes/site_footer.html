@@ -1,13 +1,17 @@
 <footer class="wrapper flex flow-col align-cen">
-  <div class="social">
+  <div class="social flex gap-10px">
     {% if site.github %}
     <a id="github" class="social-icon" href="https://github.com/{{ site.github }}">
-      ICON GITHUB
+      <svg id="date">
+        <use xlink:href="/data/spritesheet.svg#social-github"></use>
+      </svg>
     </a>
     {% endif %}
     {% if site.flickr %}
     <a id="flickr" class="social-icon" href="https://www.flickr.com/{{ site.flickr }}/">
-      ICON FLICKR
+      <svg id="date">
+        <use xlink:href="/data/spritesheet.svg#social-flickr"></use>
+      </svg>
     </a>
     {% endif %}
     {% if site.reddit %}

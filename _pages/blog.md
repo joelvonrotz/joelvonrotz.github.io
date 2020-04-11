@@ -1,7 +1,6 @@
 ---
 layout: blog
 title: Blog
-permalink: "/blog"
+permalink: "/"
 thumbnail: "/images/thumbnail_blog.jpg"
 ---
-

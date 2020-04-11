@@ -1,0 +1,48 @@
+section.page-heading{
+
+  div.page-metadata{
+    
+    display: flex;
+    justify-content: space-between;
+
+
+    .metadata-element{
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      gap: 5px;
+
+      span, a{
+        font-family: "Fira Code", monospace !important;
+        font-size: 20px;
+        font-weight: 400;
+      }
+    
+      span{
+        color: #878787;
+      }
+      a{
+        color: #2061AA;
+    
+        &:hover{
+          background-color: lighten($color: #2061AA, $amount: 50);
+        }
+      }
+    }
+
+    svg{
+      height: 24px;
+      width: 24px;
+
+      stroke: #878787;
+      stroke-width: 2;
+      stroke-linecap: square;
+      stroke-linejoin: miter;
+      fill: none;
+    }
+
+    .metadata-content{
+      line-height: 24px;  //set fix size (for better flex alignment)
+    }
+  }
+}

@@ -1,4 +1,3 @@
-
 <section class="page-heading">
   {% if include.thumbnail %}
     {% if include.url %}
@@ -9,23 +8,26 @@
     </a>
     {% endif %}
   {% endif %}
+
   {% if include.date || include.category%}
-  <div class="page-metadata">
+  <div class="page-metadata flex flow-row">
+
     <div class="metadata-element">
       <svg class="metadata-icon" id="date">
-
+        <use xlink:href="/data/spritesheet.svg#calendar-event"></use>
       </svg>
       <span class="metadata-content">
         {{ include.date | date: "%d.%m.%Y" }}
       </span>
     </div>
+
     <div class="metadata-element">
-      <svg class="metadata-icon" id="category">
-        
-      </svg>
-      <span class="metadata-content">
+      <a class="metadata-content">
         {{ include.category }}
-      </span>
+      </a>
+      <svg class="metadata-icon" id="category">
+        <use xlink:href="/data/spritesheet.svg#folder"></use>
+      </svg>
     </div>
   </div>
   {% endif %}
@@ -39,4 +41,5 @@
   {% if include.url %}
   </a>
   {% endif %}
+  
 </section>
