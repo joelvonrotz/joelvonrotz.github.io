@@ -9,3 +9,4 @@ vendor
 .jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/c9/92d6739846e7740772d07d805f8127c1254a7e770679b7bfef77a86fcf852d
 .jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/cb/d357258ba8d5ef9e9b44a4ad97ae77619068dff4a11fa0c2964df1360ef8ae
 .jekyll-cache/Jekyll/Cache/Jekyll--Converters--Markdown/e3/b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+.stylelintrc.json

@@ -2,23 +2,21 @@
  * .wrapper defines the maximum-width, which the site is allowed to have.
  * It also includes the wrapper of the header & footer.
  */
-.wrapper{
+.wrapper {
   margin: 0 auto;
 }
 
-main.wrapper{
+main.wrapper {
   max-width: 800px;
-  padding: 0px 10px;
-  
+  padding: 0 10px;
 }
 
-header.wrapper, footer.wrapper{
+header.wrapper,
+footer.wrapper {
   max-width: 900px;
 }
 
-/* 
- * 
- */
-html{
+/* Adjust line-height from normalize.css */
+html {
   line-height: 1.2;
 }

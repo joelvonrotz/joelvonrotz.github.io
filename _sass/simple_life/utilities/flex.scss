@@ -1,33 +1,35 @@
-.flex{
+.flex {
   display: flex;
 
-  &.gap-5px{
+  &.gap-5px {
     gap: 5px;
   }
-  
-  &.gap-10px{
+
+  &.gap-10px {
     gap: 10px;
   }
 
-  &.flow-col{
+  &.flow-col {
     flex-flow: column;  //! Check if this is correct
     -ms-flex-flow: column;
   }
-  &.flow-row{
+
+  &.flow-row {
     flex-flow: row; //! Check if this is correct
     -ms-flex-flow: row;
   }
 
-  &.flow-col-rev{
+  &.flow-col-rev {
     flex-flow: column-reverse; //! Check if this is correct
     -ms-flex-flow: column-reverse;
   }
-  &.flow-row-rev{
+
+  &.flow-row-rev {
     flex-flow: row-reverse; //! Check if this is correct
     -ms-flex-flow: row-reverse;
   }
 
-  &.align-cen{
+  &.align-cen {
     align-items: center;
   }
 }

@@ -1,0 +1,52 @@
+<!-- is almost the same as content_header, but the main difference is the title, which was changed to a heading #2 element-->
+<section class="blog-post">
+  {% assign thumbnail = include.thumbnail | default = "/images/thumbnail_placeholder.jpg" %}
+  {% if thumbnail %}
+    <a href="{{ include.url }}">
+      <img class="page-thumbnail" src="{{ include.thumbnail }}">
+    </a>
+  {% endif %}
+
+  {% if include.date || include.category %}
+  <div class="page-metadata flex flow-row">
+
+    {% if include.date %}
+    <div class="metadata-element">
+      <svg class="metadata-icon" id="date">
+        <use xlink:href="/assets/icons/spritesheet.svg#calendar-event"></use>
+      </svg>
+      <span class="metadata-content">
+        {{ include.date | date: "%d.%m.%Y" }}
+      </span>
+    </div>
+    {% endif %}
+
+    {% if include.category %}
+    <div class="metadata-element">
+      <a class="metadata-content">
+        {{ include.category }}
+      </a>
+      <svg class="metadata-icon" id="category">
+        <use xlink:href="/assets/icons/spritesheet.svg#folder"></use>
+      </svg>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <a href="{{ include.url }}">
+    <h2 class="page-title">
+      {{include.title}}
+    </h2>
+  </a>
+
+  <p class="post-excerpt">
+    {{ include.excerpt | remove: '<p>' | remove: '</p>' }}
+  </p>
+
+
+  <div class="readmore">
+    Read More
+  </div>
+  
+</section>

@@ -2,57 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap");
 
-/* PARAGRAPH
- * 
- */
+/* PARAGRAPH */
 p,
 li,
 figcaption {
   line-height: 1.5em;
   font-family: "PT Serif", serif;
-
   font-size: 20px;
 }
 
-/* HYPERLINK
- * For hyperlinks I want to go for a clean but watchable look
- */
-a {
-  text-decoration: none;
-  outline: none;
-  text-decoration: none;
-
-  /* SEPARATE PARAGRAPH HYPERLINKS
- * Links that are actually texts should always have their own style.
- * A standard hyperlink should be styleless
- */
-  p &,
-  footer &,
-  nav & {
-    font-family: "PT Serif", serif;
-    color: #2061aa;
-    font-weight: 600;
-    background-color: transparent;
-
-    padding: 0px 2px;
-
-    &:hover {
-      background-color: lighten($color: #2061aa, $amount: 50);
-    }
-  }
-
-  & h1 {
-    color: black;
-  }
-
-  nav & {
-    font-size: 20px;
-  }
-}
-
-/* HEADINGS
- * 
- */
+/* HEADINGS */
 h1,
 h2,
 h3,
@@ -77,9 +36,42 @@ h4 {
   font-size: 25px;
 }
 
-/* CODE
- * 
+/* HYPERLINK
+ * For hyperlinks I want to go for a clean but watchable look
  */
+a {
+  text-decoration: none;
+  outline: none;
+
+  /* SEPARATE PARAGRAPH HYPERLINKS
+   * Links that are actually texts should always have their own style.
+   * A standard hyperlink should be styleless
+   */
+  nav & {
+    font-size: 20px;
+  }
+
+  p &,
+  footer &,
+  nav & {
+    font-family: "PT Serif", serif;
+    color: #2061aa;
+    font-weight: 600;
+    background-color: transparent;
+    padding: 0 2px;
+
+    &:hover {
+      background-color: lighten($color: #2061aa, $amount: 50);
+    }
+  }
+
+  & h1,
+  & h2 {
+    color: black;
+  }
+}
+
+/* CODE */
 code {
   font-family: "Fira Code", monospace;
 }

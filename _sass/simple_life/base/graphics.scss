@@ -10,13 +10,12 @@ img {
     }
   }
 
-  #home & {
-    width: 250px;
-
-    align-self: center;
-  }
-
   header & {
     width: 60px;
+  }
+
+  #home & {
+    width: 250px;
+    align-self: center;
   }
 }

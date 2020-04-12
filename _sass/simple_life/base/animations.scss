@@ -1,12 +1,16 @@
-p a, footer a, nav a, a.metadata-content{
+p a,
+footer a,
+nav a,
+a.metadata-content {
   transition: background-color 200ms ease-in-out;
 }
 
-h1::first-letter, a h1{
+h1::first-letter,
+a h1 {
   transition: color 200ms ease-in-out;
 }
 
-footer .social-icon, img.profile{
-  
+footer .social-icon,
+img.profile {
   transition: transform 100ms ease-in-out;
 }

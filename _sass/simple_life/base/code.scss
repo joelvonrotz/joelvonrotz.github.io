@@ -1,31 +1,28 @@
 /* CODE
  * Defines all the code block & inline related adjustements
  */
-.highlighter-rouge{
-
+.highlighter-rouge {
   line-height: 1.3;
-  pre{
+
+  pre {
     padding: 10px;
   }
 
   margin-top: 40px;
   margin-bottom: 30px;
-
   position: relative;
 
-  &::before{
+  &::before {
     position: absolute;
     font-family: "Fira Code", monospace;
     font-weight: 700;
-
     font-size: 26px;
-    line-height: 1;   
-
-    color: #2061AA; 
+    line-height: 1;
+    color: #2061aa;
     top: -20px;
   }
-  
-  &.language-cpp::before{
+
+  &.language-cpp::before {
     content: 'C++';
   }
 }
