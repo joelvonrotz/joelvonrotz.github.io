@@ -29,8 +29,6 @@ plugins:
 
 highlighter: rouge
 
-sass_dir: _sass
-
 defaults:
   - scope:
       path: "_posts"
@@ -51,7 +49,6 @@ defaults:
 #    values:
 #      layout: travel
 #      permalink: '/travelbook/:title'
-
 
 collections:
   posts:

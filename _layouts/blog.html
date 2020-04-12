@@ -10,7 +10,7 @@ layout: default
       {% include content_header.html category=post.category date=post.date title=post.title thumbnail=post.thumbnail url=post.url %}
     <!-- 
     * as I might have thought, this is where previews of my posts go to.
-    ! Use a composition of building blocks
+    ! Don't use content_header later on, create a custom one.
     -->
     {% endfor %}
   </div>

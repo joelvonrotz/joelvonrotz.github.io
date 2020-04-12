@@ -1,50 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap");
 
 /* PARAGRAPH
  * 
  */
-p, li, figcaption{
-  line-height:  1.5em;
+p,
+li,
+figcaption {
+  line-height: 1.5em;
   font-family: "PT Serif", serif;
 
   font-size: 20px;
 }
 
-
 /* HYPERLINK
  * For hyperlinks I want to go for a clean but watchable look
  */
-a{
+a {
   text-decoration: none;
   outline: none;
-	text-decoration: none;
-  
-  
-/* SEPARATE PARAGRAPH HYPERLINKS
+  text-decoration: none;
+
+  /* SEPARATE PARAGRAPH HYPERLINKS
  * Links that are actually texts should always have their own style.
  * A standard hyperlink should be styleless
  */
-  p &, footer &, nav &{
+  p &,
+  footer &,
+  nav & {
     font-family: "PT Serif", serif;
-    color: #2061AA;
+    color: #2061aa;
     font-weight: 600;
     background-color: transparent;
 
     padding: 0px 2px;
 
-    &:hover{
-      background-color: lighten($color: #2061AA, $amount: 50);
+    &:hover {
+      background-color: lighten($color: #2061aa, $amount: 50);
     }
   }
 
-  
-  & h1{
+  & h1 {
     color: black;
   }
 
-  nav &{
+  nav & {
     font-size: 20px;
   }
 }
@@ -52,56 +53,58 @@ a{
 /* HEADINGS
  * 
  */
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
   font-family: "Volkhov", serif;
 }
 
 // the size of Heading 1 is chosen a lot bigger than it should be, due to the first content header actually being the page header
-h1{
+h1 {
   font-size: 45px;
 }
 
-h2{
+h2 {
   font-size: 39px;
 }
 
-h3{
+h3 {
   font-size: 31px;
 }
 
-h4{
+h4 {
   font-size: 25px;
 }
 
 /* CODE
  * 
  */
-code{
+code {
   font-family: "Fira Code", monospace;
 }
 
-
-
-
 @media only screen and (max-width: 600px) {
-
-  p, blockquote, li, figcaption{
+  p,
+  blockquote,
+  li,
+  figcaption {
     font-size: 16px;
   }
 
-  h1{
+  h1 {
     font-size: 36px;
   }
 
-  h2{
+  h2 {
     font-size: 32px;
   }
 
-  h3{
+  h3 {
     font-size: 27px;
   }
 
-  h4{
+  h4 {
     font-size: 22px;
   }
 }

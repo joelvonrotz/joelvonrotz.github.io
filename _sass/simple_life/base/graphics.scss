@@ -1,23 +1,22 @@
-img{
+img {
   max-width: 100%;
   border-radius: 5px;
 
-  &.profile{
+  &.profile {
     border-radius: 50%;
 
-    a:hover &{
+    a:hover & {
       transform: scale(1.05);
     }
   }
 
-  #home &{
+  #home & {
     width: 250px;
-  
+
     align-self: center;
   }
 
-  header &{
-    width:  60px;
+  header & {
+    width: 60px;
   }
 }
-
