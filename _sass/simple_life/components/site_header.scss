@@ -2,21 +2,27 @@ header {
   justify-content: space-between;
   height: 80px;
   flex-flow: row;
-  gap: 10px;
   padding: 0 10px;
 
   & > a {
     margin: 10px 0;
     display: inherit;
   }
+
+  nav a + a {
+    margin-left: 10px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   header {
     flex-flow: column;
-    height: 100px;
     align-items: center;
-    gap: 5px;
+    height: min-content;
+
+    nav {
+      margin: 10px 0;
+    }
 
     & > a {
       margin-bottom: 0;

@@ -7,11 +7,14 @@ layout: default
   <div class="content">
     {{ content }}
     {% for post in site.posts %}
-      {% include content_header.html category=post.category date=post.date title=post.title thumbnail=post.thumbnail url=post.url %}
+      {% include blog_post.html category=post.category date=post.date title=post.title thumbnail=post.thumbnail url=post.url excerpt=post.excerpt%}
     <!-- 
     * as I might have thought, this is where previews of my posts go to.
     ! Don't use content_header later on, create a custom one.
     -->
+      <!--{% if forloop.last == false %}
+      <hr>
+      {% endif %}-->
     {% endfor %}
   </div>
 </section>

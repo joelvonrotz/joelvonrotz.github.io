@@ -1,14 +1,6 @@
 .flex {
   display: flex;
 
-  &.gap-5px {
-    gap: 5px;
-  }
-
-  &.gap-10px {
-    gap: 10px;
-  }
-
   &.flow-col {
     flex-flow: column;  //! Check if this is correct
     -ms-flex-flow: column;

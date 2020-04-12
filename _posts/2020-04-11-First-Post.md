@@ -4,6 +4,7 @@ title:  "Hello World"
 thumbnail: "/images/posts/2020-04-hello-world.jpg"
 category: "first-post"
 ---
+
 With this first post, I'll define this website as *unstable but somehow functional*. Just kidding!
 
 <!--more-->

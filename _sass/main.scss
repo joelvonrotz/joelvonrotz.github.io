@@ -8,6 +8,6 @@
 @import "simple_life/components/site_header.scss";         // -> defines sizes and alignment of components inside the site header
 @import "simple_life/components/cont_head_blog_post.scss"; // -> defines content header stuff & blog post preview stuff (because they are very similiar
 @import "simple_life/components/site_footer.scss";         // -> defines sizes and alignment of components inside the site footer
-
+@import "simple_life/components/figure.scss";              // -> defines sizes and alignment of figures
 // * Linter Dumbo Comment -> Ha, take that dumb Linter
 @import "simple_life/utilities/flex.scss";  // -> defines flex specific classes, to reduce overall rules

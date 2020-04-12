@@ -1,5 +1,5 @@
 <!-- is almost the same as content_header, but the main difference is the title, which was changed to a heading #2 element-->
-<section class="blog-post">
+<article class="blog-post">
   {% assign thumbnail = include.thumbnail | default = "/images/thumbnail_placeholder.jpg" %}
   {% if thumbnail %}
     <a href="{{ include.url }}">
@@ -44,9 +44,10 @@
     {{ include.excerpt | remove: '<p>' | remove: '</p>' }}
   </p>
 
-
-  <div class="readmore">
-    Read More
+  <div style="text-align: center">
+    <a href="{{include.url}}" class="readmore">
+      Read More
+    </a>
   </div>
   
-</section>
+</article>

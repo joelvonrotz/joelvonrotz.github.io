@@ -25,4 +25,8 @@ footer {
   & a {
     color: #bdbdbd;
   }
+
+  .social .social-icon + .social-icon {
+    margin-left: 10px;
+  }
 }

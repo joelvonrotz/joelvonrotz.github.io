@@ -5,7 +5,8 @@
 /* PARAGRAPH */
 p,
 li,
-figcaption {
+figcaption,
+blockquote {
   line-height: 1.5em;
   font-family: "PT Serif", serif;
   font-size: 20px;
@@ -21,7 +22,7 @@ h4 {
 
 // the size of Heading 1 is chosen a lot bigger than it should be, due to the first content header actually being the page header
 h1 {
-  font-size: 45px;
+  font-size: 49px;
 }
 
 h2 {
@@ -53,7 +54,8 @@ a {
 
   p &,
   footer &,
-  nav & {
+  nav &,
+  &.readmore {
     font-family: "PT Serif", serif;
     color: #2061aa;
     font-weight: 600;
@@ -74,6 +76,29 @@ a {
 /* CODE */
 code {
   font-family: "Fira Code", monospace;
+}
+
+/* BLOCKQUOTE */
+blockquote {
+  position: relative;
+  border-left: #2061aa 3px solid;
+  margin: 0;
+  margin-left: 10px;
+  padding-left: 35px;
+
+  p{
+    margin: 0;
+  }
+
+  &::before {
+    color: #2061aa;
+    font-size: 60px;
+    font-family: "Volkhov", serif;
+    position: absolute;
+    content: '“';
+    left: 3px;
+    top: 10px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
