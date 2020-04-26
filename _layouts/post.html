@@ -1,9 +1,9 @@
 ---
 layout: default
 ---
-
+{% assign thumbnail = page.thumbnail | default: "/images/thumbnail_placeholder.jpg" %}
 <section id="post">
-  {% include content_header.html category=page.category date=page.date title=page.title thumbnail=page.thumbnail %}
+  {% include content_header.html category=page.category date=page.date title=page.title thumbnail=thumbnail %}
   <div class="post content">
     {{ content }}
   </div>

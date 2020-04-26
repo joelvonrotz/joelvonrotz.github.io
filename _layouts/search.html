@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% include content_header.html title=page.title thumbnail=page.thumbnail %}
+<section id="search">
+  <input id="search-input" type="text" placeholder="Search for Posts" name="search">
+  <p class="search-info"><em>Separate keywords with a space to filter posts more precise</em></p>
+  <div id="search-result">
+    
+  </div>
+</section>
+<script type="text/javascript" src="/assets/js/nacheluege/nacheluege.min.js"></script>
+<script type="text/javascript">
+  var search = new Nacheluege("search-input","search-result","/data/search.json");
+</script>

@@ -43,6 +43,12 @@ defaults:
     values:
       layout: page
       permalink: '/:title'
+  - scope:
+      path: "_projects"
+      type: "projects"
+    values:
+      layout: page
+      permalink: '/projects/:title'
 #  - scope:
 #      path: "_travel"
 #      type: "travel"
@@ -54,6 +60,8 @@ collections:
   posts:
     output: true
   pages:
+    output: true
+  projects:
     output: true
 #  travel:
 #    output: true

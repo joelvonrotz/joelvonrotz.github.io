@@ -1,11 +1,8 @@
 <!-- is almost the same as content_header, but the main difference is the title, which was changed to a heading #2 element-->
-<article class="blog-post">
-  {% assign thumbnail = include.thumbnail | default = "/images/thumbnail_placeholder.jpg" %}
-  {% if thumbnail %}
-    <a href="{{ include.url }}">
-      <img class="page-thumbnail" src="{{ include.thumbnail }}">
-    </a>
-  {% endif %}
+<article class="blog-post card">
+  <a href="{{ include.url }}">
+    <img class="page-thumbnail" src="{{ include.thumbnail }}">
+  </a>
 
   {% if include.date || include.category %}
   <div class="page-metadata flex flow-row">

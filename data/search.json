@@ -10,13 +10,6 @@
       "tags"     : "{{ post.tags | join: ', ' }}",
       "date"     : "{{ post.date }}"
 
-    },
+    }{% if forloop.last == false %},{% endif %}
   {% endfor %}
-  {
-    "title"    : "Dancing roach | Live in concert",
-    "url"      : "https://www.youtube.com/watch?v=c_jomXhjUjI",
-    "category" : "future-of-2030",
-    "tags"     : "cockroach, dancing, masterpiece",
-    "date"     : "right now"
-  }
 ]

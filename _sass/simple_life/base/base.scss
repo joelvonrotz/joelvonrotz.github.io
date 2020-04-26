@@ -9,6 +9,7 @@
 main.wrapper {
   max-width: 800px;
   padding: 0 10px;
+  margin-bottom: 40px;
 }
 
 header.wrapper,
@@ -19,4 +20,11 @@ footer.wrapper {
 /* Adjust line-height from normalize.css */
 html {
   line-height: 1.2;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
 }
