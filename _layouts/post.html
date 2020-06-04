@@ -1,10 +1,32 @@
 ---
 layout: default
 ---
-{% assign thumbnail = page.thumbnail | default: "/images/thumbnail_placeholder.jpg" %}
-<section id="post">
-  {% include content_header.html category=page.category date=page.date title=page.title thumbnail=thumbnail %}
-  <div class="post content">
-    {{ content }}
+<div class="title">
+  <h1>
+    {{page.title}}
+  </h1>
+  <p class="date">{{ page.date | date: "%d.%m.%Y" }}</p>
+</div>
+<div class="content">
+  {{ page.content }}
+</div>
+<hr>
+<div class="post-info">
+  <div class="post-tags">
+    <code><em>Tags</em></code>
+    <ul>
+      {% for tag in page.tags %}
+      <li class="post-info-element"><a href="/tags#{{tag | slugify}}">{{ tag }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
-</section>
+  <div class="post-category">
+    <code><em>Category</em></code>
+    <a class="post-info-element" href="/categories#{{page.category | slugify}}">{{ page.category  }}</a>
+  </div>
+
+  <div class="post-date">
+    <code><em>Date</em></code>
+    <span style="margin-left: 5px;">{{page.date | date: "%d.%m.%Y"}}</span>
+  </div>
+</div>

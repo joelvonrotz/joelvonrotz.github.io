@@ -3,23 +3,32 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/css/normalize.css">
-    <link rel="stylesheet" href="/assets/css/simple_life.css">
-    <link rel="stylesheet" href="/assets/css/syntax_highlighting.css">
+    <link rel="stylesheet" href="/assets/css/simple_notes.css">
+    <link rel="stylesheet" href="/assets/css/code_syntax_coloring.css">
+    <link rel="stylesheet" href="/assets/css/comp/collapsible.css">
     <title>{{ site.title }}</title>
   </head>
+  <body class="wrapper">
+    <header>
+      <span class="site-title">
+        <a class="site-link" href="/">
+          {{ site.title }}
+        </a>
+      </span>
+      <nav class="site-navigation">
+        <a href="/posts">Posts</a>
+        <a href="/projects">Projects</a>
+        <a href="/notes">Notes</a>
+        <a href="/about">About</a>
+      </nav>
+    </header>
 
-
-  <body>
-    <!-- HEADER -->
-    {% include site_header.html %}
-
-    <!-- MAIN -->
-    <main class="wrapper">
+    <main class="{{page.layout}}">
       {{ content }}
     </main>
-    
-    <!-- FOOTER -->
-    {% include site_footer.html %}
-    
+
+    <footer>
+
+    </footer>
   </body>
 </html>

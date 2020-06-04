@@ -1,10 +1,11 @@
 ---
 layout: default
 ---
-{% assign thumbnail = page.thumbnail | default: "/images/thumbnail_placeholder.jpg" %}
-<section id="{{ page.title | downcase }}">
-  {% include content_header.html title=page.title thumbnail=thumbnail %}
-  <div class="page content">
-    {{ content }}
-  </div>
-</section>
+<div class="title">
+  <h1>
+    {{page.title}}
+  </h1>
+</div>
+<div class="content">
+  {{ page.content }}
+</div>

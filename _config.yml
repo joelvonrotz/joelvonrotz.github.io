@@ -7,27 +7,17 @@
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Joel von Rotz
 description: >- # this means to ignore newlines until "baseurl:"
-  Help me Jesus!
+  A little website of a tall boy, that wants to enjoy life.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-flickr:   joelvonrotz
-github:   joelvonrotz
-avatar:   "/images/profilepicture.jpg"
+url: "https://joelvonrotz.ch"
 
 # Build settings
 markdown: kramdown
+
 plugins:
   - jekyll-feed
-
-highlighter: rouge
 
 defaults:
   - scope:
@@ -35,8 +25,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      permalink: '/:year/:month/:day/:title'
-      excerpt_separator: <!--more-->
+      permalink: '/posts/:year/:title'
+      excerpt_separator: "<!--more-->"
   - scope:
       path: "_pages"
       type: "pages"
@@ -49,12 +39,6 @@ defaults:
     values:
       layout: page
       permalink: '/projects/:title'
-#  - scope:
-#      path: "_travel"
-#      type: "travel"
-#    values:
-#      layout: travel
-#      permalink: '/travelbook/:title'
 
 collections:
   posts:
@@ -63,8 +47,18 @@ collections:
     output: true
   projects:
     output: true
-#  travel:
-#    output: true
+
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      title:
+      category:
+      tags:
+    posts:
+      title:
+      category:
+      tags:
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

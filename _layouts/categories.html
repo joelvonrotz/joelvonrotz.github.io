@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{% assign sorted_categories = site.categories | sort %}
+
+<div class="title">
+  <h1>
+    {{page.title}}
+  </h1>
+</div>
+<div class="content">
+  {% for category in sorted_categories %}
+  <div id="{{ category[0] | slugify }}" class="clps-element" data-state="closed">
+    <h2 class="clps-button"> {{ category[0] }}</h2>
+    <ul class="clps-content">
+      {% for post in category[1] %}
+      <li><code>{{ post.date | date: "%d.%m.%Y"}}</code> - <a href="{{post.url}}">{{post.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% endfor %}
+</div>
+
+<script>
+  //open element, when tag is given via URL (hash)
+  if(window.location.hash) { document.querySelector(window.location.hash).classList.add('open') };
+  var clpsElements = document.querySelectorAll('.clps-element');
+  for (let index = 0; index < clpsElements.length; index++) {
+    clpsElements[index].querySelector('.clps-button').addEventListener('click', function () {
+      clpsElements[index].classList.toggle('open');
+    })}
+</script>
