@@ -28,7 +28,7 @@ html {
 body {
   max-width: 800px;
   padding: 0 20px;
-  margin: 0 auto;
+  margin: 20px auto;
   text-rendering: optimizeLegibility;
   color: var(--font-paragraph-color);
   background-color: var(--main-bg-color);
@@ -261,10 +261,6 @@ div.highlighter-rouge pre {
 }
 
 /* || Header and Main Navigation (sitewide) */
-header {
-  margin-top: 20px;
-}
-
 nav.site-navigation {
   display: flex;
 }
