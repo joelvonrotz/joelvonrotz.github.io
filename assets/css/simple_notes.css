@@ -27,7 +27,7 @@ html {
 /* || General Styles */
 body {
   max-width: 800px;
-  padding: 0 5px;
+  padding: 0 20px;
   margin: 0 auto;
   text-rendering: optimizeLegibility;
   color: var(--font-paragraph-color);
