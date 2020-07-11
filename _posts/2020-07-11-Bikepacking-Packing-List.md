@@ -16,20 +16,20 @@ For camping itself the main focus would be to lastly have a great sleep. That me
 
 - [ ]  Sleeping bag
 - [ ]  Sleeping Mat
-- [ ]  Pyjamas → separate clothes from your biking clothes to isolate the smell
+- [ ]  Pyjamas → *separate clothes from your biking clothes to isolate the smell*
 
 ### Tent Camping
 
 - [ ]  Tent
 - [ ]  Tent Footprint / Underlay
-- [ ]  Tarp → keeping stuff dry when there's no space left inside your tent
+- [ ]  Tarp → *keeping stuff dry when there's no space left inside your tent*
 
 ### Hammock Camping
 
 - [ ]  Hammock
-- [ ]  2x Ropes → attaching the Hammock
-- [ ]  Tarp → keeps yourself dry & stuff
-- [ ]  Pieces of old rags → to protect the tree bark from getting damaged
+- [ ]  2x Ropes → *attaching the Hammock*
+- [ ]  Tarp → *keeps yourself dry & stuff*
+- [ ]  Pieces of old rags → *to protect the tree bark from getting damaged*
 
 ## Cooking
 
@@ -38,12 +38,12 @@ Who doesn't love cooking? Some people actually don't, but let's not consider the
 - [ ]  Gas Cooker
 - [ ]  Cartridge with gas/petrol
 - [ ]  Waterbag
-- [ ]  Fire Starter → optional but useful nonethenless (also works in wet condition)
-- [ ]  Cooking Pot Set → A set of multiple pots which can be put together
-- [ ]  Cutlery → spork and knife also works
+- [ ]  Fire Starter → *optional but useful nonetheless*
+- [ ]  Cooking Pot Set → *A set of multiple pots which can be put together*
+- [ ]  Cutlery
 - [ ]  Pocket Knife
-- [ ]  Sponge or steel wool → steel wool depends on the material of the pots
-- [ ]  Spices → Salt, pepper, paprika, garlic, etc.
+- [ ]  Sponge or steel wool
+- [ ]  Spices → *Salt, pepper, paprika, garlic, etc.*
 - [ ]  Plate
 - [ ]  Mug
 
@@ -51,22 +51,22 @@ Who doesn't love cooking? Some people actually don't, but let's not consider the
 
 During a bikepacking trip, you're completely vulnerable to nature, which means your bike can get damaged! But since we're in *this* present, having to do little repairs and maintenance here & there is easy peasy. The amount of stuff you have to carry is dependent on how long your trip will be and how much damage could occur on the trip.
 
-- [ ]  Multitool → need at least following
+- [ ]  Multitool → *need at least following features*
   - Allen Key (check your screw sizes on your bike)
   - Screwdriver (flat & phillips)
-- [ ]  Spare Inner Tubes → depends on environment, the more likely you'll get a tire, the more tubes you need.
+- [ ]  Spare Inner Tubes → *depends on environment, more holes = more tubes*
 - [ ]  Tube Repair Kit
   - Glue
-  - Sandpaper → to rough up the rubber so the glue holds better
+  - Sandpaper → *to rough up the rubber so the glue holds better*
   - Tire Levers
   - Tube patches
 - [ ]  Pump
 - [ ]  Spare Spokes
 - [ ]  Chain Brush
 - [ ]  Chain Oil
-- [ ]  Clean old Rags → used to remove muck from the chain and bike parts
+- [ ]  Clean old Rags → *used to remove muck from the chain and bike parts*
 - [ ]  Protective Tape
-- [ ]  ELECTICAL TAPE → Life Saver, tape together what needs to be taped together!!
+- [ ]  ELECTICAL TAPE → *Life Saver, tape together what needs to be taped together!!*
 
 ## Clothing
 
@@ -76,24 +76,24 @@ Clothing is important, so people don't see your private parts and no one  wants 
 
 - [ ]  Rain Jacket
 - [ ]  Rain Trousers
-- [ ]  shoe covers → optional but highly recommended
+- [ ]  shoe covers → *optional but highly recommended*
 - [ ]  Down Jacket
 
 ### Biking
 
 - [ ]  `2x` Biking Shorts
 - [ ]  `1x` Cycling Underwear
-- [ ]  `3x` Biking Shirts → 1 Shirt per 4 days + 1 Spare
+- [ ]  `3x` Biking Shirts → *1 Shirt per 4 days + 1 Spare*
 - [ ]  Wind Jacket
 - [ ]  Leg Warmers
 - [ ]  Arm Warmers
 
 ### Casual / Leisure
 
-- [ ]  `2x` T-Shirts →
+- [ ]  `2x` T-Shirts
 - [ ]  `1x` Pullover / Sweater
-- [ ]  `4x` Underwear → 1 Underwear per 3 Days + 1 Spare
-- [ ]  `3x` Socks → Pack one Wool sock at least to warm your feet up during sleep
+- [ ]  `4x` Underwear → *1 Underwear per 3 Days + 1 Spare*
+- [ ]  `3x` Socks → *Pack one Wool sock at least to warm your feet up during sleep*
 - [ ]  Swim wear
 - [ ]  Flipflops
 - [ ]  `1x` Long Trousers
@@ -108,7 +108,7 @@ In the age of electronics, some devices are a must have, like your smartphone an
 - [ ]  Front and Rear Light
 - [ ]  Solar Panel
 - [ ]  Power Bank (10'000 mAh)
-- [ ]  Phone charging cable → for me it's micro USB
+- [ ]  Phone charging cable
 - [ ]  Smartphone
 - [ ]  Wristwatch
 - [ ]  Camera
@@ -121,7 +121,7 @@ In the age of electronics, some devices are a must have, like your smartphone an
 On the road you'll be doing loads of things: see landscape, say out loud a *Owen Wilson* "wow" and take a picture. Along all that you'll be checking where to go next, how much money you can spend that day and during boring rests you'll need something to do, like reading.
 
 - [ ]  Offline Map → [Ride with GPS](https://ridewithgps.com/) or [Komoot](https://www.komoot.com/)
-- [ ]  Passport and/or ID → if you stay in Europe, you only need your ID
+- [ ]  Passport and/or ID
 - [ ]  Health Insurance Card
 - [ ]  Credit & Debit Card
 - [ ]  Writing Material
@@ -129,7 +129,7 @@ On the road you'll be doing loads of things: see landscape, say out loud a *Owen
   - Pencil & Pens
 - [ ]  Train / Flight Tickets
 - [ ]  Books & playing cards
-- [ ]  Day Pack → can be a simple 10-15l bag
+- [ ]  Day Pack → *can be a simple 10-15l bag*
 
 ## Hygiene / Care
 
