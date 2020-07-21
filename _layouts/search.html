@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<div class="title">
+  <h1>
+    {{page.title}}
+  </h1>
+</div>
+<div class="content">
+  {{ page.content }}
+
+  <div class="search" data-list="/">
+    <input class="search-input" style="background: #707070; border-style: none; border-radius: 3px; padding: 4px;" placeholder="Search for Posts, Pages,etc.">
+    <div class="search-result">
+
+    </div>
+  </div>
+</div>
+<script>
+  class SearchParse {
+    allTerms = [] //except for empty terms ('')
+    tempTerms = [] //temporary Terms-holder
+    hasTags = false
+    hasCategory = false
+    termTags = []
+    termCategory = []
+  }
+  var search = new SearchParse()
+  var search_element = document.querySelector('div.search');
+
+  var search_input = search_element.querySelector('input.search-input')
+  var search_result = search_element.querySelector('div.search-result')
+
+  search_input.addEventListener('input', ev => {
+    
+    search_result.innerHTML = search_input.value;
+    console.log('\n\nSplitting & Removing Empty Terms -> \'\'')
+
+    search.allTerms = search_input.value.split(' ').filter(value => (value != ''));
+
+    console.log(search.allTerms);
+    console.log('\n\nFiltering Tags')
+    console.log('Getting Tags Terms');
+    //check if first letter is a '#' symbol
+    search.tempTerms = search.allTerms.filter(value => (value.charAt(0) == '#') && value.length > 1)
+    if(search.tempTerms.length >= 1)
+    {
+      console.log('has Tags');
+      search.hasTags = true
+      //removing '#' from each entry
+      search.tempTerms.forEach(element => {
+        element = element.substr(1);
+      });
+      search.termTags = search.tempTerms
+      console.log(search.termTags);
+    }
+  })
+</script>
