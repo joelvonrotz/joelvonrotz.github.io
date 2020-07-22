@@ -17,6 +17,113 @@ layout: default
   </div>
 </div>
 <script>
+  // || FUNCTIONS ||
+  async function getPosts(url_postlist) {
+    let response = await fetch(url_postlist);
+    let data = await response.json()
+    return data;
+  }
+
+  function filterPosts(json_postlist, input_value, callback) {
+    class SearchParse {
+      allTerms = [] //except for empty terms ('')
+      tempTerms = [] //temporary Terms-holder
+      hasTags = false
+      hasCategory = false
+      hasTerms = false
+      termTags = []
+      termCategory = []
+      termRest = []
+    }
+
+    
+
+    var search = new SearchParse()
+
+    search.allTerms = input_value.split(' ').filter(value => (value != ''));
+
+    //check if first letter is a '#' symbol
+    search.termTags = search.allTerms.filter(value => ((value.charAt(0) == '#') && value.length > 1))
+    if(search.termTags.length > 0) {
+      search.hasTags = true
+      search.termTags.forEach((value, index, array) => {array[index] = value.substr(1)});
+    }
+    
+    //check if first letter is a '&' symbol
+    search.termCategory = search.allTerms.filter(value => ((value.charAt(0) == '&') && value.length > 1))
+    if(search.termCategory.length > 0) {
+      search.hasCategory = true
+      search.termCategory.forEach((value, index, array) => {array[index] = value.substr(1)});
+    }
+    
+    //the remaining terms are filterded
+    search.termRest = search.allTerms.filter(value => (value.charAt(0) != '&' && value.charAt(0) != '#'))
+    if(search.termRest.length > 0) { search.hasTerms = true }
+
+    console.log('Cat. Terms', search.termCategory, search.hasCategory);
+    console.log('Tags Terms', search.termTags, search.hasTags);
+    console.log('Rest Terms', search.termRest, search.hasTerms);
+
+    var filtered_posts = json_postlist.filter((value) => {
+      var isValid = false
+      if(search.hasCategory || search.hasTags || search.hasTerms)
+        isValid = true
+
+      console.log(isValid);
+
+      //turn all the post-list data into a single string for easier filtering
+      var string = value.title + value.url + value.category
+      value.tags.forEach(element2 => {
+        string += element2
+      });
+
+      search.termTags.forEach(tag => {
+        if(string.indexOf(tag) >= 0)
+          isValid &= true
+        else
+          isValid = false
+      });
+
+      search.termCategory.forEach(category => {
+        if(string.indexOf(category) >= 0)
+          isValid &= true
+        else
+          isValid = false
+      });
+
+      search.termRest.forEach(term => {
+        if(string.indexOf(term) >= 0)
+          isValid &= true
+        else
+          isValid = false
+      });
+
+      return isValid
+    })
+
+    console.log(filtered_posts);
+
+    //callback(filtered_posts);
+  }
+
+  // || MAIN ||
+  var search_element = document.querySelector('div.search');
+  var search_input = search_element.querySelector('input.search-input')
+  var data_posts
+
+  getPosts('/data/search.json').then(data => {
+    data_posts = data
+
+    search_input.addEventListener('input', ev => {
+      filterPosts(data_posts, search_input.value , (data) => {
+        console.log(data);
+      });
+    });
+  });
+
+
+
+/*
   class SearchParse {
     allTerms = [] //except for empty terms ('')
     tempTerms = [] //temporary Terms-holder
@@ -25,34 +132,5 @@ layout: default
     termTags = []
     termCategory = []
   }
-  var search = new SearchParse()
-  var search_element = document.querySelector('div.search');
-
-  var search_input = search_element.querySelector('input.search-input')
-  var search_result = search_element.querySelector('div.search-result')
-
-  search_input.addEventListener('input', ev => {
-    
-    search_result.innerHTML = search_input.value;
-    console.log('\n\nSplitting & Removing Empty Terms -> \'\'')
-
-    search.allTerms = search_input.value.split(' ').filter(value => (value != ''));
-
-    console.log(search.allTerms);
-    console.log('\n\nFiltering Tags')
-    console.log('Getting Tags Terms');
-    //check if first letter is a '#' symbol
-    search.tempTerms = search.allTerms.filter(value => (value.charAt(0) == '#') && value.length > 1)
-    if(search.tempTerms.length >= 1)
-    {
-      console.log('has Tags');
-      search.hasTags = true
-      //removing '#' from each entry
-      search.tempTerms.forEach(element => {
-        element = element.substr(1);
-      });
-      search.termTags = search.tempTerms
-      console.log(search.termTags);
-    }
-  })
+  */
 </script>
