@@ -10,7 +10,7 @@ layout: default
   {{ page.content }}
 
   <div class="search" data-list="/">
-    <input class="search-input" style="background: #707070; border-style: none; border-radius: 3px; padding: 4px;" placeholder="Search for Posts, Pages,etc.">
+    <input class="search-input" placeholder="Search for Posts">
     <div class="search-result">
 
     </div>
@@ -18,119 +18,57 @@ layout: default
 </div>
 <script>
   // || FUNCTIONS ||
-  async function getPosts(url_postlist) {
-    let response = await fetch(url_postlist);
+
+  async function getPostList(url_postlist) {
+    let response = await fetch(url_postlist)
     let data = await response.json()
-    return data;
+    return data
   }
 
   function filterPosts(json_postlist, input_value, callback) {
-    class SearchParse {
-      allTerms = [] //except for empty terms ('')
-      tempTerms = [] //temporary Terms-holder
-      hasTags = false
-      hasCategory = false
-      hasTerms = false
-      termTags = []
-      termCategory = []
-      termRest = []
-    }
+    let filteredPosts = []
+    let hasTerms = false
+    let allTerms = input_value.split(' ').filter(value => (value != '')) 
 
-    
-
-    var search = new SearchParse()
-
-    search.allTerms = input_value.split(' ').filter(value => (value != ''));
-
-    //check if first letter is a '#' symbol
-    search.termTags = search.allTerms.filter(value => ((value.charAt(0) == '#') && value.length > 1))
-    if(search.termTags.length > 0) {
-      search.hasTags = true
-      search.termTags.forEach((value, index, array) => {array[index] = value.substr(1)});
-    }
-    
-    //check if first letter is a '&' symbol
-    search.termCategory = search.allTerms.filter(value => ((value.charAt(0) == '&') && value.length > 1))
-    if(search.termCategory.length > 0) {
-      search.hasCategory = true
-      search.termCategory.forEach((value, index, array) => {array[index] = value.substr(1)});
-    }
-    
     //the remaining terms are filterded
-    search.termRest = search.allTerms.filter(value => (value.charAt(0) != '&' && value.charAt(0) != '#'))
-    if(search.termRest.length > 0) { search.hasTerms = true }
-
-    console.log('Cat. Terms', search.termCategory, search.hasCategory);
-    console.log('Tags Terms', search.termTags, search.hasTags);
-    console.log('Rest Terms', search.termRest, search.hasTerms);
-
-    var filtered_posts = json_postlist.filter((value) => {
-      var isValid = false
-      if(search.hasCategory || search.hasTags || search.hasTerms)
-        isValid = true
-
-      console.log(isValid);
-
-      //turn all the post-list data into a single string for easier filtering
-      var string = value.title + value.url + value.category
-      value.tags.forEach(element2 => {
-        string += element2
-      });
-
-      search.termTags.forEach(tag => {
-        if(string.indexOf(tag) >= 0)
-          isValid &= true
-        else
-          isValid = false
-      });
-
-      search.termCategory.forEach(category => {
-        if(string.indexOf(category) >= 0)
-          isValid &= true
-        else
-          isValid = false
-      });
-
-      search.termRest.forEach(term => {
-        if(string.indexOf(term) >= 0)
-          isValid &= true
-        else
-          isValid = false
-      });
-
-      return isValid
-    })
-
-    console.log(filtered_posts);
-
-    //callback(filtered_posts);
+    allTerms = allTerms.filter(value => (value.charAt(0) != '&' && value.charAt(0) != '#'))
+    
+    //if no terms are specified, skip over filtering an call callback with empty array
+    if(allTerms.length > 0)
+    {
+      hasTerms = true
+      filteredPosts = json_postlist.filter((value) => {
+        //turn all the post-list data into a single string for easier filtering
+        //let string = (value.title + value.url + value.category + value.tags.join('')).toLowerCase()
+        let string = Object.values(value).join('').toLowerCase()
+        return allTerms.every(term => string.indexOf(term.toLowerCase()) >= 0 ) 
+      })
+    }
+    callback(filteredPosts, hasTerms)
   }
 
   // || MAIN ||
-  var search_element = document.querySelector('div.search');
-  var search_input = search_element.querySelector('input.search-input')
-  var data_posts
+  let search_element = document.querySelector('div.search')
+  let search_input = search_element.querySelector('input.search-input')
+  let search_result = search_element.querySelector('div.search-result')
+  //insert placeholder text into the results element
+  search_result.innerHTML = '<p>Try searching for a post by typing in keywords in the input field. You can search for categories, tags, etc.</p>'
 
-  getPosts('/data/search.json').then(data => {
-    data_posts = data
-
+  getPostList('/data/search.json').then(data => {
+    let data_posts = data
+  
     search_input.addEventListener('input', ev => {
-      filterPosts(data_posts, search_input.value , (data) => {
-        console.log(data);
-      });
-    });
-  });
-
-
-
-/*
-  class SearchParse {
-    allTerms = [] //except for empty terms ('')
-    tempTerms = [] //temporary Terms-holder
-    hasTags = false
-    hasCategory = false
-    termTags = []
-    termCategory = []
-  }
-  */
+      filterPosts(data_posts, search_input.value , (data, hasTerms) => {
+        if(data.length > 0)
+        {
+          search_result.innerHTML = '<p>Found <code><b>' + data.length + '</b></code> Post' + (data.length > 1 ? 's</p>' : '</p>')
+          data.forEach(post => {
+            search_result.innerHTML += '<article><h3><a href=\"' + post.url + '\">' + post.title + '</a></h3><p><a href=\"' + post.url + '\">' + post.url +'</a></p>'
+          })
+        }
+        else if(hasTerms) { search_result.innerHTML = '<p>No Posts Found!</p>' }
+        else{ search_result.innerHTML = '<p>Try searching for a post by typing in keywords in the input field</p>'}
+      })
+    })
+  })
 </script>

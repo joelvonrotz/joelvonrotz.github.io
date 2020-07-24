@@ -1,5 +1,5 @@
 ---
 layout: search
-title: "Search <b>EVERYTHING</b>"
+title: "Search"
 permalink: "/search"
 ---

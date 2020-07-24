@@ -31,12 +31,17 @@ body {
   margin: 20px auto;
   text-rendering: optimizeLegibility;
   color: var(--font-paragraph-color);
-  background-color: var(--main-bg-color);
+  background-color: var(--primary-bg-color);
 
-  --main-bg-color: #fff;
-  --main-fg-color: #2b2b2b;
+  --primary-bg-color: #fff;
+  --primary-fg-color: #2b2b2b;
   --font-paragraph-color: #2b2b2b;
   --font-subparagraph-color: #555;
+
+  --secondary-bg-color: #d1d1d1;
+  --secondary-fg-color: #333333;
+
+  
   --code-bg-color: #e6e6e6;
   --code-fg-color: #3b3b3b;
   --font-link-color: #1e7dca;
@@ -49,10 +54,14 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    --main-bg-color: #272727;
-    --main-fg-color: #ddd;
-    --font-paragraph-color: #d4d4d4;
+    --primary-bg-color: #272727;
+    --primary-fg-color: #ddd;
+    --font-paragraph-color: #acacac;
     --font-subparagraph-color: #707070;
+
+    --secondary-bg-color: #333333;
+    --secondary-fg-color: #acacac;
+
     --code-bg-color: #3b3b3b;
     --code-fg-color: #b8b8b8;
     --font-link-color: #5285b3;
@@ -66,7 +75,7 @@ body {
 
 hr {
   max-width: 80%;
-  border: 1px solid var(--main-fg-color);
+  border: 1px solid var(--primary-fg-color);
 }
 
 p,
@@ -276,4 +285,35 @@ nav.site-navigation a + a {
 
 input.task-list-item-checkbox {
   margin-right: 10px;
+}
+
+/* || Search Page || */
+input.search-input {
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-fg-color);
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+div.search-result article{
+  background-color: var(--secondary-bg-color);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+
+  
+}
+
+div.search-result article h3 {
+  margin: 0 0 10px 0;
+}
+
+div.search-result article h3 a {
+  color: var(--secondary-fg-color);
+  text-decoration: none;
+}
+
+div.search-result article p {
+  margin: 0;
 }
