@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<div class="title">
+  <h1>
+    {{page.title}}
+  </h1>
+</div>
+<div class="content">
+  {{ page.content }}
+
+  <div class="search" data-list="/">
+    <input class="search-input" placeholder="Search for Posts">
+    <div class="search-result">
+
+    </div>
+  </div>
+</div>
+<script>
+  // || FUNCTIONS ||
+
+  async function getPostList(url_postlist) {
+    let response = await fetch(url_postlist)
+    let data = await response.json()
+    return data
+  }
+
+  function filterPosts(json_postlist, input_value, callback) {
+    let filteredPosts = []
+    let hasTerms = false
+    let allTerms = input_value.split(' ').filter(value => (value != '')) 
+
+    //the remaining terms are filterded
+    allTerms = allTerms.filter(value => (value.charAt(0) != '&' && value.charAt(0) != '#'))
+    
+    //if no terms are specified, skip over filtering an call callback with empty array
+    if(allTerms.length > 0)
+    {
+      hasTerms = true
+      filteredPosts = json_postlist.filter((value) => {
+        //turn all the post-list data into a single string for easier filtering
+        //let string = (value.title + value.url + value.category + value.tags.join('')).toLowerCase()
+        let string = Object.values(value).join('').toLowerCase()
+        return allTerms.every(term => string.indexOf(term.toLowerCase()) >= 0 ) 
+      })
+    }
+    callback(filteredPosts, hasTerms)
+  }
+
+  // || MAIN ||
+  let search_element = document.querySelector('div.search')
+  let search_input = search_element.querySelector('input.search-input')
+  let search_result = search_element.querySelector('div.search-result')
+  //insert placeholder text into the results element
+  search_result.innerHTML = '<p>Try searching for a post by typing in keywords in the input field. You can search for categories, tags, etc.</p>'
+
+  getPostList('/data/search.json').then(data => {
+    let data_posts = data
+  
+    search_input.addEventListener('input', ev => {
+      filterPosts(data_posts, search_input.value , (data, hasTerms) => {
+        if(data.length > 0)
+        {
+          search_result.innerHTML = '<p>Found <code><b>' + data.length + '</b></code> Post' + (data.length > 1 ? 's</p>' : '</p>')
+          data.forEach(post => {
+            search_result.innerHTML += '<article><h3><a href=\"' + post.url + '\">' + post.title + '</a></h3><p><a href=\"' + post.url + '\">' + post.url +'</a></p>'
+          })
+        }
+        else if(hasTerms) { search_result.innerHTML = '<p>No Posts Found!</p>' }
+        else{ search_result.innerHTML = '<p>Try searching for a post by typing in keywords in the input field</p>'}
+      })
+    })
+  })
+</script>
