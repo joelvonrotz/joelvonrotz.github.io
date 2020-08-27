@@ -26,6 +26,8 @@ html {
 
 /* || General Styles */
 body {
+  counter-reset: figure-counter;
+
   max-width: 800px;
   padding: 0 20px;
   margin: 20px auto;
@@ -88,6 +90,11 @@ table {
   letter-spacing: 0.06em;
 }
 
+li::marker {
+  font-weight: bold;
+  color: var(--font-link-color);
+}
+
 p.date {
   color: var(--font-subparagraph-color);
   margin-top: 0;
@@ -103,7 +110,9 @@ h4 {
 }
 
 h1 { font-size: 2.3rem; }
-
+h1::first-letter {
+  color: var(--font-link-color);
+}
 .post h1 {
   margin-bottom: 0;
   text-decoration: none;
@@ -161,6 +170,11 @@ nav a {
   text-decoration: none;
 }
 
+/* for better aesthetics :) */
+.post-title:hover a {
+  color: var(--font-paragraph-color);
+}
+
 a.site-link {
   text-decoration: none;
   color: var(--font-paragraph-color);
@@ -180,6 +194,7 @@ nav a:hover {
 
 code {
   font-family: "Fira Code", monospace;
+  font-variant-ligatures: no-contextual;
   background-color: var(--code-bg-color);
   color: var(--code-fg-color);
   border-radius: 3px;
@@ -190,21 +205,55 @@ p > code {
   font-size: 0.9rem;
 }
 
+
+
 /* -> Coding Blocks */
+div.highlighter-rouge {
+  position: relative;
+  overflow: hidden;
+  border: var(--secondary-bg-color) 1px solid;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0px 0px var(--secondary-bg-color);
+
+  margin-top: 55px;
+  margin-bottom: 30px;
+}
+
+div.highlighter-rouge::before {
+  position: absolute;
+  font-weight: bold;
+  font-family: "Fira Code", monospace;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--font-link-color);
+  top: -21px;
+  padding-left: 5px;
+}
+
+div.highlighter-rouge div.highlight {
+  overflow-x: auto;
+}
+
+div.highlighter-rouge.language-html::before { content: 'HTML'; }
+div.highlighter-rouge.language-javascript::before, div.highlighter-rouge.language-js::before { content: 'JavaScript'; }
+div.highlighter-rouge.language-css::before { content: 'CSS'; }
+div.highlighter-rouge.language-cpp::before { content: 'C++'; }
+div.highlighter-rouge.language-c::before { content: 'C'; }
+div.highlighter-rouge.language-latex::before { content: 'Latex'; }
+div.highlighter-rouge.language-console::before { content: 'Console'; }
+
 pre code {
   background-color: transparent;
   padding: 0;
   font-size: 0.9rem;
 }
 
-div.highlighter-rouge div.highlight {
-  border-radius: 5px;
+div.highlighter-rouge pre {
+  margin: 0;
   padding: 5px;
 }
 
-div.highlighter-rouge pre {
-  margin: 0;
-}
+
 
 /* || Special Styles */
 .site-title {
@@ -287,34 +336,68 @@ input.task-list-item-checkbox {
   margin-right: 10px;
 }
 
+
+
 /* || Search Page || */
-input.search-input {
+input.search-in {
   background-color: var(--secondary-bg-color);
   color: var(--secondary-fg-color);
   border-radius: 5px;
   border: none;
   padding: 10px;
-  width: 100%;
 }
 
-div.search-result article{
+/* Results Template */
+div.search-out article{
   background-color: var(--secondary-bg-color);
   border-radius: 5px;
-  padding: 10px;
   margin-bottom: 15px;
-
-  
+  transition: 200ms filter ease-in-out;
 }
 
-div.search-result article h3 {
-  margin: 0 0 10px 0;
+div.search-out article:hover {
+  filter: brightness(110%);
 }
 
-div.search-result article h3 a {
-  color: var(--secondary-fg-color);
+div.search-out article a {
+  padding: 10px;
+  display: block;
   text-decoration: none;
 }
 
-div.search-result article p {
+div.search-out article h3 {
+  margin: 0 0 10px 0;
+  color: var(--secondary-fg-color);
+  line-height: 1.0;
+}
+
+div.search-out article p {
   margin: 0;
+  text-decoration: underline;
+}
+
+
+/* || Figure & Image || */
+figure {
+  margin: 40px 20px;
+  display: grid;
+  justify-content: center;
+}
+
+figure figcaption {
+  counter-increment: figure-counter;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 5px;  
+}
+
+figure figcaption::before {
+  font-style: normal;
+  color: var(--font-link-color);
+  content: "Fig " counter(figure-counter) ":";
+}
+
+img {
+  box-shadow: 5px 5px 0px 0px var(--secondary-bg-color);
+  border: var(--secondary-bg-color) 1px solid;
 }

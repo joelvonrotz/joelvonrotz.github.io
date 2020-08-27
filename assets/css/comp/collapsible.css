@@ -1,29 +1,30 @@
-.clps-element .clps-button {
+.cmp-collapse h2 {
   cursor: default;
   display: flex;
   margin-bottom: 5px;
 }
 
-.clps-element .clps-button::before {
+.cmp-collapse h2::before {
   margin-right: 5px;
   transition: transform 100ms ease-in-out;
   content: "\2192";
   transform: rotateZ(0deg);
+  color: var(--font-link-color);
 }
 
-.clps-element.open .clps-button::before {
+.cmp-collapse.open h2::before {
   transform: rotateZ(90deg);
 }
 
-.clps-element .clps-content {
+.cmp-collapse .cmp-collapse-content {
   display: none;
   margin-top: 0;
 }
 
-.clps-element.open .clps-content {
+.cmp-collapse.open .cmp-collapse-content {
   display: block;
 }
 
-.clps-element li {
+.cmp-collapse li {
   line-height: 1.5rem;
 }
