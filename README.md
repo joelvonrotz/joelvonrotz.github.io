@@ -2,9 +2,7 @@
 
 ## 🗺 What, where am I?
 
-Hey, so you've stumbled upon my source code for my website. Besides the source code, you can also find a small documentation, which I wrote for myself during development (for example: how posts are filtered).
-
-You can see the "documentation" in [.dev/documentation.md](/.dev/documentation.md)
+Hey, so you've stumbled upon my source code for my website.
 
 ## 🎨 Website Theme
 
