@@ -1,21 +1,20 @@
-/* || Typography */
-@import url('https://rsms.me/inter/inter.css');
-
-html {
-  font-family: 'Inter', sans-serif;
-}
-
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif;
-  }
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
-
-/* || Configuration */
 :root {
   font-size: 18px;
+
+  /* Colors */
+  --bg-1: #ffffff;  /* main background color */
+  --bg-2: #b6b6b6;  /* secondary background for more focused content*/
+  --tx-1: #313131;  /* standard text color */
+  --tx-2: #555555;  /* secondary  */
+  --lk-tx:#1D6DB8;  /* link text */
+  --lk-1: #134778;  /* link hover */
+  --cd-1: #333333;  /* code foreground */
+  --cd-2: #d1d1d1;  /* code background */
+  --cd-br: #333333; /* code block border */
+  --tx-tag: #92ceff;/* background color for tag labels */
+  --tx-cat: #a8a8a8;/* background color for category labels */
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Fira Code", monospace;
 }
 
 @media (max-width: 684px) {
@@ -24,72 +23,71 @@ html {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-1: #272727;
+    --bg-2: #333333;
+    --tx-1: #acacac;
+    --tx-2: #707070;
+    --lk-tx: #5285b3;
+    --lk-1: #216dac;
+    --cd-1: #b8b8b8;
+    --cd-2: #3b3b3b;
+    --cd-br: #b8b8b8;
+    --tx-tag: #5b72b6;
+    --tx-cat: #5a5e70;
+  }
+}
+
+/* || Typography */
+
+html {
+  font-family: var(--font-sans);
+}
+
+
+
 /* || General Styles */
 body {
+  counter-reset: figure-counter;
+
   max-width: 800px;
   padding: 0 20px;
   margin: 20px auto;
   text-rendering: optimizeLegibility;
-  color: var(--font-paragraph-color);
-  background-color: var(--primary-bg-color);
+  color: var(--tx-1);
+  background-color: var(--bg-1);
 
-  --primary-bg-color: #fff;
-  --primary-fg-color: #2b2b2b;
-  --font-paragraph-color: #2b2b2b;
-  --font-subparagraph-color: #555;
-
-  --secondary-bg-color: #d1d1d1;
-  --secondary-fg-color: #333333;
-
-  
-  --code-bg-color: #e6e6e6;
-  --code-fg-color: #3b3b3b;
-  --font-link-color: #1e7dca;
-  --font-link-hover-color: #135081;
-  --font-info-color: #afafaf;
-  --label-tag-color: #d4ecff;
-  --label-category-color: #e9e9e9;
-  --label-text-color: #c9c9c9;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    --primary-bg-color: #272727;
-    --primary-fg-color: #ddd;
-    --font-paragraph-color: #acacac;
-    --font-subparagraph-color: #707070;
 
-    --secondary-bg-color: #333333;
-    --secondary-fg-color: #acacac;
-
-    --code-bg-color: #3b3b3b;
-    --code-fg-color: #b8b8b8;
-    --font-link-color: #5285b3;
-    --font-link-hover-color: #216dac;
-    --font-info-color: #949494;
-    --label-tag-color: #5b72b6;
-    --label-category-color: #5a5e70;
-    --label-text-color: #c9c9c9;
   }
 }
 
 hr {
   max-width: 80%;
-  border: 1px solid var(--primary-fg-color);
+  border: 1px solid var(--bg-2);
 }
 
 p,
 blockquote,
 li,
 table {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.2rem;
   letter-spacing: 0.06em;
 }
 
+li::marker {
+  font-weight: bold;
+  color: var(--lk-tx);
+}
+
 p.date {
-  color: var(--font-subparagraph-color);
+  color: var(--tx-2);
   margin-top: 0;
 }
 
@@ -98,12 +96,14 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-sans);
   font-weight: bold;
 }
 
 h1 { font-size: 2.3rem; }
-
+h1::first-letter {
+  color: var(--lk-tx);
+}
 .post h1 {
   margin-bottom: 0;
   text-decoration: none;
@@ -134,23 +134,23 @@ h4 { font-size: 1.15rem; }
 blockquote {
   margin-left: 10px;
   padding-left: 10px;
-  border-left: 3px solid var(--font-link-color);
+  border-left: 3px solid var(--lk-tx);
 }
 
 blockquote p {
-  color: var(--font-subparagraph-color);
+  color: var(--tx-2);
 }
 
 /* || Hyperlinks */
 a {
-  color: var(--font-link-color);
+  color: var(--lk-tx);
   transition: 200ms color ease-in-out;
 }
 
 nav a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: var(--font-subparagraph-color);
+  color: var(--tx-2);
 }
 
 .post-info a {
@@ -161,50 +161,67 @@ nav a {
   text-decoration: none;
 }
 
+/* for better aesthetics :) */
+.post-title:hover a {
+  color: var(--tx-1);
+}
+
 a.site-link {
   text-decoration: none;
-  color: var(--font-paragraph-color);
+  color: var(--tx-1);
 }
 
 /* -> Hyperlink Special Cases */
 a:hover {
-  color: var(--font-link-hover-color);
+  color: var(--lk-1);
 }
 
 nav a:hover {
   text-decoration: underline;
-  color: var(--font-subparagraph-color);
+  color: var(--tx-2);
 }
 
 /* || Coding */
 
-code {
-  font-family: "Fira Code", monospace;
-  background-color: var(--code-bg-color);
-  color: var(--code-fg-color);
-  border-radius: 3px;
-  padding: 0 3px;
+code, kbd, samp {
+  font-family: var(--font-mono);
+  background-color: var(--cd-2);
+  color: var(--cd-1);
+
+  padding: 2px 3px;
+  margin: 0px 2px;
+  border-radius: 4px;
+  line-height: 1em;
+  font-size: 0.9em;
 }
 
-p > code {
-  font-size: 0.9rem;
+div.highlight {
+  margin: 10px 0px;
 }
 
-/* -> Coding Blocks */
-pre code {
-  background-color: transparent;
-  padding: 0;
-  font-size: 0.9rem;
-}
-
-div.highlighter-rouge div.highlight {
-  border-radius: 5px;
+div.highlight pre {
   padding: 5px;
+
+  border: 1px solid var(--cd-br);
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+  overflow-x: scroll;
+  width: 95%;
+  margin: 0 auto;
 }
+
+div.highlight code {
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+}
+
 
 div.highlighter-rouge pre {
   margin: 0;
+  padding: 5px;
 }
+
+
 
 /* || Special Styles */
 .site-title {
@@ -213,7 +230,7 @@ div.highlighter-rouge pre {
   font-weight: bold;
 }
 
-.post-info .post-tags ul {
+.post-info .post-labels ul {
   display: flex;
   list-style: none;
   padding: 0;
@@ -221,39 +238,36 @@ div.highlighter-rouge pre {
   flex-wrap: wrap;
 }
 
-.post-info .post-tags,
-.post-info .post-category {
+.post-info .post-labels {
   margin-bottom: 7px;
 }
 
-.post-info .post-info-element {
+.post-info .post-labels a{
   padding: 0 4px;
   margin: 2px 3px;
   border-radius: 5px;
   text-decoration: none;
 }
 
-.post-tags .post-info-element {
-  background-color: var(--label-tag-color);
+.post-tags{
+  background-color: var(--tx-tag);
 }
 
-.post-tags a,
-.post-category a {
-  color: var(--label-text-color);
+.post-category{
+  background-color: var(--tx-cat);
 }
 
-.post-category .post-info-element {
-  background-color: var(--label-category-color);
+.post-labels a{
+  color: var(--bg-1);
 }
 
 .post-info > div {
   display: flex;
-  color: var(--post-info-color);
 }
 
 .post-info code, .post-info span {
   background-color: transparent;
-  color: var(--font-info-color);
+  color: var(--tx-2);
   font-size: 1rem;
   min-width: 100px;
 }
@@ -287,34 +301,107 @@ input.task-list-item-checkbox {
   margin-right: 10px;
 }
 
+
+
 /* || Search Page || */
-input.search-input {
-  background-color: var(--secondary-bg-color);
-  color: var(--secondary-fg-color);
+input.search-in {
+  background-color: var(--bg-2);
+  color: var(--tx-1);
   border-radius: 5px;
   border: none;
   padding: 10px;
-  width: 100%;
 }
 
-div.search-result article{
-  background-color: var(--secondary-bg-color);
+/* Results Template */
+div.search-out article{
+  background-color: var(--bg-2);
   border-radius: 5px;
-  padding: 10px;
   margin-bottom: 15px;
-
-  
+  transition: 200ms filter ease-in-out;
 }
 
-div.search-result article h3 {
-  margin: 0 0 10px 0;
+div.search-out article:hover {
+  filter: brightness(110%);
 }
 
-div.search-result article h3 a {
-  color: var(--secondary-fg-color);
+div.search-out article a {
+  padding: 10px;
+  display: block;
   text-decoration: none;
 }
 
-div.search-result article p {
+div.search-out article h3 {
+  margin: 0 0 10px 0;
+  color: var(--tx-1);
+  line-height: 1.0;
+}
+
+div.search-out article p {
   margin: 0;
+  text-decoration: underline;
+}
+
+
+/* || Figure & Image || */
+figure {
+  margin: 40px 20px;
+  display: grid;
+  justify-content: center;
+}
+
+figure figcaption {
+  counter-increment: figure-counter;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 5px;  
+}
+
+figure figcaption::before {
+  font-style: normal;
+  color: var(--lk-tx);
+  content: "Fig " counter(figure-counter) ":";
+}
+
+img {
+  box-shadow: 5px 5px 0px 0px var(--bg-2);
+  border: var(--bg-2) 1px solid;
+}
+
+
+
+
+
+
+
+
+
+.cmp-collapse h2 {
+  cursor: default;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.cmp-collapse h2::before {
+  margin-right: 5px;
+  transition: transform 100ms ease-in-out;
+  content: "\2192";
+  transform: rotateZ(0deg);
+  color: var(--font-link-color);
+}
+
+.cmp-collapse.open h2::before {
+  transform: rotateZ(90deg);
+}
+
+.cmp-collapse .cmp-collapse-content {
+  display: none;
+  margin-top: 0;
+}
+
+.cmp-collapse.open .cmp-collapse-content {
+  display: block;
+}
+
+.cmp-collapse li {
+  line-height: 1.5rem;
 }

@@ -9,66 +9,63 @@ layout: default
 <div class="content">
   {{ page.content }}
 
-  <div class="search" data-list="/">
-    <input class="search-input" placeholder="Search for Posts">
-    <div class="search-result">
+  <div class="search-box" data-list="/">
+    <input class="search-in" placeholder="Search for Posts">
+    <div class="search-out">
 
     </div>
   </div>
 </div>
 <script>
-  // || FUNCTIONS ||
-
   async function getPostList(url_postlist) {
     let response = await fetch(url_postlist)
     let data = await response.json()
     return data
   }
-
-  function filterPosts(json_postlist, input_value, callback) {
+  
+  function filterPosts(json_postlist, input_value) {
     let filteredPosts = []
-    let hasTerms = false
-    let allTerms = input_value.split(' ').filter(value => (value != '')) 
-
-    //the remaining terms are filterded
-    allTerms = allTerms.filter(value => (value.charAt(0) != '&' && value.charAt(0) != '#'))
-    
+    let terms = input_value.split(' ').filter(value => (value != '')) 
     //if no terms are specified, skip over filtering an call callback with empty array
-    if(allTerms.length > 0)
+    if(terms.length > 0)
     {
-      hasTerms = true
       filteredPosts = json_postlist.filter((value) => {
         //turn all the post-list data into a single string for easier filtering
-        //let string = (value.title + value.url + value.category + value.tags.join('')).toLowerCase()
-        let string = Object.values(value).join('').toLowerCase()
-        return allTerms.every(term => string.indexOf(term.toLowerCase()) >= 0 ) 
+        //                         |< --------- string conversion --------- >|< ---------- filtering ---------- >|
+        return terms.every(term => Object.values(value).join('').toLowerCase().indexOf(term.toLowerCase()) >= 0 );
       })
+      if(filteredPosts.length > 0) { return Promise.all(filteredPosts); }
+      else { return Promise.reject("NOPOST"); }
     }
-    callback(filteredPosts, hasTerms)
+    else { return Promise.reject("NOTERM"); }
   }
 
   // || MAIN ||
-  let search_element = document.querySelector('div.search')
-  let search_input = search_element.querySelector('input.search-input')
-  let search_result = search_element.querySelector('div.search-result')
+  let search_input = document.querySelector('div.search-box').querySelector('input.search-in')
+  let search_result = document.querySelector('div.search-box').querySelector('div.search-out')
+  var MAX_RESULT_SIZE = 20;
   //insert placeholder text into the results element
   search_result.innerHTML = '<p>Try searching for a post by typing in keywords in the input field. You can search for categories, tags, etc.</p>'
-
   getPostList('/data/search.json').then(data => {
     let data_posts = data
-  
     search_input.addEventListener('input', ev => {
-      filterPosts(data_posts, search_input.value , (data, hasTerms) => {
-        if(data.length > 0)
-        {
-          search_result.innerHTML = '<p>Found <code><b>' + data.length + '</b></code> Post' + (data.length > 1 ? 's</p>' : '</p>')
-          data.forEach(post => {
-            search_result.innerHTML += '<article><h3><a href=\"' + post.url + '\">' + post.title + '</a></h3><p><a href=\"' + post.url + '\">' + post.url +'</a></p>'
-          })
+      filterPosts(data_posts, search_input.value)
+       .then(data => {
+        search_result.innerHTML = '<p>Found <code><b>' + data.length + '</b></code> Post' + (data.length > 1 ? 's' : '') + (data.length > MAX_RESULT_SIZE ? ('. Limiting to recent <code><b>' + MAX_RESULT_SIZE + '</b></code> Posts</p>') : '</p>')
+        for (let index = 0; index < 15; index++) {
+          const post = data[index];
+          search_result.innerHTML += '<article><a href=\"' + post.url + '\"><h3>' + post.title + '</h3><p>' + post.url +'</p></a></article>'
         }
-        else if(hasTerms) { search_result.innerHTML = '<p>No Posts Found!</p>' }
-        else{ search_result.innerHTML = '<p>Try searching for a post by typing in keywords in the input field</p>'}
+      })
+      .catch(err => {
+        if(err == "NOTERM") {
+          search_result.innerHTML = '<p>Try searching for a post by typing in keywords in the input field. You can search for categories, tags, etc.</p>'
+        }
+        else if(err == "NOPOST") {
+          search_result.innerHTML = '<p>No Posts Found!</p>'
+        }
       })
     })
   })
 </script>
+
