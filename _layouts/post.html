@@ -12,17 +12,19 @@ layout: default
 </div>
 <hr>
 <div class="post-info">
-  <div class="post-tags">
+  <div class="post-labels">
     <code><em>Tags</em></code>
     <ul>
       {% for tag in page.tags %}
-      <li class="post-info-element"><a href="/tags#{{tag | slugify}}">{{ tag }}</a></li>
+      <li><a class="post-tags" href="/tags#{{tag | slugify}}">{{ tag }}</a></li>
       {% endfor %}
     </ul>
   </div>
-  <div class="post-category">
+  <div class="post-labels">
     <code><em>Category</em></code>
-    <a class="post-info-element" href="/categories#{{page.category | slugify}}">{{ page.category  }}</a>
+    <ul>
+      <li><a class="post-category" href="/categories#{{page.category | slugify}}">{{ page.category  }}</a></li>
+    </ul>
   </div>
 
   <div class="post-date">
