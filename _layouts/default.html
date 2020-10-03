@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/normalize.css">
-    <link rel="stylesheet" href="/assets/font/firacode/firacode.css">
-    <link rel="stylesheet" href="/assets/font/inter/inter.css">
-    <link rel="stylesheet" href="/assets/css/simple_notes.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" href="/assets/font/firacode/firacode.css" />
+    <link rel="stylesheet" href="/assets/font/inter/inter.css" />
+    <link rel="stylesheet" href="/assets/css/simple_notes.css" />
     <title>{{ site.title }}</title>
   </head>
   <body class="wrapper">
@@ -16,11 +17,23 @@
         </a>
       </span>
       <nav class="site-navigation">
-        <a href="/posts">Posts</a>
-        <a href="/projects">Projects</a>
-        <a href="/notes">Notes</a>
-        <a href="/about">About</a>
-        <a href="/search">Search</a>
+        <a class="{% if page.layout == "home" %}active {% endif %}icon" title="Home" href="/">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M2 12L5 9.3M22 12L19 9.3M19 9.3L12 3L5 9.3M19 9.3V21H5V9.3"
+            />
+          </svg>
+        </a>
+        <a {% if page.title == "Posts" %}class="active"{% endif %}href="/posts">Posts</a>
+        <a {% if page.title == "Projects" %}class="active"{% endif %}href="/projects">Projects</a>
+        <a {% if page.title == "Notes" %}class="active"{% endif %}href="/notes">Notes</a>
+        <a {% if page.title == "About" %}class="active"{% endif %} href="/about">About</a>
+        <a class="{% if page.title == "Search" %}active {% endif %}icon" title="Search" href="/search">
+          <svg rviewBox="0 0 24 24">
+            <path d="M14.4121122,14.4121122 L20,20" />
+            <circle cx="10" cy="10" r="6" />
+          </svg>
+        </a>
       </nav>
     </header>
 
@@ -28,8 +41,6 @@
       {{ content }}
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
   </body>
 </html>

@@ -4,6 +4,8 @@ title: "About"
 permalink: "/about"
 ---
 
+ {% include figure.html image="/assets/icon/logo.png" border="false" %}
+
 Hey, the name is Joel and I'm preparing myself for the future. By preparing I just mean getting everything together.
 
 I finished my apprenticeship as an electronics technician in 2019 and wanted to do something ever since. So I've taught myself a little bit of HTML, CSS and JavaScript to create this website. Besides some posts about small projects, I might also do talk about photography, electronics or traveling. At the end it depends how much I spend writing.
