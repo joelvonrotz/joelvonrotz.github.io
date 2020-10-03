@@ -16,18 +16,17 @@ layout: default
   {% endfor %}
   {% endcapture %}
 
-  {% include component/collapsible.html title=tag content=tags_html %}
+  <details class="label" id="{{ tag[0] | slugify }}">
+    <summary>{{ tag[0] }}</summary>
+    <ul>
+      {{ tags_html }}
+    </ul>
+  </details>
 
   {% endfor %}
 </div>
 
 <script>
   //open element, when tag is given via URL (hash)
-  if(window.location.hash) { document.querySelector(window.location.hash).classList.add('open') };
-  var elements = document.querySelectorAll('.cmp-collapse');
-  for (let index = 0; index < elements.length; index++) {
-    elements[index].querySelector('h2').addEventListener('click', function () {
-      elements[index].classList.toggle('open');
-    })
-  }
+  if(window.location.hash) { document.querySelector(window.location.hash).setAttribute('open','true') };
 </script>
