@@ -20,6 +20,6 @@ Walking of course is an action needed for survival. If I'm not allowed to walk a
 
 This all feels a lot like a mix between [impostor's syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) & a lack of self-confidence. This has also hit me in various other areas, including my social life. I'm sometimes so focused on myself, that I completely forget about other more important things, like friendships.
 
-I'm so glad, that I've finally taken the courage to write this up, it feels great! I am a young adult, but I imagine, this is the process I have to do to get to know myself better. I can read the posts of a past Joel and reflect on it &rarr; What has changed since then?
+I'm glad, that I've finally taken the courage to write this up, it feels great! I am a young adult, but I imagine, this is the process I have to do to get to know myself better. I can read the posts of a past Joel and reflect on it &rarr; What has changed since then?
 
-To those that have read this post, thank you and I hope you liked it. Feedback is always great to hear and might help me a lot!
+To those that have read this post, thank you and I hope you liked that unstructured mess of a post. Feedback is always great to hear and helps me a lot!
