@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Self-fulfillment"
-thumbnail: "none"
+thumbnail: "/images/jonathan-klok-JS8RhWVk74Q-unsplash.jpg"
 category: "blog"
 tags: ["thoughts"]
 ---
@@ -20,6 +20,10 @@ Walking of course is an action needed for survival. If I'm not allowed to walk a
 
 This all feels a lot like a mix between [impostor's syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) & a lack of self-confidence. This has also hit me in various other areas, including my social life. I'm sometimes so focused on myself, that I completely forget about other more important things, like friendships.
 
-I'm glad, that I've finally taken the courage to write this up, it feels great! I am a young adult, but I imagine, this is the process I have to do to get to know myself better. I can read the posts of a past Joel and reflect on it &rarr; What has changed since then?
+I'm so glad, that I've finally taken the courage to write this up, it feels great! I am a young adult, but I imagine, this is the process I have to do to get to know myself better. I can read the posts of a past Joel and reflect on it &rarr; What has changed since then?
 
-To those that have read this post, thank you and I hope you liked that unstructured mess of a post. Feedback is always great to hear and helps me a lot!
+To those that have read this post, thank you and I hope you liked it. Feedback is always great to hear and might help me a lot!
+
+## Credits
+
+<span>Photo by <a href="https://unsplash.com/@mostly_brave?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jonathan Klok</a> on <a href="https://unsplash.com/s/photos/confidence?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
