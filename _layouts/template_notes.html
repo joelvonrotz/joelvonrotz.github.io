@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" href="/assets/font/firacode/firacode.css" />
+    <link rel="stylesheet" href="/assets/font/inter/inter.css" />
+    <link rel="stylesheet" href="/assets/css/simple_notes.css" />
+    <title>Joel von Rotz</title>
+  </head>
+  <body class="wrapper">
+    <header>
+      <span class="site-title">
+        <a class="site-link" href="/">
+          Joel von Rotz
+        </a>
+      </span>
+      <nav class="site-navigation">
+        <a class="icon" title="Home" href="/">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M2 12L5 9.3M22 12L19 9.3M19 9.3L12 3L5 9.3M19 9.3V21H5V9.3"
+            />
+          </svg>
+        </a>
+        <a href="/archive">Archive</a>
+        <a href="/projects">Projects</a>
+        <a class="active" href="/notes">Notes</a>
+        <a href="/about">About</a>
+        <a class="icon" title="Search" href="/search">
+          <svg rviewBox="0 0 24 24">
+            <path d="M14.4121122,14.4121122 L20,20" />
+            <circle cx="10" cy="10" r="6" />
+          </svg>
+        </a>
+      </nav>
+    </header>
+
+    <main class="notes">
+      {{ note.content }}
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

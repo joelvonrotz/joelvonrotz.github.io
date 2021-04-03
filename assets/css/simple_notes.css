@@ -1,3 +1,4 @@
+/* [COLORS] ------------------------------------------------------------------*/
 :root {
   font-size: 18px;
 
@@ -15,12 +16,9 @@
   --tx-cat: #a8a8a8; /* background color for category labels */
   --font-sans: "Inter", sans-serif;
   --font-mono: "Fira Code", monospace;
-}
 
-@media (max-width: 684px) {
-  :root {
-    font-size: 16px;
-  }
+  --header-nav-height: 1.2rem;
+  --header-gap: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,33 +37,10 @@
   }
 }
 
-/* || Typography */
 
-html {
-  font-family: var(--font-sans);
-}
 
-/* || General Styles */
-body {
-  counter-reset: figure-counter;
-
-  max-width: 800px;
-  padding: 0 20px;
-  margin: 20px auto;
-  text-rendering: optimizeLegibility;
-  color: var(--tx-1);
-  background-color: var(--bg-1);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-  }
-}
-
-hr {
-  max-width: 80%;
-  border: 1px solid var(--bg-2);
-}
+/* [TYPOGRAPHY] --------------------------------------------------------------*/
+/* This section handles everything text stuff (except for code blocks)        */
 
 p,
 blockquote,
@@ -77,17 +52,7 @@ table {
   letter-spacing: 0.06em;
 }
 
-li::marker {
-  font-weight: bold;
-  color: var(--lk-tx);
-}
-
-p.date {
-  color: var(--tx-2);
-  margin-top: 0;
-}
-
-/* || Headings */
+/* [HEADINGS] ------------------------*/
 h1,
 h2,
 h3,
@@ -98,13 +63,6 @@ h4 {
 
 h1 {
   font-size: 2.3rem;
-}
-h1::first-letter {
-  color: var(--lk-tx);
-}
-.post h1 {
-  margin-bottom: 0;
-  text-decoration: none;
 }
 
 h2 {
@@ -117,7 +75,65 @@ h4 {
   font-size: 1.15rem;
 }
 
+
+h1::first-letter {
+  color: var(--lk-tx);
+}
+
+:root {
+  font-family: var(--font-sans);
+}
+
+/* [HYPERLINKS] ----------------------*/
+/* This group defines the very basic hyperlink stuff (i.e. how SVG inside links
+   should behave)                                                             */
+
+/* !!! no font adjustments, only style*/
+a {
+  /* Text */
+  color: var(--lk-tx);
+
+  /* SVG */
+  /* SVG links will always use stroke-only -> be creative due to limitations */
+  stroke: var(--lk-tx);
+  fill: none;
+
+  transition: 200ms color ease-in-out, 200ms stroke ease-in-out;
+}
+
+a:hover {
+  color: var(--lk-1);
+  stroke: var(--lk-1);
+}
+
+/* the alternative hyperlinks use a rather opaque color (instead of black it'll
+   use a gray color                                                           */
+a.alt {
+  /* Text */
+  color: var(--tx-2);
+
+  /* SVG */
+  stroke: var(--tx-2);
+  fill: none;
+}
+
+a.alt:hover {
+  color: var(--tx-1);
+  stroke: var(--tx-1);
+}
+
+/* [MEDIA QUERIES] -------------------*/
+
+/* This media query adjusts the typography to be more readable on mobile
+   devices */
 @media (max-width: 684px) {
+  /* this small adjustment the overall font-size, as all the other font-size 
+     settings are based around 'rem' (root em) -> it reduces the overall font
+     size.                                                                    */
+  :root {
+    font-size: 16px;
+  }
+  
   h1 {
     font-size: 2rem;
   }
@@ -139,6 +155,42 @@ h4 {
   }
 }
 
+/* [CODE BLOCKS] -------------------------------------------------------------*/
+
+
+
+/* [MISC] --------------------------------------------------------------------*/
+
+body {
+  counter-reset: figure-counter;
+
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 20px auto;
+  text-rendering: optimizeLegibility;
+  color: var(--tx-1);
+  background-color: var(--bg-1);
+}
+
+
+hr {
+  max-width: 80%;
+  border: 1px solid var(--bg-2);
+}
+
+
+
+li::marker {
+  font-weight: bold;
+  color: var(--lk-tx);
+}
+
+p.date {
+  color: var(--tx-2);
+  margin-top: 0;
+}
+
+
 blockquote {
   margin-left: 10px;
   padding-left: 10px;
@@ -149,76 +201,7 @@ blockquote p {
   color: var(--tx-2);
 }
 
-/* || Hyperlinks */
-a,
-a svg {
-  color: var(--lk-tx);
-  transition: 200ms color ease-in-out, 200ms stroke ease-in-out;
-}
-
-nav a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: var(--tx-2);
-}
-
-nav a.active,
-nav a.active svg {
-  color: var(--bg-2);
-  stroke: var(--bg-2);
-}
-
-.icon {
-  display: flex;
-}
-
-.icon svg {
-  fill: transparent;
-  stroke-linejoin: miter;
-  stroke-width: 2px;
-  height: 1.2rem;
-  justify-self: center;
-  align-self: center;
-}
-span.icon svg {
-  stroke: var(--bg-2);
-}
-a.icon svg {
-  stroke: var(--lk-tx);
-}
-a.icon svg:hover {
-  stroke: var(--lk-1);
-}
-
-.post-info a {
-  text-decoration: none;
-}
-
-.post-title a {
-  text-decoration: none;
-}
-
-/* for better aesthetics :) */
-.post-title:hover a {
-  color: var(--tx-1);
-}
-
-a.site-link {
-  text-decoration: none;
-  color: var(--tx-1);
-}
-
-/* -> Hyperlink Special Cases */
-a:hover {
-  color: var(--lk-1);
-}
-
-nav a:hover {
-  text-decoration: underline;
-  color: var(--tx-2);
-}
-
-/* || Coding */
+/* [ELEMENTS - HYPERLINKS] ---------------------------------------------------*/
 
 code,
 kbd,
@@ -234,111 +217,99 @@ samp {
   font-size: 0.9em;
 }
 
-div.highlight {
-  margin: 10px 0px;
-}
+/* [POST METADATA] -----------------------------------------------------------*/
 
-div.highlight pre {
-  padding: 5px;
-
-  border: 1px solid var(--cd-br);
-  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.75);
-  overflow-x: scroll;
-  width: 95%;
-  margin: 0 auto;
-}
-
-div.highlight code {
-  padding: 0px;
-  margin: 0px;
-  background-color: transparent;
-}
-
-div.highlighter-rouge pre {
-  margin: 0;
-  padding: 5px;
-}
-
-/* || Special Styles */
-.site-title {
-  font-size: 3.5rem;
-  letter-spacing: -0.1rem;
-  font-weight: bold;
-}
-
-.post-info .post-labels ul {
+.post-metadata {
   display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
+  flex-flow: column;
+  gap: 5px;
 }
 
-.post-info .post-labels {
-  margin-bottom: 7px;
+.metadata {
+  display: flex;
+  flex-flow: row;
+  align-content: center;
 }
 
-.post-info .post-labels a {
+.metadata-key {
+  font-family: var(--font-mono);
+  color: var(--tx-2);
+  min-width: 100px;
+
+  align-self: center;
+}
+
+.metadata-value {
+  font-family: var(--font-mono);
+  display: flex;
+}
+
+.metadata-value a.tags,
+.metadata-value a.category {
+  color: var(--bg-1);
   padding: 0 4px;
-  margin: 2px 3px;
+  margin: 2px 2px;
   border-radius: 5px;
   text-decoration: none;
 }
 
-.post-tags {
+.metadata-value a.tags {
   background-color: var(--tx-tag);
 }
 
-.post-category {
+.metadata-value a.category {
   background-color: var(--tx-cat);
 }
 
-.post-labels a {
-  color: var(--bg-1);
-}
-
-.post-info > div {
-  display: flex;
-}
-
-.post-info code,
-.post-info span {
-  background-color: transparent;
-  color: var(--tx-2);
-  font-size: 1rem;
-  min-width: 100px;
-}
-
 @media (max-width: 684px) {
-  .post-info code {
+  .metadata-key {
     min-width: 85px;
   }
 }
 
-/* -> Archive */
-.archive .archive-list li {
-  line-height: 1.5rem;
-}
 
-/* || Header and Main Navigation (sitewide) */
-nav.site-navigation {
+/*[HEADER] -------------------------------------------------------------------*/
+header {
   display: flex;
+  flex-flow: column;
+  max-width: 440px;
 }
 
-nav.site-navigation > * {
-  margin-right: 10px;
+header nav {
+  line-height: 1.0;
+  display: flex;
+  align-self: center;
+  flex-wrap: wrap;
+  gap: var(--header-gap);
+  font-size: var(--header-nav-height);
 }
 
-.task-list {
-  list-style: none;
-  padding-left: 15px;
+header nav a{
+  text-decoration: none;
 }
 
-input.task-list-item-checkbox {
-  margin-right: 10px;
+.icon {
+  stroke-width: 1.5pt;
+  width: var(--header-nav-height);
+  height: var(--header-nav-height);
 }
 
-/* || Search Page || */
+/* SVG need special care, when fitting them into */
+.icon svg {
+  width: inherit;
+  height: inherit;
+}
+
+@media (max-width: 684px) {
+  header {
+    margin: 0 auto;
+  }
+}
+
+
+/* [SEARCH] ----------------------------------------------------------------------------- */
+
+
 input.search-in {
   background-color: var(--bg-2);
   color: var(--tx-1);
@@ -376,7 +347,9 @@ div.search-out article p {
   text-decoration: underline;
 }
 
-/* || Figure & Image || */
+/* [IMAGES & FIGURES] ------------------------------------------------------------------- */
+
+
 figure {
   margin: 40px 20px;
   display: grid;
@@ -397,14 +370,12 @@ figure figcaption::before {
 }
 
 img {
-  box-shadow: 5px 5px 0px 0px var(--bg-2);
   border: var(--bg-2) 1px solid;
   max-width: 100%;
 }
 
 img.thumbnail {
   margin-top: 20px;
-  box-shadow: none;
   border: none;
   border-radius: 5px;
 }
@@ -451,5 +422,3 @@ details[open] ul {
     transform: translateX(0px);
   }
 }
-
-/* add animation here */

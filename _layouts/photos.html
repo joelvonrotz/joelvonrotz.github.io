@@ -1,0 +1,150 @@
+---
+layout: default
+---
+<div class="title">
+  <h1>
+    {{page.title}}
+  </h1>
+</div>
+<div class="content">
+  {{ page.content }}
+
+  <div class="photo_collection">
+    
+  </div>
+</div>
+<div class="photo-viewer">
+  <div class="photo-screen">
+    <img>
+    <div class="photo-info">
+      <h2>Title</h2>
+      <p>Description</p>
+    </div>
+  </div>
+  <div class="photo-controller"></div>
+</div>
+
+<style>
+  body.wrapper {
+    max-width: 100%;
+    overflow-y: scroll;
+  }
+  img {
+    border: none
+  }
+
+  div.photo_collection {
+    width: 100%;
+    position: relative;
+  }
+
+  .photo {
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .photo img {
+    width: 100%;
+    opacity: 100%;
+    filter: blur(0px);
+    transition: 200ms filter ease-in-out;
+  }
+
+  .photo:hover img{
+    filter: blur(3px) brightness(0.8);
+  }
+
+  .photo .photo-info {
+    font-family: "Merriweather", serif;
+    font-size: 1.2rem;
+    margin: 0;
+
+    opacity: 0%;
+
+    transition: 200ms opacity ease-in-out;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+  }
+
+  .photo:hover .photo-info {
+    opacity: 100%;
+  }
+
+  .photo .photo-zoom svg{
+    height: 2rem;
+    cursor: pointer;
+  }
+
+</style>
+
+<script type="text/javascript" src="/scripts/justified-layout/dist/justified-layout.js"></script>
+<script type="text/javascript">
+  
+  var justifiedLayout = require('justified-layout');
+
+  async function getJSON(url_json) {
+    let response = await fetch(url_json)
+    let data = await response.json()
+    return data
+  }
+  
+  // [MAIN] ----------------------------
+
+  let photo_collection = document.querySelector("div.photo_collection")
+  let photo_ratios = []
+  let photo_list = []
+
+  function generate_layout(ratios, collection_width) {
+    return justifiedLayout(ratios, {
+      containerPadding: 0,
+      targetRowHeight: 200,
+      containerWidth: collection_width
+    })
+  }
+
+  function render_layout(photos, boxes) {
+    let index = 0
+    return photos.map(function(photo) {
+      const box = boxes[index];
+      index++;
+      return (
+        `<div style="width: ${box.width}px; height: ${box.height}px; top: ${box.top}px; left: ${box.left}px" class="photo" data-id="${photo.id}" data-title="${photo.title}" data-desc="${photo.description}" data-url="${photo.url_l}">
+          <img src="${photo.url_s}" title="${photo.title}">
+          <div class="photo-info">
+            <span class="photo-title">${photo.title}</span>
+            <span class="photo-zoom">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white">
+                <path d="M4,20 L9.58788778,14.4121122"/>
+                <path d="M14,16 C10.6862915,16 8,13.3137085 8,10 C8,6.6862915 10.6862915,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,13.3137085 17.3137085,16 14,16 Z"/>
+                <path d="M16.6666667 10L11.3333333 10M14 7.33333333L14 12.6666667"/>
+              </svg>
+            </span>
+          </div>
+        </div>`)
+    }).join('\n')
+  }
+
+
+  function func_onload() {
+    getJSON('/data/photos.json').then(data => {
+      photo_list = data
+      photo_ratios = photo_list.map(x => x.ratio)
+      photo_collection.innerHTML = render_layout(photo_list, generate_layout(photo_ratios, photo_collection.clientWidth).boxes)
+    })
+  }
+
+  function func_onresize() {
+    //since all data is already acquired, we don't need to reacquire the data, we can just reuse the old data.
+    photo_collection.innerHTML = render_layout(photo_list, generate_layout(photo_ratios, photo_collection.clientWidth).boxes)
+  }
+
+  window.addEventListener("load", func_onload)
+  window.addEventListener("resize", func_onresize)
+</script>
