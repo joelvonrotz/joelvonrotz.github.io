@@ -132,6 +132,9 @@ a.alt:hover {
      size.                                                                    */
   :root {
     font-size: 16px;
+    
+    --header-nav-height: 1rem;
+    --header-gap: 10px;
   }
   
   h1 {
