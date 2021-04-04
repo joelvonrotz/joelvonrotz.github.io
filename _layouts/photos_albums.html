@@ -1,0 +1,152 @@
+---
+layout: default
+---
+<div class="title">
+  <h1>
+    {{page.title}}
+  </h1>
+</div>
+<div class="content">
+  {{ page.content }}
+
+  <div class="photo_collection">
+    
+  </div>
+</div>
+<style>
+  img {
+    border: none
+  }
+
+  div.photo_collection {
+    width: 100%;
+    position: relative;
+  }
+
+  .photoset-tb {
+    overflow: hidden;
+    filter: brightness(0.5);
+  }
+
+  .tb-inner {
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .photoset {
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+
+  .photoset .photoset-text {
+    font-family: "Merriweather", serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+  }
+
+  .photoset h2 {
+    font-family: "Merriweather", serif;
+    margin: 0;
+  }
+
+  .photoset .ps-desc {
+    font-weight: 100;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  
+  .photoset .ps-count {
+    font-size: 0.8rem;
+  }
+
+  .photoset a svg{
+    height: 2rem;
+  }
+
+  .photoset .photoset-big-viewer {
+    display: none;
+  }
+  
+</style>
+
+<script type="text/javascript" src="/scripts/justified-layout/dist/justified-layout.js"></script>
+<script type="text/javascript">
+  
+  var justifiedLayout = require('justified-layout');
+
+
+  function slugify(text) {
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
+  }
+  
+  async function getJSON(url_json) {
+    let response = await fetch(url_json)
+    let data = await response.json()
+    return data
+  }
+  
+  // [MAIN] ----------------------------
+  let photo_collection = document.querySelector("div.photo_collection")
+
+  function main() {
+    getJSON('/data/photosets.json').then(data => {
+
+      var photosets = data.map(function (photoset) {
+        let photo_ratios = photoset.photos.map(function (photo) {
+          return photo.ratio
+        })
+        var geometry = justifiedLayout(photo_ratios, {
+          containerPadding: 0,
+          targetRowHeight: 150,
+          containerWidth: document.querySelector("div.photo_collection").clientWidth
+        })
+
+        let index = 0
+        let photos_s = photoset.photos.map(function (photo) {
+          var box = geometry.boxes[index]
+          style = `style="width: ${box.width}px; height: ${box.height}px; top: ${box.top}px; left: ${box.left}px"`
+          index += 1
+          return `<img ${style} src="${photo.url_s}" title="${photo.title}">`
+        }).join('\n')
+
+        return `<div class="photoset" id="${slugify(photoset.title)}">
+                  <div class="photoset-tb">
+                    <div class="tb-inner" style="background-image: url(${photoset.thumbnail});"></div>
+                  </div>
+                  <div class="photoset-text">
+                    <h2>${photoset.title}</h2>
+                    <span class="ps-desc">${photoset.description}</span>
+                    <span class="ps-count">${photoset.photos_count} Photos</span>
+                    <span>
+                      <a class="alt" href="${photoset.source}">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white">
+                          <path d="M10.5,15.5 C10.5,14.1666667 10.5,13.5 10.5,13.5 C10.5,10.7385763 8.26142375,8.5 5.5,8.5 C2.73857625,8.5 0.5,10.7385763 0.5,13.5 C0.5,13.5 0.5,14.1666667 0.5,15.5" transform="rotate(-90 5.5 12)"/> <path d="M8,12 L16,12"/> <path d="M23.5,15.5 C23.5,14.1666667 23.5,13.5 23.5,13.5 C23.5,10.7385763 21.2614237,8.5 18.5,8.5 C15.7385763,8.5 13.5,10.7385763 13.5,13.5 C13.5,13.5 13.5,14.1666667 13.5,15.5" transform="rotate(90 18.5 12)"/>
+                        </svg>
+                      </a>
+                    </span>
+                  </div>
+                </div>`
+      }).join('\n')
+      
+
+      photo_collection.innerHTML = photosets
+
+    })
+  }
+
+  main()
+</script>

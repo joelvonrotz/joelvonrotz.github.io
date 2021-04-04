@@ -14,24 +14,28 @@ layout: default
   {{ page.content }}
 </div>
 <hr>
-<div class="post-info">
-  <div class="post-labels">
-    <code><em>Tags</em></code>
-    <ul>
+<div class="post-metadata">
+  <!--TAGS-->
+  <div class="metadata">
+    <span class="metadata-key">Tags</span>
+    <span class="metadata-value">
       {% for tag in page.tags %}
-      <li><a class="post-tags" href="/tags#{{tag | slugify}}">{{ tag }}</a></li>
+      <a class="tags" href="/tags#{{tag | slugify}}">{{ tag }}</a>
       {% endfor %}
-    </ul>
+    </span>
   </div>
-  <div class="post-labels">
-    <code><em>Category</em></code>
-    <ul>
-      <li><a class="post-category" href="/categories#{{page.category | slugify}}">{{ page.category  }}</a></li>
-    </ul>
+  <!--CATEGORY-->
+  <div class="metadata">
+    <span class="metadata-key">Category</span>
+    <span class="metadata-value">
+      <a class="category" href="/categories#{{page.category | slugify}}">{{ page.category  }}</a></li>
+    </span>
   </div>
-
-  <div class="post-date">
-    <code><em>Date</em></code>
-    <span style="margin-left: 5px;">{{page.date | date: "%d.%m.%Y"}}</span>
+  <!--DATE-->
+  <div class="metadata">
+    <span class="metadata-key">Date</span>
+    <span class="metadata-value">
+      {{page.date | date: "%d.%m.%Y"}}
+    </span>
   </div>
 </div>
