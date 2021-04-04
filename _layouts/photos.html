@@ -6,6 +6,39 @@ layout: default
     {{page.title}}
   </h1>
 </div>
+<div class="photo-viewer inactive">
+  <div class="vw-screen">
+    <img class="vw-image">
+    <div class="vw-info">
+      <h2 class="vw-title">Title</h2>
+      <p class="vw-desc">Description</p>
+    </div>
+  </div>
+  <div class="vw-control">
+    <span class="vw-button vw-stat">
+      <svg viewBox="0 0 24 24"fill="none" stroke="white"> <title id="statsIconTitle">Stats</title> <path d="M6 7L15 7M6 12L18 12M6 17L12 17"/>
+      </svg>
+    </span>
+    <span class="vw-button vw-prev">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white"> 
+        <polyline points="14 18 8 12 14 6 14 6"/>
+      </svg>
+    </span>
+    <span class="vw-button vw-close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white">
+        <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"/>
+      </svg>
+    </span>
+    <span class="vw-button vw-next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white">
+        <polyline points="10 6 16 12 10 18 10 18"/>
+      </svg>
+    </span>
+    <span class="vw-button vw-dummy">
+    </span>
+  </div>
+</div>
+
 <div class="content">
   {{ page.content }}
 
@@ -13,18 +46,76 @@ layout: default
     
   </div>
 </div>
-<div class="photo-viewer">
-  <div class="photo-screen">
-    <img>
-    <div class="photo-info">
-      <h2>Title</h2>
-      <p>Description</p>
-    </div>
-  </div>
-  <div class="photo-controller"></div>
-</div>
 
 <style>
+  .inactive {
+    display: none !important;
+  }
+
+  .photo-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-color: rgba(0,0,0);
+    grid-template-rows: minmax(0, 1fr) 48px;
+  }
+
+  .photo-viewer .vw-screen {
+    position: relative;
+  }
+
+  .photo-viewer .vw-image {
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .photo-viewer .vw-info {
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    gap: 10px;
+    padding: 10px 0;
+    margin: 0;
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    width: 100%;
+  }
+
+  .photo-viewer .vw-title {
+    margin: 0 10px;
+  }
+
+  .photo-viewer .vw-desc {
+    margin: 0 10px;
+  }
+
+  /* PHOTO VIEWER CONTROLS */
+  .photo-viewer .vw-control {
+    display: flex;
+    gap: 10px;
+    justify-self: center;
+  }
+  .photo-viewer span.vw-button {
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    line-height: 1;
+  }
+
+  .photo-viewer svg{
+    height: inherit;
+    stroke-width: 1pt;
+    fill: none;
+  }
+
+  /* GALLERY */
   body.wrapper {
     max-width: 100%;
     overflow-y: scroll;
@@ -42,6 +133,13 @@ layout: default
     text-align: center;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
 
   .photo img {
@@ -79,16 +177,16 @@ layout: default
 
   .photo .photo-zoom svg{
     height: 2rem;
-    cursor: pointer;
   }
 
 </style>
 
 <script type="text/javascript" src="/scripts/justified-layout/dist/justified-layout.js"></script>
+<script type="text/javascript" src="/scripts/photo-viewer/photo-viewer.js"></script>
 <script type="text/javascript">
   
   var justifiedLayout = require('justified-layout');
-
+  
   async function getJSON(url_json) {
     let response = await fetch(url_json)
     let data = await response.json()
@@ -96,6 +194,7 @@ layout: default
   }
   
   // [MAIN] ----------------------------
+  const event_gallery_rendered = new Event("gallery_rendered")
 
   let photo_collection = document.querySelector("div.photo_collection")
   let photo_ratios = []
@@ -116,7 +215,7 @@ layout: default
       index++;
       return (
         `<div style="width: ${box.width}px; height: ${box.height}px; top: ${box.top}px; left: ${box.left}px" class="photo" data-id="${photo.id}" data-title="${photo.title}" data-desc="${photo.description}" data-url="${photo.url_l}">
-          <img src="${photo.url_s}" title="${photo.title}">
+          <img src="${photo.url_s}" alt="${photo.title}">
           <div class="photo-info">
             <span class="photo-title">${photo.title}</span>
             <span class="photo-zoom">
@@ -137,6 +236,8 @@ layout: default
       photo_list = data
       photo_ratios = photo_list.map(x => x.ratio)
       photo_collection.innerHTML = render_layout(photo_list, generate_layout(photo_ratios, photo_collection.clientWidth).boxes)
+
+      document.dispatchEvent(event_gallery_rendered)
     })
   }
 
@@ -145,6 +246,20 @@ layout: default
     photo_collection.innerHTML = render_layout(photo_list, generate_layout(photo_ratios, photo_collection.clientWidth).boxes)
   }
 
+  
+  
+  document.addEventListener("gallery_rendered", function (event) {
+    vw_photos = document.querySelectorAll("div.photo");
+    var viewer = new Viewer(vw_photos)
+    vw_photos.forEach(element => {
+      element.addEventListener("click", function (event) {
+        viewer.open(event.target.closest("div.photo").dataset.id)
+      })
+    })
+  })
+  
+
+  // [WINDOW EVENT LISTENERS] --------------------------------------------------
   window.addEventListener("load", func_onload)
   window.addEventListener("resize", func_onresize)
 </script>
