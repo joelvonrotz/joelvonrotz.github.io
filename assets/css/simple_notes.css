@@ -133,7 +133,7 @@ a.alt:hover {
   :root {
     font-size: 16px;
     
-    --header-nav-height: 1rem;
+    --header-nav-height: 1.1rem;
     --header-gap: 10px;
   }
   
@@ -177,7 +177,7 @@ body {
 
 
 hr {
-  max-width: 80%;
+  width: 80%;
   border: 1px solid var(--bg-2);
 }
 
@@ -276,6 +276,7 @@ header {
   display: flex;
   flex-flow: column;
   max-width: 440px;
+  margin: 0 auto;
 }
 
 header nav {
@@ -303,14 +304,38 @@ header nav a{
   height: inherit;
 }
 
-@media (max-width: 684px) {
-  header {
-    margin: 0 auto;
-  }
+/* [FOOTER] ------------------------------------------------------------------*/
+
+footer {
+  display: grid;
+  justify-content: center;
+  gap: 10px;
+
+  max-width: 440px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  font-size: calc(var(--header-nav-height)*0.8);
+  text-align: center;
 }
 
+footer nav {
+  line-height: 1.0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--header-gap);
+}
 
-/* [SEARCH] ----------------------------------------------------------------------------- */
+footer a {
+  text-decoration: none;
+}
+
+footer .copyright {
+  color: var(--tx-cat);
+}
+
+/* [SEARCH] ----------------------------------------------------------------- */
 
 
 input.search-in {

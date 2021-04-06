@@ -53,72 +53,6 @@ layout: default
 </div>
 
 <style>
-  .inactive {
-    display: none !important;
-  }
-
-  .photo-viewer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    background-color: rgba(0,0,0);
-    grid-template-rows: minmax(0, 1fr) 48px;
-  }
-
-  .photo-viewer .vw-screen {
-    position: relative;
-  }
-
-  .photo-viewer .vw-image {
-    justify-self: center;
-    align-self: center;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-  }
-
-  .photo-viewer .vw-info {
-    position: absolute;
-    bottom: 0;
-    display: grid;
-    gap: 10px;
-    padding: 10px 0;
-    margin: 0;
-    background-color: rgba(0,0,0,.5);
-    color: white;
-    width: 100%;
-  }
-
-  .photo-viewer .vw-title {
-    margin: 0 10px;
-  }
-
-  .photo-viewer .vw-desc {
-    margin: 0 10px;
-  }
-
-  /* PHOTO VIEWER CONTROLS */
-  .photo-viewer .vw-control {
-    display: flex;
-    gap: 10px;
-    justify-self: center;
-  }
-  .photo-viewer span.vw-button {
-    cursor: pointer;
-    height: 48px;
-    width: 48px;
-    line-height: 1;
-  }
-
-  .photo-viewer svg{
-    height: inherit;
-    stroke-width: 1pt;
-    fill: none;
-  }
 
   /* GALLERY */
   body.wrapper {
@@ -147,17 +81,17 @@ layout: default
     user-select: none;
   }
 
-  .photo img {
+  .photo .photo-image {
+    background-position: center;
+    background-size: cover;
+    height: 100%;
     width: 100%;
     opacity: 100%;
     filter: blur(0px);
     transition: 200ms filter ease-in-out;
   }
 
-  .photo:hover img{
-    filter: blur(3px) brightness(0.8);
-  }
-
+  
   .photo .photo-info {
     font-family: "Merriweather", serif;
     font-size: 1.2rem;
@@ -175,9 +109,15 @@ layout: default
     flex-flow: column;
     gap: 10px;
   }
-
-  .photo:hover .photo-info {
+  
+  .photo:hover .photo-info,
+  .photo:active .photo-info {
     opacity: 100%;
+  }
+
+  .photo:hover .photo-image,
+  .photo:active .photo-image{
+    filter: blur(3px) brightness(0.8);
   }
 
   .photo .photo-zoom svg{
@@ -188,6 +128,7 @@ layout: default
 
 <script type="text/javascript" src="/scripts/justified-layout/dist/justified-layout.js"></script>
 <script type="text/javascript" src="/scripts/photo-viewer/photo-viewer.js"></script>
+<link rel="stylesheet" href="/scripts/photo-viewer/photo-viewer.css" />
 <script type="text/javascript">
   
   var justifiedLayout = require('justified-layout');
@@ -206,11 +147,13 @@ layout: default
   let photo_list = []
 
   function generate_layout(ratios, collection_width) {
-    return justifiedLayout(ratios, {
+    justify = justifiedLayout(ratios, {
       containerPadding: 0,
       targetRowHeight: 200,
       containerWidth: collection_width
     })
+    photo_collection.style.height = `${justify.containerHeight}px`;
+    return justify;
   }
 
   function render_layout(photos, boxes) {
@@ -220,7 +163,7 @@ layout: default
       index++;
       return (
         `<div style="width: ${box.width}px; height: ${box.height}px; top: ${box.top}px; left: ${box.left}px" class="photo" data-id="${photo.id}" data-title="${photo.title}" data-desc="${photo.description}" data-url="${photo.url_l}">
-          <img src="${photo.url_s}" alt="${photo.title}">
+          <div class="photo-image" style="background-image: url(${photo.url_s});" title="${photo.title}"></div>
           <div class="photo-info">
             <span class="photo-title">${photo.title}</span>
             <span class="photo-zoom">
@@ -258,6 +201,9 @@ layout: default
     var viewer = new Viewer(vw_photos)
     vw_photos.forEach(element => {
       element.addEventListener("click", function (event) {
+        viewer.open(event.target.closest("div.photo").dataset.id)
+      })
+      element.addEventListener("touchend", function (event) {
         viewer.open(event.target.closest("div.photo").dataset.id)
       })
     })
