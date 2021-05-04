@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "Notes"
+title: "Soon!"
 permalink: "/notes"
 ---
-Nothing actually implemented here ;P
+
+Notes aren't fully implemented yet. Soon<sup>TM</sup>
