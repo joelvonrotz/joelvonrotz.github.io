@@ -39,6 +39,11 @@ defaults:
     values:
       layout: page
       permalink: '/projects/:title'
+  - scope:
+      path: "_notes"
+      type: "notes"
+    values:
+      layout: note
 
 collections:
   posts:
@@ -46,6 +51,8 @@ collections:
   pages:
     output: true
   projects:
+    output: true
+  notes:
     output: true
 
 jekyll_compose:
@@ -58,6 +65,10 @@ jekyll_compose:
       title:
       category:
       tags:
+
+
+katex:
+  math_engine: katex
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
