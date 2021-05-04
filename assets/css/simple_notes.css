@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* [COLORS] ------------------------------------------------------------------*/
 :root {
   font-size: 18px;
@@ -14,11 +18,9 @@
   --cd-br: #333333; /* code block border */
   --tx-tag: #92ceff; /* background color for tag labels */
   --tx-cat: #a8a8a8; /* background color for category labels */
+  --mark: #3f7db8;
   --font-sans: "Inter", sans-serif;
   --font-mono: "Fira Code", monospace;
-
-  --header-nav-height: 1.2rem;
-  --header-gap: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,6 +36,7 @@
     --cd-br: #b8b8b8;
     --tx-tag: #5b72b6;
     --tx-cat: #5a5e70;
+    --highlight: #4E657A;
   }
 }
 
@@ -46,7 +49,6 @@ p,
 blockquote,
 li,
 table {
-  font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.2rem;
   letter-spacing: 0.06em;
@@ -57,8 +59,17 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-sans);
   font-weight: bold;
+  padding: 2px 4px;
+  left: -4px;
+  position: relative;
+}
+
+h2:target,
+h3:target,
+h4:target {
+  background-color: var(--mark);
+  border-radius: 5px;
 }
 
 h1 {
@@ -81,6 +92,7 @@ h1::first-letter {
 }
 
 :root {
+  font-family: "Inter", sans-serif; /* FALLBACK IE 11 */
   font-family: var(--font-sans);
 }
 
@@ -91,10 +103,12 @@ h1::first-letter {
 /* !!! no font adjustments, only style*/
 a {
   /* Text */
+  color: #1d6db8; /* FALLBACK IE */
   color: var(--lk-tx);
 
   /* SVG */
   /* SVG links will always use stroke-only -> be creative due to limitations */
+  stroke: #1d6db8; /* FALLBACK IE */
   stroke: var(--lk-tx);
   fill: none;
 
@@ -102,7 +116,9 @@ a {
 }
 
 a:hover {
+  color: #134778; /* FALLBACK IE */
   color: var(--lk-1);
+  stroke: #134778; /* FALLBACK IE */
   stroke: var(--lk-1);
 }
 
@@ -110,18 +126,39 @@ a:hover {
    use a gray color                                                           */
 a.alt {
   /* Text */
+  color: #555555; /* FALLBACK IE */
   color: var(--tx-2);
 
   /* SVG */
+  stroke: #555555; /* FALLBACK IE */
   stroke: var(--tx-2);
   fill: none;
 }
 
 a.alt:hover {
+  color: #313131; /* FALLBACK IE */
   color: var(--tx-1);
+  stroke: #313131; /* FALLBACK IE */
   stroke: var(--tx-1);
 }
 
+a.external::before,
+a.internal::before {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  top: 1px;
+  position: relative;
+  margin-right: 0.1rem;
+}
+
+a.internal::before {
+  content: url("/assets/icon/internal_source.svg");
+}
+
+a.external::before {
+  content: url("/assets/icon/external_source.svg");
+}
 /* [MEDIA QUERIES] -------------------*/
 
 /* This media query adjusts the typography to be more readable on mobile
@@ -132,9 +169,20 @@ a.alt:hover {
      size.                                                                    */
   :root {
     font-size: 16px;
-    
-    --header-nav-height: 1.1rem;
-    --header-gap: 10px;
+  }
+
+  header nav {
+    font-size: 1.1rem; /* FALLBACK IE */
+  }
+  
+  .icon {
+    width: 1.1rem; /* FALLBACK IE */
+    height: 1.1rem; /* FALLBACK IE */
+  }
+
+
+  footer {
+    font-size: 0.8rem; /* FALLBACK IE */
   }
   
   h1 {
@@ -197,6 +245,8 @@ p.date {
 blockquote {
   margin-left: 10px;
   padding-left: 10px;
+
+  border-left: 3px solid var(--lk-tx);
   border-left: 3px solid var(--lk-tx);
 }
 
@@ -208,8 +258,12 @@ blockquote p {
 
 code,
 kbd,
-samp {
+samp,
+.metadata-key,
+.metadata-value {
+  font-family: "Fira Code", Consolas, monospace; /* FALLBACK IE 11 */
   font-family: var(--font-mono);
+
   background-color: var(--cd-2);
   color: var(--cd-1);
 
@@ -225,7 +279,11 @@ samp {
 .post-metadata {
   display: flex;
   flex-flow: column;
-  gap: 5px;
+  
+}
+
+.post-metadata + .post-metadata {
+  margin-left: 5px;
 }
 
 .metadata {
@@ -235,7 +293,6 @@ samp {
 }
 
 .metadata-key {
-  font-family: var(--font-mono);
   color: var(--tx-2);
   min-width: 100px;
 
@@ -243,14 +300,19 @@ samp {
 }
 
 .metadata-value {
-  font-family: var(--font-mono);
   display: flex;
+  flex-wrap: wrap;
+}
+
+.metadata-key,
+.metadata-value {
+  background-color: transparent;
 }
 
 .metadata-value a.tags,
 .metadata-value a.category {
   color: var(--bg-1);
-  padding: 0 4px;
+  padding: 2px 4px;
   margin: 2px 2px;
   border-radius: 5px;
   text-decoration: none;
@@ -284,8 +346,8 @@ header nav {
   display: flex;
   align-self: center;
   flex-wrap: wrap;
-  gap: var(--header-gap);
-  font-size: var(--header-nav-height);
+  gap: 10px;
+  font-size: 1.2rem; /* FALLBACK IE */
 }
 
 header nav a{
@@ -293,9 +355,9 @@ header nav a{
 }
 
 .icon {
-  stroke-width: 1.5pt;
-  width: var(--header-nav-height);
-  height: var(--header-nav-height);
+  stroke-width: 1pt;
+  width: 2rem; /* FALLBACK IE */
+  height: 2rem; /* FALLBACK IE */
 }
 
 /* SVG need special care, when fitting them into */
@@ -303,6 +365,28 @@ header nav a{
   width: inherit;
   height: inherit;
 }
+
+nav .icon span {
+  display: inline-block;
+  opacity: 0%;
+  position: relative;
+  transform-origin: left center;
+  transform: translateX(25px) translateY(-15px) rotateZ(45deg);
+  background: var(--bg-1);
+  padding: 6px 8px;
+  border-radius: 5px;
+  z-index: 2;
+  transition: 200ms background-color ease-in-out, 200ms opacity ease-in-out;
+}
+
+nav:hover .icon span {
+  opacity: 100%;
+}
+
+nav .icon:hover span {
+  background: var(--bg-2);
+}
+
 
 /* [FOOTER] ------------------------------------------------------------------*/
 
@@ -315,7 +399,7 @@ footer {
   margin: 0 auto;
   margin-top: 20px;
 
-  font-size: calc(var(--header-nav-height)*0.8);
+  font-size: 0.9rem; /* FALLBACK IE */
   text-align: center;
 }
 
@@ -324,7 +408,7 @@ footer nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: var(--header-gap);
+  gap: 10px;
 }
 
 footer a {
@@ -412,41 +496,43 @@ img.thumbnail + h1 {
   margin-top: 10px;
 }
 
-details {
-  margin-bottom: 5px;
+/* [TAG & CATEGORY STUFF] ======================================================= */
+div.entry {
+  overflow: hidden;
+  padding: 2px 5px;
+  margin: 5px 0;
 }
 
-summary {
-  cursor: pointer;
+
+div.entry:target{
+  background-color: var(--bg-2);
+  border-radius: 5px;
+}
+
+div.entry > a {
+  font-weight: bold;
+  text-decoration: none;
   font-size: 1.4rem;
 }
 
-summary::marker {
-  padding-right: 10px;
-  content: "→";
-  font-weight: bold;
+div.entry ul {
+  display: none;
+  margin: 5px;
+}
+
+div.entry:target ul {
+  display: block;
+}
+
+
+div.entry.open ul {
+  display: block;
+}
+
+div.entry:target > a {
   color: var(--lk-tx);
 }
 
-details[open] summary::marker {
-  content: "↓";
-}
-
-details ul {
-  margin-top: 5px;
-}
-
-details[open] ul {
-  animation: fadeIn 100ms forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0%;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 100%;
-    transform: translateX(0px);
-  }
+div.entry li + li{
+  margin-top: 7px;
 }

@@ -9,24 +9,22 @@ layout: default
   </h1>
 </div>
 <div class="content">
+  
+
   {% for tag in sorted_tags %}
   {% capture tags_html %}
   {% for post in tag[1] %}
-    <li><code>{{ post.date | date: "%d.%m.%Y"}}</code> - <a href="{{post.url}}">{{post.title}}</a></li>
+  <li><code> {{ post.date | date: "%d.%m.%Y" }}</code> - <a href="{{ post.url }}" style="text-decoration: none;">{{ post.title }}</a></li>
   {% endfor %}
   {% endcapture %}
 
-  <details class="label" id="{{ tag[0] | slugify }}">
-    <summary>{{ tag[0] }}</summary>
+  <div class="entry" id="{{ tag[0] | slugify }}" >
+    <a class="alt" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
     <ul>
       {{ tags_html }}
     </ul>
-  </details>
+  </div>
 
   {% endfor %}
-</div>
 
-<script>
-  //open element, when tag is given via URL (hash)
-  if(window.location.hash) { document.querySelector(window.location.hash).setAttribute('open','true') };
-</script>
+</div>

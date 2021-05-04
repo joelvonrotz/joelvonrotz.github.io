@@ -6,44 +6,6 @@ layout: default
     {{page.title}}
   </h1>
 </div>
-<div class="photo-viewer inactive">
-  <div class="vw-screen">
-    <img class="vw-image">
-    <div class="vw-info">
-      <h2 class="vw-title">Title</h2>
-      <p class="vw-desc">Description</p>
-    </div>
-  </div>
-  <div class="vw-control">
-    <span class="vw-button vw-stat">
-      <svg viewBox="0 0 24 24"fill="none" stroke="white">
-        <title>Press H to toggle</title>
-        <path d="M6 7L15 7M6 12L18 12M6 17L12 17"/>
-      </svg>
-    </span>
-    <span class="vw-button vw-prev">
-      <svg viewBox="0 0 24 24" fill="none" stroke="white"> 
-        <title>Press left arrow for previous photo</title>
-        <polyline points="14 18 8 12 14 6 14 6"/>
-      </svg>
-    </span>
-    <span class="vw-button vw-close">
-      <svg viewBox="0 0 24 24" fill="none" stroke="white">
-        <title>Press ESC to close</title>
-        <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"/>
-      </svg>
-    </span>
-    <span class="vw-button vw-next">
-      <svg viewBox="0 0 24 24" fill="none" stroke="white">
-        <title>Press right arrow for next photo</title>
-        <polyline points="10 6 16 12 10 18 10 18"/>
-      </svg>
-    </span>
-    <span class="vw-button vw-dummy">
-    </span>
-  </div>
-</div>
-
 <div class="content">
   {{ page.content }}
 
@@ -51,87 +13,84 @@ layout: default
     
   </div>
 </div>
-
 <style>
-
-  /* GALLERY */
-  body.wrapper {
-    max-width: 100%;
-    overflow-y: scroll;
-  }
   img {
     border: none
   }
 
   div.photo_collection {
     width: 100%;
+  }
+
+  .photoset-tb {
+    overflow: hidden;
+    filter: brightness(0.5);
+  }
+
+  .tb-inner {
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .photoset {
+    text-align: center;
+    color: white;
     position: relative;
   }
 
-  .photo {
-    text-align: center;
-    position: absolute;
-    overflow: hidden;
-    cursor: pointer;
-
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-  }
-
-  .photo .photo-image {
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    opacity: 100%;
-    filter: blur(0px);
-    transition: 200ms filter ease-in-out;
-  }
-
-  
-  .photo .photo-info {
+  .photoset .photoset-text {
     font-family: "Merriweather", serif;
-    font-size: 1.2rem;
-    margin: 0;
-
-    opacity: 0%;
-
-    transition: 200ms opacity ease-in-out;
-    color: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     display: flex;
     flex-flow: column;
     gap: 10px;
   }
+
+  .photoset h2 {
+    font-family: "Merriweather", serif;
+    margin: 0;
+  }
+
+  .photoset .ps-desc {
+    font-weight: 100;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-style: italic;
+  }
   
-  .photo:hover .photo-info,
-  .photo:active .photo-info {
-    opacity: 100%;
+  .photoset .ps-count {
+    font-size: 0.8rem;
   }
 
-  .photo:hover .photo-image,
-  .photo:active .photo-image{
-    filter: blur(3px) brightness(0.8);
-  }
-
-  .photo .photo-zoom svg{
+  .photoset a svg{
     height: 2rem;
   }
 
+  .photoset .photoset-big-viewer {
+    display: none;
+  }
+  
 </style>
 
 <script type="text/javascript" src="/scripts/justified-layout/dist/justified-layout.js"></script>
-<script type="text/javascript" src="/scripts/photo-viewer/photo-viewer.js"></script>
-<link rel="stylesheet" href="/scripts/photo-viewer/photo-viewer.css" />
 <script type="text/javascript">
   
   var justifiedLayout = require('justified-layout');
+
+
+  function slugify(text) {
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
+  }
   
   async function getJSON(url_json) {
     let response = await fetch(url_json)
@@ -140,77 +99,54 @@ layout: default
   }
   
   // [MAIN] ----------------------------
-  const event_gallery_rendered = new Event("gallery_rendered")
-
   let photo_collection = document.querySelector("div.photo_collection")
-  let photo_ratios = []
-  let photo_list = []
 
-  function generate_layout(ratios, collection_width) {
-    justify = justifiedLayout(ratios, {
-      containerPadding: 0,
-      targetRowHeight: 200,
-      containerWidth: collection_width
+  function main() {
+    getJSON('/data/photosets.json').then(data => {
+
+      var photosets = data.map(function (photoset) {
+        let photo_ratios = photoset.photos.map(function (photo) {
+          return photo.ratio
+        })
+        var geometry = justifiedLayout(photo_ratios, {
+          containerPadding: 0,
+          targetRowHeight: 150,
+          containerWidth: document.querySelector("div.photo_collection").clientWidth
+        })
+
+        let index = 0
+        let photos_s = photoset.photos.map(function (photo) {
+          var box = geometry.boxes[index]
+          style = `style="width: ${box.width}px; height: ${box.height}px; top: ${box.top}px; left: ${box.left}px"`
+          index += 1
+          return `<img ${style} src="${photo.url_s}" title="${photo.title}">`
+        }).join('\n')
+
+        return `<div class="photoset" id="${slugify(photoset.title)}">
+                  <div class="photoset-tb">
+                    <div class="tb-inner" style="background-image: url(${photoset.thumbnail});"></div>
+                  </div>
+                  <div class="photoset-text">
+                    <h2>${photoset.title}</h2>
+                    <span class="ps-desc">${photoset.description}</span>
+                    <span class="ps-count">${photoset.photos_count} Photos</span>
+                    <span>
+                      <a class="alt" href="${photoset.source}" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white">
+                          <path d="M10.5,15.5 C10.5,14.1666667 10.5,13.5 10.5,13.5 C10.5,10.7385763 8.26142375,8.5 5.5,8.5 C2.73857625,8.5 0.5,10.7385763 0.5,13.5 C0.5,13.5 0.5,14.1666667 0.5,15.5" transform="rotate(-90 5.5 12)"/> <path d="M8,12 L16,12"/> <path d="M23.5,15.5 C23.5,14.1666667 23.5,13.5 23.5,13.5 C23.5,10.7385763 21.2614237,8.5 18.5,8.5 C15.7385763,8.5 13.5,10.7385763 13.5,13.5 C13.5,13.5 13.5,14.1666667 13.5,15.5" transform="rotate(90 18.5 12)"/>
+                        </svg>
+                      </a>
+                    </span>
+                  </div>
+                </div>`
+      }).join('\n')
+      
+
+      photo_collection.innerHTML = photosets
+
     })
-    photo_collection.style.height = `${justify.containerHeight}px`;
-    return justify;
   }
 
-  function render_layout(photos, boxes) {
-    let index = 0
-    return photos.map(function(photo) {
-      const box = boxes[index];
-      index++;
-      return (
-        `<div style="width: ${box.width}px; height: ${box.height}px; top: ${box.top}px; left: ${box.left}px" class="photo" data-id="${photo.id}" data-title="${photo.title}" data-desc="${photo.description}" data-url="${photo.url_l}">
-          <div class="photo-image" style="background-image: url(${photo.url_s});" title="${photo.title}"></div>
-          <div class="photo-info">
-            <span class="photo-title">${photo.title}</span>
-            <span class="photo-zoom">
-              <svg viewBox="0 0 24 24" fill="none" stroke="white">
-                <path d="M4,20 L9.58788778,14.4121122"/>
-                <path d="M14,16 C10.6862915,16 8,13.3137085 8,10 C8,6.6862915 10.6862915,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,13.3137085 17.3137085,16 14,16 Z"/>
-                <path d="M16.6666667 10L11.3333333 10M14 7.33333333L14 12.6666667"/>
-              </svg>
-            </span>
-          </div>
-        </div>`)
-    }).join('\n')
-  }
+  main()
 
-
-  function func_onload() {
-    getJSON('/data/photos.json').then(data => {
-      photo_list = data
-      photo_ratios = photo_list.map(x => x.ratio)
-      photo_collection.innerHTML = render_layout(photo_list, generate_layout(photo_ratios, photo_collection.clientWidth).boxes)
-
-      document.dispatchEvent(event_gallery_rendered)
-    })
-  }
-
-  function func_onresize() {
-    //since all data is already acquired, we don't need to reacquire the data, we can just reuse the old data.
-    photo_collection.innerHTML = render_layout(photo_list, generate_layout(photo_ratios, photo_collection.clientWidth).boxes)
-  }
-
-  
-  
-  document.addEventListener("gallery_rendered", function (event) {
-    vw_photos = document.querySelectorAll("div.photo");
-    var viewer = new Viewer(vw_photos)
-    vw_photos.forEach(element => {
-      element.addEventListener("click", function (event) {
-        viewer.open(event.target.closest("div.photo").dataset.id)
-      })
-      element.addEventListener("touchend", function (event) {
-        viewer.open(event.target.closest("div.photo").dataset.id)
-      })
-    })
-  })
-  
-
-  // [WINDOW EVENT LISTENERS] --------------------------------------------------
-  window.addEventListener("load", func_onload)
-  window.addEventListener("resize", func_onresize)
 </script>

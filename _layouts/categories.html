@@ -10,18 +10,13 @@ layout: default
 </div>
 <div class="content">
   {% for category in sorted_categories %}
-  <details class="label" id="{{ category[0] | slugify }}">
-    <summary>{{ category[0] }}</summary>
+  <div class="entry" id="{{ category[0] | slugify }}" >
+    <a class="alt" href="#{{ category[0] | slugify }}">{{ category[0] }}</a>
     <ul>
       {% for post in category[1] %}
-      <li><code>{{ post.date | date: "%d.%m.%Y"}}</code> - <a href="{{post.url}}">{{post.title}}</a></li>
+      <li><code> {{ post.date | date: "%d.%m.%Y" }}</code> - <a href="{{ post.url }}" style="text-decoration: none;">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
-  </details>
+  </div>
   {% endfor %}
 </div>
-
-<script>
-  //open element, when tag is given via URL (hash)
-  if(window.location.hash) { document.querySelector(window.location.hash).setAttribute('open','true') };
-</script>
