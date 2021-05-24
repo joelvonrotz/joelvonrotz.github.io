@@ -1,11 +1,50 @@
 # Repository of [joelvonrotz.ch](https://joelvonrotz.ch)
 
-## 🗺 What, where am I?
+## Notes
 
-Hey, so you've stumbled upon my source code for my website.
+### Disclosure Menu
 
-## 🎨 Website Theme
+HTML contains the `detail` & `summary` tags, which are used in combination to create a disclosure menu (click on the `summary` tag and open up the respective `detail`)
 
-The theme of my website is heavily inspired by [0x0f0f0f's website](https://0x0f0f0f.github.io/). Colors have been chosen by me, what I took was the font, which is [Inter](https://rsms.me/inter/) (I love the font, because it looks smooth!)
+```html
+<details>
+  <summary>Details</summary>
+  Something small enough to escape casual notice.
+</details>
+```
 
-If you like the theme, I might tune it a bit for customizability and show it off in a separate repository. For now it's just mine.
+The problem with this one is the customizability is rather limited, therefore I created a `:target`-selector based disclosure menu (for now only with `ul` contents).
+
+```html
+<div class="entry open" id="spaghet">
+  <a class="alt" href="#spaghet">test</a>
+  <ul>
+    ...
+  </ul>
+</div>
+```
+
+![](docs/disclosure_menu.gif)
+
+- **Problem** - You can't close it! You can click it, but you have to click something else to close it.
+
+### Menu Icon
+
+```html
+<a class="icon" href="/link">
+  <svg>
+    inline SVG
+  </svg>
+  <span>Title</span>
+</a>
+```
+
+To get a icon only, remove the `span` element
+
+```html
+<a class="icon" href="/link">
+  <svg>
+    inline SVG
+  </svg>
+</a>
+```
