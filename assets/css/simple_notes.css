@@ -18,7 +18,8 @@ html {
   --cd-br: #333333; /* code block border */
   --tx-tag: #92ceff; /* background color for tag labels */
   --tx-cat: #a8a8a8; /* background color for category labels */
-  --mark: #3f7db8;
+  --highlight: #3f7db8;
+  --mark: #FACC14;
   --font-sans: "Inter", sans-serif;
   --font-mono: "Fira Code", monospace;
 }
@@ -37,10 +38,9 @@ html {
     --tx-tag: #5b72b6;
     --tx-cat: #5a5e70;
     --highlight: #4E657A;
+    --mark: #CCB100;
   }
 }
-
-
 
 /* [TYPOGRAPHY] --------------------------------------------------------------*/
 /* This section handles everything text stuff (except for code blocks)        */
@@ -59,6 +59,7 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: "Source Sans Pro";
   font-weight: bold;
   padding: 2px 4px;
   left: -4px;
@@ -68,7 +69,7 @@ h4 {
 h2:target,
 h3:target,
 h4:target {
-  background-color: var(--mark);
+  background-color: var(--highlight);
   border-radius: 5px;
 }
 
@@ -89,6 +90,19 @@ h4 {
 
 h1::first-letter {
   color: var(--lk-tx);
+}
+
+a.site-title{
+  text-decoration: none;
+
+}
+
+a.site-title h1::first-letter {
+  color: inherit;
+}
+
+a.site-title h1 {
+  margin: 0;
 }
 
 :root {
@@ -170,10 +184,6 @@ a.external::before {
   :root {
     font-size: 16px;
   }
-
-  header nav {
-    font-size: 1.1rem; /* FALLBACK IE */
-  }
   
   /* ! FIX */
   /*.icon {
@@ -212,6 +222,14 @@ a.external::before {
 
 
 /* [MISC] --------------------------------------------------------------------*/
+
+
+mark {
+  background-color: var(--mark);
+  padding: 0px 3px;
+  border-radius: 3px;
+  margin: 0px 2px;
+}
 
 body {
   counter-reset: figure-counter;
@@ -336,16 +354,17 @@ samp,
 
 /*[HEADER] -------------------------------------------------------------------*/
 header {
-  display: flex;
-  flex-flow: column;
-  max-width: 440px;
+  display: grid;
+  grid-auto-flow: column;
   margin: 0 auto;
+  align-items: center;
 }
 
 header nav {
+  justify-self: right;
+
   line-height: 1.0;
   display: flex;
-  align-self: center;
   flex-wrap: wrap;
   gap: 10px;
   font-size: 1.2rem; /* FALLBACK IE */
@@ -355,13 +374,25 @@ header nav a{
   text-decoration: none;
 }
 
+
+@media (max-width: 684px) {
+  header {
+    grid-auto-flow: row;
+    justify-content: left;
+  }
+
+  header nav {
+    font-size: 1.1rem; /* FALLBACK IE */
+  }
+}
+
 .icon {
   stroke-width: 1pt;
-  height: 1rem; /* FALLBACK IE */
+  height: 1.3rem; /* FALLBACK IE */
   display: flex;
   flex-flow: row;
   align-items: center;
-  gap: 5px;
+  gap: 3px;
 
   padding: 4px;
   border-radius: 5px;
@@ -370,12 +401,12 @@ header nav a{
 /* SVG need special care, when fitting them into */
 .icon svg {
   height: inherit;
-  width: 1rem;
-  stroke-width: 1.5pt;
+  width: 1.3rem;
+  stroke-width: 1.2pt;
 }
 
 .icon span {
-  font-size: 0.9rem;
+  font-size: 1.0rem;
   font-weight: 500;
 }
 
@@ -505,23 +536,23 @@ div.entry:target{
   border-radius: 5px;
 }
 
-div.entry > a {
+div.entry .entry-summary {
   font-weight: bold;
   text-decoration: none;
   font-size: 1.4rem;
 }
 
-div.entry ul {
+div.entry .entry-detail {
   display: none;
   margin: 5px;
 }
 
-div.entry:target ul {
+div.entry:target .entry-detail {
   display: block;
 }
 
 
-div.entry.open ul {
+div.entry.open .entry-detail {
   display: block;
 }
 
