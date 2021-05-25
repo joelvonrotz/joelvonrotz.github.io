@@ -1,0 +1,11 @@
+{% if include.open %}
+<div class="entry open" id="{{ include.summary | slugify }}">
+{% else %}
+<div class="entry" id="{{ include.summary | slugify }}">
+{% endif %}
+  <a class="entry-summary alt" href="#{{ include.summary | slugify }}">
+    {{ include.summary }}</a>
+  <div class="entry-detail">
+    {{ include.detail }}
+  </div>
+</div>

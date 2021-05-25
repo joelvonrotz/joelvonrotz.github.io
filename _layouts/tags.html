@@ -12,19 +12,16 @@ layout: default
   
 
   {% for tag in sorted_tags %}
-  {% capture tags_html %}
-  {% for post in tag[1] %}
-  <li><code> {{ post.date | date: "%d.%m.%Y" }}</code> - <a href="{{ post.url }}" style="text-decoration: none;">{{ post.title }}</a></li>
-  {% endfor %}
-  {% endcapture %}
-
-  <div class="entry" id="{{ tag[0] | slugify }}" >
-    <a class="alt" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+    {% capture tags_html %}
     <ul>
-      {{ tags_html }}
+      {% for post in tag[1] %}
+      <li><code> {{ post.date | date: "%d.%m.%Y" }}</code> - <a href="{{ post.url }}" style="text-decoration: none;">{{ post.title }}</a></li>
+      {% endfor %}
     </ul>
-  </div>
+    {% endcapture %}
 
+    {% assign _tag = tag[0] %}
+    {% include disclosure_box.html detail=tags_html summary=_tag %}
   {% endfor %}
 
 </div>
