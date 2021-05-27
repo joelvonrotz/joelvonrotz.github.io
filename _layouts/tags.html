@@ -21,7 +21,7 @@ layout: default
     {% endcapture %}
 
     {% assign _tag = tag[0] %}
-    {% include disclosure_box.html detail=tags_html summary=_tag %}
+    {% include disclosure_box.html content=tags_html title=_tag %}
   {% endfor %}
 
 </div>
