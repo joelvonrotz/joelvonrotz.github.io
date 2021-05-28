@@ -50,7 +50,7 @@ blockquote,
 li,
 table {
   font-size: 1rem;
-  line-height: 1.2rem;
+  line-height: 1.3rem;
   letter-spacing: 0.06em;
 }
 
@@ -91,6 +91,7 @@ h4 {
 h1::first-letter {
   color: var(--lk-tx);
 }
+
 
 a.site-title{
   text-decoration: none;
@@ -396,6 +397,9 @@ header nav a{
 
   padding: 4px;
   border-radius: 5px;
+
+  font-size: 1.0rem;
+  font-weight: 500;
 }
 
 /* SVG need special care, when fitting them into */
@@ -405,13 +409,7 @@ header nav a{
   stroke-width: 1.2pt;
 }
 
-.icon span {
-  font-size: 1.0rem;
-  font-weight: 500;
-}
-
-
-nav .icon:hover {
+.icon:hover {
   background: var(--bg-2);
 }
 
@@ -495,6 +493,10 @@ figure {
   justify-content: center;
 }
 
+figure img {
+  border-radius: 5px;
+}
+
 figure figcaption {
   counter-increment: figure-counter;
   font-style: italic;
@@ -509,7 +511,6 @@ figure figcaption::before {
 }
 
 img {
-  border: var(--bg-2) 1px solid;
   max-width: 100%;
 }
 
@@ -562,4 +563,44 @@ div.entry:target > a {
 
 div.entry li + li{
   margin-top: 7px;
+}
+
+span.green {
+  color: #379420;
+  font-weight: bold;
+}
+
+span.red {
+  color: #F23049;
+  font-weight: bold;
+}
+
+span.blue {
+  color: #4e71e4;
+  font-weight: bold;
+}
+
+span.black {
+  color: #020202;
+  font-weight: bold;
+}
+
+span.grey {
+  color: #9E9E9E;
+  font-weight: bold;
+}
+/* [PHOTO COLLECTIONS] ======================================================= */
+.photoset-row {
+  display: flex;
+  flex-flow: row;
+  gap: 10px;
+}
+.photoset {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+.photoset img {
+  width: inherit;
+  height: inherit;
 }

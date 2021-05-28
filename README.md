@@ -1,6 +1,12 @@
 # Repository of [joelvonrotz.ch](https://joelvonrotz.ch)
 
-## Notes
+## Collection: Travel `_travel`
+
+
+
+## Collection: Notes `_notes`
+
+## Miscellaneous
 
 ### Disclosure Menu
 

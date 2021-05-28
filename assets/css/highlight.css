@@ -29,6 +29,10 @@ div.highlighter-rouge.language-c::before {
   content: "C";
 }
 
+div.highlighter-rouge.language-yaml::before {
+  content: "YAML";
+}
+
 div.highlight {
   margin: 30px 0;
   border-radius: 10px;
