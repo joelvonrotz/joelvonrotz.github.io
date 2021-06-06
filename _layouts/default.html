@@ -62,6 +62,9 @@
     </header>
 
     <main class="{{page.layout}}">
+      {% if page.deprecated == true %}
+      <h1 class="deprecated">DEPRECATED</h1>
+      {% endif %}
       {{ content }}
     </main>
 
