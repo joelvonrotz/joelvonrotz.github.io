@@ -240,8 +240,6 @@ mark {
 }
 
 body {
-  counter-reset: figure-counter;
-
   max-width: 800px;
   padding: 0 20px;
   margin: 20px auto;
@@ -504,8 +502,10 @@ figure img {
   border-radius: 5px;
 }
 
+
+
 figure figcaption {
-  counter-increment: figure-counter;
+  counter-increment: figureCounter;
   font-style: italic;
   font-size: 0.9rem;
   margin-top: 5px;
@@ -514,7 +514,11 @@ figure figcaption {
 figure figcaption::before {
   font-style: normal;
   color: var(--lk-tx);
-  content: "Fig " counter(figure-counter) ":";
+  content: "Fig " counter(figureCounter) ":";
+}
+
+html {
+  counter-reset: figureCounter;
 }
 
 img {
