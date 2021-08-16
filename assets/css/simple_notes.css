@@ -20,8 +20,14 @@ html {
   --tx-cat: #a8a8a8; /* background color for category labels */
   --highlight: #3f7db8;
   --mark: #FACC14;
-  --font-sans: "Inter", sans-serif;
+  --font-text:  "Inter", sans-serif;
+}
+
+body {
   --font-mono: "Fira Code", monospace;
+  
+  font-family: "Inter", sans-serif; /* FALLBACK IE 11 */
+  font-family: var(--font-text);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,7 +65,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Source Sans Pro";
+  font-family: var(--font-text);
   font-weight: bold;
   padding: 2px 4px;
   left: -4px;
@@ -78,8 +84,7 @@ h1 {
 }
 
 
-.deprecated,
-.deprecated::first-letter {
+.deprecated {
   color: red;
   text-align: center;
 }
@@ -95,28 +100,16 @@ h4 {
 }
 
 
-h1::first-letter {
-  color: var(--lk-tx);
-}
-
-
 a.site-title{
   text-decoration: none;
 
 }
 
-a.site-title h1::first-letter {
-  color: inherit;
-}
 
 a.site-title h1 {
   margin: 0;
 }
 
-:root {
-  font-family: "Inter", sans-serif; /* FALLBACK IE 11 */
-  font-family: var(--font-sans);
-}
 
 /* [HYPERLINKS] ----------------------*/
 /* This group defines the very basic hyperlink stuff (i.e. how SVG inside links
@@ -360,19 +353,21 @@ samp,
 
 /*[HEADER] -------------------------------------------------------------------*/
 header {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
   margin: 0 auto;
-  align-items: center;
+  gap: 5px;
+  padding-bottom: 10px;
+  border-bottom: var(--bg-2) solid 1px;
 }
 
 header nav {
-  justify-self: right;
 
   line-height: 1.0;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
   font-size: 1.2rem; /* FALLBACK IE */
 }
 
@@ -412,6 +407,11 @@ header nav a{
   height: inherit;
   width: 1.3rem;
   stroke-width: 1.2pt;
+}
+
+.icon.alt {
+  stroke: var(--tx-2);
+  fill:none
 }
 
 .icon:hover {
@@ -610,8 +610,61 @@ span.grey {
   display: flex;
   flex-flow: column;
   gap: 10px;
+  margin-bottom: 20px;
 }
+
 .photoset img {
   width: inherit;
   height: inherit;
+}
+
+
+.photoset-item-title {
+  position: relative;
+  /*display:flex;
+  
+  text-shadow: 2px 2px 0px var(--lk-1);*/
+}
+
+.photoset-item-title span{
+  position: absolute;
+  padding: 4px;
+  margin: 0;
+  left: 0;
+  color: white;
+
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+article.post {
+  background-color: var(--bg-2);
+  margin-bottom: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+article.post * {
+  margin:0
+}
+
+article.post .post-content {
+  padding: 10px;
+}
+
+article.post a{
+  text-decoration: none;
+  font-family: "Inter";
+}
+
+article.post .post-date{
+  margin: 10px 0;
+  color: var(--tx-2);
+}
+
+article.post .post-readmore {
+  padding: 10px;
+  background-color: var(--bg-1);
+  margin-top: 20px;
+  display: inline-flex;
 }
