@@ -1,12 +1,11 @@
 ---
 layout: "post"
-title: "Struggling with Photosets & CSS"
+title: "Creating Photosets with CSS"
 thumbnail: "/images/posts/struggling_photos_math/thumbnail.jpg"
 category: "design"
 tags:
 - "math"
-- "overthinking"
-- "struggle"
+- "css"
 - "photoset"
 ---
 
@@ -41,20 +40,18 @@ So I started to list up some equations:
 
 $$ r_n = \frac{w_n}{h_n} \rightarrow r_1 = \frac{w_1}{h_1}, r_2 = \frac{w_2}{h_2}$$
 
-$$ w - w_{G} = x_1 + x_2 + x_n$$
+$$ w - w_{gaps} = x_1 + x_2 + x_n$$
 
 Already I thought, how am I gonna turn this into something scalable/dynamic?
 
-### What Didn't Work
+### Going Off Path & Into a Wall
 
-I actually don't really know, why exactly it didn't work. When trying to see a pattern in my first idea I always had a thought in the back of my mind, that yelled, this shouldn't be so hard.
-
-I wasn't getting anywhere. Equations cluttered up, turning into more complex equations or simply useless equations that cancel each other out. At one point I put my pen aside, just looked at the equation and said to myself, that this is a waste of my time.
+As time went on, I wasn't getting anywhere. Equations cluttered up, turning into more complex equations or simply useless equations that cancel each other out. At one point I put my pen aside, just looked at the equation and said to myself, that this is a waste of my time.
 
 
 ## One Height, Different Widths
 
-After giving up on that mess of equations, I looked at a sketch (similar to the one above with the variable names) and tried to not overthink & focus more on what I wanted to actually achieve. All photos in a row need the same height! What if I first resized the photos to one common height and then adjusted the row to the containers width?
+After giving up on that mess of equations, I looked at a sketch (similar to the one above with the variable names) and tried to focus more on what I wanted to actually achieve. All photos in a row need the same height! What if I first resized the photos to one common height and then adjusted the row to the containers width?
 
 This sounded a lot more realistic (& scalable). By assuming a height (for example $100px$) I can calculate the overall width, that each photo takes up. By adding those widths together and calculating the ratio between said width and the container width, I was able to solve my problem.
 
