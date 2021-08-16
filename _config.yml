@@ -18,12 +18,20 @@ markdown: kramdown
 
 plugins:
   - jekyll-feed
+# jekyll-redirect-from
 
 defaults:
+  - scope:
+      path: "_drafts"
+    values:
+      layout: "post"
+      permalink: '/drafts/:year/:title'
+      excerpt_separator: "<!--more-->"
   - scope:
       path: "_posts"
       type: "posts"
     values:
+      font: "sans-serif"
       layout: "post"
       permalink: '/posts/:year/:title'
       excerpt_separator: "<!--more-->"
@@ -55,17 +63,6 @@ collections:
   notes:
     output: true
 
-jekyll_compose:
-  default_front_matter:
-    drafts:
-      title:
-      category:
-      tags:
-    posts:
-      title:
-      category:
-      tags:
-
 
 katex:
   math_engine: katex
@@ -83,3 +80,4 @@ exclude:
   - vendor/ruby/
   - .dev
   - .vscode
+  - .template
