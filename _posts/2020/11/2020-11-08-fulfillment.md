@@ -16,9 +16,7 @@ Self-fulfillment (& self-confidence) is something I've been struggling with for 
 
 Starting a learn-project and seeing already finished products, that could easily replace my project, on the internet feels soul-crushing, which is the reason why I sometimes stop and delete my projects. The reason behind that ironic problem is, that I see someone, that has created a more robust system than me, as superior and that I shouldn't tread on "his" kingdom. This kind of view stops me in every way possible. Looking at it more literally I shouldn't even be allowed to walk, because there are other people on the world that can walk miles better than me. So what keeps me walking?
 
-Walking of course is an action needed for survival. If I'm not allowed to walk anywhere, I'm not able to find any food and as a followup I starve to death. Side-projects on the other hand aren't necessary for survival, but they are necessary for education.
-
-This all feels a lot like a mix between [impostor's syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome) & a lack of self-confidence. This has also hit me in various other areas, including my social life. I'm sometimes so focused on myself, that I completely forget about other more important things, like friendships.
+Walking of course is an action needed for survival. If I'm not allowed to walk anywhere, I'm not able to find any food and as a followup I starve to death. Side-projects on the other hand aren't necessary for survival, but they are necessary for education!
 
 I'm so glad, that I've finally taken the courage to write this up, it feels great! I am a young adult, but I imagine, this is the process I have to do to get to know myself better. I can read the posts of a past Joel and reflect on it &rarr; What has changed since then?
 
