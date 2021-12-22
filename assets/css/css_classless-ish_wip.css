@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* [COLORS] ------------------------------------------------------------------*/
+:root {
+  font-size: 18px;
+
+  /* Colors */
+  --bg-1: #ffffff; /* main background color */
+  --bg-2: #b6b6b6; /* secondary background for more focused content*/
+  --tx-1: #313131; /* standard text color */
+  --tx-2: #555555; /* secondary  */
+  --lk-tx: #1d6db8; /* link text */
+  --lk-1: #134778; /* link hover */
+  --cd-1: #333333; /* code foreground */
+  --cd-2: #d1d1d1; /* code background */
+  --cd-br: #333333; /* code block border */
+  --tx-tag: #92ceff; /* background color for tag labels */
+  --tx-cat: #a8a8a8; /* background color for category labels */
+  --highlight: #3f7db8;
+  --mark: #facc14;
+
+  --font-text: "Inter", sans-serif;
+  --font-heading: var(var(--font-text));
+  --font-mono: "Fira Code", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-1: #272727;
+    --bg-2: #333333;
+    --tx-1: #acacac;
+    --tx-2: #707070;
+    --lk-tx: #5285b3;
+    --lk-1: #216dac;
+    --cd-1: #b8b8b8;
+    --cd-2: #3b3b3b;
+    --cd-br: #b8b8b8;
+    --tx-tag: #5b72b6;
+    --tx-cat: #5a5e70;
+    --highlight: #4e657a;
+    --mark: #ccb100;
+  }
+}
+
+body {
+  font-family: var(--font-text);
+}
+
+/* [TYPOGRAPHY] --------------------------------------------------------------*/
+/* This section handles everything text stuff (except for code blocks)        */
+
+p,
+blockquote,
+li,
+table {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.06em;
+}
+
+/* [HEADINGS] ------------------------*/
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-text);
+  font-weight: bold;
+  padding: 2px 4px;
+  left: -4px;
+  position: relative;
+}
+
+h2:target,
+h3:target,
+h4:target {
+  background-color: var(--highlight);
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+h2 {
+  font-size: 1.85rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.15rem;
+}
+
+body {
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 20px auto;
+  text-rendering: optimizeLegibility;
+  color: var(--tx-1);
+  background-color: var(--bg-1);
+}
+
+body > hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+main > article {
+  border-radius: 15px;
+  background-color: var(--bg-2);
+  overflow: hidden;
+}
+
+main article > section {
+  padding: 10px;
+}
+
+main article > img + section {
+  padding-top: 0px;
+}
+
+img {
+  width: 100%;
+}
+
+/* [HYPERLINKS] ----------------------*/
+a {
+  color: var(--lk-tx);
+  stroke: var(--lk-tx);
+  fill: none;
+
+  transition: 200ms color ease-in-out, 200ms stroke ease-in-out,
+    200ms background-color ease-in-out;
+}
+
+a:hover {
+  color: var(--lk-1);
+  stroke: var(--lk-1);
+}
+
+/* [HEADER] ================================================================================= */
+
+/* the alternative hyperlinks use a rather opaque color (instead of black it'll
+   use a gray color                                                           */
+header nav a:not(:first-child):not(:last-child) {
+  color: var(--tx-2);
+  stroke: var(--tx-2);
+  fill: none;
+}
+
+header nav a:hover:not(:first-child):not(:last-child) {
+  color: var(--tx-1);
+  stroke: var(--tx-1);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+header nav a {
+  stroke-width: 2pt;
+  height: 1.3rem; /* FALLBACK IE */
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 3px;
+
+  padding: 4px;
+  border-radius: 5px;
+
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+header nav a svg {
+  height: inherit;
+  width: 1.3rem;
+  stroke-width: 1.2pt;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header nav > span {
+  color: var(--lk-tx);
+}
+
+header nav a:hover {
+  background: var(--bg-2);
+}
+
+/* [FOOTER] ================================================================================= */
+footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+/* [JEKYLL] ================================================================================= */
+.jekyll {
+  text-decoration: none;
+}
