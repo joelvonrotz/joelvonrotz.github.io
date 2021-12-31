@@ -53,7 +53,7 @@ As time went on, I wasn't getting anywhere. Equations cluttered up, turning into
 
 After giving up on that mess of equations, I looked at a sketch (similar to the one above with the variable names) and tried to focus more on what I wanted to actually achieve. All photos in a row need the same height! What if I first resized the photos to one common height and then adjusted the row to the containers width?
 
-This sounded a lot more realistic (& scalable). By assuming a height (for example $100px$) I can calculate the overall width, that each photo takes up. By adding those widths together and calculating the ratio between said width and the container width, I was able to solve my problem.
+This sounded a lot more realistic (& scalable). By assuming a height (for example 100px) I can calculate the overall width, that each photo takes up. By adding those widths together and calculating the ratio between said width and the container width, I was able to solve my problem.
 
 {% include figure.html caption="Steps to correctly fit a row into the container width" image="/images/posts/struggling_photos_math/total_steps_calculation.jpg"%}
 

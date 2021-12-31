@@ -1,3 +1,5 @@
+/* [NORMALIZE] ============================================================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +9,11 @@ html {
   scroll-behavior: smooth;
 }
 
-/* [COLORS] ------------------------------------------------------------------*/
+/* [CONFIG] ================================================================================= */
 :root {
   font-size: 18px;
+
+  --img_max_height: 500px;
 
   /* Colors */
   --bg-1: #ffffff; /* main background color */
@@ -23,6 +27,7 @@ html {
   --cd-br: #333333; /* code block border */
   --tx-tag: #92ceff; /* background color for tag labels */
   --tx-cat: #a8a8a8; /* background color for category labels */
+  --quote: var(--tx-tag);
   --highlight: #3f7db8;
   --mark: #facc14;
 
@@ -49,6 +54,8 @@ html {
   }
 }
 
+/* [STYLE] ================================================================================== */
+
 body {
   font-family: var(--font-text);
 }
@@ -65,6 +72,10 @@ table {
   letter-spacing: 0.06em;
 }
 
+p {
+  margin: 10px 0;
+}
+
 /* [HEADINGS] ------------------------*/
 h1,
 h2,
@@ -75,6 +86,12 @@ h4 {
   padding: 2px 4px;
   left: -4px;
   position: relative;
+}
+
+h2,
+h3,
+h4 {
+  margin-top: 0.75em;
 }
 
 h2:target,
@@ -90,6 +107,7 @@ h1 {
 
 h2 {
   font-size: 1.85rem;
+  border-bottom: 1px var(--bg-2) solid;
 }
 h3 {
   font-size: 1.4rem;
@@ -151,10 +169,12 @@ a:hover {
   stroke: var(--lk-1);
 }
 
-/* [HEADER] ================================================================================= */
-
+/* [HEADER & FOOTER] ======================================================================== */
 /* the alternative hyperlinks use a rather opaque color (instead of black it'll
    use a gray color                                                           */
+
+footer nav a,
+footer nav span,
 header nav a:not(:first-child):not(:last-child) {
   color: var(--tx-2);
   stroke: var(--tx-2);
@@ -193,6 +213,7 @@ header nav a svg {
   stroke-width: 1.2pt;
 }
 
+footer a,
 header a {
   text-decoration: none;
 }
@@ -208,11 +229,79 @@ header nav a:hover {
 /* [FOOTER] ================================================================================= */
 footer {
   display: flex;
-  flex-flow: column;
-  align-items: center;
+  flex-flow: row;
+  justify-content: center;
 }
 
-/* [JEKYLL] ================================================================================= */
-.jekyll {
-  text-decoration: none;
+main footer {
+  gap: 10px;
+}
+
+/* [FIGURE] ================================================================================= */
+figure {
+  border-radius: 10px;
+  background-color: var(--bg-2);
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+  margin: 40px 20px;
+  overflow: hidden;
+}
+
+figure figcaption {
+  padding: 10px;
+}
+
+/* [BLOCKQUOTE] ============================================================================= */
+blockquote {
+  position: relative;
+  border-left: 4px solid var(--quote);
+  border-radius: 5px;
+  padding-left: 25px;
+  margin: 20px 0;
+}
+
+blockquote::before {
+  content: "“";
+  position: absolute;
+  top: 0.25em;
+  left: 0px;
+  padding-left: 5px;
+  font-size: 2rem;
+  color: var(--quote);
+}
+
+/* [LIST] =================================================================================== */
+li > ol,
+li > ul {
+  margin: 0;
+}
+ol,
+ul {
+  padding-left: 30px;
+  margin: 10px 0;
+}
+
+li::marker {
+  color: var(--lk-tx);
+  font-weight: bold;
+}
+
+/* [CODE,KEYBOARD] ========================================================================== */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+/* [SPECIAL] ================================================================================ */
+
+div:target strong {
+  position: relative;
+  border-bottom: 2px solid var(--highlight);
+}
+div:target strong::before {
+  position: absolute;
+  content: "->";
+  color: var(--highlight);
+  left: -20px;
 }

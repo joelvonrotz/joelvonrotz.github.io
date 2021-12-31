@@ -1,40 +1,36 @@
 ---
 layout: default
 ---
-<div class="title">
-  {% if page.thumbnail %}
-  <img src="{{page.thumbnail}}" class="thumbnail">
-  {% endif %}
-  <h1>
-    {{page.title}}
-  </h1>
-</div>
-<div class="content">
+<header>
+{% if page.thumbnail %}
+<img src="{{page.thumbnail}}" class="thumbnail">
+{% endif %}
+<h1>
+  {{page.title}}
+</h1>
+<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string: "ordinal" }}</time>
+</header>
+<section>
   {{ content }}
-</div>
+</section>
 <hr>
-<div class="post-metadata">
-  <!--TAGS-->
-  <div class="metadata">
-    <span class="metadata-key">Tags</span>
-    <span class="metadata-value">
+<footer>
+  <div>
+    <strong>Tags</strong>
+    <span class="post_labels">
       {% for tag in page.tags %}
-      <a class="tags" href="/tags#{{tag | slugify}}">{{ tag }}</a>
+      {% if forloop.last == false %}
+      <a href="/tags#{{tag | slugify}}">{{ tag }}</a>,
+      {% else %}
+      <a href="/tags#{{tag | slugify}}">{{ tag }}</a>
+      {% endif %}
       {% endfor %}
     </span>
   </div>
-  <!--CATEGORY-->
-  <div class="metadata">
-    <span class="metadata-key">Category</span>
-    <span class="metadata-value">
+  <div>
+    <strong >Category</strong>
+    <span >
       <a class="category" href="/categories#{{page.category | slugify}}">{{ page.category  }}</a></li>
     </span>
   </div>
-  <!--DATE-->
-  <div class="metadata">
-    <span class="metadata-key">Date</span>
-    <span class="metadata-value">
-      {{page.date | date: "%d.%m.%Y"}}
-    </span>
-  </div>
-</div>
+</footer>

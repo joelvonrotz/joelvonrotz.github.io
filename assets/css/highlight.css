@@ -13,6 +13,10 @@ div.highlighter-rouge::before {
   text-shadow: 2px 2px 0px var(--lk-1);
 }
 
+div.highlighter-rouge.language-plaintext div.highlight {
+  padding-top: 0;
+}
+
 div.highlighter-rouge.language-python::before {
   content: "PYTHON";
 }
@@ -54,6 +58,7 @@ pre.highlight code {
   background-color: transparent;
   padding: 0;
   margin: 0;
+  font-family: var(--font-mono);
 }
 
 .highlight pre {
