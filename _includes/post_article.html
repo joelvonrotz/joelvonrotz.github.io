@@ -1,0 +1,23 @@
+{% if include.url %}
+<a class="post-preview" href="{{ include.url }}">
+  <article>
+    {% else %}
+    <article class="post-preview">
+      {% endif %}
+      {% if include.thumbnail %}
+      <div class="post-thumbnail" style="background-image: url({{ include.thumbnail }});"></div> {% endif %}
+      <div>
+        <h2 class="post-title">{{ include.title }}</h2>
+        {% if include.date %}
+        <p class="post-date">
+          <time datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">{{ include.date |
+            date_to_long_string:
+            "ordinal" }}
+          </time>
+        </p>
+        {% endif %}
+        {{ include.excerpt | replace: '<p', '<p class="post-excerpt"' }} </div>
+    </article>
+    {% if include.url %}
+</a>
+{% endif %}
