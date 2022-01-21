@@ -1,15 +1,15 @@
-/* [NORMALIZE] ============================================================================== */
+/* [FONTS] ================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* [NORMALIZE] ============================================================== */
 
 * {
   margin: 0;
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* [CONFIG] ================================================================================= */
+/* [CONFIG] ================================================================= */
 :root {
   font-size: 18px;
 
@@ -20,8 +20,8 @@ html {
   --bg-2: #b6b6b6; /* secondary background for more focused content*/
   --tx-1: #313131; /* standard text color */
   --tx-2: #555555; /* secondary  */
-  --lk-tx: #1d6db8; /* link text */
-  --lk-1: #134778; /* link hover */
+  --lk-tx: #5285b3; /* link text */
+  --lk-1: #216dac; /* link hover */
   --cd-1: #333333; /* code foreground */
   --cd-2: #d1d1d1; /* code background */
   --cd-br: #333333; /* code block border */
@@ -31,61 +31,44 @@ html {
   --highlight: #3f7db8;
   --mark: #facc14;
 
-  --font-text: "Inter", sans-serif;
-  --font-heading: var(var(--font-text));
-  --font-mono: "Fira Code", monospace;
+  --font-text: "Roboto", sans-serif;
+  --font-heading: "Outfit";
+  --font-code: "Fira Code", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-1: #272727;
-    --bg-2: #333333;
-    --tx-1: #acacac;
-    --tx-2: #707070;
-    --lk-tx: #5285b3;
-    --lk-1: #216dac;
-    --cd-1: #b8b8b8;
-    --cd-2: #3b3b3b;
-    --cd-br: #b8b8b8;
-    --tx-tag: #5b72b6;
-    --tx-cat: #5a5e70;
-    --highlight: #4e657a;
-    --mark: #ccb100;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-1);
 }
 
-/* [STYLE] ================================================================================== */
+/* [STYLE] ================================================================== */
 
-body {
-  font-family: var(--font-text);
-}
-
-/* [TYPOGRAPHY] --------------------------------------------------------------*/
+/* [TYPOGRAPHY] ------------------------------------------------------------- */
 /* This section handles everything text stuff (except for code blocks)        */
 
 p,
+a,
 blockquote,
 li,
 table {
+  font-family: var(--font-text);
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.3rem;
-  letter-spacing: 0.06em;
 }
 
 p {
   margin: 10px 0;
 }
 
-/* [HEADINGS] ------------------------*/
+/* [HEADINGS] --------------------------------------------------------------- */
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-text);
-  font-weight: bold;
-  padding: 2px 4px;
-  left: -4px;
-  position: relative;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  transition: 100ms border ease-in-out;
 }
 
 h2,
@@ -94,67 +77,52 @@ h4 {
   margin-top: 0.75em;
 }
 
+h1:target,
 h2:target,
 h3:target,
 h4:target {
-  background-color: var(--highlight);
+  border-left: solid 4px var(--highlight);
+  border-right: solid 4px var(--highlight);
+  padding-left: 5px;
   border-radius: 5px;
 }
 
 h1 {
-  font-size: 2.3rem;
+  font-size: 2.2rem;
 }
 
 h2 {
-  font-size: 1.85rem;
-  border-bottom: 1px var(--bg-2) solid;
+  font-size: 1.8rem;
 }
+
 h3 {
   font-size: 1.4rem;
 }
+
 h4 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 body {
   max-width: 800px;
-  padding: 0 20px;
-  margin: 20px auto;
+  padding: 20px;
+  margin: 0 auto;
   text-rendering: optimizeLegibility;
   color: var(--tx-1);
   background-color: var(--bg-1);
 }
 
-body > hr {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-main {
+section.post-collection {
   display: flex;
-  flex-flow: column;
-  gap: 10px;
-}
-
-main > article {
-  border-radius: 15px;
-  background-color: var(--bg-2);
-  overflow: hidden;
-}
-
-main article > section {
-  padding: 10px;
-}
-
-main article > img + section {
-  padding-top: 0px;
+  flex-direction: column;
+  gap: 40px;
 }
 
 img {
   width: 100%;
 }
 
-/* [HYPERLINKS] ----------------------*/
+/* [HYPERLINKS] ------------------------------------------------------------- */
 a {
   color: var(--lk-tx);
   stroke: var(--lk-tx);
@@ -169,32 +137,50 @@ a:hover {
   stroke: var(--lk-1);
 }
 
-/* [HEADER & FOOTER] ======================================================================== */
+a.button {
+  padding: 6px 8px;
+  background-color: var(--lk-tx);
+  transition: 100ms background-color ease-in-out;
+  color: var(--bg-1);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+a.button:hover {
+  background-color: var(--lk-1);
+}
+
+/* [HEADER] ======================================================== */
 /* the alternative hyperlinks use a rather opaque color (instead of black it'll
    use a gray color                                                           */
 
-footer nav a,
-footer nav span,
-header nav a:not(:first-child):not(:last-child) {
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+a.alt {
   color: var(--tx-2);
   stroke: var(--tx-2);
   fill: none;
 }
 
-header nav a:hover:not(:first-child):not(:last-child) {
+a.alt:hover {
   color: var(--tx-1);
   stroke: var(--tx-1);
 }
 
-header nav {
+nav.menu {
   display: flex;
   align-items: center;
   gap: 3px;
 }
 
-header nav a {
+nav.menu a {
   stroke-width: 2pt;
-  height: 1.3rem; /* FALLBACK IE */
+  height: 1.3rem;
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -207,37 +193,30 @@ header nav a {
   font-weight: 500;
 }
 
-header nav a svg {
+nav.menu a svg {
   height: inherit;
   width: 1.3rem;
-  stroke-width: 1.2pt;
+  stroke-width: 1.3pt;
 }
 
-footer a,
-header a {
+nav.menu a {
   text-decoration: none;
 }
 
-header nav > span {
-  color: var(--lk-tx);
-}
-
-header nav a:hover {
+nav.menu a:hover {
   background: var(--bg-2);
 }
 
-/* [FOOTER] ================================================================================= */
+/* [FOOTER] ================================================================= */
+
 footer {
   display: flex;
-  flex-flow: row;
   justify-content: center;
+  gap: 3px;
+  margin-top: 40px;
 }
 
-main footer {
-  gap: 10px;
-}
-
-/* [FIGURE] ================================================================================= */
+/* [FIGURE] ================================================================= */
 figure {
   border-radius: 10px;
   background-color: var(--bg-2);
@@ -252,7 +231,7 @@ figure figcaption {
   padding: 10px;
 }
 
-/* [BLOCKQUOTE] ============================================================================= */
+/* [BLOCKQUOTE] ============================================================= */
 blockquote {
   position: relative;
   border-left: 4px solid var(--quote);
@@ -271,7 +250,7 @@ blockquote::before {
   color: var(--quote);
 }
 
-/* [LIST] =================================================================================== */
+/* [LIST] =================================================================== */
 li > ol,
 li > ul {
   margin: 0;
@@ -287,13 +266,13 @@ li::marker {
   font-weight: bold;
 }
 
-/* [CODE,KEYBOARD] ========================================================================== */
-code {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
+/* [CODE,KEYBOARD] ========================================================== */
+code,
+kbd {
+  font-family: var(--font-code);
 }
 
-/* [SPECIAL] ================================================================================ */
+/* [SPECIAL] ================================================================ */
 
 div:target strong {
   position: relative;
@@ -304,4 +283,49 @@ div:target strong::before {
   content: "->";
   color: var(--highlight);
   left: -20px;
+}
+
+/* [TAGS & CATEGORY] ======================================================== */
+.post-tags,
+.post-category {
+  position: relative;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.post-tags::before {
+  content: "Tags";
+  font-weight: bold;
+}
+
+.post-category::before {
+  content: "Category";
+  font-weight: bold;
+}
+
+/* [SPECIAL NUT CASES] ====================================================== */
+div.post-thumbnail {
+  width: 100%;
+  padding-bottom: 50%;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center; /* optional, center the image */
+}
+
+/* [POST STUFF PREVIEW] ===================================================== */
+a.post-preview {
+  text-decoration: none;
+}
+
+a.post-preview:hover h2 {
+  text-decoration: underline var(--lk-1);
+}
+
+.post-date {
+  color: var(--tx-2);
+}
+
+.post-excerpt,
+.post-title {
+  color: var(--tx-1);
 }

@@ -1,22 +1,25 @@
 ---
 layout: default
 ---
-<header>
-{% if page.thumbnail %}
-<img src="{{page.thumbnail}}" class="thumbnail">
-{% endif %}
-<h1>
-  {{page.title}}
-</h1>
-<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string: "ordinal" }}</time>
-</header>
+<div class="post-header">
+  {% if page.thumbnail %}
+  <img src="{{page.thumbnail}}" class="thumbnail">
+  {% endif %}
+  <h1>
+    {{page.title}}
+  </h1>
+  <p>
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_long_string:
+      "ordinal" }}
+    </time>
+  </p>
+</div>
 <section>
   {{ content }}
 </section>
 <hr>
 <footer>
-  <div>
-    <strong>Tags</strong>
+  <div class="post-metadata post-tags">
     <span class="post_labels">
       {% for tag in page.tags %}
       {% if forloop.last == false %}
@@ -27,10 +30,9 @@ layout: default
       {% endfor %}
     </span>
   </div>
-  <div>
-    <strong >Category</strong>
-    <span >
-      <a class="category" href="/categories#{{page.category | slugify}}">{{ page.category  }}</a></li>
+  <div class="post-metadata post-category">
+    <span>
+      <a class="category" href="/categories#{{page.category | slugify}}">{{ page.category }}</a></li>
     </span>
   </div>
 </footer>

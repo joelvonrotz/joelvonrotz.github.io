@@ -1,29 +1,19 @@
 ---
 layout: default
 ---
-<div class="title">
-  <h1>
-    {{page.title}}
-  </h1>
+
+<div class="{{page.title}}">
+  <h1>{{page.title}}</h1>
 </div>
-<div class="content">
-  {{ content }}
-  {% for compare_post in site.posts  %}
-    {% capture this_year %}{{ compare_post.date | date: "%Y" }}{% endcapture %}
-    {% capture prev_year %}{{ compare_post.previous.date | date: "%Y" }}{% endcapture %}
-    
-    {% if this_year!=prev_year %}
-    {% capture entry_detail %}
-      <ul>
-      {% for post in site.posts  %}
-        {% capture post_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-        {% if post_year==this_year %}
-          <li><code> {{ post.date | date: "%d.%m" }}</code> - <a href="{{ post.url }}" style="text-decoration: none;">{{ post.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-      </ul>
-    {% endcapture %}
-    {% include disclosure_box.html open="True" content=entry_detail title=this_year %}
-    {% endif %}
+<div class="content">{{ content }}</div>
+<section class="post-collection">
+  {% for post in site.posts %}
+  {% if post.thumbnail %}
+  {% include post_article.html url=post.url thumbnail=post.thumbnail title=post.title excerpt=post.excerpt
+  date=post.date
+  %}
+  {% else %}
+  {% include post_article.html url=post.url title=post.title excerpt=post.excerpt date=post.date %}
+  {% endif %}
   {% endfor %}
-</div>
+</section>

@@ -2,24 +2,6 @@
 layout: default
 ---
 
-<h1 class="post-title">{{page.title}}</h1>
-{{content}} {% for post in site.posts %} {% if post.redirect %} {% assign url =
-post.redirect %} {% else %} {% assign url = post.url %} {% endif %}
-<article>
-  {% if post.thumbnail %}
-  <img src="{{post.thumbnail}}" />
-  {% endif %}
-  <section>
-    <a href="{{ url }}">
-      <h2>{{post.title}}</h2>
-    </a>
-    <p>{{post.date | date:"%a %d.%m.%Y"}}</p>
-    <!--DATE-->
-    {{post.excerpt}}<!--EXCERPTCONTENT-->
-    <a class="post-readmore" href="{{ url }}">
-      {% if post.readmore %} {{ post.readmore }} &rarr; {% else %} Read More
-      &rarr; {% endif %}
-    </a>
-  </section>
-</article>
-{% endfor %}
+<div class="site-introduction">
+  {{content}}
+</div>

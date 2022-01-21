@@ -1,10 +1,10 @@
 ---
-layout: photos
+layout: page
 title: "Photos"
 permalink: "/photos"
 ---
 
-Sadly I haven't gotten to this page, as I'm currently in university (of applied sciences) studying electrical engineering.
+Sadly I haven't gotten to this page, as I'm currently in uni studying electrical engineering.
 
 This page probably will be finished some time!
 
