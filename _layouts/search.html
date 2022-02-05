@@ -1,70 +1,43 @@
 ---
 layout: default
 ---
-<div class="title">
-  <h1>
-    {{page.title}}
-  </h1>
-</div>
-<div class="content">
+<div class="content search">
   {{ page.content }}
 
-  <div class="search-box" data-list="/">
-    <input class="search-in" placeholder="Search for Posts">
-    <div class="search-out">
-
-    </div>
-  </div>
+  <input autocomplete="off" type="search" id="search" placeholder="Search for posts & pages!" />
+  <ul id="results">
+    <li>no results</li>
+  </ul>
 </div>
 <script>
-  async function getPostList(url_postlist) {
-    let response = await fetch(url_postlist)
-    let data = await response.json()
-    return data
-  }
-  
-  function filterPosts(json_postlist, input_value) {
-    let filteredPosts = []
-    let terms = input_value.split(' ').filter(value => (value != '')) 
-    //if no terms are specified, skip over filtering an call callback with empty array
-    if(terms.length > 0)
-    {
-      filteredPosts = json_postlist.filter((value) => {
-        //turn all the post-list data into a single string for easier filtering
-        //                         |< --------- string conversion --------- >|< ---------- filtering ---------- >|
-        return terms.every(term => Object.values(value).join('').toLowerCase().indexOf(term.toLowerCase()) >= 0 );
-      })
-      if(filteredPosts.length > 0) { return Promise.all(filteredPosts); }
-      else { return Promise.reject("NOPOST"); }
+  const search = document.getElementById("search");
+  const results = document.getElementById("results");
+  let search_list = [];
+  search.addEventListener('input', (event) => {
+    search_term = event.target.value.toLowerCase();
+    if (search_term) {
+      results.innerHTML = "";
+      search_list.filter((item) => {
+        console.log(JSON.stringify(item).includes(search_term));
+        return JSON.stringify(item).includes(search_term);
+      }).forEach((item) => {
+        results.innerHTML += `<li class="${item.type}" ><a href=\"${item.url}\">${item.title}</a></li>`;
+      });
     }
-    else { return Promise.reject("NOTERM"); }
+    else {
+      results.innerHTML = "<li>no results</li>";
+    }
+  });
+
+  function get_json_posts() {
+    fetch('/data/search.json')
+      .then(response => response.json())
+      .then(data => {
+        search_list = data;
+      });
   }
 
-  // || MAIN ||
-  let search_input = document.querySelector('div.search-box').querySelector('input.search-in')
-  let search_result = document.querySelector('div.search-box').querySelector('div.search-out')
-  var MAX_RESULT_SIZE = 20;
-  //insert placeholder text into the results element
-  search_result.innerHTML = '<p>Try searching for a post by typing in keywords in the input field. You can search for categories, tags, etc.</p>'
-  getPostList('/data/search.json').then(data => {
-    let data_posts = data
-    search_input.addEventListener('input', ev => {
-      filterPosts(data_posts, search_input.value)
-       .then(data => {
-        search_result.innerHTML = '<p>Found <code><b>' + data.length + '</b></code> Post' + (data.length > 1 ? 's' : '') + (data.length > MAX_RESULT_SIZE ? ('. Limiting to recent <code><b>' + MAX_RESULT_SIZE + '</b></code> Posts</p>') : '</p>')
-        for (let index = 0; index < 15; index++) {
-          const post = data[index];
-          search_result.innerHTML += '<article><a href=\"' + post.url + '\"><h3>' + post.title + '</h3><p>' + post.url +'</p></a></article>'
-        }
-      })
-      .catch(err => {
-        if(err == "NOTERM") {
-          search_result.innerHTML = '<p>Try searching for a post by typing in keywords in the input field. You can search for categories, tags, etc.</p>'
-        }
-        else if(err == "NOPOST") {
-          search_result.innerHTML = '<p>No Posts Found!</p>'
-        }
-      })
-    })
-  })
+  get_json_posts();
+
+
 </script>
