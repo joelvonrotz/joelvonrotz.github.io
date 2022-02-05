@@ -31,6 +31,12 @@
   --highlight: #3f7db8;
   --mark: #facc14;
 
+  --search-post-bg: #facc14;
+  --search-post-br: #b69204;
+
+  --search-page-bg: #92ceff;
+  --search-page-br: #588bb6;
+
   --font-text: "Roboto", sans-serif;
   --font-heading: "Outfit";
   --font-code: "Fira Code", monospace;
@@ -256,6 +262,22 @@ blockquote::before {
   color: var(--quote);
 }
 
+blockquote > blockquote {
+  border: none;
+  color: var(--tx-2);
+  font-style: italic;
+  padding-left: 20px;
+  margin: 0px;
+}
+
+blockquote > blockquote::before {
+  content: "\2013";
+  font-size: 1rem;
+  font-weight: bold;
+  top: 0px;
+  left: 0px;
+}
+
 /* [LIST] =================================================================== */
 li > ol,
 li > ul {
@@ -348,4 +370,54 @@ a.post-preview:hover h2 {
     line-height: 0.8;
     font-size: 30px;
   }
+}
+
+div.content.search {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+input#search {
+  border-radius: 5px;
+  border: 1px solid var(--bg-2);
+  padding: 5px;
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 300;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul#results {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  gap: 10px;
+  list-style: none;
+}
+
+ul#results li.post::after,
+ul#results li.page::after {
+  font-family: var(--font-heading);
+  font-weight: bold;
+  font-size: 0.8rem;
+  border: 1px solid;
+  border-radius: 10px;
+  font-variant: small-caps;
+  padding: 0px 3px;
+  margin-left: 5px;
+}
+
+ul#results li.post::after {
+  content: "post";
+  background-color: var(--search-post-bg);
+  border-color: var(--search-post-br);
+}
+
+ul#results li.page::after {
+  content: "page";
+  background-color: var(--search-page-bg);
+  border-color: var(--search-page-br);
 }
