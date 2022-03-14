@@ -421,3 +421,30 @@ ul#results li.page::after {
   background-color: var(--search-page-bg);
   border-color: var(--search-page-br);
 }
+
+div.box-collection{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+div.box{
+  width: 250px;
+  padding: 10px;
+  border: solid 1px var(--bg-2);
+  transition: border 250ms ease-in-out;
+}
+
+div.box:hover{
+  border: solid 1px var(--lk-tx);
+}
+
+p.box-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+p.box-desc {
+  font-size: 0.9rem;
+}
