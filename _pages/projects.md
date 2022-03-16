@@ -22,7 +22,7 @@ This page probably will be finished some time!
       <img src="/images/projects/touring/project_suisse_de_tour.jpg">
     </div>
     <p class="box-title">
-      Bike Touring
+      Suisse de Tour
     </p>
     <p class="box-desc">
       A four week tour I've done during the summer of 2021. I explored my home country thoroughly by visiting all the main cities of each canton.
