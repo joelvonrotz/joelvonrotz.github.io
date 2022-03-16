@@ -97,6 +97,10 @@ h1 {
   font-size: 2.2rem;
 }
 
+h1:not(.site-title){
+  margin-bottom: 20px;
+}
+
 h1.site-title {
   display: flex;
   gap: 10px;
@@ -149,18 +153,18 @@ a:hover {
   stroke: var(--lk-1);
 }
 
-a.button {
+a.obnoxious {
   padding: 6px 8px;
-  background-color: var(--lk-tx);
+  border: 1px var(--lk-tx) solid;
   transition: 100ms background-color ease-in-out;
-  color: var(--bg-1);
+  color: var(--tx-1);
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
 }
 
-a.button:hover {
-  background-color: var(--lk-1);
+a.obnoxious:hover {
+  background-color: var(--lk-tx);
 }
 
 /* [HEADER] ======================================================== */
@@ -429,6 +433,11 @@ div.box-collection{
   gap: 15px;
 }
 
+div.box-collection.vertical{
+  flex-flow: column;
+  align-items: center;
+}
+
 div.box{
   width: 250px;
   padding: 10px;
@@ -440,11 +449,37 @@ div.box:hover{
   border: solid 1px var(--lk-tx);
 }
 
-p.box-title {
+div.box .box-title {
   font-weight: bold;
   font-size: 1.1rem;
+  margin: 0;
 }
 
-p.box-desc {
+div.box .box-desc, div.box .box-links a{
   font-size: 0.9rem;
+  text-decoration: none;
+}
+
+div.box .box-img{
+  margin-bottom: 0.75rem;
+}
+
+div.box .box-title + .box-links {
+  margin-top: 15px;
+  text-align: center;
+}
+
+div.title.filled {
+  display: flex;
+  align-items: center;
+}
+
+div.title.filled h1{
+  background-clip: text;
+  background-size: cover;
+  color: transparent;
+  font-size: 8rem;
+  background-position: center;
+  margin: 0 auto;
+  -webkit-text-stroke: 5px transparent;
 }
