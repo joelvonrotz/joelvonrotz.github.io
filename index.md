@@ -20,4 +20,4 @@ lot, as I sometimes just ponder for myself or exchange some topics with friends.
 
 ### Some links
 
-[Posts](/posts){:.obnoxious} / [Github]([/posts](https://github.com/joelvonrotz)){:.obnoxious} / [Flickr](https://www.flickr.com/joelvonrotz){:.obnoxious}
+[Posts](/posts){:.obnoxious} / [Downloads](/downloads){:.obnoxious} / [Github]([/posts](https://github.com/joelvonrotz)){:.obnoxious} / [Flickr](https://www.flickr.com/joelvonrotz){:.obnoxious}

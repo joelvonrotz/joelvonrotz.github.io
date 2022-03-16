@@ -5,9 +5,23 @@ permalink: "/projects"
 thumbnail: "/images/pages/projects.jpg"
 filled: true
 ---
-## Bike Touring
 
-  
+## Summaries
+
+### Bachelor &ndash; Electrical Engineering
+<div class="box-collection">
+  <div class="box">
+  <a href="/downloads#semester-1">
+    <h4 class="box-title">
+      Semester 1
+    </h4></a>
+    <p class="box-desc">
+      My summaries from my first semester of the bachelor of electrical engineering at HSLU Lucerne.
+    </p>
+  </div>
+</div>
+
+## Bike Touring
 
 > Genau wenn man irgendwo im nirgendwo ist, die Regenkleider völlig durchnässt und das Ziel viel zu weit weg gesetzt hat, dann erlebt man das Abenteuer.
 > > Me!
