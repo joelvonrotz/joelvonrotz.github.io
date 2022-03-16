@@ -7,10 +7,17 @@ title: "dumb ideas"
 hide_home: true
 ---
 
-Hi I'm Joel
+# Hi I'm Joel
 
-I'm an electrical engineering student studying in Switzerland...
+Welcome to my tinker website, were I learn a bit about HTML, CSS & JavaScript.
+Sometimes I write some posts, which you can find in the links below. I don't write a
+lot, as I sometimes just ponder for myself or exchange some topics with friends.
 
-## Contact
+> ### What I'm currently thinking about
+> - Teaching at a workshop
+> - Sewing
+> - Reading more books
 
-You can find me on [Github](https://github.com/joelvonrotz), where I post code and stuff, on [Flickr](https://www.flickr.com/joelvonrotz), where I post my photography, or via [mail](mailto:contact@joelvonrotz.ch)
+### Some links
+
+[Posts](/posts){:.obnoxious} / [Github]([/posts](https://github.com/joelvonrotz)){:.obnoxious} / [Flickr](https://www.flickr.com/joelvonrotz){:.obnoxious}
