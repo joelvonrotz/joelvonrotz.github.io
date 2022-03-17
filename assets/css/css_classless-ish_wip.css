@@ -479,8 +479,8 @@ div.title.filled h1{
   background-clip: text;
   background-size: cover;
   color: transparent;
-  font-size: 8rem;
+  font-size: min(17vw,9rem);
   background-position: center;
   margin: 0 auto;
-  -webkit-text-stroke: 5px transparent;
+  -webkit-text-stroke: 3px transparent;
 }
