@@ -2,12 +2,9 @@
 layout: page
 title: "Photos"
 permalink: "/photos"
+thumbnail: "/images/pages/photos.jpg"
+filled: true
 ---
+Still trying to figure something out with this.
 
-Sadly I haven't gotten to this page, as I'm currently in uni studying electrical engineering.
-
-This page probably will be finished some time!
-
-\- Joel, Sep. 2021
-
-Also I'm not sure how I'm actually going to implement the page...
+While I'm at it, you can check out my photo collection over at [Flickr](https://flickr.com/joelvonrotz).
