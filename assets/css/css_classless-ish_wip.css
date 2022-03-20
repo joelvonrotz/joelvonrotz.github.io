@@ -92,6 +92,7 @@ h4:target {
   border-right: solid 4px var(--highlight);
   padding-left: 5px;
   border-radius: 5px;
+  background-color: #b2d2ee;
 }
 
 h1 {
