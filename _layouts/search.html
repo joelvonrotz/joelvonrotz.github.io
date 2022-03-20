@@ -21,8 +21,7 @@ layout: default
     if (search_term) {
       results.innerHTML = "";
       search_list.filter((item) => {
-        console.log(JSON.stringify(item).includes(search_term));
-        return JSON.stringify(item).includes(search_term);
+        return (JSON.stringify(item).toLowerCase().indexOf(search_term) >= 0);
       }).forEach((item) => {
         results.innerHTML += `<li class="${item.type}" ><a href=\"${item.url}\">${item.title}</a></li>`;
       });
