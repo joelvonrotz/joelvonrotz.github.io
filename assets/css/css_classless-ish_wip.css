@@ -410,7 +410,7 @@ ul#results li.page::after {
   font-weight: bold;
   font-size: 0.8rem;
   border: 1px solid;
-  border-radius: 10px;
+  border-radius: 5px;
   font-variant: small-caps;
   padding: 0px 3px;
   margin-left: 5px;
