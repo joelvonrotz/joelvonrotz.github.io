@@ -164,6 +164,8 @@ a.obnoxious {
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
+  line-height: 2.3;
+  white-space: nowrap; /* disables word wrap for links*/
 }
 
 a.obnoxious:hover {
