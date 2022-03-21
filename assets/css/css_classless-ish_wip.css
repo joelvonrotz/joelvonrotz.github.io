@@ -57,6 +57,7 @@ a,
 blockquote,
 li,
 table,
+footer,
 figcaption {
   font-family: var(--font-text);
   font-weight: 300;
@@ -112,6 +113,10 @@ h1.site-title {
 
 h2 {
   font-size: 1.8rem;
+}
+
+h2.post-title{
+  line-height: 1.0;
 }
 
 h3 {
@@ -312,15 +317,12 @@ kbd {
 
 /* [SPECIAL] ================================================================ */
 
-div:target strong {
-  position: relative;
-  border-bottom: 2px solid var(--highlight);
-}
-div:target strong::before {
-  position: absolute;
-  content: "->";
-  color: var(--highlight);
-  left: -20px;
+div:target h4 {
+  border-left: solid 4px var(--highlight);
+  border-right: solid 4px var(--highlight);
+  padding-left: 5px;
+  border-radius: 5px;
+  background-color: #b2d2ee;
 }
 
 /* [TAGS & CATEGORY] ======================================================== */
