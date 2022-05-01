@@ -156,6 +156,14 @@ a {
     200ms background-color ease-in-out;
 }
 
+a[href=""]::after {
+  content: "no link";
+  color: var(--bg-2);
+  font-weight: bold;
+  padding-left: 5px;
+  font-size: 0.8rem;
+}
+
 a:hover {
   color: var(--lk-1);
   stroke: var(--lk-1);
