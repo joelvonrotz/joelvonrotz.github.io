@@ -11,7 +11,7 @@ title: Joel von Rotz
 description: >- # this means to ignore newlines until "baseurl:"
   A little website of a tall boy, that wants to enjoy life.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://joelvonrotz.ch"
+url: "https://joelvonrotz.github.io"
 
 # Build settings
 markdown: kramdown
