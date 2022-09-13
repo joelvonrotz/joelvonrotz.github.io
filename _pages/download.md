@@ -16,5 +16,7 @@ As these summaries aren't completely written
 
 [Mathematik Grundlagen](/downloads/ee21/s1_mathematik_grundlagen.pdf){:.obnoxious} / [Elektrotechnik 1](/downloads/ee21/s1_elektrotechnik_1.pdf){:.obnoxious} / [Digitaltechnik](/downloads/ee21/s1_digitaltechnik.pdf){:.obnoxious} / [Programmiergrundlagen 1](/downloads/ee21/s1_programmiergrundlagen.pdf){:.obnoxious}
 
-### Semester 2 (WIP)
-[Mathematik & Physik 1](){:.obnoxious} / [Elektrotechnik 2](){:.obnoxious} / [Mikrocontroller Fundamentals](){:.obnoxious} / [Elektronik 1](){:.obnoxious} / [Linear Algebra](){:.obnoxious}
+### Semester 2
+[Mathematik (& Physik) 1](/downloads/ee21/s2_mathematik1.pdf){:.obnoxious} / [Elektrotechnik 2](/downloads/ee21/s2_elektrotechnik2.pdf){:.obnoxious} ([Lab](/downloads/ee21/s2_elektrotechnik2_labor.pdf){:.obnoxious}) / [Mikrocontroller Fundamentals](/downloads/ee21/s2_microcontroller_fundamentals.pdf){:.obnoxious} / [Elektronik 1](/downloads/ee21/s2_electronik1.pdf){:.obnoxious} / [Linear Algebra](/downloads/ee21/s2_linear_algebra.pdf){:.obnoxious}
+
+### Semester 3 WIP
