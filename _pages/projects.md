@@ -9,6 +9,7 @@ filled: true
 ## Summaries
 
 ### Bachelor &ndash; Electrical Engineering
+
 <div class="box-collection">
   <div class="box">
   <a href="/downloads#semester-1">
@@ -17,6 +18,26 @@ filled: true
     </h4></a>
     <p class="box-desc">
       My summaries from my first semester of the bachelor of electrical engineering at HSLU Lucerne.
+    </p>
+  </div>
+
+  <div class="box">
+  <a href="/downloads#semester-2">
+    <h4 class="box-title">
+      Semester 2
+    </h4></a>
+    <p class="box-desc">
+      My summaries from my second semester of the bachelor of electrical engineering at HSLU Lucerne.
+    </p>
+  </div>
+
+  <div class="box">
+  <a href="/downloads#semester-2">
+    <h4 class="box-title">
+      Semester 3
+    </h4></a>
+    <p class="box-desc">
+      My summaries from my third semester of the bachelor of electrical engineering at HSLU Lucerne.
     </p>
   </div>
 </div>

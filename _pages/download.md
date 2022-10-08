@@ -10,7 +10,7 @@ filled: true
 
 All the summaries are written in a mix of English and German, but I'm providing them anyways as they might help you somehow. As time goes, I'll add more of my summaries!
 
-As these summaries aren't completely written
+These notes are as is and do not guarantee a good grade on your exams!
 
 ### Semester 1
 
@@ -19,4 +19,6 @@ As these summaries aren't completely written
 ### Semester 2
 [Mathematik (& Physik) 1](/downloads/ee21/s2_mathematik1.pdf){:.obnoxious} / [Elektrotechnik 2](/downloads/ee21/s2_elektrotechnik2.pdf){:.obnoxious} ([Lab](/downloads/ee21/s2_elektrotechnik2_labor.pdf){:.obnoxious}) / [Mikrocontroller Fundamentals](/downloads/ee21/s2_microcontroller_fundamentals.pdf){:.obnoxious} / [Elektronik 1](/downloads/ee21/s2_electronik1.pdf){:.obnoxious} / [Linear Algebra](/downloads/ee21/s2_linear_algebra.pdf){:.obnoxious}
 
-### Semester 3 WIP
+### Semester 3
+
+[Mathematik (& Physik) 2](){:.obnoxious} / [Elektronik 2](){:.obnoxious} / [Signale & Systeme](){:.obnoxious} / [Advanced Programming](){:.obnoxious}
