@@ -32,7 +32,7 @@ filled: true
   </div>
 
   <div class="box">
-  <a href="/downloads#semester-2">
+  <a href="/downloads#semester-3">
     <h4 class="box-title">
       Semester 3
     </h4></a>
