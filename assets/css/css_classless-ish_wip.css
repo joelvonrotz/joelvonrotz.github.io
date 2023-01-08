@@ -40,6 +40,8 @@
   --font-text: "Overpass", "Roboto", sans-serif;
   --font-heading: "Outfit";
   --font-code: "Fira Code", monospace;
+
+  --wrapper: 800px;
 }
 
 html {
@@ -128,7 +130,7 @@ h4 {
 }
 
 body {
-  max-width: 800px;
+  max-width: var(--wrapper);
   padding: 20px;
   margin: 0 auto;
   text-rendering: optimizeLegibility;
@@ -483,6 +485,10 @@ div.box .box-img{
 div.box .box-title + .box-links {
   margin-top: 15px;
   text-align: center;
+}
+
+div.title {
+  margin-bottom: 20px;
 }
 
 div.title.filled {

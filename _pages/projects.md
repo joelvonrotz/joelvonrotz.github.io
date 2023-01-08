@@ -6,6 +6,23 @@ thumbnail: "/images/pages/projects.jpg"
 filled: true
 ---
 
+{% if site.projects %}
+<div class="box-collection">
+  {% for project in site.projects %}
+  <div class="box">
+    <a href="{{ project.url }}">
+      <h4 class="box-title">
+        {{ project.title }}
+      </h4>
+    </a>
+    <p class="box-desc">
+      {{ project.excerpt }}
+    </p>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
 ## Summaries
 
 ### Bachelor &ndash; Electrical Engineering
