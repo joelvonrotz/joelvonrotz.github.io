@@ -14,11 +14,11 @@ These notes are as is and do not guarantee a good grade on your exams!
 
 ### Semester 1
 
-[Mathematik Grundlagen](/downloads/ee21/s1_mathematik_grundlagen.pdf){:.obnoxious} / [Elektrotechnik 1](/downloads/ee21/s1_elektrotechnik_1.pdf){:.obnoxious} / [Digitaltechnik](/downloads/ee21/s1_digitaltechnik.pdf){:.obnoxious} / [Programmiergrundlagen 1](/downloads/ee21/s1_programmiergrundlagen.pdf){:.obnoxious}
+[Mathematik Grundlagen](/downloads/bachelor/s1_mathematik_grundlagen.pdf){:.obnoxious} / [Elektrotechnik 1](/downloads/bachelor/s1_elektrotechnik_1.pdf){:.obnoxious} / [Digitaltechnik](/downloads/bachelor/s1_digitaltechnik.pdf){:.obnoxious} / [Programmiergrundlagen 1](/downloads/bachelor/s1_programmiergrundlagen.pdf){:.obnoxious}
 
 ### Semester 2
-[Mathematik (& Physik) 1](/downloads/ee21/s2_mathematik1.pdf){:.obnoxious} / [Elektrotechnik 2](/downloads/ee21/s2_elektrotechnik2.pdf){:.obnoxious} ([Lab](/downloads/ee21/s2_elektrotechnik2_labor.pdf){:.obnoxious}) / [Mikrocontroller Fundamentals](/downloads/ee21/s2_microcontroller_fundamentals.pdf){:.obnoxious} / [Elektronik 1](/downloads/ee21/s2_electronik1.pdf){:.obnoxious} / [Linear Algebra](/downloads/ee21/s2_linear_algebra.pdf){:.obnoxious}
+[Mathematik (& Physik) 1](/downloads/bachelor/s2_mathematik1.pdf){:.obnoxious} / [Elektrotechnik 2](/downloads/bachelor/s2_elektrotechnik2.pdf){:.obnoxious} ([Lab](/downloads/bachelor/s2_elektrotechnik2_labor.pdf){:.obnoxious}) / [Mikrocontroller Fundamentals](/downloads/bachelor/s2_microcontroller_fundamentals.pdf){:.obnoxious} / [Elektronik 1](/downloads/bachelor/s2_electronik1.pdf){:.obnoxious} / [Linear Algebra](/downloads/bachelor/s2_linear_algebra.pdf){:.obnoxious}
 
 ### Semester 3
 
-[Mathematik (& Physik) 2](){:.obnoxious} / [Elektronik 2](){:.obnoxious} / [Signale & Systeme](){:.obnoxious} / [Advanced Programming](){:.obnoxious}
+[Mathematik 2](/downloads/bachelor/s3_mathematik2_pt1.pdf){:.obnoxious} ([Edited HSLU-Formulary](/downloads/bachelor/s3_mathematik2_pt2.pdf){:.obnoxious}) / [Elektronik 2](/downloads/bachelor/s3_Elektronik2.pdf){:.obnoxious} / [Signale & Systeme](){:.obnoxious} / [Advanced Programming](){:.obnoxious}
