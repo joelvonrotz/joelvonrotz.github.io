@@ -110,7 +110,7 @@ pre.highlight code {
   font-style: italic;
 }
 .highlight .gs {
-  font-weight: 700;
+  font-weight: bold;
 }
 .highlight .kc {
   color: #dd672c;
@@ -182,7 +182,7 @@ pre.highlight code {
   color: #e5c07b;
 }
 .highlight .ow {
-  font-weight: 700;
+  font-weight: bold;
 }
 .highlight .w {
   color: #f8f8f2;
