@@ -4,6 +4,7 @@ title: "$\\LaTeX$ Equation Generator"
 excerpt: "A small generator using Katex to generate equations."
 ---
 
+This exist to quickly write an equation for explaining something to a friend or look how an equation will look in a document. It uses the Katex script and works great! I recommend using a browser that has a Snapshot-Tool to save the equations.
 
 <pre id="equation_input" contenteditable="true">y = m \cdot x + b</pre>
 <pre id="equation_text" contenteditable="true"></pre>
@@ -29,6 +30,8 @@ excerpt: "A small generator using Katex to generate equations."
     overflow-x: auto;
     border: solid 1px var(--highlight);
     line-height: 1.3;
+    width:100%;
+    display:block
   }
 
   #equation_output {
@@ -37,9 +40,8 @@ excerpt: "A small generator using Katex to generate equations."
   }
   
   .katex {
-    font-size: 1.2em;
-    }
+    font-size: 1.5em;
+  }
 
-  input{width:100%;display:block}
 </style>
 <script src="/scripts/tools/katex_equation_renderer.js"></script>
