@@ -21,4 +21,4 @@ These notes are as is and do not guarantee a good grade on your exams!
 
 ### Semester 3
 
-[Mathematik 2](/downloads/bachelor/s3_mathematik2_pt1.pdf){:.obnoxious} ([Edited HSLU-Formulary](/downloads/bachelor/s3_mathematik2_pt2.pdf){:.obnoxious}) / [Elektronik 2](/downloads/bachelor/s3_elektronik2.pdf){:.obnoxious} / [Signale & Systeme](/downloads/bachelor/s3_signal_systeme.pdf){:.obnoxious} / [Advanced Programming](/downloads/s3_advanced_programming.pdf){:.obnoxious}
+[Mathematik 2](/downloads/bachelor/s3_mathematik2_pt1.pdf){:.obnoxious} ([Edited HSLU-Formulary](/downloads/bachelor/s3_mathematik2_pt2.pdf){:.obnoxious}) / [Elektronik 2](/downloads/bachelor/s3_elektronik2.pdf){:.obnoxious} / [Signale & Systeme](/downloads/bachelor/s3_signal_systeme.pdf){:.obnoxious} / [Advanced Programming](/downloads/bachelor/s3_advanced_programming.pdf){:.obnoxious}
