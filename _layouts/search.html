@@ -8,9 +8,9 @@ layout: default
   {{ page.content }}
 
   <input autocomplete="off" type="search" id="search" placeholder="Search for posts & pages!" />
-  <ul id="results">
-    <li>no results</li>
-  </ul>
+  <div id="results">
+    <a class="search-result none"><span>^</span><span>Type something in the input bar to search</span></a>
+  </div>
 </div>
 <script>
   const search = document.getElementById("search");
@@ -20,14 +20,23 @@ layout: default
     search_term = event.target.value.toLowerCase();
     if (search_term) {
       results.innerHTML = "";
-      search_list.filter((item) => {
+      let list_filtered = search_list.filter((item) => {
         return (JSON.stringify(item).toLowerCase().indexOf(search_term) >= 0);
-      }).forEach((item) => {
-        results.innerHTML += `<li class="${item.type}" ><a href=\"${item.url}\">${item.title}</a></li>`;
-      });
+      })
+      console.log(list_filtered);
+
+      if(list_filtered.length != 0) {
+        console.log("In");
+        list_filtered.forEach((item) => {
+          results.innerHTML += `<a href="${item.url}" class="search-result ${item.type}"><span>${item.type.toUpperCase()}</span><span>${item.title}</span></a>`;
+        });
+      } else {
+        results.innerHTML += `<a class="search-result none"><span>No results</span><span>No topic could be found</span></a>`;
+      }
+      
     }
     else {
-      results.innerHTML = "<li>no results</li>";
+      results.innerHTML = `<a class="search-result none"><span>^</span><span>Type something in the input bar to search</span></a>`;
     }
   });
 
