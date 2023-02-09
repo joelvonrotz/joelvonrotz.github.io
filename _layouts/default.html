@@ -29,14 +29,17 @@
     onload="renderMathInElement(document.body);"></script>
 </head>
 
-<body id="page-top">
+<body>
+  <div class="header-background">
+    
+  </div>
   <header>
-    <h1 class="site-title">
-      <span>joel</span>
-      <span>von</span>
-      <span>rotz</span>
-    </h1>
-    <nav class="menu">
+      <h1 class="site-title">
+        <span>joel</span>
+        <span>von</span>
+        <span>rotz</span>
+      </h1>
+      <nav class="menu">
       {% if page.hide_home != true %}
       <a title="Home" href="/">
         <svg viewBox="0 0 24 24">
@@ -44,11 +47,11 @@
         </svg>
       </a>
       {% endif %}
-
+      
       <a class="alt" href="/projects">
         <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-          aria-labelledby="lightBulbIconTitle">
-          <path
+        aria-labelledby="lightBulbIconTitle">
+        <path
             d="M16 12C15.3333333 12.6666667 15 14 15 16L15 17 9 17 9 16C9 14 8.66666667 12.6666667 8 12 5.6739597 9.6739597 5.41421356 6.10050506 7.75735931 3.75735931 10.1005051 1.41421356 13.8994949 1.41421356 16.2426407 3.75735931 18.5857864 6.10050506 18.4068484 9.59315157 16 12zM10 21L14 21">
           </path>
         </svg>
@@ -56,12 +59,12 @@
       </a>
       <a class="alt" href="/photos">
         <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-          aria-labelledby="imageIconTitle">
-          <rect width="18" height="18" x="3" y="3"></rect>
-          <path stroke-linecap="round" d="M3 14l4-4 11 11"></path>
-          <circle cx="13.5" cy="7.5" r="2.5"></circle>
-          <path stroke-linecap="round" d="M13.5 16.5L21 9"></path>
-        </svg>
+        aria-labelledby="imageIconTitle">
+        <rect width="18" height="18" x="3" y="3"></rect>
+        <path stroke-linecap="round" d="M3 14l4-4 11 11"></path>
+        <circle cx="13.5" cy="7.5" r="2.5"></circle>
+        <path stroke-linecap="round" d="M13.5 16.5L21 9"></path>
+      </svg>
         <span>Photos</span>
       </a>
       <a title="Search" href="/search">
@@ -71,6 +74,7 @@
         </svg>
       </a>
     </nav>
+
   </header>
   <main class="{{page.layout}}">{{ content }}</main>
 

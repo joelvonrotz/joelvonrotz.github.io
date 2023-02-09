@@ -126,13 +126,59 @@ h4 {
 }
 
 body {
-  max-width: var(--wrapper);
-  padding: 20px;
-  margin: 0 auto;
+  /*padding: 20px;*/
   text-rendering: optimizeLegibility;
   color: var(--tx-1);
   background-color: var(--bg-1);
+
+  display: grid;
+  grid-template-columns: 1fr 800px 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
+
+div.header-background {
+  grid-row: 1;
+  grid-column: 1 / span 3;
+  background-image: url("/assets/header/header.png");
+  background-size: cover;
+  background-position-y: 50%;
+  padding: 40px;
+}
+
+@media (max-width: calc(800px + 40px)) {
+  body > header,
+  body > footer,
+  body > main {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  body {
+    color: var(--tx-1);
+    background-color: var(--bg-1);
+    grid-template-columns: none;
+  }
+}
+
+
+header {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+}
+
+main {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 40px;
+}
+
+footer {
+  grid-column: 2;
+  grid-row: 3;
+}
+
 
 section.post-collection {
   display: flex;
@@ -190,7 +236,7 @@ a.obnoxious:hover {
 header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  
 }
 
 a.alt {
