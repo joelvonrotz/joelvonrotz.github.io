@@ -1,0 +1,7 @@
+{
+  "attachmentFolderPath": "images/posts",
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative",
+  "showUnsupportedFiles": true,
+  "showInlineTitle": false
+}

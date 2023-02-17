@@ -1,0 +1,13 @@
+{
+  "accentColor": "",
+  "cssTheme": "Atom",
+  "enabledCssSnippets": [
+    "callout",
+    "headings",
+    "inline-code",
+    "lists",
+    "toc"
+  ],
+  "showViewHeader": true,
+  "theme": "moonstone"
+}
