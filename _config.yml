@@ -33,7 +33,7 @@ defaults:
     values:
       font: "sans-serif"
       layout: "post"
-      permalink: '/posts/:year/:title'
+      permalink: '/writing/:title'
       excerpt_separator: "<!--more-->"
   - scope:
       path: "_pages"

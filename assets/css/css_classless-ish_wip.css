@@ -220,13 +220,6 @@ footer {
   grid-row: 3;
 }
 
-
-section.post-collection {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
 img {
   width: 100%;
 }
@@ -455,6 +448,7 @@ a.post-preview:hover h2 {
 }
 
 .post-date {
+  font-style: italic;
   color: var(--tx-2);
 }
 
@@ -585,6 +579,12 @@ div.box .box-title {
   font-weight: bold;
   font-size: 1.1rem;
   margin: 0;
+}
+
+div.box .box-date {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--tx-2);
 }
 
 div.box .box-desc, div.box .box-links a{
