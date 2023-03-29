@@ -6,15 +6,18 @@ layout: home
 hide_home: true
 ---
 
-# Hi I'm Joel
+Hi I'm Joel
+{: .font-big .bold}
 
-Welcome to my tinker website, were I learn a bit about HTML, CSS & JavaScript. Sometimes I do stuff, but I'm currently doing my bachelor in electrical engineering. I don't write a lot, as I sometimes just ponder for myself or exchange some topics with friends.
+An electrical engineering student.
+{: .font-bigger}
+\
+This website is not very active and I mostly write just when I feel like. The most active page is my projects page, which not only contains my summaries, but also some bike touring reports.
 
-> ### What I'm currently thinking about
-> - Teaching at a workshop
-> - Sewing
-> - Reading more books
+![](images/pages/index.jpg){:.rounded}
 
-### Some links
+### Links
 
-[Downloads](/downloads){:.obnoxious} / [Github](https://github.com/joelvonrotz){:.obnoxious} / [Flickr](https://www.flickr.com/joelvonrotz){:.obnoxious}
+- [Downloads](/downloads){:.obnoxious} &ndash; Here you can find some stuff to download, for now being just my summaries
+- [Github](https://github.com/joelvonrotz){:.obnoxious} &ndash; Link to my Github profile
+- [Flickr](https://www.flickr.com/joelvonrotz){:.obnoxious} &ndash; As I do some photography here and there, you can find the photos on my flickr profile.

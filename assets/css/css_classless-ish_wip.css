@@ -67,6 +67,20 @@ p {
   margin: 10px 0;
 }
 
+p.font-bigger {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+p.font-big {
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+}
+
+p.font-big.bold {
+  font-weight: 700;
+}
+
 /* [HEADINGS] --------------------------------------------------------------- */
 h1,
 h2,
@@ -222,6 +236,10 @@ footer {
 
 img {
   width: 100%;
+}
+
+img.rounded{
+  border-radius: 10px;
 }
 
 /* [HYPERLINKS] ------------------------------------------------------------- */
@@ -470,6 +488,8 @@ a.post-preview:hover h2 {
     font-size: 30px;
   }
 }
+
+
 
 div.content.search {
   display: flex;
