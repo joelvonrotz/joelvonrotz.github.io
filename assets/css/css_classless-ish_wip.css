@@ -639,3 +639,37 @@ div.title.filled h1{
   margin: 0 auto;
   -webkit-text-stroke: 3px transparent;
 }
+
+/* [LIST BLOCK ELEMENT] */
+div.list-block-collection {
+  display: flex;
+  flex-flow: column;
+  
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+div.list-block-collection > h2 { /* Title */
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+div.list-block-element {
+  border: solid 1px var(--bg-2);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row;
+  padding: 5px;
+}
+
+div.list-block-element *{
+  margin: 0;
+  text-decoration: none;
+}
+
+div.list-block-element .date { 
+  font-size: 0.9rem;
+  color: var(--tx-2);
+  font-family: var(--font-code);
+}
