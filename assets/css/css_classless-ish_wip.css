@@ -490,7 +490,7 @@ a.post-preview:hover h2 {
 }
 
 
-
+/* [SEARCH] ---------------------------- */
 div.content.search {
   display: flex;
   flex-flow: column;
@@ -509,69 +509,52 @@ input#search {
   margin-bottom: 20px;
 }
 
-div#results a span:first-child{
-  font-weight: bold;
-  font-size: 0.8rem;
-}
-
-div#results a span{
-  font-family: var(--font-heading);
-  padding: 3px 5px;
-}
-
-div#results a {
-  text-decoration: none;
-  display: flex;
-  flex-flow: row;
-  border-radius: 5px;
-  color: var(--tx-1);
-  overflow: hidden;
-  box-shadow: 0px 0px 0px var(--bg-2);
-  transition: box-shadow .3s ease-in-out;
-}
-
-div#results a:not(.none):hover {
-  box-shadow: 3px 3px 0px var(--bg-2);
-
-}
-
 div#results {
   display: flex;
   flex-flow: column;
   text-align: left;
   gap: 10px;
+  width: 80%;
 }
 
-div#results a.post {
-  border: var(--search-post-br) 1px solid;
+div#results div.list-block-element h4{
+  font-weight: normal;
+  color: var(--tx-1);
 }
 
-div#results a.page {
+div#results div.list-block-element p.date{
+  font-weight: bold;
+}
+
+div#results div.list-block-element.page{
   border: var(--search-page-br) 1px solid;
 }
 
-div#results a.post span:first-child {
-  background-color: var(--search-post-bg);
-  border-right: var(--search-post-br) 1px solid;
+div#results div.list-block-element.page p.date{
+  background-color: var(--search-page-bg);
+  border-left: var(--search-page-br) 1px solid;
 }
 
-div#results a.none {
+
+div#results div.list-block-element.post{
+  border: var(--search-post-br) 1px solid;
+}
+
+div#results div.list-block-element.post p.date{
+  background-color: var(--search-post-bg);
+  border-left: var(--search-post-br) 1px solid;
+}
+
+div#results div.list-block-element.none{
   border: var(--bg-2) 1px solid;
 }
 
-div#results a.none span:first-child {
-  background-color: var(--bg-2);
-  border-right: var(--bg-2) 1px solid;
-}
-
-div#results a.page span:first-child {
-  background-color: var(--search-page-bg);
-  border-right: var(--search-page-br) 1px solid;
+div#results div.list-block-element.none p.date{
+  border-left: var(--bg-2) 1px solid;
 }
 
 
-
-
+/* [BOX] ------------------------------- */
 div.box-collection{
   display: flex;
   flex-wrap: wrap;
@@ -640,7 +623,7 @@ div.title.filled h1{
   -webkit-text-stroke: 3px transparent;
 }
 
-/* [LIST BLOCK ELEMENT] */
+/* [LIST BLOCK COLLECITON] ------------- */
 div.list-block-collection {
   display: flex;
   flex-flow: column;
@@ -660,13 +643,20 @@ div.list-block-element {
   display: flex;
   justify-content: space-between;
   flex-flow: row;
-  padding: 5px;
+  gap: 5px;
 }
 
 div.list-block-element *{
   margin: 0;
   text-decoration: none;
 }
+
+div.list-block-element > *{
+  padding: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
 
 div.list-block-element .date { 
   font-size: 0.9rem;
