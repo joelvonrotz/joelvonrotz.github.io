@@ -14,7 +14,7 @@
   /* Colors */
   --bg-1: #ffffff; /* main background color */
   --bg-2: #b6b6b6; /* secondary background for more focused content*/
-  --tx-1: #313131; /* standard text color */
+  --tx-1: #000000; /* standard text color */
   --tx-2: #555555; /* secondary  */
   --lk-tx: #5285b3; /* link text */
   --lk-1: #216dac; /* link hover */
@@ -524,6 +524,7 @@ div#results div.list-block-element h4{
 
 div#results div.list-block-element p.date{
   font-weight: bold;
+  color: var(--tx-1);
 }
 
 div#results div.list-block-element.page{
