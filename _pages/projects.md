@@ -54,7 +54,17 @@ filled: true
       Semester 3
     </h4></a>
     <p class="box-desc">
-      My summaries from my third semester of the bachelor of electrical engineering at HSLU Lucerne.
+      Our summaries from my third semester of the bachelor of electrical engineering at HSLU Lucerne.
+    </p>
+  </div>
+
+  <div class="box">
+  <a href="/downloads#semester-4">
+    <h4 class="box-title">
+      Semester 4
+    </h4></a>
+    <p class="box-desc">
+      Our summaries from my fourth semester of the bachelor of electrical engineering at HSLU Lucerne.
     </p>
   </div>
 </div>

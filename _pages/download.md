@@ -22,3 +22,7 @@ These notes are as is and do not guarantee a good grade on your exams!
 ### Semester 3
 
 [Mathematik 2](/downloads/bachelor/s3_mathematik2_pt1.pdf){:.obnoxious} ([Edited HSLU-Formulary](/downloads/bachelor/s3_mathematik2_pt2.pdf){:.obnoxious}) / [Elektronik 2](/downloads/bachelor/s3_elektronik2.pdf){:.obnoxious} / [Signale & Systeme](/downloads/bachelor/s3_signal_systeme.pdf){:.obnoxious} / [Advanced Programming](/downloads/bachelor/s3_advanced_programming.pdf){:.obnoxious}
+
+### Semester 4
+
+[Advanced Embedded Systems](/downloads/bachelor/s4_advanced_embedded_systems.pdf){:.obnoxious} / [Digital Design](/downloads/bachelor/s4_digital_design.pdf){:.obnoxious} / [Leistungselektronik & Elektrische Antriebe](/downloads/bachelor/s4_leistungselektronik_antriebe.pdf){:.obnoxious} / [Nachrichtentechnik](/downloads/bachelor/s4_nachrichtentechnik.pdf){:.obnoxious} / [Regelungstechnik](/downloads/bachelor/s4_regelungstechnik.pdf){:.obnoxious}
