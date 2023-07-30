@@ -34,12 +34,12 @@
     
   </div>
   <header>
-      <h1 class="site-title">
-        <span>joel</span>
-        <span>von</span>
-        <span>rotz</span>
-      </h1>
-      <nav class="menu">
+    <div class="site-title">
+      <span>joel</span>
+      <span>von</span>
+      <span>rotz</span>
+    </div>
+    <nav class="menu">
       {% if page.hide_home != true %}
       <a title="Home" href="/">
         <svg viewBox="0 0 24 24">
@@ -74,7 +74,6 @@
         </svg>
       </a>
     </nav>
-
   </header>
   <main class="{{page.layout}}">{{ content }}</main>
 

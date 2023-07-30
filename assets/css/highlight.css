@@ -7,10 +7,10 @@ div.highlighter-rouge {
 div.highlighter-rouge::before {
   position: absolute;
   font-weight: bold;
-  left: 9px;
+  right: 9px;
   top: 6px;
   font-size: 1.1rem;
-  text-shadow: 2px 2px 0px var(--lk-1);
+  color: var(--bg-1);
 }
 
 div.highlighter-rouge.language-plaintext div.highlight {
@@ -38,10 +38,9 @@ div.highlighter-rouge.language-yaml::before {
 }
 
 div.highlight {
-  margin: 30px 0;
+  margin: 20px 0;
   border-radius: 10px;
   overflow: hidden;
-  padding-top: 25px;
 }
 
 .highlight {
