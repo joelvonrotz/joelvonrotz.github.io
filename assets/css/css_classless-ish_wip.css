@@ -338,14 +338,8 @@ figure {
 figure figcaption {
   padding: 0 10px;
   font-size: 0.9rem;
-  border-left: 4px solid var(--highlight);
+  border-left: 2px solid var(--highlight);
   border-bottom-left-radius: 5px;
-}
-
-figure figcaption::before {
-  content: ":";
-  color: var(--highlight);
-  font-weight: bold;
 }
 
 /* [BLOCKQUOTE] ============================================================= */
