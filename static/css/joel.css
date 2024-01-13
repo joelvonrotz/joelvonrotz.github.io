@@ -487,3 +487,8 @@ div.box .box-title + .box-links {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  #site-content div.thumbnail {
+    height: 280px;
+  }
+}
