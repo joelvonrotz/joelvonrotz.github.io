@@ -243,6 +243,9 @@ a.button {
   transition: background-color 100ms ease-in-out;
 
   vertical-align: middle;
+  justify-content: center;
+  line-height: 1;
+  min-width: 24px;
 }
 
 main a.button {
@@ -470,6 +473,10 @@ div.box .box-title + .box-links {
     gap: 10px;
   }
 
+  a.button {
+    height: 20px;
+    min-width: 20px;
+  }
   a.button svg {
     height: 20px;
   }
