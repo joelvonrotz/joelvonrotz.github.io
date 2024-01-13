@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if section.extra.thumbnail %}
+<div class="thumbnail" style="background-image: url('{{ section.extra.thumbnail }}');">
+</div>
+{% endif %}
+<h1 class="title">
+  {{ section.title }}
+</h1>
+
+{{ section.content | safe }}
+{% endblock content %}

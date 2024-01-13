@@ -1,0 +1,28 @@
+<div class="box">
+  {% if image %}
+  <div class="box-img">
+    <img src="{{ image }}">
+  </div>
+  {% endif %}
+  {% if link %}
+  <a href="{{ link }}">
+  {% endif %}
+  <h4 class="box-title">
+    {{ title }}
+  </h4>
+  {% if link %}
+  </a>
+  {% endif %}
+  <p class="box-desc">
+    {{ body }}
+  </p>
+  <div class="box-links">
+    {% if link1 %}
+    <a href="{{ link1 }}">{{ desc1 }}</a>
+    {% endif %}
+    {% if link2 %}
+    <span>/</span>
+    <a href="{{ link2 }}">{{ desc2 }}</a>
+    {% endif %}
+  </div>
+</div>

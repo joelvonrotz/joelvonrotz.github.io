@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* --- [normalize] --- */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* --- end[normalize] --- */
+
+:root {
+  --font-serif: "Lora";
+  --font-sansserif: "Source Sans 3";
+  --font-monospace: "Inconsolata";
+  
+
+
+  --font-text: var(--font-serif);
+
+  --weight-text: normal;
+  --font-title: "Outfit";
+  --font-heading: "Outfit";
+  --font-code: var(--font-monospace);
+  
+  --color-accent: #1464aa;
+
+  --color-link: #1464aa;
+  --color-link-hover: #aed3f3;
+  --color-link-visited: #1464aa;
+  
+  --color-text-primary: #000000;
+  --color-text-secondary: #5f5f5f;
+  
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #b8b8b8;
+
+  
+
+  --color-quote: #8fe27b;
+
+
+  --color-heading1: #000000;
+
+  --color-heading2: #000000;
+
+
+  font-size: 18px;
+
+  --data-title-gap: 10px;
+  --reader-width: 800px;
+}
+
+/* --- [classless] --- */
+
+body {
+  font-family: var(--font-text);
+  color: var(--color-text);
+  text-rendering: optimizeLegibility;
+}
+
+main{
+  margin-bottom: 200px;
+}
+
+img {
+  width: 100%;
+}
+
+p,
+blockquote,
+li,
+table,
+input,
+footer,
+figcaption {
+  font-family: var(--font-text);
+  font-weight: var(--weight-text);
+  font-size: 1.05em;
+  line-height: 1.6rem;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  transition: 100ms border ease-in-out;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  color: var(--color-heading1);
+  
+
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: var(--color-heading2);
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h2,
+h3,
+h4 {
+  margin-top: 0.75em;
+  margin-bottom: 10px;
+}
+
+h1:target,
+h2:target,
+h3:target,
+h4:target {
+  padding-left: 30px;
+  position: relative;
+  text-decoration: underline wavy var(--color-accent) 2px;
+}
+
+h1:target::before,
+h2:target::before,
+h3:target::before,
+h4:target::before {
+  border-color: var(--color-accent);
+  border-style: solid;
+  border-width: 4px 4px 0 0;
+  content: "";
+  display: block;
+  left: 5px;
+  
+  position: absolute;
+
+  height: 10px;
+  width: 10px;
+
+  /* These two lines vertically centre the point of the arrow */
+  margin-top: -5px;
+  top: 50%;
+
+  /* The arrow sprints to the left when the link is hovered */
+  transition: left 0.1s;
+  transform: rotate( 45deg );
+}
+
+h1:target::after,
+h2:target::after,
+h3:target::after,
+h4:target::after {
+  background: var(--color-accent);
+  content: "";
+  display: block;
+  height: 4px;
+  left: 0px;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+
+  /* We need to animate the shaft too, to be able to look at a moving arrow */
+  transition: left 0.1s;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: var(--font-sansserif);
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  border: 1pt solid var(--color-background-secondary);
+  border-left: 3pt solid var(--color-accent);
+  outline: none;
+}
+
+div.search-results {
+  min-height: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: var(--font-sansserif);
+  margin-top: 20px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  border: 1pt dashed var(--color-background-secondary);
+}
+
+ul.search-results-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+}
+
+ul.search-results-items li {
+  
+  font-family: var(--font-sansserif);
+}
+ul.search-results-items li a{
+  font-weight: bold;
+}
+
+a { 
+  color: var(--color-link);
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+a.button {
+  font-family: var(--font-sansserif);
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  flex-flow: row;
+  height: 24px;
+
+  gap: 3px;
+  align-items: center;
+
+  border: 1px solid var(--color-link);
+  color: var(--color-link);
+  stroke: var(--color-link);
+
+  padding: 4px;
+  border-radius: 5px;
+  transition: background-color 100ms ease-in-out;
+
+  vertical-align: middle;
+}
+
+main a.button {
+  margin: 2px;
+}
+
+a.button.less {
+  border: none;
+}
+
+a.button:hover {
+  background-color: var(--color-link-hover);
+}
+
+a.button:visited {
+  color: var(--color-link-visited);
+}
+
+a.button svg {
+  fill: none;
+  stroke-width: 2px;
+  height: inherit;
+}
+
+body.menu-home     a#nav-home,
+body.menu-projects a#nav-projects,
+body.menu-photos   a#nav-photos,
+body.menu-search   a#nav-search {
+  box-shadow: inset 0px 0px 2px 2px rgba(123, 173, 225, 0.48);
+}
+
+/* [BLOCKQUOTE] ============================================================= */
+blockquote {
+  position: relative;
+  border-left: 4px solid var(--color-quote);
+  border-radius: 5px;
+  padding: 5px 25px;
+  margin: 20px 0;
+}
+
+blockquote::before {
+  content: "“";
+  position: absolute;
+  top: 0.25em;
+  left: 0px;
+  padding-left: 5px;
+  font-size: 2rem;
+  color: var(--color-quote);
+}
+
+blockquote > blockquote {
+  border: none;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  padding: 0 20px;
+  margin: 7px 0px;
+}
+
+blockquote > blockquote::before {
+  content: "~";
+  font-size: 1.1rem;
+  font-weight: bold;
+  top: 0px;
+}
+
+/* [LIST] =================================================================== */
+ol,
+ul {
+  padding-left: 30px;
+  margin: 10px 0;
+}
+
+/* adjusts the size of the list to be the same size as ul-lists */
+ol > li + li {
+  margin-top: 3px;
+}
+
+li::marker {
+  color: var(--color-accent);
+  font-weight: normal;
+}
+
+header {
+  height: 80px;
+  background-image: url("/assets/header.svg");
+  background-size: cover;
+  background-position: center center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header section {
+    width: var(--reader-width);
+    
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-right: 20px;
+    margin-left: 20px;
+  
+    div.site-title {
+      font-family: var(--font-title);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 40px;
+
+      display: flex;
+      gap: var(--data-title-gap);
+    }
+  }
+
+header nav {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 10px;
+
+    border: solid 1px var(--color-background-secondary);
+    border-radius: 8px;
+    padding: 4px;
+    background-color: var(--color-background-primary);
+
+    height: 100%;
+}
+
+/* --- end[classless] --- */
+
+#site-content{
+  display: grid;
+  grid-template-columns: 1fr var(--reader-width) 1fr;  
+}
+
+#site-content > * {
+  grid-column: 2;
+}
+
+#site-content div.thumbnail { 
+  grid-column: 1 / 4;
+  height: 400px;
+
+  background-size: cover;
+  background-position: center center;
+}
+
+section#title-block {
+  border-bottom-style: dotted;
+  border-bottom-color: var(--color-accent);
+  border-image-source: url('./assets/border.svg');
+  border-image-slice: 33.33% 33.33%;
+  border-image-repeat: round;
+  border-width: 8px;
+  margin-bottom: 20px;
+}
+
+
+/* [BOX] ------------------------------- */
+div.box-collection{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+div.box-collection.vertical{
+  flex-flow: column;
+  align-items: center;
+}
+
+div.box{
+  width: 250px;
+  padding: 10px;
+  border: solid 1px var(--color-background-secondary);
+  transition: border 250ms ease-in-out;
+}
+
+div.box:hover{
+  border: solid 1px var(--color-link-hover);
+}
+
+div.box .box-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+div.box .box-date {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--color-background-secondary);
+}
+
+div.box .box-desc, div.box .box-links a{
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+div.box .box-img{
+  margin-bottom: 0.75rem;
+}
+
+div.box .box-title + .box-links {
+  margin-top: 15px;
+  text-align: center;
+}
+
+
+
+/* [MEDIA SPECIFIC STUFF] -------------- */
+@media only screen and (max-width: 816px) {
+  :root { 
+    font-size: 16px;
+  }
+
+  header {
+    height: 120px;
+  }
+
+  header > section {
+    flex-flow: column;
+    gap: 10px;
+  }
+
+  a.button svg {
+    height: 20px;
+  }
+
+  #site-content{
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }
+
+  #site-content > *,
+  div.thumbnail {
+    grid-column: 1;
+    padding: 0 8px;
+  }
+}
+

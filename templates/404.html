@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style type="text/css" media="screen">
+  .error {
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: var(--reader-width);
+    text-align: center;
+  }
+
+  .error h1 {
+    margin: 10px 0;
+    font-size: 6.5rem;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="error">
+  <h1>404</h1>
+
+  <h2>Page not found</h2>
+  <p>
+    Whoops, looks like the requested page doesn't actually exist.
+  </p>
+  <div style="height: 20px;"></div>
+  <a class="button" href="/">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <title>Home</title>
+      <path d="M2 12L5 9.3M22 12L19 9.3M19 9.3L12 3L5 9.3M19 9.3V21H5V9.3"></path>
+    </svg>
+    <span>Home</span>
+  </a>
+</div>
+
+{% endblock content %}

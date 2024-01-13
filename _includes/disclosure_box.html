@@ -1,9 +1,0 @@
-{% if include.open %}
-<div class="entry open" id="{{ include.title | slugify }}">
-  {% else %}
-  <div class="entry" id="{{ include.title | slugify }}">
-    {% endif %}
-    <strong> {{ include.title }}</strong>
-    <div class="entry-detail">{{ include.content }}</div>
-  </div>
-</div>

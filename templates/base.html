@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  {% if section %}
+  <title>{{ config.title }} - {{ section.title }}</title>
+  {% elif page %}
+  <title>{{ config.title }} - {{ page.title }}</title>
+  {% else %}
+  <title>{{ config.title }}</title>
+  {% endif %}
+
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+
+  {% block css %}
+  <link rel="stylesheet" href="/css/joel.css">
+  {% endblock css %}
+
+</head>
+
+{% if section %}
+  {% if section.extra.menu %}
+<body class="menu-{{ section.extra.menu }}">
+  {% endif %}
+{% elif page %}
+  {% if page.extra.menu %}
+<body class="menu-{{ page.extra.menu }}">
+  {% endif %}
+{% else %}
+  <body>
+{% endif %}
+      {% include 'header.html' %}
+      <main id="site-container">
+
+        <section id="site-content">
+          {% block content %} {% endblock %}
+        </section>
+      </main>
+    </body>
+
+</html>

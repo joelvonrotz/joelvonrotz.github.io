@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if section.extra.thumbnail %}
+<div class="thumbnail" style="background-image: url('{{ section.extra.thumbnail }}');">
+</div>
+{% endif %}
+<h1 class="title">
+  {{ section.title }}
+</h1>
+
+{{ section.content | safe }}
+
+{% for year, posts in section.pages | group_by(attribute="year") %}
+<section id="year-{{ year }}">
+  <h2>{{ year }}</h2>
+  <ul>
+    {% for post in posts %}
+    <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</section>
+
+{% endblock content %}
