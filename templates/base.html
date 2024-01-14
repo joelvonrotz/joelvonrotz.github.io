@@ -19,7 +19,7 @@
   {% block css %}
   <link rel="stylesheet" href="/css/joel.css">
   {% endblock css %}
-
+  
 </head>
 
 {% if section %}
@@ -33,6 +33,17 @@
 {% else %}
   <body>
 {% endif %}
+
+      {% if section %}
+      {% if section.extra.enable_gallery %}
+      {% include 'gallery.html' %}
+      {% endif %}
+      {% elif page %}
+      {% if page.extra.enable_gallery %}
+      {% include 'gallery.html' %}
+      {% endif %}
+      {% endif %}
+
       {% include 'header.html' %}
       <main id="site-container">
 
@@ -41,5 +52,13 @@
         </section>
       </main>
     </body>
-
+    {% if section %}
+    {% if section.extra.enable_gallery %}
+    <script src="/scripts/photo.js"></script>
+    {% endif %}
+    {% elif page %}
+    {% if page.extra.enable_gallery %}
+    <script src="/scripts/photo.js"></script>
+    {% endif %}
+    {% endif %}
 </html>

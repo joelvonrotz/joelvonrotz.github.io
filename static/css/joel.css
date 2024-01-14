@@ -68,6 +68,10 @@ img {
   width: 100%;
 }
 
+img.indexed {
+  cursor: zoom-in;
+}
+
 p,
 blockquote,
 li,
@@ -457,6 +461,130 @@ div.box .box-title + .box-links {
 }
 
 
+/* [GALLERY] --------------------------- */
+section#gallery {
+  display: none;
+  position: fixed;
+  background-color: #070707ed;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+}
+
+section#gallery.active {
+  display: block;
+}
+
+
+section#gallery.active #gallery-dec,
+section#gallery.active #gallery-inc {
+  position: absolute;
+  height: 42px;
+  width: 30px;
+
+  z-index: 20;
+
+  cursor: pointer;
+}
+section#gallery.active #gallery-close {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+
+  z-index: 20;
+
+  cursor: pointer;
+}
+
+section#gallery.active #gallery-dec {
+  left: 20px;
+  top: 48%;
+}
+
+section#gallery.active #gallery-inc {
+  right: 20px;
+  top: 48%;
+}
+
+section#gallery.active #gallery-image-wrap {
+  padding: 50px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+section#gallery.active #gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  z-index: 15;
+
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+}
+
+section#gallery.active #gallery-close {
+  top: 20px;
+  right: 20px;
+}
+
+section#gallery.active #gallery-close::before,
+section#gallery.active #gallery-close::after,
+section#gallery.active #gallery-inc::before,
+section#gallery.active #gallery-inc::after,
+section#gallery.active #gallery-dec::before,
+section#gallery.active #gallery-dec::after{
+  content: '';
+
+  background-color: #b8b8b8;
+
+  display: block;
+  height: 4px;
+  width: 30px;
+
+  position: absolute;
+  transform-origin: center;
+}
+
+
+section#gallery.active #gallery-close::before {
+  transform: translateY(15px) rotate(45deg);
+}
+section#gallery.active #gallery-close::after {
+  transform: translateY(15px) rotate(135deg);
+}
+
+section#gallery.active #gallery-inc::before {
+  transform-origin: 28px center;
+  transform: translate(-4px, 19px) rotate(-45deg);
+}
+section#gallery.active #gallery-inc::after {
+  transform-origin: 28px center;
+  transform: translate(-4px, 19px) rotate(45deg);
+}
+
+section#gallery.active #gallery-dec::before {
+  transform-origin: 2px center;
+  transform: translate(4px, 19px) rotate(-45deg);
+
+}
+
+section#gallery.active #gallery-dec::after {
+  transform-origin: 2px center;
+  transform: translate(4px, 19px) rotate(45deg);
+}
+
+
+
+
+
+
 
 /* [MEDIA SPECIFIC STUFF] -------------- */
 @media only screen and (max-width: 816px) {
@@ -491,6 +619,11 @@ div.box .box-title + .box-links {
   div.thumbnail {
     grid-column: 1;
     padding: 0 8px;
+  }
+
+  
+  section#gallery.active #gallery-image-wrap {
+    padding:0;
   }
 }
 
