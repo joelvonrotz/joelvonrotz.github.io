@@ -2,14 +2,20 @@
 
 {% block content %}
 
+{% if page.extra.thumbnail %}
+<div class="thumbnail" style="background-image: url('{{ page.extra.thumbnail }}');">
+</div>
+{% endif %}
 <section id="title-block">
-  {% if section.extra.thumbnail %}
-  <div class="thumbnail" style="background-image: url('{{ section.extra.thumbnail }}');">
-  </div>
-  {% endif %}
   <h1 class="title">
     {{ page.title }}
   </h1>
+  <time class="date" datetime="{{ page.date }}">
+    {{ page.date | date(format="%d.%m.%Y") }}
+  </time>
+  <p class="description">
+    {{ page.description }}
+  </p>
 </section>
 {{ page.content | safe }}
 {% endblock content %}
