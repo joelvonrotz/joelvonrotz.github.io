@@ -5,6 +5,7 @@ page_template = "post.html"
 template = "archive.html"
 
 [extra]
+menu = 'writing'
 thumbnail = '/assets/writing.jpg'
 +++
 

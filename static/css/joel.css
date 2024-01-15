@@ -81,7 +81,7 @@ figcaption {
 }
 
 #site-content > p {
-  margin: 10px 0;
+  margin: 7px 0;
 }
 
 strong {
@@ -278,7 +278,8 @@ a.button svg {
 body.menu-home     a#nav-home,
 body.menu-projects a#nav-projects,
 body.menu-photos   a#nav-photos,
-body.menu-search   a#nav-search {
+body.menu-search   a#nav-search,
+body.menu-writing   a#nav-writing {
   box-shadow: inset 0px 0px 2px 2px rgba(123, 173, 225, 0.48);
 }
 
