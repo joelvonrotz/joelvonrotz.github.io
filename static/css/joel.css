@@ -56,7 +56,7 @@
 
 body {
   font-family: var(--font-text);
-  color: var(--color-text);
+  color: var(--color-text-primary);
   text-rendering: optimizeLegibility;
 }
 
@@ -83,6 +83,10 @@ figcaption {
   font-weight: var(--weight-text);
   font-size: 1.05em;
   line-height: 1.6rem;
+}
+
+#site-content > p {
+  margin: 10px 0;
 }
 
 strong {
@@ -176,6 +180,8 @@ h4:target::after {
   /* We need to animate the shaft too, to be able to look at a moving arrow */
   transition: left 0.1s;
 }
+
+
 
 input {
   box-sizing: border-box;
@@ -404,8 +410,21 @@ section#title-block {
   border-image-source: url('./assets/border.svg');
   border-image-slice: 33.33% 33.33%;
   border-image-repeat: round;
-  border-width: 8px;
+  border-width: 3px;
   margin-bottom: 20px;
+  
+  font-family: var(--font-sansserif);
+}
+
+time.date {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+}
+
+#title-block p.description {
+  font-family: inherit;
+  margin: 20px 0;
+  font-size: 1.1rem;
 }
 
 
