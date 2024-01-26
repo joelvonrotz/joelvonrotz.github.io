@@ -22,31 +22,55 @@
   <link rel="stylesheet" href="/fonts/outfit.css">
   <link rel="stylesheet" href="/fonts/sourcesans3.css">
   <link rel="stylesheet" href="/css/joel.css">
+  <link rel="stylesheet" href="/css/joel-mobile.css">
   {% endblock css %}
-  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          renderMathInElement(document.body, {
+            // customised options
+            // • auto-render specific keys, e.g.:
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+            ],
+            // • rendering keys, e.g.:
+            throwOnError : false
+          });
+      });
+  </script>
 </head>
 
 {% if section %}
   {% if section.extra.menu %}
-<body class="menu-{{ section.extra.menu }}">
+<body class="menu-{{ section.extra.menu }}" id="top">
   {% endif %}
 {% elif page %}
   {% if page.extra.menu %}
-<body class="menu-{{ page.extra.menu }}">
+<body class="menu-{{ page.extra.menu }}" id="top">
   {% endif %}
 {% else %}
-  <body>
+  <body id="top">
 {% endif %}
 
       {% if section %}
-      {% if section.extra.enable_gallery %}
+      {% if section.extra.gallery %}
       {% include 'gallery.html' %}
       {% endif %}
       {% elif page %}
-      {% if page.extra.enable_gallery %}
+      {% if page.extra.gallery %}
       {% include 'gallery.html' %}
       {% endif %}
       {% endif %}
+
+      <div id="back-to-top" title="Back to top">
+        <a href="#top" class="button">△</a>
+      </div>
 
       {% include 'header.html' %}
       <main id="site-container">
@@ -57,11 +81,11 @@
       </main>
     </body>
     {% if section %}
-    {% if section.extra.enable_gallery %}
+    {% if section.extra.gallery %}
     <script src="/scripts/photo.js"></script>
     {% endif %}
     {% elif page %}
-    {% if page.extra.enable_gallery %}
+    {% if page.extra.gallery %}
     <script src="/scripts/photo.js"></script>
     {% endif %}
     {% endif %}
