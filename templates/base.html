@@ -48,45 +48,60 @@
 
 {% if section %}
   {% if section.extra.menu %}
-<body class="menu-{{ section.extra.menu }}" id="top">
+<body class="menu-{{ section.extra.menu }}">
   {% endif %}
 {% elif page %}
   {% if page.extra.menu %}
-<body class="menu-{{ page.extra.menu }}" id="top">
+<body class="menu-{{ page.extra.menu }}">
   {% endif %}
 {% else %}
-  <body id="top">
+<body>
 {% endif %}
 
-      {% if section %}
-      {% if section.extra.gallery %}
-      {% include 'gallery.html' %}
-      {% endif %}
-      {% elif page %}
-      {% if page.extra.gallery %}
-      {% include 'gallery.html' %}
-      {% endif %}
-      {% endif %}
+    <header>
+      <h1 class="site-title">
+        joel von rotz
+      </h1>
+      <nav>
+        <a class="button" id="nav-home" title="Home" href="/">
+          <img class="icon" src="/assets/icons/home.svg">
+        </a>
+        <a class="button" id="nav-writing" title="Writing" href="{{ get_url(path='@/writing/_index.md')}}">
+          <img class="icon" src="/assets/icons/feather.svg">
+        </a>
+        <a class="button" id="nav-projects" title="Projects" href="{{ get_url(path='@/projects/_index.md') }}">
+          <img class="icon" src="/assets/icons/lightbulb.svg">
+        </a>
+        <a class="button" id="nav-photos" title="Photography" href="{{ get_url(path='@/photos.md') }}">
+          <img class="icon" src="/assets/icons/aperture.svg">
+        </a>
+        <!--<a class="button" id="nav-search" title="Search" href="{{ get_url(path='@/search.md') }}">
+          <img class="icon" src="/assets/icons/search.svg">
+        </a>-->
+      </nav>
+    </header>
+    <main>
+      {% block content %} {% endblock %}
+    </main>
 
-      <div id="back-to-top" title="Back to top">
-        <a href="#top" class="button">△</a>
-      </div>
+    <footer>
+        Made with <a href="https://www.getzola.org/">Zola</a>
+        <b>/</b> 
+        <a href="/writing/">Archive</a>
+        <b>/</b> 
+        <a href="https://www.getzola.org/">Tags</a>
+        <b>/</b> 
+        <a href="https://www.getzola.org/">Category</a>
+    </footer>
+  </body>
 
-      {% include 'header.html' %}
-      <main id="site-container">
-
-        <section id="site-content">
-          {% block content %} {% endblock %}
-        </section>
-      </main>
-    </body>
-    {% if section %}
+  {% if section %}
     {% if section.extra.gallery %}
-    <script src="/scripts/photo.js"></script>
+      <script src="/scripts/photo.js"></script>
     {% endif %}
-    {% elif page %}
+  {% elif page %}
     {% if page.extra.gallery %}
-    <script src="/scripts/photo.js"></script>
+      <script src="/scripts/photo.js"></script>
     {% endif %}
-    {% endif %}
+  {% endif %}
 </html>

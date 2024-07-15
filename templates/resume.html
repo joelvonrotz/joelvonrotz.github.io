@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if page.extra.thumbnail %}
+<div class="thumbnail" style="background-image: url('{{ page.extra.thumbnail }}');">
+</div>
+{% endif %}
+<section id="resume-header-block">
+  <div class="resume-header">
+    <h1 id="resume-name">
+      {{ page.title }}
+    </h1>
+    <p id="resume-description">
+      {{ page.description }}
+    </p>
+    <nav style="display: flex; gap: 3px;">
+      {% for element in page.extra.links %}
+        <a class="button {{ element.class }} hover less" href="{{ element.link }}">
+          {{ element.icon | safe}}
+        </a>
+      {% endfor %}
+    </nav>
+
+  </div>
+  <img class="resume-image" src="{{ page.extra.profile_image }}">
+</section>
+{{ page.content | safe }}
+{% endblock content %}

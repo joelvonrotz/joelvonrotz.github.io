@@ -14,5 +14,5 @@ menu = 'search'
   </div>
 </div>
 
-<script type="text/javascript" src="/elasticlunr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 <script type="text/javascript" src="/scripts/search.js"></script>

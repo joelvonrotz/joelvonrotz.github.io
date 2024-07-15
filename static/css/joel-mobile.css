@@ -1,42 +1,15 @@
-
 /* [MEDIA SPECIFIC STUFF] -------------- */
-@media only screen and (max-width: 816px) {
-  :root { 
+@media only screen and (max-width: 716px) {
+  :root {
     font-size: 16px;
   }
 
-  header {
-    height: 120px;
+  main, div.dark {
+    grid-template-columns: 8px 1fr 8px;
   }
 
-  header > section {
-    flex-flow: column;
-    gap: 10px;
-  }
-
-  a.button {
-    height: 20px;
-    min-width: 20px;
-  }
-  a.button svg {
-    height: 20px;
-  }
-
-  #site-content{
-    display: grid;
-    grid-template-columns: 1fr;
-
-  }
-
-  #site-content > *,
   div.thumbnail {
-    grid-column: 1;
-    padding: 0 8px;
-  }
-
-  
-  section#gallery.active #gallery-image-wrap {
-    padding:0;
+    height: 250px;
   }
 
 
@@ -49,11 +22,13 @@
   h3:target::after,
   h4:target::after {
     content: none;
+    padding-left: 0;
   }
-}
 
-@media only screen and (max-width: 500px) {
-  #site-content div.thumbnail {
-    height: 280px;
+  h1:target,
+  h2:target,
+  h3:target,
+  h4:target {
+    padding-left: 0;
   }
 }
