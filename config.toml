@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://joelvonrotz.github.io/"
+base_url = "https://joelvonrotz.ch/"
 
 title = "JvR"
 
@@ -15,7 +15,23 @@ taxonomies = [
 ]
 
 [search]
-index_format = "elasticlunr_json"
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = true
+
+# Whether to include the RFC3339 datetime of the page in the search index
+include_date = true
+include_path = false
+
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+
+# At which code point to truncate the content to. Useful if you have a lot of pages and the index would
+# become too big to load on the site. Defaults to not being set.
+truncate_content_length = 100
+
+index_format = "fuse_json" # or "fuse_javascript"
 
 [markdown]
 # Whether to do syntax highlighting
