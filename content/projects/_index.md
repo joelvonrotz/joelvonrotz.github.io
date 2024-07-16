@@ -30,6 +30,10 @@ I'm up for sharing all my summaries for the different courses. If they're useful
   My summaries from my fourth semester of the bachelor of electrical engineering at HSLU Lucerne.
 {% end %}
 
+{% box(link="/downloads#semester-6" title="Semester 6") %}
+  My summaries from my sixth semester of the bachelor of electrical engineering at HSLU Lucerne.
+{% end %}
+
 </div>
 
 ## Bikepacking 🚲

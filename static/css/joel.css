@@ -640,6 +640,10 @@ div.box .box-img{
   margin-bottom: 0.75em;
 }
 
+div.box .box-img img{
+  margin: 0;
+}
+
 div.box .box-title + .box-links {
   margin-top: 15px;
   text-align: center;

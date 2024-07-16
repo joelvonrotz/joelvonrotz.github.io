@@ -2,7 +2,7 @@
 title = "Download"
 +++
 
-# HSLU - Electrical Engineering 🎓
+## HSLU - Electrical Engineering 🎓
 
 All the summaries are written in a mix of English and German, but I’m providing them anyways as they might help you somehow. As time goes, I’ll add more of my summaries!
 
@@ -40,3 +40,14 @@ These notes are as is and do not guarantee a good grade on your exams!
 {{ button (text="Leistungselektronik & Elektrische Antriebe" link="/downloads/bachelor/s4_leistungselektronik_antriebe.pdf" type="document") }} /
 {{ button (text="Nachrichtentechnik"                         link="/downloads/bachelor/s4_nachrichtentechnik.pdf"           type="document") }} /
 {{ button (text="Regelungstechnik"                           link="/downloads/bachelor/s4_regelungstechnik.pdf"             type="document") }}
+
+### Semester 5
+
+Fifth semester was an exchange semester in Denmark and (almost) all exams were oral exams, so no summaries.
+
+### Semester 6
+
+{{ button (text="Advanced System Design" link="/downloads/bachelor/s6_advanced_system_design.pdf" type="document") }} /
+{{ button (text="Angewandte Industrielle Robotik" link="/downloads/bachelor/s6_applied_industrial_robotics.pdf" type="document") }} /
+{{ button (text="Machine Learning" link="/downloads/bachelor/s6_machine_learning.pdf" type="document") }} /
+{{ button (text="Echtzeitbildverarbeitung" link="/downloads/bachelor/s6_real-time_image_processing.pdf" type="document") }}
