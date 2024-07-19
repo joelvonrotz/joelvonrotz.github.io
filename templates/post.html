@@ -13,9 +13,11 @@
   <time class="date" datetime="{{ page.date }}">
     {{ page.date | date(format="%d.%m.%Y") }}
   </time>
-  <p class="description">
-    {{ page.description }}
-  </p>
+  {% if page.description %}
+  <div class="description">
+    {{ page.description | markdown | safe }}
+  </div>
+  {% endif %}
 </section>
 {{ page.content | safe }}
 {% endblock content %}
