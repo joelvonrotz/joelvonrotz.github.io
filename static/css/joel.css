@@ -578,7 +578,7 @@ time.date {
   color: var(--color-text-secondary);
 }
 
-#title-block div.description {
+#title-block p.description {
   font-family: inherit;
   background-color: var(--color-background-description);
   padding: 10px;
