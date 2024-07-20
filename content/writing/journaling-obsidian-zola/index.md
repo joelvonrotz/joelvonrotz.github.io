@@ -19,7 +19,7 @@ extra:
 Following guide explains the setup to push content to a repository which uses the static site engine [Zola](https://www.getzola.org/).
 ## Setting it up!
 
-Git on Android is a difficult story, in short: there are no "official" git GUI client apps for Android. There is an app called [GitJournal](https://gitjournal.io/) which combines Git and a journal writer, which is neat, but it is not as customizable as [Obsidian.md](https://obsidian.md/). So I'm going with the more complicated setup by using *Obsidian.md*. Advantage is it keeps everything in one app!
+Git on Android is a difficult story, in short: there are no "official" git GUI client apps for Android. There is an app called [GitJournal](https://gitjournal.io/) which combines Git and a journal writer, which is neat, but it is not as customizable as [Obsidian.md](https://obsidian.md/). So I'm going with the more complicated setup by using *Obsidian.md*. Advantage is, Obsidian is very customizable and flexible!
 ### Preparation
 
 Before Obsidian is setup up, the website repository needs to be copied onto your phone via USB (or whatever you use to transfer data between Phone and PC)
@@ -41,9 +41,53 @@ Before Obsidian is setup up, the website repository needs to be copied onto your
 8. Pull changes by pulling down and executing the **Git: Pull** command
 
 *Alternative Guide*: [https://forum.obsidian.md/t/the-easiest-way-to-setup-obsidian-git-to-backup-notes/51429](https://forum.obsidian.md/t/the-easiest-way-to-setup-obsidian-git-to-backup-notes/51429)
+## Template
+
+Templates are useful when writing notes in Obsidian to quickly have a general structure. This can also be used for posts!
+
+Fortunately Zola not only supports TOML, but also YAML, which makes it a lot easier on Obsidian. While Obsidian does support YAML, its fancy *Properties* feature does not support **nested** YAML:
+
+```yaml
+# supported in Properties view
+key1: value1
+key2: value2
+
+# not supported :(
+group:
+  key1: value1
+  key2: value2
+```
+
+A workaround is to display the post frontmatter in source form. Under **Settings > Editor > Under 'Display' the option 'Properties in document'**, change the setting to *Source*. This way it displays the frontmatter in monospaced font.
+
+Going back to writing a post template, now that everything is configured correctly. Following template `post template.md` is saved locally under `obsidian/template/` and contains following:
+
+```markdown
+---
+title: ""
+description: ""
+date: {{date:YYYY-MM-DD}}
+
+taxonomies:
+  category: [""]
+  tags: ["",""] # 
+
+extra:
+  thumbnail: ""
+---
+
+```
+
+It's mainly the frontmatter that is important!
+
+To be able to use the template, the Template core plugin needs to be configured!
+
+1. Go to **Settings > under sidebar group 'Core Plugins' select 'Templates'**
+2. Change the option *Template folder location* to the folder, where the post template is located (i.e. `obsidian/template`)
+3. It's recommended to extend the toolbar above your phone keyboard with the template button (can be changed in the settings) – *OR* pull down and search for "Templates: insert template"
 ## Stuff to keep in mind
 
-**Paths**: Zola handles posts and images a bit weirdly, but once you get used to it, it's actually quite neat. When writing a post with images, the post is named `index.md` and placed into a folder (i.e. `/test/`) under the posts' root folder (my posts are saved under `content/writing/`), which corresponds to the URL. So if I want to use the following image `colton-sturgeon-N4fdQbMJ0nI-unsplash.jpg`, it is saved in the folder `/test/`. If multiple posts use the same image, it can be placed in the posts' root folder.
+**Paths**: Zola handles posts and images a bit weirdly, but once you get used to it, it's actually quite neat. When writing a post with images, the post is named `index.md` and placed into a folder (i.e. `/test/`) under the posts' root folder (my posts are saved under `content/writing/`), which corresponds to the URL. So if I want to use the following image `colton-sturgeon-N4fdQbMJ0nI-unsplash.jpg`, it is saved for example in the folder `/test/`. If multiple posts use the same image, it can be placed in the posts' root folder and a relative path to the image is used.
 
 ![colton-sturgeon-N4fdQbMJ0nI-unsplash-min](colton-sturgeon-N4fdQbMJ0nI-unsplash.jpg)
 
