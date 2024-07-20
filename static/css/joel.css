@@ -33,6 +33,8 @@
 
   --color-dark-background: #000000;
   --color-dark-text: #f3f3f3;  
+  
+  --color-code-background: #daeeff;
 
   --color-quote: #8fe27b;
 
@@ -252,6 +254,25 @@ h4:target::after {
 
   /* We need to animate the shaft too, to be able to look at a moving arrow */
   transition: left 0.1s;
+}
+
+
+code, pre {
+  font-family: var(--font-monospace);
+}
+
+*:not(pre) > code {
+  background-color: var(--color-code-background);
+  padding: 2px 3px;
+  border-radius: 5px;
+}
+
+pre {
+  padding: 10px;
+  border-radius: 7px;
+  margin: 20px 0px;
+  overflow-x: scroll;
+  scrollbar-width: thin;
 }
 
 /* ----------------------------------------
