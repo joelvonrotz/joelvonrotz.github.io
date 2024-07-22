@@ -24,8 +24,10 @@ Git on Android is a difficult story, in short: there are no "official" git GUI c
 
 Before Obsidian is setup up, the website repository needs to be copied onto your phone via USB (or whatever you use to transfer data between Phone and PC)
 
-1. Connect your phone to your PC, where the repository of your Zola based website is located.
+1. Connect your phone to your PC, where the repository of your Zola based website is located. (**Important**: the website repo needs to have a `.git` folder)
 2. Copy the website files onto your phone for example under `internal/Documents/Obsidian/vault_website`
+
+This copy step is done to remove the hassle of having to initialize the repo inside Obsidian.md and adding the necessary remote repository. By simply copying the repo onto your phone, the git repo is already initialized and ready to go.
 
 ### Obsidian
 
