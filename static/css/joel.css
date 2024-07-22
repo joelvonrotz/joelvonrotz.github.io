@@ -29,6 +29,9 @@
   --color-background-primary: #ffffff;
   --color-background-secondary: #b8b8b8;
 
+  --color-banner-light: #ECECEC;
+  --color-banner-dark: #313131;
+
   --color-background-description: #eaf4ff;
 
   --color-dark-background: #000000;
@@ -44,6 +47,12 @@
   --color-category-travel: #ce7501;
   --color-category-text: #ffffff;
 
+  --color-lightdark-border: #1464aa;
+  --color-lightdark-light: #d47f00;
+  --color-lightdark-light-bg: #ffe7c2;
+  --color-lightdark-dark: #686868;
+  --color-lightdark-dark-bg: #1d1d1d;
+
   font-size: 18px;
 
   --data-title-gap: 10px;
@@ -56,6 +65,7 @@ html {
 }
 
 body {
+  background-color: var(--color-background-primary);
   font-family: var(--font-text);
   color: var(--color-text-primary);
   text-rendering: optimizeLegibility;
@@ -70,6 +80,113 @@ main{
 main > * {
   grid-column: 2;
 }
+
+/* ----------------------------------------
+  _      _       _     _     _____             _    
+ | |    (_)     | |   | |   |  __ \           | |   
+ | |     _  __ _| |__ | |_  | |  | | __ _ _ __| | __
+ | |    | |/ _` | '_ \| __| | |  | |/ _` | '__| |/ /
+ | |____| | (_| | | | | |_  | |__| | (_| | |  |   < 
+ |______|_|\__, |_| |_|\__| |_____/ \__,_|_|  |_|\_\
+            __/ |                                   
+           |___/
+sec:lightdark
+---------------------------------------- */
+body.dark {
+  --color-accent: #50a0e6;
+
+  --color-link: #50a0e6;
+  --color-link-hover: #aed3f3;
+  --color-link-visited: #50a0e6;
+  
+  --color-text-primary: #f7f7f7;
+  --color-text-secondary: #aaaaaa;
+  
+  --color-background-primary: #1d1d1d;
+  --color-background-secondary: #303030;
+
+  --color-background-description: #23364b;
+
+  --color-dark-background: #000000;
+  --color-dark-text: #f3f3f3;  
+  
+  --color-code-background: #20272c;
+
+  --color-quote: #8fe27b;
+
+  --color-heading1: #ffffff;
+  --color-heading2: #ffffff;
+
+  --color-category-travel: #ce7501;
+  --color-category-text: #ffffff;
+}
+
+body.dark header::before,
+body.dark footer::before {
+  background-color: var(--color-banner-dark);
+}
+
+body.dark header img.icon {
+  filter: invert(53%) sepia(89%) saturate(352%) hue-rotate(169deg) brightness(93%) contrast(93%);
+}
+
+/*
+  --color-lightdark-light: #d47f00;
+  --color-lightdark-light-bg: #ffd28e;
+  --color-lightdark-dark: #252525;
+  --color-lightdark-dark-bg: #585858;
+*/
+
+label.container{
+  position: relative;
+
+  height: 32px;
+  width: 32px;
+  display: block;
+  cursor: pointer;
+}
+
+label.container input {
+  position: absolute;
+  opacity: 0;
+
+  height: 100%;
+  width: 100%;
+}
+
+label.container .checkmark {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 0px 1px var(--color-lightdark-light);
+  background-color: var(--color-lightdark-light-bg);
+
+}
+
+label .checkmark:after {
+  content: '';
+  height: 24px;
+  width: 24px;
+  mask: url('/assets/icons/sun.svg') center no-repeat;
+  background-color: var(--color-lightdark-light);
+  padding: 4px;
+  display: block;
+}
+
+label.container input:checked ~ .checkmark {
+  box-shadow: inset 0px 0px 0px 1px var(--color-lightdark-dark);
+  background-color: var(--color-lightdark-dark-bg);
+}
+
+label input:checked ~  .checkmark:after {
+  mask: url('/assets/icons/moon.svg') center no-repeat;
+  background-color: var(--color-lightdark-dark);
+}
+
 
 /* ----------------------------------------
   _    _                _           
@@ -90,7 +207,7 @@ header > h1 {
   margin: 0;
 }
 
-header > nav {
+header nav {
   height: fit-content;
   width: fit-content;
 
@@ -106,18 +223,27 @@ header > nav {
 
 }
 
-header {
-  height: 120px;
-  background-image: url("/assets/header.svg");
-  background-size: cover;
-  background-position: center center;
+header::before, footer::before {
+  position: absolute;
+  content: '';
+  height: 100%; width: 100%;
+  mask: url("/assets/header.svg") center no-repeat;
+  mask-size: cover;
+  background-color: var(--color-banner-light);
+  z-index: -1;
+}
 
+header {
+  position: relative;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
   gap: 5px;
 }
+
+
 
 /* ----------------------------------------
   ______          _            
@@ -130,14 +256,25 @@ sec:footer
 ---------------------------------------- */                                    
 
 footer {
-  margin: 50px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-family: var(--font-sansserif);
+
+  margin-top: 30px;
 }
 
-footer > a {
-  
+footer span {
+  padding: 3px 4px;
+  border-radius: 5px;
+  background-color: var(--color-background-primary);
+}
+
+footer a {
   text-decoration: none;
 }
 
