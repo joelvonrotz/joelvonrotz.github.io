@@ -141,6 +141,9 @@
     if(localStorage.getItem('dark')==="true") {
       body.classList.add('dark');
       comp.checked = true;
+    } else {
+      body.classList.remove('dark');
+      comp.checked = false;
     }
 
   </script>
