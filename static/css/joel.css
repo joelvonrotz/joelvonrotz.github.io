@@ -161,7 +161,7 @@ label.container .checkmark {
   top: 0;
   left: 0;
 
-  border-radius: 5px;
+  border-radius: 50%;
   box-shadow: inset 0px 0px 0px 1px var(--color-lightdark-light);
   background-color: var(--color-lightdark-light-bg);
 
