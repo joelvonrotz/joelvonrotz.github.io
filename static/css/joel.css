@@ -678,7 +678,7 @@ div.dark {
   grid-template-columns: 1fr var(--reader-width) 1fr;
   background-color: var(--color-dark-background);
   grid-column: 1 / 4;
-  padding: 4 0px 0;
+  padding: 40px 0;
 }
 
 div.dark * {
