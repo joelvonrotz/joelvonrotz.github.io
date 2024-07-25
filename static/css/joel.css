@@ -686,7 +686,97 @@ div.dark * {
   grid-column: 2;
 }
 
+/* ----------------------------------------
+   _____      _ _             _   
+  / ____|    | | |           | |  
+ | |     __ _| | | ___  _   _| |_ 
+ | |    / _` | | |/ _ \| | | | __|
+ | |___| (_| | | | (_) | |_| | |_ 
+  \_____\__,_|_|_|\___/ \__,_|\__|
+sec:callout
+---------------------------------------- */
+div.callout.note {
+  --callout-color: #0658E5;
+  --callout-color-border: #4581EB;
+  --callout-icon-path: url('/assets/icons/callout/info.svg');
+}
 
+body.dark div.callout.note {--callout-color:        #4581EB;
+                            --callout-color-border: #0658E5;}
+
+div.callout.important {
+  --callout-color: #FC5200;
+  --callout-color-border: #FD7E13;
+  --callout-icon-path: url('/assets/icons/callout/bolt.svg');
+}
+
+body.dark div.callout.important {--callout-color: #FD7E13;
+                                 --callout-color-border: #FC5200;}
+
+div.callout.tip {
+  --callout-color: #00A046;
+  --callout-color-border: #01B874;
+  --callout-icon-path: url('/assets/icons/callout/lightbulb.svg');
+}
+
+body.dark div.callout.tip {--callout-color: #01B874;
+                           --callout-color-border: #00A046;}
+
+
+div.callout.warning {
+  --callout-color: #EB9113;
+  --callout-color-border: #F0AD4D;
+  --callout-icon-path: url('/assets/icons/callout/danger.svg');
+}
+
+body.dark div.callout.warning {--callout-color: #F0AD4D;
+                               --callout-color-border: #EB9113;}
+
+div.callout.caution {
+  --callout-color: #CC1913;
+  --callout-color-border: #D8524E;
+  --callout-icon-path: url('/assets/icons/callout/error.svg');
+}
+
+body.dark  div.callout.caution {--callout-color: #D8524E;
+                                --callout-color-border: #CC1913;}
+
+div.callout {
+  margin: 8px 0px;
+  --callout-radius: 6px;
+  border-radius: var(--callout-radius);
+  border: solid var(--callout-color-border) 1pt;
+  border-left-width: var(--callout-radius);
+  background-color: var(--callout-color-border);
+  overflow: hidden;
+}
+
+div.callout > * {
+  padding: 7px;
+}
+
+div.callout div.callout-title {
+  background-color: color-mix(in oklab, var(--callout-color) 20%, var(--color-background-primary));
+  border-top-left-radius: var(--callout-radius);
+  font-weight: bold;
+  display: flex;
+  gap: 6px;
+}
+
+div.callout div.callout-title::before {
+  background-color: var(--callout-color);
+  aspect-ratio: 1;
+  content: '';
+  height: 1.3rem;
+  mask-image: var(--callout-icon-path);
+  mask-size: cover;
+  mask-repeat: no-repeat;
+}
+
+div.callout div.callout-content {
+  background-color: var(--color-background-primary); 
+  border-bottom-left-radius: var(--callout-radius); 
+}
 
 /* ----------------------------------------
    _____      _                                _           _          _     
