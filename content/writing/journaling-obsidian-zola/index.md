@@ -3,7 +3,7 @@ title: Journaling with Obsidian.md & Zola
 description: I'm thinking about writing and recording my bike travels and have been trying a workflow using Obsidian.md and its git plugin. My website is hosted on Github Pages and it uses the static site engine *Zola*. Changes are pushed to the website's git repository via the git plugin and the page is rebuilt.
 date: 2024-07-19
 taxonomies:
-  category:
+  categories:
     - workflow
   tags:
     - workflow
@@ -71,7 +71,7 @@ description: ""
 date: {{date:YYYY-MM-DD}}
 
 taxonomies:
-  category: [""]
+  categories: [""]
   tags: ["",""] # 
 
 extra:
