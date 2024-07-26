@@ -305,6 +305,7 @@ figcaption {
   font-weight: var(--weight-text);
   font-size: 1em;
   line-height: 1.6em;
+  color: var(--color-text-primary);
 }
 
 strong {
@@ -655,6 +656,10 @@ div.dark-transition:has(+div.dark) {
   background-color: var(--color-dark-background);
 
   mask-position: 33% 0px;
+
+  bottom: -10px;
+  position: relative;
+  z-index: -1;
 }
 
 div.dark + div.dark-transition {
@@ -667,15 +672,28 @@ div.dark + div.dark-transition {
   mask-repeat: repeat-x;
   
   background-color: var(--color-dark-background);
+
+  top: -10px;
+  position: relative;
+  z-index: -1;
 }
 
 div.dark {
+  --color-text-primary: var(--color-dark-text);
+  --color-heading1: var(--color-dark-text);
+  --color-heading2: var(--color-dark-text);
+
   display: grid;
   grid-template-columns: 1fr var(--reader-width) 1fr;
   background-color: var(--color-dark-background);
   grid-column: 1 / 4;
-  --color-text-primary: red;
+  
   padding: 20px 0px;
+}
+
+div.dark *:not(pre) > code {
+  background-color: transparent;
+  border: dotted var(--color-code-background) 1px;
 }
 
 div.dark > *:first-child { margin-top: 0;}
