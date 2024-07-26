@@ -1,10 +1,3 @@
-/* --- [normalize] --- */
-* {
-  margin: 0;
-  padding: 0;
-}
-/* --- end[normalize] --- */
-
 :root {
   --font-serif: "Lora";
   --font-sansserif: "Alegreya Sans";
@@ -58,6 +51,7 @@
   --data-title-gap: 10px;
   --reader-width: 700px;
   --reader-thumbnail-height: 500px;
+  --reader-map-height: 800px;
 }
 
 html {
@@ -79,6 +73,11 @@ main{
 
 main > * {
   grid-column: 2;
+}
+
+#map {
+  width: 100%;
+  aspect-ratio: 5 / 3;
 }
 
 /* ----------------------------------------
@@ -504,7 +503,8 @@ body.menu-writing  a#nav-writing {
 sec:image
 ---------------------------------------- */
 
-img:not(.map-node) {
+main > img,
+main div.dark > img {
   width: 100%;
   border-radius: 5px;
   margin: 20px 0;
@@ -636,41 +636,30 @@ ul.post-list li time {
 sec:dark-paragraph
 ---------------------------------------- */
 
-div.dark::before {
-  height: 40px;
-  top: -40px;
-  content: "";
+div.dark-transition:has(+div.dark) {
+  width: 100%;
+  aspect-ratio: 8;
   grid-column: 1 / 4;
-  background-color: white;
-  position: relative;
-  background-image: url("./mountain_fadein.svg");
-  background-repeat: repeat-x;
-  margin-top: 40px;
-  background-size: contain;
-  background-position-x: 33%;
-  border-bottom: solid 2pt black;
+  
+  mask-image: url("./mountain_fadein.svg");
+  mask-size: cover;
+  mask-repeat: repeat-x;
+  
+  background-color: var(--color-dark-background);
+
+  mask-position: 33% 0px;
 }
 
-div.dark::after {
-  height: 60px;
-  bottom: -40px;
-  content: "";
+div.dark + div.dark-transition {
+  width: 100%;
+  aspect-ratio: 8;
   grid-column: 1 / 4;
-  background-color: white;
-  position: relative;
-  background-image: url("./mountain_fadeout.svg");
-  background-repeat: repeat-x;
-  margin-bottom: 40px;
-  background-size: contain;
-  border-top: solid 2pt black;
-}
 
-div.dark *:first-child {
-  margin-top: 0;
-}
-
-div.dark *:last-child {
-  margin-bottom: 0;
+  mask-image: url("./mountain_fadeout.svg");
+  mask-size: cover;
+  mask-repeat: repeat-x;
+  
+  background-color: var(--color-dark-background);
 }
 
 div.dark {
@@ -678,13 +667,13 @@ div.dark {
   grid-template-columns: 1fr var(--reader-width) 1fr;
   background-color: var(--color-dark-background);
   grid-column: 1 / 4;
-  padding: 40px 0;
+  --color-text-primary: red;
+  padding: 20px 0px;
 }
 
-div.dark * {
-  color:  var(--color-dark-text);
-  grid-column: 2;
-}
+div.dark > *:first-child { margin-top: 0;}
+div.dark > *:last-child { margin-bottom: 0;}
+div.dark > * {  grid-column: 2; }
 
 /* ----------------------------------------
    _____      _ _             _   
