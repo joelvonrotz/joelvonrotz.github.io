@@ -70,12 +70,16 @@ body {
   font-family: var(--font-text);
   color: var(--color-text-primary);
   text-rendering: optimizeLegibility;
+  grid-template-rows: auto 1fr auto;
+  display: grid;
+  min-height: 100vh;
 }
 
 
-main{
+main {
   display: grid;
   grid-template-columns: 1fr var(--reader-width) 1fr;
+  height: fit-content;
 }
 
 main > * {
@@ -511,6 +515,7 @@ body.menu-writing  a#nav-writing {
 sec:image
 ---------------------------------------- */
 
+.box img,
 main > img,
 main div.dark > img {
   width: 100%;
@@ -1053,4 +1058,22 @@ body.menu-cv{
 .experience .exp-description {
   color: var(--color-text-secondary);
   line-height: 1.2em;
+}
+
+hr {
+  margin: 10px 0px;
+}
+
+#post-tags span, #post-categories span {
+  display: inline;
+  margin: 3px 0px;
+  font-size: 0.9rem;
+}
+
+#post-tags a,
+#post-categories a {
+  font-size: 0.9em;
+  padding: 2px 4px;
+  margin: 2px 0px;
+  height: fit-content;
 }

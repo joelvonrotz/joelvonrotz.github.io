@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="title">
+  {{ taxonomy.name | capitalize }}
+</h1>
+
+<ul>
+  {% for entry in terms %}
+  <li><a href="/{{ taxonomy.name }}/{{ entry.name | lower | slugify}}">{{ entry.name | lower }}</a> <span style="color: var(--color-text-secondary);">({{entry.pages | length}})<span></li>
+  {% endfor %}
+</ul>
+
+
+{% endblock content %}

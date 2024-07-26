@@ -3,10 +3,10 @@
 {% block content %}
 
 <h1 class="title">
-  Tag: <code>{{ term.name | lower }}</code>
+  Category: <code>{{ term.name | lower }}</code>
 </h1>
 
-<p><a class="button" href="/{{ taxonomy.name }}/">Back to Tags</a></p>
+<p><a class="button" href="/{{ taxonomy.name }}/">Back to Categories</a></p>
 
 <ul class="post-list">
   {% for page in term.pages %}
