@@ -1,3 +1,10 @@
+/* normalize stuff */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* end normalize stuff */
+
 :root {
   --font-serif: "Lora";
   --font-sansserif: "Alegreya Sans";
