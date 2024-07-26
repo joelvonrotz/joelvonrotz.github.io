@@ -11,7 +11,7 @@ build_search_index = true
 
 taxonomies = [
   {name = "tags", feed=false}, # you can have taxonomies with the same name in multiple languages
-  {name = "category", feed=false}
+  {name = "categories", feed=false}
 ]
 
 [search]
