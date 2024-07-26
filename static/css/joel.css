@@ -515,9 +515,7 @@ body.menu-writing  a#nav-writing {
 sec:image
 ---------------------------------------- */
 
-.box img,
-main > img,
-main div.dark > img {
+img:not([class*="leaflet-"]) {
   width: 100%;
   border-radius: 5px;
   margin: 20px 0;
