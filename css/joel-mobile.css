@@ -1,0 +1,34 @@
+/* [MEDIA SPECIFIC STUFF] -------------- */
+@media only screen and (max-width: 716px) {
+  :root {
+    font-size: 16px;
+  }
+
+  main, div.dark {
+    grid-template-columns: 8px 1fr 8px;
+  }
+
+  div.thumbnail {
+    height: 250px;
+  }
+
+
+  h1:target::before,
+  h2:target::before,
+  h3:target::before,
+  h4:target::before,
+  h1:target::after,
+  h2:target::after,
+  h3:target::after,
+  h4:target::after {
+    content: none;
+    padding-left: 0;
+  }
+
+  h1:target,
+  h2:target,
+  h3:target,
+  h4:target {
+    padding-left: 0;
+  }
+}
