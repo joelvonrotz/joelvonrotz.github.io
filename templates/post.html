@@ -49,20 +49,27 @@
 </section>
 {{ page.content | safe }}
 
-<hr>
-<section id="post-tags"><span>
-  <b>Tags</b>:
-{% for tag in page.taxonomies.tags %}
-<a class="button" href="/tags/{{ tag | lower }}">{{ tag }}</a>{% if not loop.last%},{% endif %}
-{% endfor %}
-</span>
-</section>
+{% if page.taxonomies.tags or page.taxonomies.categories %}
+  <hr>
+  
+  {% if page.taxonomies.tags %}
+    <section id="post-tags"><span>
+      <b>Tags</b>:
+    {% for tag in page.taxonomies.tags %}
+    <a class="button" href="/tags/{{ tag | lower }}">{{ tag }}</a>{% if not loop.last%},{% endif %}
+    {% endfor %}
+    </span>
+    </section>
+  {% endif %}
 
-<section id="post-categories"><span>
-<b>Categories</b>:
-{% for category in page.taxonomies.categories %}
-<a class="button" href="/categories/{{ category | lower }}">{{ category }}</a>{% if not loop.last%},{% endif %}
-{% endfor %}
-</span>
-</section>
+  {% if page.taxonomies.categories %}
+    <section id="post-categories"><span>
+    <b>Categories</b>:
+    {% for category in page.taxonomies.categories %}
+    <a class="button" href="/categories/{{ category | lower }}">{{ category }}</a>{% if not loop.last%},{% endif %}
+    {% endfor %}
+    </span>
+    </section>
+  {% endif %}
+{% endif %}
 {% endblock content %}
