@@ -1,6 +1,9 @@
 +++
 title = "Projects"
 
+sort_by = "date"
+page_template = "post.html"
+
 [extra]
 thumbnail = '/assets/projects.jpg'
 menu = 'projects'
@@ -50,6 +53,13 @@ I'm up for sharing all my summaries for the different courses. If they're useful
        link2="https://flic.kr/s/aHBqjzAD3F"
        desc2="Photos") %}
   A four week tour I've done during the summer of 2021. I explored my home country thoroughly by visiting all the main cities of each canton.
+{% end %}
+
+{% box(image="./tour-dolomites2022/dolomites2022.jpg"
+       title="Dolomites 2022"
+       link1="tour-dolomites2022"
+       desc1="Read more...") %}
+  A ten day trip through the Dolomites starting and ending in Switzerland. 
 {% end %}
 
 </div>
