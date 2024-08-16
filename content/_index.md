@@ -2,7 +2,6 @@
 title = "Salut, I'm Joel!"
 
 [extra]
-thumbnail = './assets/cover.jpg'
 menu = 'home'
 +++
 
