@@ -19,7 +19,7 @@
     <li><a data-category="{{ post.taxonomies.categories | first }}" class="less" href="{{ post.permalink }}">{{ post.title }}</a><time class="date" datetime="{{ post.date }}">{{ post.date | date(format="%d.%m.") }}</time></li>
     {% endfor %}
   </ul>
-  {% endfor %}
 </section>
+{% endfor %}
 
 {% endblock content %}
