@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if section.extra.thumbnail %}
+<div class="thumbnail"
+  style="background-image: url('{{ section.extra.thumbnail }}'); {{ section.extra.thumbnailstyle | default(value='')}}">
+</div>
+{% endif %}
+<h1 class="title">
+  {{ section.title }}
+</h1>
+
+{{ section.content | safe }}
+
+{% for year, posts in section.pages | group_by(attribute="year") %}
+<section id="journals">
+  <h2>Journals</h2>
+  <ul class="post-list fancy">
+    {% for post in posts %}
+    <li>
+      <span>
+
+        <a data-category="{{ post.taxonomies.categories | first }}" class="less" href="{{ post.permalink }}">{{
+          post.title }}</a>
+          <time class="date" datetime="{{ post.date }}">{{ post.date | date(format="%d.%m.%Y") }}</time>
+        </span>
+        {{ post.description | markdown |  safe  }}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+
+{% endblock content %}

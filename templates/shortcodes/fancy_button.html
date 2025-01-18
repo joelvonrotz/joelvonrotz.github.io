@@ -1,0 +1,7 @@
+<a class="button fancy" style="{{ style | default(value='') }}" href="{{ link }}">
+    <img src="{{ image }}">
+    <div>
+        <span>{{ text }}</span>
+        <span>{{ desc | markdown | safe }}</span>
+    </div>
+  </a>

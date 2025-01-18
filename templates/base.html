@@ -3,7 +3,7 @@
 
 <head>
 
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   {% if section %}
@@ -37,125 +37,81 @@
   <link rel="stylesheet" href="/css/joel-mobile.css">
 
   <!--preload navigation and header images-->
-  <link rel="preload" href="/assets/icons/aperture.svg" as="image"/>
-  <link rel="preload" href="/assets/icons/feather.svg" as="image"/>
-  <link rel="preload" href="/assets/icons/home.svg" as="image"/>
-  <link rel="preload" href="/assets/icons/lightbulb.svg" as="image"/>
-  <link rel="preload" href="/assets/icons/search.svg" as="image"/>
-  <link rel="preload" href="/assets/icons/sun.svg" as="image"/>
-  <link rel="preload" href="/assets/icons/moon.svg" as="image"/>
-  <link rel="preload" href="/assets/header.svg" as="image"/>
+  {% include "snippets/preloads.html" %}
   {% endblock css %}
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"></script>
   <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          renderMathInElement(document.body, {
-            // customised options
-            // • auto-render specific keys, e.g.:
-            delimiters: [
-                {left: '$$', right: '$$', display: true},
-                {left: '$', right: '$', display: false},
-                {left: '\\(', right: '\\)', display: false},
-                {left: '\\[', right: '\\]', display: true}
-            ],
-            // • rendering keys, e.g.:
-            throwOnError : false
-          });
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        // • rendering keys, e.g.:
+        throwOnError: false
       });
+    });
   </script>
 </head>
 
-{% if section %}
-  {% if section.extra.menu %}
-<body class="menu-{{ section.extra.menu }}">
-  {% endif %}
-{% elif page %}
-  {% if page.extra.menu %}
-<body class="menu-{{ page.extra.menu }}">
-  {% endif %}
-{% else %}
-<body>
-{% endif %}
+<body class="{% if section.extra.menu %}menu-{{ section.extra.menu }}{% elif page.extra.menu %}menu-{{ page.extra.menu }}{% else %}{% endif %}">
+      <header>
+        {% include "snippets/header.html" %}
+      </header>
 
-    <header>
-      <h1 class="site-title">
-        joel von rotz
-      </h1>
-      <div style="display: flex;
-                  gap: 5px;
-                    align-items: center;">
+      <main>
+        {% block content %} {% endblock %}
+      </main>
 
-        <nav>
-          <a class="button" id="nav-home" title="Home" href="/">
-            <img class="icon" src="/assets/icons/home.svg">
-          </a>
-          <a class="button" id="nav-writing" title="Writing" href="{{ get_url(path='@/writing/_index.md')}}">
-            <img class="icon" src="/assets/icons/feather.svg">
-          </a>
-          <a class="button" id="nav-projects" title="Projects" href="{{ get_url(path='@/projects/_index.md') }}">
-            <img class="icon" src="/assets/icons/lightbulb.svg">
-          </a>
-          <a class="button" id="nav-photos" title="Photography" href="{{ get_url(path='@/photos.md') }}">
-            <img class="icon" src="/assets/icons/aperture.svg">
-          </a>
-          <!--<a class="button" id="nav-search" title="Search" href="{{ get_url(path='@/search.md') }}">
-            <img class="icon" src="/assets/icons/search.svg">
-          </a>-->
-        </nav>
-        <label class="container" title="Dark/Light Toggle">
-          <input id="darklight-toggler" type="checkbox" onclick="toggleDarkLight(this)">
-          <span class="checkmark"></span>
-        </label>
-      </div>
-    </header>
-    <main>
-      {% block content %} {% endblock %}
-    </main>
+      <footer>
+        {% include "snippets/footer.html" %}
+      </footer>
+    </body>
 
-    <footer>
-      <span>
-        Made with <a href="https://www.getzola.org/">Zola</a>
-        <b>/</b> 
-        <a href="/tags/">Tags</a>
-        <b>/</b> 
-        <a href="/categories/">Categories</a>
-        <b>/</b> 
-        <a href="/opensource/">Open Source</a>
-      </span>
-    </footer>
-  </body>
-
-  {% if section %}
+    {% if section %}
     {% if section.extra.gallery %}
-      <script src="/scripts/photo.js"></script>
+    <script src="/scripts/photo.js"></script>
     {% endif %}
-  {% elif page %}
+    {% elif page %}
     {% if page.extra.gallery %}
-      <script src="/scripts/photo.js"></script>
+    <script src="/scripts/photo.js"></script>
     {% endif %}
-  {% endif %}
-  <script>
-    comp = document.getElementById('darklight-toggler');
-    body = document.getElementsByTagName('body')[0];
-    function toggleDarkLight(comp) {
-      localStorage.setItem('dark',comp.checked);
-      if(comp.checked) {
-        body.classList.add('dark');
-      } else {
-        body.classList.remove('dark');     
+    {% endif %}
+
+
+
+    <script>
+      /*-------------------------- Dark/Light Mode --------------------------*/
+      comp = document.getElementById('darklight-toggler');
+      body = document.getElementsByTagName('body')[0];
+      function toggleDarkLight(comp) {
+        localStorage.setItem('dark', comp.checked);
+        if (comp.checked) {
+          body.classList.add('dark');
+        } else {
+          body.classList.remove('dark');
+        }
       }
-    }
 
-    if(localStorage.getItem('dark')==="true") {
-      body.classList.add('dark');
-      comp.checked = true;
-    } else {
-      body.classList.remove('dark');
-      comp.checked = false;
-    }
+      if (localStorage.getItem('dark') === "true") {
+        body.classList.add('dark');
+        comp.checked = true;
+      } else {
+        body.classList.remove('dark');
+        comp.checked = false;
+      }
+    </script>
 
-  </script>
 </html>
