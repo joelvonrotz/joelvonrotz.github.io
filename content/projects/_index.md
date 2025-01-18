@@ -17,24 +17,35 @@ I'm up for sharing all my summaries for the different courses. If they're useful
 
 <div class="box-collection">
 
+
+
+
+
+
+
+
 {% box(link="/downloads#semester-1" title="Semester 1") %}
-  My summaries from my first semester of the bachelor of electrical engineering at HSLU Lucerne.
+  <i>Mathematik Grundlagen</i> / <i>Elektrotechnik 1</i> / <i>Digitaltechnik</i> / <i>Programmiergrundlagen</i>
 {% end %}
 
 {% box(link="/downloads#semester-2" title="Semester 2") %}
-  My summaries from my second semester of the bachelor of electrical engineering at HSLU Lucerne.
+  <i>Mathematik (& Physik) 1</i> / <i>Elektrotechnik 2</i> / <i>Mikrocontroller Fundamentals</i> / <i>Elektronik 1</i> / <i>Linear Algebra</i>
 {% end %}
 
 {% box(link="/downloads#semester-3" title="Semester 3") %}
-  My summaries from my third semester of the bachelor of electrical engineering at HSLU Lucerne.
+  <i>Mathematik 2</i> / <i>Elektronik 2</i> / <i>Signale & Systeme</i> / <i>Advanced Programming</i>
 {% end %}
 
 {% box(link="/downloads#semester-4" title="Semester 4") %}
-  My summaries from my fourth semester of the bachelor of electrical engineering at HSLU Lucerne.
+  <i>Advanced Embedded Systems</i> / <i>Digital Design</i> / <i>Leistungselektronik & Elektrische Antriebe</i> / <i>Nachrichtentechnik</i> / <i>Regelungstechnik</i>
 {% end %}
 
 {% box(link="/downloads#semester-6" title="Semester 6") %}
-  My summaries from my sixth semester of the bachelor of electrical engineering at HSLU Lucerne.
+  <i>Advanced System Design</i> / <i>Angewandte Industrielle Robotik</i> / <i>Machine Learning</i> / <i>Echtzeitbildverarbeitung</i>
+{% end %}
+
+{% box(link="/downloads#semester-7" title="Semester 7") %}
+  <i>Concurrent Distributed Systems</i> / <i>Digital Signal Processing</i> / <i>Industrielle Automation</i>
 {% end %}
 
 </div>

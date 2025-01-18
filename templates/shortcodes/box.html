@@ -14,7 +14,7 @@
   </a>
   {% endif %}
   <p class="box-desc">
-    {{ body }}
+    {{ body | safe }}
   </p>
   <div class="box-links">
     {% if link1 %}
