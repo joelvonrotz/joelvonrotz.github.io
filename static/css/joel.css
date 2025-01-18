@@ -312,12 +312,17 @@ figcaption {
   color: var(--color-text-primary);
 }
 
+p + p {
+  margin-top: 1em;
+}
+
 strong {
   font-weight: bold;
 }
 
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
+  font-variant-numeric: lining-nums;
   font-weight: 600;
   transition: 100ms border ease-in-out;
 }
@@ -471,6 +476,44 @@ a.button {
   vertical-align: middle;
 }
 
+a.button.fancy {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  height: auto;
+
+  margin: 20px 10px;
+  padding: 5px;
+
+  border-radius: 10px;
+}
+
+a.button.fancy img {
+  margin: 0;
+  height: 8vw;
+  width: auto;
+}
+
+a.button.fancy div {
+  display: flex;
+  flex-flow: column;
+}
+
+a.button.fancy div > span:nth-child(1) {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+a.button.fancy div > span:nth-child(2) {
+  font-family: var(--font-serif);
+  color: var(--color-text-primary);
+  font-weight: normal;
+}
+
+a.button.fancy:hover {
+  background-color: color-mix(in srgb, var(--color-link-hover) 20%, var(--color-background-primary) 80%);
+}
+
 /*special case were navigation buttons in the header don't have a border*/
 nav a.button {
   border: none;
@@ -481,7 +524,7 @@ main a.button {
 }
 
 a.button:hover {
-  background-color: var(--color-link-hover);
+  background-color: color-mix(in srgb, var(--color-link-hover) 20%, var(--color-background-primary) 80%);
 }
 
 a.button .button-icon {
@@ -631,8 +674,47 @@ ul.post-list li{
   justify-content: space-between;
 }
 
+
+
+
+
 ul.post-list li time {
   font-family: var(--font-sansserif);
+}
+
+ul.post-list.fancy{
+  padding: 0 10px;
+}
+
+ul.post-list.fancy li{
+  border: var(--color-accent) 1pt solid;
+  padding: 0.1em 0.4em;
+  border-radius: 0.5em;
+
+  flex-flow: column;
+  margin-bottom: 10px;
+}
+
+ul.post-list.fancy li > span{
+  border-bottom: var(--color-text-secondary) 1pt dashed;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.1em;
+}
+
+ul.post-list.fancy li > span * {
+  font-family: var(--font-serif);
+  font-size: 1.0em;
+}
+
+
+ul.post-list.fancy li > p{
+  font-size: 0.9em;
+  padding: 0.3em 0;
+}
+
+ul.post-list.fancy li span{
+  display: flex;
+  justify-content: space-between;
 }
 
 /* ----------------------------------------
