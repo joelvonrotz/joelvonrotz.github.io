@@ -25,7 +25,7 @@ async function fetchPostsJSON() {
 }
 
 function formatSearchResultItem(item, terms) {
-  return `<a href="${item.url}">${item.title}</a>`; //+ `<div>${makeTeaser(item.doc.body, terms)}</div>`;
+  return `<a href="${item.url}"><span>${item.title}</span><span>${item.description.replace(/\*\*(.+?)\*\*|__(.+?)__/,'<b>$1</b>').replace(/\*(.+?)\*|_(.+?)_/,'<i>$1</i>')}</span></a>`; //+ `<div>${makeTeaser(item.doc.body, terms)}</div>`;
 }
 
 
@@ -77,11 +77,6 @@ function initSearch() {
       }
 
       var results = search_fuse.search(term);
-
-      for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
-        var item = document.createElement("li");
-        console.log(results[i]);
-      }
 
       for (var i = 0; i < Math.min(results.length, MAX_ITEMS); i++) {
         var item = document.createElement("li");
