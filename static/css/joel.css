@@ -476,13 +476,17 @@ a.button {
   vertical-align: middle;
 }
 
+a.button.less {
+  border: none;
+}
+
 a.button.fancy {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   height: auto;
 
-  margin: 20px 10px;
+  margin: 10px 10px;
   padding: 5px;
 
   border-radius: 10px;
@@ -490,8 +494,8 @@ a.button.fancy {
 
 a.button.fancy img {
   margin: 0;
-  height: 8vw;
-  width: auto;
+  height: auto;
+  width: 300px;
 }
 
 a.button.fancy div {
@@ -1031,9 +1035,11 @@ sec:misc
 }
 
 input {
+  background-color: transparent;
   box-sizing: border-box;
   width: 100%;
   font-family: var(--font-sansserif);
+  font-size: 1.4rem;
   padding: 8px 15px;
   border-radius: 8px;
   border: none;
@@ -1156,4 +1162,64 @@ hr {
   padding: 2px 4px;
   margin: 2px 0px;
   height: fit-content;
+}
+
+
+/* ----------------------------------------
+   _____                     _     
+  / ____|                   | |    
+ | (___   ___  __ _ _ __ ___| |__  
+  \___ \ / _ \/ _` | '__/ __| '_ \ 
+  ____) |  __/ (_| | | | (__| | | |
+ |_____/ \___|\__,_|_|  \___|_| |_| 
+sec:search
+---------------------------------------- */
+
+.search-results-items {
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  gap: 0.5em;
+  padding: 0;
+  position: relative;
+  padding-top: 2em;
+}
+
+.search-results-items::after {
+  display: flex;
+  content: "Search Results";
+  
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0pt;
+  padding: 0px 10px;
+  background-color: var(--color-background-primary);
+}
+
+.search-results-items::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0.5em;
+  border-bottom: dotted 4pt var(--color-background-secondary);
+}
+
+.search-results-items li a{
+  display: flex;
+  flex-flow: column;
+  text-decoration: none;
+  border: dashed var(--color-background-secondary) 2pt;
+  border-radius: 4pt;
+  padding-left: 6pt;
+}
+
+.search-results-items a span:nth-child(1){
+  font-family: var(--font-title );
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.search-results-items a span:nth-child(2){
+  color: var(--color-text-secondary);
 }

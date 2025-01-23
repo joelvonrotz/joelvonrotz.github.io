@@ -31,4 +31,25 @@
   h4:target {
     padding-left: 0;
   }
+
+
+
+  a.button.fancy {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    gap: 10px;
+    height: auto;
+  
+    margin: 20px 10px;
+    padding: 5px;
+  
+    border-radius: 10px;
+  }
+  
+  a.button.fancy img {
+    margin: 0;
+    height: auto;
+    width: 100%;
+  }
 }
