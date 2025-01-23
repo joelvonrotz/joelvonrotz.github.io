@@ -19,8 +19,7 @@
     {% for post in posts %}
     <li>
       <span>
-
-        <a data-category="{{ post.taxonomies.categories | first }}" class="less" href="{{ post.permalink }}">{{
+        <a class="less" href="{{ post.permalink }}">{{
           post.title }}</a>
           <time class="date" datetime="{{ post.date }}">{{ post.date | date(format="%d.%m.%Y") }}</time>
         </span>
