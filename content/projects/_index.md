@@ -7,6 +7,7 @@ page_template = "page.html"
 [extra]
 thumbnail = '/assets/projects.jpg'
 menu = 'projects'
+breadcrumb = 'Back to Home'
 +++
 
 ## Summaries 📚
