@@ -1,5 +1,10 @@
 +++
 title = "Download"
+
+[extra]
+thumbnail = '/aditya-dvPd91Pdh5c-unsplash.jpg'
+menu = 'downloads'
+attribution = 'Photo by <a href="https://unsplash.com/@adidhotre?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aditya</a> on <a href="https://unsplash.com/photos/brown-wooden-stick-lot-on-gray-concrete-floor-dvPd91Pdh5c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>'
 +++
 
 ## HSLU - Electrical Engineering 🎓
@@ -57,3 +62,5 @@ Fifth semester was an exchange semester in Denmark and (almost) all exams were o
 {{ button (text="Concurrent Distributed Systems" link="/downloads/bachelor/s7_concurrent_distributed_systems.pdf" type="pdf") }} /
 {{ button (text="Digital Signal Processing" link="/downloads/bachelor/s7_digital_signal_processing.pdf" type="pdf") }} /
 {{ button (text="Industrielle Automation" link="/downloads/bachelor/s7_industrial_automation.pdf" type="pdf") }}
+
+---

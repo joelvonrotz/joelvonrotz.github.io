@@ -2,7 +2,7 @@
 title = "Projects"
 
 sort_by = "date"
-page_template = "post.html"
+page_template = "page.html"
 
 [extra]
 thumbnail = '/assets/projects.jpg'
@@ -47,10 +47,9 @@ I'm up for sharing all my summaries for the different courses. If they're useful
 {% box(link="/downloads#semester-7" title="Semester 7") %}
   <i>Concurrent Distributed Systems</i> / <i>Digital Signal Processing</i> / <i>Industrielle Automation</i>
 {% end %}
-
 </div>
 
-## Bikepacking 🚲
+## Bikepacking / Biketouring
 
 > Genau wenn man irgendwo im nirgendwo ist, die Regenkleider völlig durchnässt und das Ziel viel zu weit weg gesetzt hat, dann erlebt man das Abenteuer.
 > > Me!
