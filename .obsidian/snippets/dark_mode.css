@@ -1,0 +1,30 @@
+
+div.dark-transition.start::before {
+    content: "Dark Mode Start";
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+    color: white;
+    display: block;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%); 
+
+    padding: 5px 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+div.dark-transition.end::before {
+    content: "Dark Mode End";
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+    color: white;
+    display: block;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%); 
+
+    padding: 5px 8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
