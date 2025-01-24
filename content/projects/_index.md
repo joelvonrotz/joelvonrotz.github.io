@@ -10,9 +10,7 @@ menu = 'projects'
 breadcrumb = 'Back to Home'
 +++
 
-## Summaries 📚
-
-### Bachelor – Electrical Engineering
+## Summaries 📚 Bachelor – Electrical Engineering
 
 I'm up for sharing all my summaries for the different courses. If they're useful to you, then that's good! I want to contribute somehow to [open education](https://joint-research-centre.ec.europa.eu/what-open-education_en) and hopefully this helps.
 
