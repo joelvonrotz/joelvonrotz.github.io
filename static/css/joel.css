@@ -716,27 +716,50 @@ ul.post-list.fancy li{
   margin-bottom: 10px;
 }
 
-ul.post-list.fancy li > span{
+ul.post-list.fancy li > div{
   border-bottom: var(--color-text-secondary) 1pt dashed;
   padding-bottom: 0.2em;
   margin-bottom: 0.1em;
+  
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 5.4em;
+  padding-left: 2pt;
 }
 
-ul.post-list.fancy li > span * {
+ul.post-list.fancy li > div.pinned{
+  grid-template-columns: 1.4em 1fr 5.4em;
+  padding-left: 0pt;
+}
+
+ul.post-list.fancy li > div img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: -4px;
+  top:2px;
+  align-self: flex-start;
+}
+
+ul.post-list.fancy li > div time {
+  align-self: flex-end;
+  justify-self: right;
+  position: relative;
+  right: 2pt;
+}
+
+
+ul.post-list.fancy li > div * {
   font-family: var(--font-serif);
   font-size: 1.0em;
 }
-
 
 ul.post-list.fancy li > p{
   font-size: 0.9em;
   padding: 0.3em 0;
 }
 
-ul.post-list.fancy li span{
-  display: flex;
-  justify-content: space-between;
-}
 
 /* ----------------------------------------
   _____             _      _____                                      _     
