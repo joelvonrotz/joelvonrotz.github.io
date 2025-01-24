@@ -19,22 +19,41 @@
 
 {{ section.content | safe }}
 
-{% for year, posts in section.pages | group_by(attribute="year") %}
-<section id="journals">
-  <h2>Journals</h2>
-  <ul class="post-list fancy">
-    {% for post in posts %}
-    <li>
-      <span>
-        <a class="less" href="{{ post.permalink }}">{{
-          post.title | markdown(inline=true) | safe }}</a>
+{% set pinned_posts = section.pages | filter(attribute="extra.pinned", value=true) %}
+{% if section.pages %}
+  {% if pinned_posts %}
+    <section id="pinned-journals">
+      <h2>Pinned Journals</h2>
+      <ul class="post-list fancy">
+        {% for post in pinned_posts %}
+        <li>
+          <div {% if post.extra.pinned %}class="pinned" {% endif %}>
+            {% if post.extra.pinned %}<img class="icon" src="/assets/icons/pinned.svg">{% endif %}
+            <a class="less" href="{{ post.permalink }}">{{ post.title | markdown(inline=true) | safe }}</a>
+            <time class="date" datetime="{{ post.date }}">{{ post.date | date(format="%d.%m.%Y") }}</time>
+          </div>
+          {{ post.description | markdown | safe }}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  <section id="journals">
+    <h2>Journals</h2>
+    <ul class="post-list fancy">
+      {% for post in section.pages %}
+      <li>
+        <div {% if post.extra.pinned %}class="pinned" {% endif %}>
+          {% if post.extra.pinned %}<img class="icon" src="/assets/icons/pinned.svg">{% endif %}
+          <a class="less" href="{{ post.permalink }}">{{ post.title | markdown(inline=true) | safe }}</a>
           <time class="date" datetime="{{ post.date }}">{{ post.date | date(format="%d.%m.%Y") }}</time>
-        </span>
-        {{ post.description | markdown(inline=true) |  safe  }}
-    </li>
-    {% endfor %}
-  </ul>
-</section>
-{% endfor %}
+        </div>
+        {{ post.description | markdown | safe }}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
 
 {% endblock content %}
