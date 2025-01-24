@@ -1,5 +1,4 @@
 public/
-
 .trash/
 
 # [Obsidian.md]
@@ -12,3 +11,4 @@ public/
 !.obsidian/plugins
 .obsidian/plugins/*
 !.obsidian/plugins/obsidian-style-settings
+
