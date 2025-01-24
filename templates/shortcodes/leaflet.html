@@ -1,3 +1,4 @@
+{%- if page.extra.leaflet -%}
 <div>
   <div id="map"></div>
   <script>
@@ -61,7 +62,7 @@
     var marker = L.marker({{ node.coordinates }}).addTo(map);
     marker.setIcon({{ node.icon | default(value="iconDefault")}});
     {%- if node.description %}
-    marker.bindPopup("{{ node.description }} Camp").openPopup();
+    marker.bindPopup("{{ node.description | markdown(inline=true) | safe }}").openPopup();
     {%- endif %}
     {%- if node.focus %}
     map.setView(marker._latlng, 13);
@@ -71,3 +72,4 @@
 L.control.scale().addTo(map); // adds a scale
   </script>
 </div>
+{%- endif %}
