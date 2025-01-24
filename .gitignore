@@ -11,3 +11,5 @@ public/
 !.obsidian/plugins
 .obsidian/plugins/*
 !.obsidian/plugins/obsidian-style-settings
+!.obsidian/plugins/templater-obsidian
+!.obsidian/snippets
