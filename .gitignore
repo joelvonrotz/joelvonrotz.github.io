@@ -1,4 +1,6 @@
 public/
 .obsidian/
-obsidian/
 .trash/
+!.obsidian/themes/*
+!.obsidian/app.json
+!.obsidian/appearance.json
