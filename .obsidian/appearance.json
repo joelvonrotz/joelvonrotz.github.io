@@ -1,4 +1,7 @@
 {
   "cssTheme": "Border",
-  "theme": "moonstone"
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "dark_mode"
+  ]
 }

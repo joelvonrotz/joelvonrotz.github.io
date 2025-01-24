@@ -1,1 +1,9 @@
-{}
+{
+  "trashOption": "local",
+  "propertiesInDocument": "source",
+  "userIgnoreFilters": [
+    "public/"
+  ],
+  "attachmentFolderPath": "./",
+  "newLinkFormat": "relative"
+}
