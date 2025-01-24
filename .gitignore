@@ -9,4 +9,6 @@ public/
 !.obsidian/community-plugins.json
 !.obsidian/appearance.json
 !.obsidian/themes
+!.obsidian/plugins
+.obsidian/plugins/*
 !.obsidian/plugins/obsidian-style-settings
