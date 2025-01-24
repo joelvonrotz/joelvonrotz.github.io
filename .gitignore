@@ -1,6 +1,13 @@
 public/
-.obsidian/
 .trash/
-!.obsidian/themes/*
+
+# [Obsidian.md]
+!.obsidian/
+.obsidian/*
 !.obsidian/app.json
+!.obsidian/community-plugins.json
 !.obsidian/appearance.json
+!.obsidian/themes
+!.obsidian/plugins
+.obsidian/plugins/*
+!.obsidian/plugins/obsidian-style-settings

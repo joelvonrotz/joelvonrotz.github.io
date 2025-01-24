@@ -7,12 +7,15 @@
     var iconShop = L.icon({iconUrl: '/assets/leaflet/marker_shop.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
     var iconWarning = L.icon({iconUrl: '/assets/leaflet/marker_warn.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
     var iconForbid = L.icon({iconUrl: '/assets/leaflet/marker_forbidden.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
+    var iconStart = L.icon({iconUrl: '/assets/leaflet/marker_start.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
+    var iconStop = L.icon({iconUrl: '/assets/leaflet/marker_stop.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
     var map = L.map('map', {
       fullscreenControl: true,
       fullscreenControlOptions: {
         position: 'topleft'
       }
     });
+    //L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -27,9 +30,13 @@
       'Camp': '/assets/leaflet/marker_sleep.svg',
       'Hotel': '/assets/leaflet/marker_sleep.svg'
     },
+    marker_options: {
+    iconSize: [28, 28],
+    iconAnchor: [16.5, 16.5],
+  },
       markers: {
-        startIcon: '/assets/leaflet/marker_start.svg',
-        endIcon: '/assets/leaflet/marker_stop.svg',
+        startIcon: '/assets/leaflet/point_start.svg',
+        endIcon: '/assets/leaflet/point_stop.svg',
         pointMatchers: [
         {
           regex: /camp|hotel|sleep|hostel|guesthouse/i,
@@ -55,6 +62,9 @@
     marker.setIcon({{ node.icon | default(value="iconDefault")}});
     {%- if node.description %}
     marker.bindPopup("{{ node.description }} Camp").openPopup();
+    {%- endif %}
+    {%- if node.focus %}
+    map.setView(marker._latlng, 13);
     {%- endif %}
   {%- endfor %}
 {%- endif %}
