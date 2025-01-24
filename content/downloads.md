@@ -4,7 +4,7 @@ title = "Download"
 
 ## HSLU - Electrical Engineering 🎓
 
-All the summaries are written in a mix of English and German, but I’m providing them anyways as they might help you somehow. As time goes, I’ll add more of my summaries!
+All the summaries are written in a mix of English and German, but I’m providing them anyways as they might help you somehow.
 
 These notes are as is and do not guarantee a good grade on your exams!
 
