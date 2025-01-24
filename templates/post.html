@@ -7,10 +7,15 @@
   style="background-image: url('{{ page.extra.thumbnail }}'); {{ page.extra.thumbnailstyle | default(value='')}}">
 </div>
 {% endif %}
+{% if page.extra.breadcrumb %}
+<label class="container">
+  <a class="button less breadcrumb" title="{{ page.extra.breadcrumb }}" href="..">
+    <img class="icon" src="/assets/icons/arrow-back-up.svg"><span>{{ page.extra.breadcrumb }}</span>
+  </a>
+</label>
+{% endif %}
 <section id="title-block">
-  <h1 class="title">
-    {{ page.title }}
-  </h1>
+  <h1 class="title">{{ page.title | markdown(inline=true) | safe }}</h1>
   <time class="date" datetime="{{ page.date }}">
     {{ page.date | date(format="%d.%m.%Y") }}
   </time>

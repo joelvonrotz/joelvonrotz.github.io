@@ -5,6 +5,15 @@
 <div class="thumbnail" style="background-image: url('{{ section.extra.thumbnail }}');">
 </div>
 {% endif %}
+
+{% if section.extra.breadcrumb %}
+<label class="container">
+  <a class="button less breadcrumb" title="{{ section.extra.breadcrumb }}" href="..">
+    <img class="icon" src="/assets/icons/arrow-back-up.svg"><span>{{ section.extra.breadcrumb }}</span>
+  </a>
+</label>
+{% endif %}
+
 <h1 class="title">
   {{ section.title }}
 </h1>

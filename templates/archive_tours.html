@@ -6,6 +6,13 @@
   style="background-image: url('{{ section.extra.thumbnail }}'); {{ section.extra.thumbnailstyle | default(value='')}}">
 </div>
 {% endif %}
+{% if section.extra.breadcrumb %}
+<label class="container">
+  <a class="button less breadcrumb" title="{{ section.extra.breadcrumb }}" href="..">
+    <img class="icon" src="/assets/icons/arrow-back-up.svg"><span>{{ section.extra.breadcrumb }}</span>
+  </a>
+</label>
+{% endif %}
 <h1 class="title">
   {{ section.title }}
 </h1>
@@ -20,10 +27,10 @@
     <li>
       <span>
         <a class="less" href="{{ post.permalink }}">{{
-          post.title }}</a>
+          post.title | markdown(inline=true) | safe }}</a>
           <time class="date" datetime="{{ post.date }}">{{ post.date | date(format="%d.%m.%Y") }}</time>
         </span>
-        {{ post.description | markdown |  safe  }}
+        {{ post.description | markdown(inline=true) |  safe  }}
     </li>
     {% endfor %}
   </ul>
