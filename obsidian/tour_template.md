@@ -14,5 +14,6 @@ extra:
   #  {description: "See ya in three months!", coordinates: [47.0507621319826, 8.310224275003634], icon: "iconStart", focus: true}
   #]
   thumbnail: 'tianshu-liu-aqZ3UAjs_M4-unsplash.jpg'
-  #breadcrumb: 'projects/japan2025/'
+  #pinned: true
+  #breadcrumb: 'Back to Journals'
 ---
