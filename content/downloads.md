@@ -62,5 +62,3 @@ Fifth semester was an exchange semester in Denmark and (almost) all exams were o
 {{ button (text="Concurrent Distributed Systems" link="/downloads/bachelor/s7_concurrent_distributed_systems.pdf" type="pdf") }} /
 {{ button (text="Digital Signal Processing" link="/downloads/bachelor/s7_digital_signal_processing.pdf" type="pdf") }} /
 {{ button (text="Industrielle Automation" link="/downloads/bachelor/s7_industrial_automation.pdf" type="pdf") }}
-
----
