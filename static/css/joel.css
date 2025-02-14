@@ -136,7 +136,7 @@ body.dark footer::before {
   background-color: var(--color-banner-dark);
 }
 
-body.dark header img.icon {
+body.dark img.icon {
   filter: invert(53%) sepia(89%) saturate(352%) hue-rotate(169deg) brightness(93%) contrast(93%);
 }
 
@@ -453,6 +453,14 @@ a {
   color: var(--color-link);
 }
 
+a:not([href]) { 
+  color: white !important;
+}
+
+a:not([href]):hover {
+  background-color: transparent !important;
+}
+
 
 
 a.less {
@@ -581,8 +589,7 @@ img.icon {
   height: 100%;
   aspect-ratio: 1;
   width: fit-content;
-
-  filter: invert(26%) sepia(30%) saturate(4491%) hue-rotate(192deg) brightness(95%) contrast(84%);
+  filter: brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(2656%) hue-rotate(195deg) brightness(100%) contrast(84%);
 }
 
 div.img-fit {
