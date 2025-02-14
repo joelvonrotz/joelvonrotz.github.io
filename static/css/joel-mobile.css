@@ -1,5 +1,5 @@
 /* [MEDIA SPECIFIC STUFF] -------------- */
-@media only screen and (max-width: 716px) {
+@media only screen and (max-width: 800px) {
   :root {
     font-size: 16px;
   }
@@ -10,6 +10,10 @@
 
   div.thumbnail {
     height: 250px;
+  }
+
+  header div.header-wrapper {
+    width: 100%;
   }
 
 
@@ -34,22 +38,19 @@
 
 
 
-  a.button.fancy {
-    display: flex;
+}
+
+
+@media only screen and (max-width: 540px) {
+  header div.header-wrapper {
     flex-flow: column;
-    align-items: flex-start;
-    gap: 10px;
-    height: auto;
-  
-    margin: 20px 10px;
-    padding: 5px;
-  
-    border-radius: 10px;
   }
-  
-  a.button.fancy img {
-    margin: 0;
-    height: auto;
-    width: 100%;
+
+  header {
+    height: 110px;
+  }
+
+  header h1 {
+    line-height: 1;
   }
 }
