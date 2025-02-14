@@ -207,14 +207,34 @@ label input:checked ~  .checkmark:after {
  |_|  |_|\___|\__,_|\__,_|\___|_|   
 sec:header
 ---------------------------------------- */                                    
-                                    
 
-header > h1 {
+header {
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 5px;
+}
+
+header h1 {
   font-family: var(--font-title);
   font-weight: 600;
   text-decoration: none;
   font-size: 40px;
   margin: 0;
+  line-height: 0;
+  margin-bottom: 0.25em;
+}
+
+header div.header-wrapper {
+  display: flex;
+  align-items: center;
+  width: var(--reader-width);
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 header nav {
@@ -243,16 +263,6 @@ header::before, footer::before {
   z-index: -1;
 }
 
-header {
-  position: relative;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  gap: 5px;
-}
-
 
 
 /* ----------------------------------------
@@ -270,7 +280,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 0;
+  height: 70px;
   text-align: center;
   font-size: 0.9rem;
   font-family: var(--font-sansserif);
@@ -310,6 +320,7 @@ figcaption {
   font-size: 1em;
   line-height: 1.6em;
   color: var(--color-text-primary);
+  hyphens: auto;
 }
 
 p + p {
@@ -492,44 +503,6 @@ a.button.less {
   border: none;
 }
 
-a.button.fancy {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  height: auto;
-
-  margin: 10px 10px;
-  padding: 5px;
-
-  border-radius: 10px;
-}
-
-a.button.fancy img {
-  margin: 0;
-  height: auto;
-  width: 300px;
-}
-
-a.button.fancy div {
-  display: flex;
-  flex-flow: column;
-}
-
-a.button.fancy div > span:nth-child(1) {
-  margin-bottom: 5px;
-  font-size: 1.2em;
-}
-
-a.button.fancy div > span:nth-child(2) {
-  font-family: var(--font-serif);
-  color: var(--color-text-primary);
-  font-weight: normal;
-}
-
-a.button.fancy:hover {
-  background-color: color-mix(in srgb, var(--color-link-hover) 20%, var(--color-background-primary) 80%);
-}
-
 /*special case were navigation buttons in the header don't have a border*/
 nav a.button {
   border: none;
@@ -549,9 +522,21 @@ a.button .button-icon {
   height: 100%;
 }
 
+/* ------------------------------ Fanc Buttons ------------------------------ */
+a.button.fancy {
+
+  margin: 10px 10px;
+  padding: 4px;
+
+  border-radius: 10px;
+}
+
+a.button.fancy:hover {
+  background-color: color-mix(in srgb, var(--color-link-hover) 20%, var(--color-background-primary) 80%);
+}
 
 
-
+/* ------------------------- Navbar Icons Highlight ------------------------- */
 /* implements the highlighted icons in navigation bar*/
 body.menu-home     a#nav-home,
 body.menu-projects a#nav-projects,
@@ -563,7 +548,10 @@ body.menu-writing  a#nav-writing {
   box-shadow: inset 0px 0px 2px 2px rgba(123, 173, 225, 0.48);
 }
 
-/* ----------------------------------------
+
+
+
+/* --------------------------------------------------------------------------------
  _____                            
 |_   _|                           
   | |  _ __ ___   __ _  __ _  ___ 
@@ -573,7 +561,7 @@ body.menu-writing  a#nav-writing {
                         __/ |     
                        |___/
 sec:image
----------------------------------------- */
+-------------------------------------------------------------------------------- */
 
 img:not([class*="leaflet-"]) {
   width: 100%;
@@ -1009,8 +997,13 @@ div.box:hover{
 
 div.box .box-title {
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin: 0;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+
+  
+  border-bottom: var(--color-text-secondary) 1pt dashed;
 }
 
 div.box .box-date {
@@ -1019,13 +1012,14 @@ div.box .box-date {
   color: var(--color-background-secondary);
 }
 
-div.box .box-desc, div.box .box-links a{
+div.box .box-desc {
   font-size: 0.9em;
-  text-decoration: none;
 }
 
+
+
 div.box .box-img{
-  margin-bottom: 0.75em;
+  margin-bottom: 5px;
 }
 
 div.box .box-img img{
@@ -1036,6 +1030,22 @@ div.box .box-title + .box-links {
   margin-top: 15px;
   text-align: center;
 }
+
+div.box .box-links {
+  padding-top: 10px;
+}
+
+div.box .box-links a{
+  text-decoration: none;
+  font-family: var(--font-title);
+  font-size: 1rem;
+}
+
+div.box .box-links a.button {
+  padding: 0 4px;
+  border-style: dotted;
+}
+
 /* ----------------------------------------
   _  __     _            
  | |/ /    | |           
