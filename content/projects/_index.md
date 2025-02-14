@@ -66,7 +66,7 @@ I'm up for sharing all my summaries for the different courses. If they're useful
 
 {% box(image="/images/projects/suisse_de_tour.jpg"
        title="Japan 2025"
-       link1="/projects/japan2025/"
+       link1="/projects/japan-2025/"
        desc1="Tour-Posts") %}
   A four week tour I've done during the summer of 2021. I explored my home country thoroughly by visiting all the main cities of each canton.
 {% end %}

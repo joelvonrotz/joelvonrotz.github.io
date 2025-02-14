@@ -11,15 +11,14 @@ This website is not very active and I mostly write just when I feel like. The mo
 
 <div class="box-collection">
 
-{% box(image="/assets/Flag_of_Japan.svg"
+{% box(image="/images/projects/Flag_of_Japan.svg"
        title="Japan 2025"
-       link1="/projects/japan2025/"
+       link1="/projects/japan-2025/"
        desc1="Read Journals") %}
   Hello, or more _Konichiwa_? Anyway, from April until July, I'll be discovering this country alone on my touring bike!
 {% end %}
 
 </div>
-
 
 
 ## Links
