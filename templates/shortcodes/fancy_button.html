@@ -1,7 +1,12 @@
-<a class="button fancy" style="{{ style | default(value='') }}" href="{{ link }}">
+<a class="button fancy" id="{{ id }}" style="{{ style | default(value='') }}" href="{{ link }}">
     <img src="{{ image }}">
     <div>
-        <span>{{ text | markdown(inline=true) | safe }}</span>
+        <div class="title-block">
+            <p class="title">{{ text | markdown(inline=true) | safe }}</p>
+            {% if notice %}
+            <p class="notify">{{ notice | markdown(inline=true) | safe }}</p>
+            {% endif %}
+        </div>
         <span>{{ desc | markdown | safe }}</span>
     </div>
   </a>
