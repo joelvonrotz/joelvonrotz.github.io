@@ -9,8 +9,17 @@ I'm an electrical engineering student!
 
 This website is not very active and I mostly write just when I feel like. The most active page is my projects page, which not only contains my summaries, but also some bike touring reports (if there are some going to come).
 
+<div class="box-collection">
 
-{{ fancy_button (text="Japan Tour 2025" link="/projects/japan2025/" image="/assets/Flag_of_Japan.svg" desc="Hello, or more _Konichiwa_? Anyway, from April until July, I'll be discovering this country alone on my touring bike!" id="japan2025-link" notice="via Projects" )}}
+{% box(image="/assets/Flag_of_Japan.svg"
+       title="Japan 2025"
+       link1="/projects/japan2025/"
+       desc1="Read Journals") %}
+  Hello, or more _Konichiwa_? Anyway, from April until July, I'll be discovering this country alone on my touring bike!
+{% end %}
+
+</div>
+
 
 
 ## Links

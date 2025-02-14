@@ -14,15 +14,15 @@
   </a>
   {% endif %}
   <p class="box-desc">
-    {{ body | safe }}
+    {{ body | markdown(inline=true) | safe }}
   </p>
   <div class="box-links">
     {% if link1 %}
-    <a href="{{ link1 }}">{{ desc1 }}</a>
+    <a class="button" href="{{ link1 }}">{{ desc1 | markdown(inline=true) | safe }}</a>
     {% endif %}
     {% if link2 %}
     <span>/</span>
-    <a href="{{ link2 }}">{{ desc2 }}</a>
+    <a class="button" href="{{ link2 }}">{{ desc2 | markdown(inline=true) | safe }}</a>
     {% endif %}
   </div>
 </div>
