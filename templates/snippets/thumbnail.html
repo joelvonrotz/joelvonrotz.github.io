@@ -1,0 +1,14 @@
+{% set elem = [] %}
+{% if page %}
+{% set elem = page %}
+{% else %}
+{% set elem = section %}
+{% endif %}
+
+{% if elem.extra.thumbnail %}
+<div class="thumbnail" style="background-image: url('{{ elem.extra.thumbnail }}'); {{ elem.extra.thumbnailstyle | default(value='')}}">
+  {% if elem.extra.attribution %}
+  <p class="attribution">{{ elem.extra.attribution | markdown(inline=true) | safe }}</p>
+  {% endif %}
+</div>
+{% endif %}

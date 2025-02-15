@@ -37,7 +37,9 @@
   }
 
 
-
+  div.thumbnail .attribution {
+    font-size: 0.7em;
+  }
 }
 
 

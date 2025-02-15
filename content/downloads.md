@@ -18,7 +18,7 @@ These notes are as is and do not guarantee a good grade on your exams!
 {{ button (text="Mathematik Grundlagen" link="/downloads/bachelor/s1_mathematik_grundlagen.pdf" type="pdf") }} /
 {{ button (text="Elektrotechnik 1"      link="/downloads/bachelor/s1_elektrotechnik_1.pdf"      type="pdf") }} /
 {{ button (text="Digitaltechnik"        link="/downloads/bachelor/s1_digitaltechnik.pdf"        type="pdf") }} /
-{{ button (text="Programmiergrundlagen" link="/downloads/bachelor/s1_programmiergrundlagen.pdf" type="pdf") }} /
+{{ button (text="Programmiergrundlagen" link="/downloads/bachelor/s1_programmiergrundlagen.pdf" type="pdf") }}
 
 ### Semester 2
 

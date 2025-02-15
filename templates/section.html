@@ -6,13 +6,8 @@
 </div>
 {% endif %}
 
-{% if section.extra.breadcrumb %}
-<label class="container">
-  <a class="button less breadcrumb" title="{{ section.extra.breadcrumb }}" href="..">
-    <img class="icon" src="/assets/icons/arrow-back-up.svg"><span>{{ section.extra.breadcrumb }}</span>
-  </a>
-</label>
-{% endif %}
+
+{% include "snippets/breadcrumb.html" %}
 
 <h1 class="title">
   {{ section.title }}

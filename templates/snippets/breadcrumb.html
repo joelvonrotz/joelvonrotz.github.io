@@ -1,0 +1,33 @@
+
+{% if section %}
+  {% set split_paths = section.path | split(pat="/") %}
+  {% set elem = section %}
+{% elif page %}
+  {% set split_paths = page.path | split(pat="/") %}
+  {% set elem = page %}
+{% endif %}
+{% set arr_length = split_paths | length %}
+{% set arr_length = arr_length - 1%}
+
+<p class="breadcrumbs">
+  {%- for elem in split_paths -%}
+    {%- if not loop.last -%}
+    {%- if not loop.first -%}
+    <strong>/</strong>
+    {%- endif -%}
+    {%- if loop.index == arr_length -%}
+    <a style="width: fit-content;" class="button less breadcrumb">
+      <span>{{ elem.title }}</span>
+    </a>
+    {%- else -%}
+    <a style="width: fit-content;" class="button less breadcrumb" href="{% for _ in range(end=arr_length, start=loop.index) %}../{% endfor %}">
+        {%- if loop.first -%}
+        <img class="icon" src="/assets/icons/home.svg"><span>Home</span>
+        {%- else -%}
+        {{ elem | title | replace(from="-",to=" ")}}
+        {%- endif -%}
+      </a>
+    {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+</p>
