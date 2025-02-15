@@ -4,7 +4,7 @@ description: I'm thinking about writing and recording my bike travels and have b
 date: 2024-07-19
 taxonomies:
   categories:
-    - workflow
+    - guide
   tags:
     - workflow
     - obsidian
