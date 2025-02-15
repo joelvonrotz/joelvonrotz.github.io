@@ -1,6 +1,6 @@
 +++
 title = "Japan 2025"
-description = "hello"
+#description = "hello"
 
 sort_by = "date"
 page_template = "post.html"
