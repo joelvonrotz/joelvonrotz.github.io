@@ -8,10 +8,7 @@
 
 
 {% include "snippets/breadcrumb.html" %}
-
-<h1 class="title">
-  {{ section.title }}
-</h1>
+{% include "snippets/titleblock.html" %}
 
 {{ section.content | safe }}
 

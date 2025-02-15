@@ -1,0 +1,20 @@
+{% set elem = [] %}
+{% if page %}
+{% set elem = page %}
+{% else %}
+{% set elem = section %}
+{% endif %}
+
+<section id="title-block">
+  <h1 class="title">{{ elem.title | markdown(inline=true) | safe }}</h1>
+  {% if elem.date %}
+  <time class="date" datetime="{{ elem.date }}">
+    {{ elem.date | date(format="%d.%m.%Y") }}
+  </time>
+  {% endif %}
+  {% if elem.description %}
+  <div class="description">
+    {{ elem.description | markdown | safe }}
+  </div>
+  {% endif %}
+</section>
