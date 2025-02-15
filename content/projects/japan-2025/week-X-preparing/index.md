@@ -12,7 +12,7 @@ extra:
   leaflet_gpx_file: 'dummy.gpx'
   leaflet_nodes: [
     {description: "See ya in **three** months!", coordinates: [47.0507621319826, 8.310224275003634], icon: "iconStart", focus: true}
-  ]
+  ] # iconDefault, iconSleep, iconShop, iconWarning, iconForbid, iconStart, iconStop
   thumbnail: 'tianshu-liu-aqZ3UAjs_M4-unsplash.jpg'
   breadcrumb: "Back to Journals"
 ---
