@@ -702,6 +702,36 @@ ul.post-list li{
   justify-content: space-between;
 }
 
+ul.post-list li a[data-category] {
+  display: flex;
+  align-items: center;
+}
+
+ul.post-list li a[data-category]::before {
+  content: attr(data-category);
+  font-size: 0.8rem;
+  padding: 1pt 3pt;
+  padding-bottom: 2pt;
+  margin-right: 6pt;
+  font-family: var(--font-title);
+  background: var(--category-bg);
+  color: var(--category-color);
+  border-radius: 6pt;
+  line-height: 1.2;
+  font-weight: bolder;
+  
+}
+
+
+ul.post-list li a[data-category="guide"] {
+  --category-color: white;
+  --category-bg: #143e8b;
+}
+
+ul.post-list li a[data-category="travel"] {
+  --category-color: white;
+  --category-bg: #ce7501;
+}
 
 
 
@@ -924,37 +954,6 @@ div.callout div.callout-content {
   background-color: var(--color-background-primary); 
   border-bottom-left-radius: var(--callout-radius); 
 }
-
-/* ----------------------------------------
-   _____      _                                _           _          _     
-  / ____|    | |                              | |         | |        | |    
- | |     __ _| |_ ___  __ _  ___  _ __ _   _  | |     __ _| |__   ___| |___ 
- | |    / _` | __/ _ \/ _` |/ _ \| '__| | | | | |    / _` | '_ \ / _ \ / __|
- | |___| (_| | ||  __/ (_| | (_) | |  | |_| | | |___| (_| | |_) |  __/ \__ \
-  \_____\__,_|\__\___|\__, |\___/|_|   \__, | |______\__,_|_.__/ \___|_|___/
-                       __/ |            __/ |                               
-                      |___/            |___/                                
-sec:category-labels
----------------------------------------- */
-
-[data-category="Travel"]::before {
-  content: "travel";
-  font-family: var(--font-sansserif);
-  font-weight: bold;
-  font-size: 0.8em;
-
-  color: var(--color-category-text);
-  background-color: var(--color-category-travel);
-  
-  padding: 2px 5px;
-  border-radius: 5px;
-  
-  margin-right: 5px;
-
-  position: relative;
-  bottom: 2px;
-}
-
 
 section#title-block {
   border-bottom-style: dotted;

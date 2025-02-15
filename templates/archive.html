@@ -16,7 +16,7 @@
   <h2>{{ year }}</h2>
   <ul class="post-list">
     {% for post in posts %}
-    <li><a data-category="{{ post.taxonomies.categories | first }}" class="less" href="{{ post.permalink }}">{{ post.title }}</a><time class="date" datetime="{{ post.date }}">{{ post.date | date(format="%d.%m.") }}</time></li>
+    <li><a data-category="{{ post.taxonomies.categories | first }}" class="less" href="{% if post.extra.redirect %}{{post.extra.redirect}}{% else %}{{ post.permalink }}{% endif %}">{{ post.title }}</a><time class="date" datetime="{{ post.date }}">{{ post.date | date(format="%d.%m.") }}</time></li>
     {% endfor %}
   </ul>
 </section>
