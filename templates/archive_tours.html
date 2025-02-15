@@ -1,15 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% if section.extra.thumbnail %}
-<div class="thumbnail"
-  style="background-image: url('{{ section.extra.thumbnail }}'); {{ section.extra.thumbnailstyle | default(value='')}}">
-</div>
-{% endif %}
-{% if section.extra.attribution %}
-{{ section.extra.attribution | markdown | safe }}
-{% endif %}
 
+{% include "snippets/thumbnail.html" %}
 {% include "snippets/breadcrumb.html" %}
 
 <h1 class="title">

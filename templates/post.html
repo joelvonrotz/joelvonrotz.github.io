@@ -2,12 +2,8 @@
 
 {% block content %}
 
-{% if page.extra.thumbnail %}
-<div class="thumbnail"
-  style="background-image: url('{{ page.extra.thumbnail }}'); {{ page.extra.thumbnailstyle | default(value='')}}">
-</div>
-{% endif %}
 
+{% include "snippets/thumbnail.html" %}
 {% include "snippets/breadcrumb.html" %}
 
 <section id="title-block">

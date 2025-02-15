@@ -614,6 +614,17 @@ div.thumbnail {
   height: var(--reader-thumbnail-height);
   background-size: cover;
   background-position: center center;
+
+  position: relative;
+}
+
+div.thumbnail .attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2px 7px;
+  border-top-left-radius: 10px;
+  background: var(--color-background-primary);
 }
 
 /* ----------------------------------------

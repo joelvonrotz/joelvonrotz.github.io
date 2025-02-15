@@ -2,15 +2,7 @@
 
 {% block content %}
 
-{% if page.extra.thumbnail %}
-<div class="thumbnail" style="background-image: url('{{ page.extra.thumbnail }}'); {{ page.extra.thumbnailstyle | default(value='')}}">
-</div>
-{% endif %}
-
-{% if page.extra.attribution %}
-{{page.extra.attribution | markdown | safe }}
-{% endif %}
-
+{% include "snippets/thumbnail.html" %}
 {% include "snippets/breadcrumb.html" %}
 
 <h1 class="title">

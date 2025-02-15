@@ -13,6 +13,7 @@ taxonomies:
     - android
 extra:
   thumbnail: colton-sturgeon-N4fdQbMJ0nI-unsplash.jpg
+  attribution: "Photo by [Colton Sturgeon](https://unsplash.com/@coltonsturgeon?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/brown-book-beside-macbook-N4fdQbMJ0nI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)"
 ---
 
 
@@ -92,7 +93,4 @@ To be able to use the template, the Template core plugin needs to be configured!
 **Paths**: Zola handles posts and images a bit weirdly, but once you get used to it, it's actually quite neat. When writing a post with images, the post is named `index.md` and placed into a folder (i.e. `/test/`) under the posts' root folder (my posts are saved under `content/writing/`), which corresponds to the URL. So if I want to use the following image `colton-sturgeon-N4fdQbMJ0nI-unsplash.jpg`, it is saved for example in the folder `/test/`. If multiple posts use the same image, it can be placed in the posts' root folder and a relative path to the image is used.
 
 ![colton-sturgeon-N4fdQbMJ0nI-unsplash-min](colton-sturgeon-N4fdQbMJ0nI-unsplash.jpg)
-
----
-Photo by [Colton Sturgeon](https://unsplash.com/@coltonsturgeon?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/brown-book-beside-macbook-N4fdQbMJ0nI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
