@@ -5,18 +5,8 @@
 
 {% include "snippets/thumbnail.html" %}
 {% include "snippets/breadcrumb.html" %}
+{% include "snippets/titleblock.html" %}
 
-<section id="title-block">
-  <h1 class="title">{{ page.title | markdown(inline=true) | safe }}</h1>
-  <time class="date" datetime="{{ page.date }}">
-    {{ page.date | date(format="%d.%m.%Y") }}
-  </time>
-  {% if page.description %}
-  <div class="description">
-    {{ page.description | markdown | safe }}
-  </div>
-  {% endif %}
-</section>
 {{ page.content | markdown | safe }}
 
 {% if page.taxonomies.tags or page.taxonomies.categories %}

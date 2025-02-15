@@ -956,12 +956,6 @@ div.callout div.callout-content {
 }
 
 section#title-block {
-  border-bottom-style: dotted;
-  border-bottom-color: var(--color-accent);
-  border-image-source: url('./assets/border.svg');
-  border-image-slice: 33.33% 33.33%;
-  border-image-repeat: round;
-  border-width: 3px;
   margin-bottom: 20px;
   
   font-family: var(--font-sansserif);
@@ -977,6 +971,14 @@ time.date {
   background-color: var(--color-background-description);
   padding: 10px;
   margin-top: 20px;
+
+  border-bottom-style: dotted;
+  border-bottom-color: var(--color-accent);
+  border-image-source: url('./assets/border.svg');
+  border-image-slice: 33.33% 33.33%;
+  border-image-repeat: round;
+  border-width: 4pt;
+  border-
 }
 
 
