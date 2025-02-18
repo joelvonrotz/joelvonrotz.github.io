@@ -136,7 +136,7 @@ body.dark footer::before {
   background-color: var(--color-banner-dark);
 }
 
-body.dark header img.icon {
+body.dark img.icon {
   filter: invert(53%) sepia(89%) saturate(352%) hue-rotate(169deg) brightness(93%) contrast(93%);
 }
 
@@ -207,14 +207,34 @@ label input:checked ~  .checkmark:after {
  |_|  |_|\___|\__,_|\__,_|\___|_|   
 sec:header
 ---------------------------------------- */                                    
-                                    
 
-header > h1 {
+header {
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 5px;
+}
+
+header h1 {
   font-family: var(--font-title);
   font-weight: 600;
   text-decoration: none;
   font-size: 40px;
   margin: 0;
+  line-height: 0;
+  margin-bottom: 0.25em;
+}
+
+header div.header-wrapper {
+  display: flex;
+  align-items: center;
+  width: var(--reader-width);
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 header nav {
@@ -243,16 +263,6 @@ header::before, footer::before {
   z-index: -1;
 }
 
-header {
-  position: relative;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  gap: 5px;
-}
-
 
 
 /* ----------------------------------------
@@ -270,7 +280,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px 0;
+  height: 70px;
   text-align: center;
   font-size: 0.9rem;
   font-family: var(--font-sansserif);
@@ -310,6 +320,7 @@ figcaption {
   font-size: 1em;
   line-height: 1.6em;
   color: var(--color-text-primary);
+  hyphens: auto;
 }
 
 p + p {
@@ -442,6 +453,14 @@ a {
   color: var(--color-link);
 }
 
+a:not([href]) { 
+  color: white !important;
+}
+
+a:not([href]):hover {
+  background-color: transparent !important;
+}
+
 
 
 a.less {
@@ -452,9 +471,30 @@ a:visited {
   color: var(--color-link-visited);
 }
 
-a.breadcrumb {
-  width: 100%;
+
+
+p.breadcrumbs {
+  height: 24px;
+  font-size: 0.9em;
+  display: inline-flex;
+  gap: 4px;
+  padding-top: 6px;
+  align-items: center;
+  line-height: 1;
 }
+
+p.breadcrumbs a.breadcrumb {
+  width: fit-content;
+  margin: 0;
+  padding: 2px;
+  gap: 2px;
+}
+
+p.breadcrumbs a.breadcrumb img {
+  height: 18px;
+  padding: 1px;
+}
+
 
 a.button {
 
@@ -463,9 +503,6 @@ a.button {
   text-decoration: none;
   display: inline-flex;
   flex-flow: row;
-  
-  height: 24px;
-
   gap: 3px;
   align-items: center;
 
@@ -480,54 +517,12 @@ a.button {
   transition: background-color 100ms ease-in-out;
   
   vertical-align: middle;
-}
 
-main label a.breadcrumb {
-  margin-top: 5px;
-  margin-left: 0;
-  width: max-content;
+  line-height: 1;
 }
 
 a.button.less {
   border: none;
-}
-
-a.button.fancy {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  height: auto;
-
-  margin: 10px 10px;
-  padding: 5px;
-
-  border-radius: 10px;
-}
-
-a.button.fancy img {
-  margin: 0;
-  height: auto;
-  width: 300px;
-}
-
-a.button.fancy div {
-  display: flex;
-  flex-flow: column;
-}
-
-a.button.fancy div > span:nth-child(1) {
-  margin-bottom: 5px;
-  font-size: 1.2em;
-}
-
-a.button.fancy div > span:nth-child(2) {
-  font-family: var(--font-serif);
-  color: var(--color-text-primary);
-  font-weight: normal;
-}
-
-a.button.fancy:hover {
-  background-color: color-mix(in srgb, var(--color-link-hover) 20%, var(--color-background-primary) 80%);
 }
 
 /*special case were navigation buttons in the header don't have a border*/
@@ -549,9 +544,21 @@ a.button .button-icon {
   height: 100%;
 }
 
+/* ------------------------------ Fanc Buttons ------------------------------ */
+a.button.fancy {
+
+  margin: 10px 10px;
+  padding: 4px;
+
+  border-radius: 10px;
+}
+
+a.button.fancy:hover {
+  background-color: color-mix(in srgb, var(--color-link-hover) 20%, var(--color-background-primary) 80%);
+}
 
 
-
+/* ------------------------- Navbar Icons Highlight ------------------------- */
 /* implements the highlighted icons in navigation bar*/
 body.menu-home     a#nav-home,
 body.menu-projects a#nav-projects,
@@ -563,7 +570,10 @@ body.menu-writing  a#nav-writing {
   box-shadow: inset 0px 0px 2px 2px rgba(123, 173, 225, 0.48);
 }
 
-/* ----------------------------------------
+
+
+
+/* --------------------------------------------------------------------------------
  _____                            
 |_   _|                           
   | |  _ __ ___   __ _  __ _  ___ 
@@ -573,7 +583,7 @@ body.menu-writing  a#nav-writing {
                         __/ |     
                        |___/
 sec:image
----------------------------------------- */
+-------------------------------------------------------------------------------- */
 
 img:not([class*="leaflet-"]) {
   width: 100%;
@@ -593,8 +603,7 @@ img.icon {
   height: 100%;
   aspect-ratio: 1;
   width: fit-content;
-
-  filter: invert(26%) sepia(30%) saturate(4491%) hue-rotate(192deg) brightness(95%) contrast(84%);
+  filter: brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(2656%) hue-rotate(195deg) brightness(100%) contrast(84%);
 }
 
 div.img-fit {
@@ -619,6 +628,18 @@ div.thumbnail {
   height: var(--reader-thumbnail-height);
   background-size: cover;
   background-position: center center;
+
+  position: relative;
+}
+
+div.thumbnail .attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2px 7px;
+  border-top-left-radius: 10px;
+  background: var(--color-background-primary);
+  font-size: 0.8em;
 }
 
 /* ----------------------------------------
@@ -695,6 +716,36 @@ ul.post-list li{
   justify-content: space-between;
 }
 
+ul.post-list li a[data-category] {
+  display: flex;
+  align-items: center;
+}
+
+ul.post-list li a[data-category]::before {
+  content: attr(data-category);
+  font-size: 0.8rem;
+  padding: 1pt 3pt;
+  padding-bottom: 2pt;
+  margin-right: 6pt;
+  font-family: var(--font-title);
+  background: var(--category-bg);
+  color: var(--category-color);
+  border-radius: 6pt;
+  line-height: 1.2;
+  font-weight: bolder;
+  
+}
+
+
+ul.post-list li a[data-category="guide"] {
+  --category-color: white;
+  --category-bg: #143e8b;
+}
+
+ul.post-list li a[data-category="travel"] {
+  --category-color: white;
+  --category-bg: #ce7501;
+}
 
 
 
@@ -918,44 +969,7 @@ div.callout div.callout-content {
   border-bottom-left-radius: var(--callout-radius); 
 }
 
-/* ----------------------------------------
-   _____      _                                _           _          _     
-  / ____|    | |                              | |         | |        | |    
- | |     __ _| |_ ___  __ _  ___  _ __ _   _  | |     __ _| |__   ___| |___ 
- | |    / _` | __/ _ \/ _` |/ _ \| '__| | | | | |    / _` | '_ \ / _ \ / __|
- | |___| (_| | ||  __/ (_| | (_) | |  | |_| | | |___| (_| | |_) |  __/ \__ \
-  \_____\__,_|\__\___|\__, |\___/|_|   \__, | |______\__,_|_.__/ \___|_|___/
-                       __/ |            __/ |                               
-                      |___/            |___/                                
-sec:category-labels
----------------------------------------- */
-
-[data-category="Travel"]::before {
-  content: "travel";
-  font-family: var(--font-sansserif);
-  font-weight: bold;
-  font-size: 0.8em;
-
-  color: var(--color-category-text);
-  background-color: var(--color-category-travel);
-  
-  padding: 2px 5px;
-  border-radius: 5px;
-  
-  margin-right: 5px;
-
-  position: relative;
-  bottom: 2px;
-}
-
-
 section#title-block {
-  border-bottom-style: dotted;
-  border-bottom-color: var(--color-accent);
-  border-image-source: url('./assets/border.svg');
-  border-image-slice: 33.33% 33.33%;
-  border-image-repeat: round;
-  border-width: 3px;
   margin-bottom: 20px;
   
   font-family: var(--font-sansserif);
@@ -971,6 +985,14 @@ time.date {
   background-color: var(--color-background-description);
   padding: 10px;
   margin-top: 20px;
+
+  border-bottom-style: dotted;
+  border-bottom-color: var(--color-accent);
+  border-image-source: url('./assets/border.svg');
+  border-image-slice: 33.33% 33.33%;
+  border-image-repeat: round;
+  border-width: 4pt;
+  border-
 }
 
 
@@ -1009,8 +1031,13 @@ div.box:hover{
 
 div.box .box-title {
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin: 0;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+
+  
+  border-bottom: var(--color-text-secondary) 1pt dashed;
 }
 
 div.box .box-date {
@@ -1019,13 +1046,14 @@ div.box .box-date {
   color: var(--color-background-secondary);
 }
 
-div.box .box-desc, div.box .box-links a{
+div.box .box-desc {
   font-size: 0.9em;
-  text-decoration: none;
 }
 
+
+
 div.box .box-img{
-  margin-bottom: 0.75em;
+  margin-bottom: 5px;
 }
 
 div.box .box-img img{
@@ -1036,6 +1064,22 @@ div.box .box-title + .box-links {
   margin-top: 15px;
   text-align: center;
 }
+
+div.box .box-links {
+  padding-top: 10px;
+}
+
+div.box .box-links a{
+  text-decoration: none;
+  font-family: var(--font-title);
+  font-size: 1rem;
+}
+
+div.box .box-links a.button {
+  padding: 0 4px;
+  border-style: dotted;
+}
+
 /* ----------------------------------------
   _  __     _            
  | |/ /    | |           

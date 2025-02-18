@@ -1,24 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% if section.extra.thumbnail %}
-<div class="thumbnail"
-  style="background-image: url('{{ section.extra.thumbnail }}'); {{ section.extra.thumbnailstyle | default(value='')}}">
-</div>
-{% endif %}
-{% if section.extra.attribution %}
-{{ section.extra.attribution | markdown | safe }}
-{% endif %}
-{% if section.extra.breadcrumb %}
-<label class="container">
-  <a class="button less breadcrumb" title="{{ section.extra.breadcrumb }}" href="..">
-    <img class="icon" src="/assets/icons/arrow-back-up.svg"><span>{{ section.extra.breadcrumb }}</span>
-  </a>
-</label>
-{% endif %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
+
+{% include "snippets/thumbnail.html" %}
+{% include "snippets/breadcrumb.html" %}
+{% include "snippets/titleblock.html" %}
 
 {{ section.content | safe }}
 
