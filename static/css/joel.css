@@ -471,9 +471,30 @@ a:visited {
   color: var(--color-link-visited);
 }
 
-a.breadcrumb {
-  width: 100%;
+
+
+p.breadcrumbs {
+  height: 24px;
+  font-size: 0.9em;
+  display: inline-flex;
+  gap: 4px;
+  padding-top: 6px;
+  align-items: center;
+  line-height: 1;
 }
+
+p.breadcrumbs a.breadcrumb {
+  width: fit-content;
+  margin: 0;
+  padding: 2px;
+  gap: 2px;
+}
+
+p.breadcrumbs a.breadcrumb img {
+  height: 18px;
+  padding: 1px;
+}
+
 
 a.button {
 
@@ -482,9 +503,6 @@ a.button {
   text-decoration: none;
   display: inline-flex;
   flex-flow: row;
-  
-  height: 24px;
-
   gap: 3px;
   align-items: center;
 
@@ -499,12 +517,8 @@ a.button {
   transition: background-color 100ms ease-in-out;
   
   vertical-align: middle;
-}
 
-main label a.breadcrumb {
-  margin-top: 5px;
-  margin-left: 0;
-  width: max-content;
+  line-height: 1;
 }
 
 a.button.less {

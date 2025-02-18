@@ -23,6 +23,5 @@ This website is not very active and I mostly write just when I feel like. The mo
 
 ## Links
 
-{{ button (text="Downloads" link="/downloads") }} – Things such as my school summaries at HSLU
-
+{{ button (text="Downloads" link="/downloads") }} – Things such as my school summaries at HSLU\
 {{ button (text="Github" link="https://github.com/joelvonrotz") }} – Link to my Github profile
