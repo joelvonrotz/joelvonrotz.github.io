@@ -9,8 +9,6 @@ template = "archive_tours.html"
 [extra]
 menu = 'projects'
 thumbnail = 'tianshu-liu-aqZ3UAjs_M4-unsplash.jpg'
-breadcrumb = 'Back to Projects'
-      
 +++
 
 Nachdem ich nun mein Bachelorabschluss in Elektrotechnik und Informationstechnologie absolviert habe, ist es Zeit für eine Pause! Dieses Jahr gehe ich nach Japan!
