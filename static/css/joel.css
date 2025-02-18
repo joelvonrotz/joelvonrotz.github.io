@@ -477,7 +477,7 @@ p.breadcrumbs {
   height: 24px;
   font-size: 0.9em;
   display: inline-flex;
-  gap: 4px;
+  gap: 2px;
   padding-top: 6px;
   align-items: center;
   line-height: 1;
@@ -486,8 +486,15 @@ p.breadcrumbs {
 p.breadcrumbs a.breadcrumb {
   width: fit-content;
   margin: 0;
-  padding: 2px;
+  height: 20px;
+  padding: 2px 4px;
   gap: 2px;
+}
+
+p.breadcrumbs span.divider {
+  font-weight: bold;
+  margin-bottom: 0.1em;
+  color: var(--color-text-secondary)
 }
 
 p.breadcrumbs a.breadcrumb img {
@@ -801,8 +808,8 @@ ul.post-list.fancy li > div time {
 }
 
 
-ul.post-list.fancy li > div * {
-  font-family: var(--font-serif);
+ul.post-list.fancy li > div > * {
+  font-family: var(--font-title);
   font-size: 1.0em;
 }
 
@@ -1076,7 +1083,6 @@ div.box .box-links a{
 }
 
 div.box .box-links a.button {
-  padding: 0 4px;
   border-style: dotted;
 }
 
