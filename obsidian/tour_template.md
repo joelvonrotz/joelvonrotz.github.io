@@ -2,6 +2,7 @@
 title: "Week `X` – Preparation & Setup" 
 description: "What has to be packed for a three month trip? And how am I going to write these journals?"
 date: <% tp.date.now("YYYY-MM-DD") %>
+draft: false
 
 taxonomies:
   categories: ["travel"]
@@ -15,5 +16,4 @@ extra:
   #]
   thumbnail: 'tianshu-liu-aqZ3UAjs_M4-unsplash.jpg'
   #pinned: true
-  #breadcrumb: 'Back to Journals'
 ---
