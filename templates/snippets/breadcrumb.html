@@ -13,11 +13,11 @@
   {%- for elem in split_paths -%}
     {%- if not loop.last -%}
     {%- if not loop.first -%}
-    <strong>/</strong>
+    <span class="divider">/</span>
     {%- endif -%}
     {%- if loop.index == arr_length -%}
     {%- else -%}
-    <a style="width: fit-content;" class="button less breadcrumb" href="{% for _ in range(end=arr_length, start=loop.index) %}../{% endfor %}">
+    <a class="button less breadcrumb" href="{% for _ in range(end=arr_length, start=loop.index) %}../{% endfor %}">
         {%- if loop.first -%}
         <img class="icon" src="/assets/icons/home.svg"><span>Home</span>
         {%- else -%}
