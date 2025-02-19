@@ -637,6 +637,17 @@ div.thumbnail {
   background-position: center center;
 
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.thumbnail .title-inside {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  font-weight: bold;
+
+  text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
 }
 
 div.thumbnail .attribution {
