@@ -3,6 +3,9 @@ title = "Salut, I'm Joel!"
 
 [extra]
 menu = 'home'
+thumbnail = './45077673735_568517fc39_k.jpg'
+thumbnailstyle = "background-color: #060403; background-repeat: no-repeat;"
+title_inside = true
 +++
 
 I'm an electrical engineering student!
