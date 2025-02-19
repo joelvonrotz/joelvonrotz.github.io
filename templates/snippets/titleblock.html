@@ -6,7 +6,10 @@
 {% endif %}
 
 <section id="title-block">
+  {% if elem.extra.title_inside %}
+  {% else %}
   <h1 class="title">{{ elem.title | markdown(inline=true) | safe }}</h1>
+  {% endif %}
   {% if elem.date %}
   <time class="date" datetime="{{ elem.date }}">
     {{ elem.date | date(format="%d.%m.%Y") }}
