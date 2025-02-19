@@ -10,7 +10,7 @@
 
 <ul class="post-list">
   {% for page in term.pages %}
-  <li><a href="{{ page.permalink }}">{{ page.title }}</a> <time class="date" datetime="{{ page.date }}">{{ page.date | date(format="%d.%m.") }}</time></li>
+  <li><a href="{{ page.permalink }}">{{ page.title | markdown(inline=true) | safe }}</a> <time class="date" datetime="{{ page.date }}">{{ page.date | date(format="%d.%m.") }}</time></li>
   {% endfor %}
 </ul>
 
