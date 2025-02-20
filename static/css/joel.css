@@ -646,14 +646,10 @@ div.thumbnail .title-inside {
   font-family: var(--font-title);
   font-size: 3rem;
   font-weight: bold;
-
-  text-shadow: 0px 0px 10px rgba(0,0,0,1);
-
-  -webkit-text-stroke: 2px #888888;
-  text-stroke: 2px #888888;
-
-  paint-order: stroke fill;
-  color: white; /* since images are generally darker than white, this should be fine! */
+  text-shadow: 0px 0px 10px rgb(39 39 39 / 60%);
+  color: rgb(237 237 237 / 71%);
+  background: url(/45077673735_568517fc39_k.jpg) 50% 50% no-repeat;
+  background-clip: text;
 }
 
 div.thumbnail .attribution {
