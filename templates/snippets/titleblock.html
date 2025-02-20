@@ -6,7 +6,7 @@
 {% endif %}
 
 <section id="title-block">
-  {% if elem.extra.title_inside %}
+  {% if elem.extra.titleinside %}
   {% else %}
   <h1 class="title">{{ elem.title | markdown(inline=true) | safe }}</h1>
   {% endif %}

@@ -7,7 +7,7 @@
 
 {% if elem.extra.thumbnail %}
 <div class="thumbnail" style="background-image: url('{{ elem.extra.thumbnail }}'); {{ elem.extra.thumbnailstyle | default(value='')}}">
-  {% if elem.extra.title_inside %}
+  {% if elem.extra.titleinside %}
   <p class="title-inside">{{ elem.title | markdown(inline=true) | safe }}</p>
   {% endif %}
   {% if elem.extra.attribution %}
