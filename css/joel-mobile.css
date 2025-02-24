@@ -1,0 +1,58 @@
+/* [MEDIA SPECIFIC STUFF] -------------- */
+@media only screen and (max-width: 800px) {
+  :root {
+    font-size: 16px;
+  }
+
+  main, div.dark {
+    grid-template-columns: 8px 1fr 8px;
+  }
+
+  div.thumbnail {
+    height: 250px;
+  }
+
+  header div.header-wrapper {
+    width: 100%;
+  }
+
+
+  h1:target::before,
+  h2:target::before,
+  h3:target::before,
+  h4:target::before,
+  h1:target::after,
+  h2:target::after,
+  h3:target::after,
+  h4:target::after {
+    content: none;
+    padding-left: 0;
+  }
+
+  h1:target,
+  h2:target,
+  h3:target,
+  h4:target {
+    padding-left: 0;
+  }
+
+
+  div.thumbnail .attribution {
+    font-size: 0.7em;
+  }
+}
+
+
+@media only screen and (max-width: 540px) {
+  header div.header-wrapper {
+    flex-flow: column;
+  }
+
+  header {
+    height: 110px;
+  }
+
+  header h1 {
+    line-height: 1;
+  }
+}
