@@ -2,7 +2,6 @@
 title = 'Search'
 
 [extra]
-thumbnail = '/assets/search.jpg'
 menu = 'search'
 +++
 
