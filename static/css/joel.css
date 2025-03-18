@@ -724,6 +724,10 @@ ol > li + li {
   margin-top: 3px;
 }
 
+li > ul {
+  margin-top: -3px;
+}
+
 li::marker {
   color: var(--color-accent);
   font-weight: normal;
@@ -1006,7 +1010,7 @@ time.date {
 
   border-bottom-style: dotted;
   border-bottom-color: var(--color-accent);
-  border-image-source: url('./assets/border.svg');
+  border-image-source: url('/assets/border.svg');
   border-image-slice: 33.33% 33.33%;
   border-image-repeat: round;
   border-width: 4pt;
