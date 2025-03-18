@@ -12,5 +12,6 @@ extra:
   thumbnail: '<% tp.file.cursor(5) %>'
   #titleinside: true
   #attribution: 'helloworld'
+  #thumbnailstyle: "background-size: contain; background-repeat: no-repeat;"
 ---
 <% tp.file.cursor(6) %>
