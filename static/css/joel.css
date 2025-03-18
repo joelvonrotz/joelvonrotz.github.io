@@ -6,7 +6,7 @@
 /* end normalize stuff */
 
 :root {
-  --font-serif: "Lora";
+  --font-serif: "Atkinson Hyperlegible Next"; /* "Lora" */
   --font-sansserif: "Alegreya Sans";
   --font-monospace: "Inconsolata";
   
@@ -719,13 +719,18 @@ ul {
   margin: 10px 0;
 }
 
+li {
+
+  line-height: 1.4rem;
+}
+
 /* adjusts the size of the list to be the same size as ul-lists */
 ol > li + li {
   margin-top: 3px;
 }
 
-li > ul {
-  margin-top: -3px;
+li > ul, li > ol {
+  margin-top: 0px;
 }
 
 li::marker {
@@ -908,6 +913,18 @@ div.dark > * {  grid-column: 2; }
   \_____\__,_|_|_|\___/ \__,_|\__|
 sec:callout
 ---------------------------------------- */
+
+div.callout {
+  --callout-color: hsl(218, 0%, 46%);
+  --callout-color-border: hsl(218, 0%, 60%);
+  --callout-icon-path: url('/assets/icons/callout/info.svg');
+}
+
+body.dark div.callout {--callout-color:        hsl(218, 0%, 60%);
+                        --callout-color-border: hsl(218, 0%, 46%);}
+
+
+
 div.callout.note {
   --callout-color: #0658E5;
   --callout-color-border: #4581EB;
@@ -916,6 +933,15 @@ div.callout.note {
 
 body.dark div.callout.note {--callout-color:        #4581EB;
                             --callout-color-border: #0658E5;}
+
+div.callout.tools {
+  --callout-icon-path: url('/assets/icons/callout/tools.svg');
+}
+
+
+div.callout.wood {
+  --callout-icon-path: url('/assets/icons/callout/wood.svg');
+}
 
 div.callout.important {
   --callout-color: #FC5200;
@@ -956,7 +982,7 @@ body.dark  div.callout.caution {--callout-color: #D8524E;
 
 div.callout {
   margin: 8px 0px;
-  --callout-radius: 6px;
+  --callout-radius: 5px;
   border-radius: var(--callout-radius);
   border: solid var(--callout-color-border) 1pt;
   border-left-width: var(--callout-radius);
@@ -971,9 +997,21 @@ div.callout > * {
 div.callout div.callout-title {
   background-color: color-mix(in oklab, var(--callout-color) 20%, var(--color-background-primary));
   border-top-left-radius: var(--callout-radius);
-  font-weight: bold;
+
   display: flex;
   gap: 6px;
+
+  font-weight: bold;
+  line-height: 1;
+  font-size: 1.2rem;
+}
+
+div.callout div.callout-content > *:first-child{
+  margin-top: 0pt;
+}
+
+div.callout div.callout-content > *:last-child{
+  margin-bottom: 0pt;
 }
 
 div.callout div.callout-title::before {
