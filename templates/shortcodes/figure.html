@@ -1,0 +1,12 @@
+<figure>
+    <img
+        src="{{ src }}"
+        alt="{%- if alt -%}{{- alt -}}{%- else -%}{{- caption -}}{%- endif -%}"
+        {%- if class -%}
+        class="{{ class }}"
+        {%- endif -%}
+        >
+    <figcaption>
+        {{- caption | markdown(inline=true) | safe -}}
+    </figcaption>
+</figure>

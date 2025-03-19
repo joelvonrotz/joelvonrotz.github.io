@@ -594,7 +594,7 @@ sec:image
 
 img:not([class*="leaflet-"]) {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 6px;
   margin: 20px 0;
   justify-self: center;
 }
@@ -627,6 +627,22 @@ div.img-fit {
 
 div.img-fixed {
   background-attachment: fixed;
+}
+
+
+figure {
+  background-color: var(--color-background-description);
+  margin: 20px 0px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+figure > img {
+  margin: 0pt !important;
+}
+
+figure > figcaption {
+  padding: 0.1rem 0.3rem;
 }
 
 
