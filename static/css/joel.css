@@ -318,7 +318,7 @@ figcaption {
   font-family: var(--font-text);
   font-weight: var(--weight-text);
   font-size: 1em;
-  line-height: 1.6em;
+  line-height: 1.5;
   color: var(--color-text-primary);
   hyphens: auto;
 }
@@ -596,6 +596,7 @@ img:not([class*="leaflet-"]) {
   width: 100%;
   border-radius: 5px;
   margin: 20px 0;
+  justify-self: center;
 }
 
 img.full, div.dark img.full {
