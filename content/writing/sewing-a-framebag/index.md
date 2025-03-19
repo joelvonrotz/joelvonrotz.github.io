@@ -82,7 +82,7 @@ To go a little further and have a reusable and nicer looking design pattern, red
     - I added an allowance of $\approx 1\text{cm}$
 5. Export the sketch as a `.dxf` and import it into *Inkscape*
 6. Clean up the sketch and add some labels and information
-7. Go to your nearest architecture plan printing place and let them print it for you!
+7. Go to your nearest architecture plan plotting place and let them print it for you!
 8. (**Recommended**) Glue the pattern onto cardboard to make it more robust 
 
 
@@ -125,7 +125,8 @@ The frame bag is put on the bottom bar and sidebar using custom-made Velcro stra
 
 To measure the length of the fabric pieces, grab your measurement tape and measure a **U**-shape loop around the frame bar, where the straps will be used + add an overlap which is equal to the Velcro's width. I found my lengths through trial and error after two tries. But to give a more exact plan:
 
-1. Each strap consists of two pieces: a long piece and a short piece. When both are connected to one another, then the total length should be equal to the measured **U**-shape around the frame bar ($l_{\text{total}} = l_{\text{1}} + l_{\text{2}} + l_{\text{velcro}}$). What exactly the lengths of these two pieces are, is your choice!
+1. On the created design pattern of the frame bag, mark where you want your Velcro straps to go and how wide they should be!
+2. Each strap consists of two pieces: a long piece and a short piece. When both are connected to one another, then the total length should be equal to the measured **U**-shape around the frame bar ($l_{\text{total}} = l_{\text{1}} + l_{\text{2}} + l_{\text{velcro}}$). What exactly the lengths of these two pieces are, is your choice!
 
 <img src="total_length.drawio.svg" style="width: 65%;">
 
@@ -136,7 +137,7 @@ Each side of the frame might have different diameters/sizes, so be sure to measu
 
 {% end %}
 
-2. First do the side folds, then the top fold. The bottom one is not needed, as it will be sewn later on.
+3. First do the side folds, then the top fold. The bottom one is not needed, as it will be sewn later on.
     - To make life easier, sew the side fold's edges for a nicer look and easier handling for the top fold.
     - When doing the top fold, directly sew the Velcro strip to it.
 
@@ -146,9 +147,9 @@ $$
 
 ![](pattern_velcro.drawio.svg)
 
-3. Now do this for
+4. Now do this for all the other straps. It's a lot of work, but it will be worth it :)
 
-![](step_velcro_loops.jpg)
+{{ figure(src="step_velcro_loops.jpg" caption="One pair of finished Velcro straps") }}
 
 ## Sew Everything together
 
