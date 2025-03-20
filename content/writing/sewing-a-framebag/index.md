@@ -82,7 +82,7 @@ To go a little further and have a reusable and nicer looking design pattern, red
         - reduces the amount of stops required
     - Add seam allowance using the *Offset* tool (in *Fusion360* it's under *Modify* $\rightarrow$ *Offset*)
         - I added an allowance of $\approx 1\text{cm}$
-    - Include the zipper line (see my template in the <a href="#list-of-materials">List of Materials</a>)
+    - Include the zipper line (see my template in the <a class="internal" href="#list-of-materials">List of Materials</a>)
     - Export the sketch as a `.dxf` and import it into *Inkscape*
 3. Clean up the sketch and add some labels and information
 4. Go to your nearest architecture plan plotting place and let them print it for you!
@@ -99,7 +99,7 @@ With the design pattern done, next step is to create a _Mise en Place_ with the 
     - `2×` Stiffener fabric 
         - **IMPORTANT**: make the stiffener smaller for it to fit in between $\rightarrow$ reducing the seam allowance by $\approx 1.5\text{cm}$ on the outlines did the job for me
     - `2×` Inside fabric
-- `2×` fabric pieces **per** velcro strap (see <a href="#velcro-pieces">Velcro Pieces</a> for sizes) + velcro Strips
+- `2×` fabric pieces **per** velcro strap (see <a class="internal" href="#velcro-pieces">Velcro Pieces</a> for sizes) + velcro Strips
 - `12×` Square fabric pieces for the lace loops (size: $6\times 6\text{cm}$)
 - `1×` long piece of fabric used for combining the side panels
     - it's one long piece, which will be used in the last step!
