@@ -1,12 +1,6 @@
 <figure>
-    <img
-        src="{{ src }}"
-        alt="{%- if alt -%}{{- alt -}}{%- else -%}{{- caption -}}{%- endif -%}"
-        {%- if class -%}
-        class="{{ class }}"
-        {%- endif -%}
-        >
+    {{ body | markdown(inline=true) | safe }}
     <figcaption>
-        {{- caption | markdown(inline=true) | safe -}}
+        {{- caption | markdown | safe -}}
     </figcaption>
 </figure>
