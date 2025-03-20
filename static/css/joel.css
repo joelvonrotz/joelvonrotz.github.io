@@ -472,13 +472,13 @@ a:visited {
 }
 
 
-a[href^="#"] {
+a.internal {
   text-decoration: none;
   line-height: 1;
   border-radius: 5pt;
 }
 
-a[href^="#"]::after {
+a.internal::after {
   content: "\ea3a";
   font-family: "tabler-icons";
   position: relative;
