@@ -472,6 +472,20 @@ a:visited {
 }
 
 
+a[href^="#"] {
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 5pt;
+}
+
+a[href^="#"]::after {
+  content: "\ea3a";
+  font-family: "tabler-icons";
+  position: relative;
+  top: 1pt;
+}
+
+
 
 p.breadcrumbs {
   height: 24px;
@@ -593,7 +607,11 @@ sec:image
 -------------------------------------------------------------------------------- */
 
 img:not([class*="leaflet-"]) {
-  width: 100%;
+  max-height: 800px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+
   border-radius: 6px;
   margin: 20px 0;
   justify-self: center;
@@ -631,21 +649,42 @@ div.img-fixed {
 
 
 figure {
-  background-color: var(--color-background-description);
   margin: 20px 0px;
   border-radius: 6px;
   overflow: hidden;
+
+  display: flex;
+  flex-flow: column;
+
+  align-self: center;
+  align-items: center;
 }
 
-figure > img {
+figure > *:first-child {
   margin: 0pt !important;
+  border-radius: 0pt;
 }
 
 figure > figcaption {
-  padding: 0.1rem 0.3rem;
+  padding: 0.3rem;
+  line-height: 1;
+  font-size: 1rem;
+
+  display: flex;
+  gap: 3pt;
+
+  align-items: center;
 }
 
+figure > figcaption > * {
+  line-height: 1;
+}
 
+figure > figcaption::before {
+  content: "\f55a";
+  font-family: "tabler-icons";
+  color: var(--color-accent);
+}
 
 div.thumbnail {
   grid-column: 1 / 4;
@@ -954,6 +993,17 @@ body.dark div.callout.note {--callout-color:        #4581EB;
 div.callout.tools {
   --callout-icon-path: url('/assets/icons/callout/tools.svg');
 }
+
+
+div.callout.toc {
+  --callout-color: #069ee5;
+  --callout-color-border: #45c4eb;
+  --callout-icon-path: url('/assets/icons/callout/bookmark.svg');
+}
+
+body.dark div.callout.toc {--callout-color:        #45c4eb;
+                            --callout-color-border: #069ee5;}
+
 
 
 div.callout.wood {
