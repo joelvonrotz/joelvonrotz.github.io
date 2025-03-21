@@ -1,0 +1,6 @@
+<figure>
+    {{ body | markdown(inline=true) | safe }}
+    <figcaption>
+        {{- caption | markdown | safe -}}
+    </figcaption>
+</figure>

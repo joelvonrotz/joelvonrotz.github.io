@@ -64,4 +64,11 @@ I'm up for sharing all my summaries for the different courses. If they're useful
   A four week tour I've done during the summer of 2021. I explored my home country thoroughly by visiting all the main cities of each canton.
 {% end %}
 
+{% box(image="./japan-2025/tianshu-liu-aqZ3UAjs_M4-unsplash.jpg"
+       title="Japan 2025"
+       link1="/projects/japan-2025/"
+       desc1="Tour Journals") %}
+  A four week tour I've done during the summer of 2021. I explored my home country thoroughly by visiting all the main cities of each canton.
+{% end %}
+
 </div>

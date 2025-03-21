@@ -1,0 +1,10 @@
+/*!
+ * Tabler Icons 3.31.0 by tabler - https://tabler.io
+ * License - https://github.com/tabler/tabler-icons/blob/master/LICENSE
+ */
+@font-face {
+    font-family: "tabler-icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./tabler-icons.woff2?v3.31.0") format("woff2");
+}

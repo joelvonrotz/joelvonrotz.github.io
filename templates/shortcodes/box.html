@@ -14,7 +14,7 @@
   </a>
   {% endif %}
   <p class="box-desc">
-    {{ body | safe }}
+    {{ body | markdown(inline=true) | safe }}
   </p>
   <div class="box-links">
     {% if link1 %}

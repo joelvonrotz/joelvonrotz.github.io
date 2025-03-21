@@ -7,6 +7,10 @@
 {% include "snippets/breadcrumb.html" %}
 {% include "snippets/titleblock.html" %}
 
+{% if page.toc == true %}
+{% include "snippets/toc.html" %}
+{% endif %}
+
 {{ page.content | markdown | safe }}
 
 {% if page.taxonomies.tags or page.taxonomies.categories %}

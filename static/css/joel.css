@@ -6,7 +6,7 @@
 /* end normalize stuff */
 
 :root {
-  --font-serif: "Lora";
+  --font-serif: "Atkinson Hyperlegible Next"; /* "Lora" */
   --font-sansserif: "Alegreya Sans";
   --font-monospace: "Inconsolata";
   
@@ -318,7 +318,7 @@ figcaption {
   font-family: var(--font-text);
   font-weight: var(--weight-text);
   font-size: 1em;
-  line-height: 1.6em;
+  line-height: 1.5;
   color: var(--color-text-primary);
   hyphens: auto;
 }
@@ -472,6 +472,20 @@ a:visited {
 }
 
 
+a.internal {
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 5pt;
+}
+
+a.internal::after {
+  content: "\ea3a";
+  font-family: "tabler-icons";
+  position: relative;
+  top: 1pt;
+}
+
+
 
 p.breadcrumbs {
   height: 24px;
@@ -579,6 +593,25 @@ body.menu-writing  a#nav-writing {
 
 
 
+/* --------------------------------------------------------------------------------
+  _                 __ _      _   
+ | |               / _| |    | |  
+ | |     ___  __ _| |_| | ___| |_ 
+ | |    / _ \/ _` |  _| |/ _ \ __|
+ | |___|  __/ (_| | | | |  __/ |_ 
+ |______\___|\__,_|_| |_|\___|\__|
+sec:leaflet
+-------------------------------------------------------------------------------- */
+
+path.leaflet-interactive {
+  transition: ease-in-out 200ms, ease-in-out 200ms;
+  transition-property: stroke-width;
+}
+
+path.leaflet-interactive:hover {
+  stroke-width: 10;
+}
+
 
 /* --------------------------------------------------------------------------------
  _____                            
@@ -593,9 +626,14 @@ sec:image
 -------------------------------------------------------------------------------- */
 
 img:not([class*="leaflet-"]) {
-  width: 100%;
-  border-radius: 5px;
+  max-height: 800px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+
+  border-radius: 6px;
   margin: 20px 0;
+  justify-self: center;
 }
 
 img.full, div.dark img.full {
@@ -629,6 +667,43 @@ div.img-fixed {
 }
 
 
+figure {
+  margin: 20px 0px;
+  border-radius: 6px;
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: column;
+
+  align-self: center;
+  align-items: center;
+}
+
+figure > *:first-child {
+  margin: 0pt !important;
+  border-radius: 0pt;
+}
+
+figure > figcaption {
+  padding: 0.3rem;
+  line-height: 1;
+  font-size: 1rem;
+
+  display: flex;
+  gap: 3pt;
+
+  align-items: center;
+}
+
+figure > figcaption > * {
+  line-height: 1;
+}
+
+figure > figcaption::before {
+  content: "\f55a";
+  font-family: "tabler-icons";
+  color: var(--color-accent);
+}
 
 div.thumbnail {
   grid-column: 1 / 4;
@@ -719,9 +794,18 @@ ul {
   margin: 10px 0;
 }
 
+li {
+
+  line-height: 1.4rem;
+}
+
 /* adjusts the size of the list to be the same size as ul-lists */
 ol > li + li {
   margin-top: 3px;
+}
+
+li > ul, li > ol {
+  margin-top: 0px;
 }
 
 li::marker {
@@ -904,6 +988,18 @@ div.dark > * {  grid-column: 2; }
   \_____\__,_|_|_|\___/ \__,_|\__|
 sec:callout
 ---------------------------------------- */
+
+div.callout {
+  --callout-color: hsl(218, 0%, 46%);
+  --callout-color-border: hsl(218, 0%, 60%);
+  --callout-icon-path: url('/assets/icons/callout/info.svg');
+}
+
+body.dark div.callout {--callout-color:        hsl(218, 0%, 60%);
+                        --callout-color-border: hsl(218, 0%, 46%);}
+
+
+
 div.callout.note {
   --callout-color: #0658E5;
   --callout-color-border: #4581EB;
@@ -912,6 +1008,26 @@ div.callout.note {
 
 body.dark div.callout.note {--callout-color:        #4581EB;
                             --callout-color-border: #0658E5;}
+
+div.callout.tools {
+  --callout-icon-path: url('/assets/icons/callout/tools.svg');
+}
+
+
+div.callout.toc {
+  --callout-color: #069ee5;
+  --callout-color-border: #45c4eb;
+  --callout-icon-path: url('/assets/icons/callout/bookmark.svg');
+}
+
+body.dark div.callout.toc {--callout-color:        #45c4eb;
+                            --callout-color-border: #069ee5;}
+
+
+
+div.callout.wood {
+  --callout-icon-path: url('/assets/icons/callout/wood.svg');
+}
 
 div.callout.important {
   --callout-color: #FC5200;
@@ -952,7 +1068,7 @@ body.dark  div.callout.caution {--callout-color: #D8524E;
 
 div.callout {
   margin: 8px 0px;
-  --callout-radius: 6px;
+  --callout-radius: 5px;
   border-radius: var(--callout-radius);
   border: solid var(--callout-color-border) 1pt;
   border-left-width: var(--callout-radius);
@@ -967,9 +1083,21 @@ div.callout > * {
 div.callout div.callout-title {
   background-color: color-mix(in oklab, var(--callout-color) 20%, var(--color-background-primary));
   border-top-left-radius: var(--callout-radius);
-  font-weight: bold;
+
   display: flex;
   gap: 6px;
+
+  font-weight: bold;
+  line-height: 1;
+  font-size: 1.2rem;
+}
+
+div.callout div.callout-content > *:first-child{
+  margin-top: 0pt;
+}
+
+div.callout div.callout-content > *:last-child{
+  margin-bottom: 0pt;
 }
 
 div.callout div.callout-title::before {
@@ -1006,11 +1134,10 @@ time.date {
 
   border-bottom-style: dotted;
   border-bottom-color: var(--color-accent);
-  border-image-source: url('./assets/border.svg');
+  border-image-source: url('/assets/border.svg');
   border-image-slice: 33.33% 33.33%;
   border-image-repeat: round;
   border-width: 4pt;
-  border-
 }
 
 
