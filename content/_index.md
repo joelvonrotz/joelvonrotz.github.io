@@ -17,12 +17,10 @@ This website is not very active and I mostly write just when I feel like. The mo
 {% box(image="/images/projects/Flag_of_Japan.svg"
        title="Japan 2025"
        link1="/projects/japan-2025/"
-       desc1="Read Journals") %}
-  Hello, or more _Konichiwa_? Anyway, from April until July, I'll be discovering this country alone on my touring bike!
+       desc1="Hier entlang!") %}
+  Hallo, oder eher _Konichiwa_? Egal, von April bis Juni werde ich das Land der aufgehenden Sonne mit meinem Tourenvelo erkunden!
 {% end %}
-
 </div>
-
 
 ## Links
 
