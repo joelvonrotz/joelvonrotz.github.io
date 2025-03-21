@@ -6,6 +6,10 @@
 {% include "snippets/breadcrumb.html" %}
 {% include "snippets/titleblock.html" %}
 
+{% if section.extra.leaflet == true %}
+{% include "snippets/leaflet-overview.html" %}
+{% endif %}
+
 {{ section.content | safe }}
 
 {% set pinned_posts = section.pages | filter(attribute="extra.pinned", value=true) %}
