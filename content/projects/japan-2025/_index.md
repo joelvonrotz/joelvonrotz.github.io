@@ -10,7 +10,10 @@ template = "archive_tours.html"
 menu = 'projects'
 thumbnail = 'tianshu-liu-aqZ3UAjs_M4-unsplash.jpg'
 titleinside = true
+leaflet = true
+leaflet_gpx_file = true # just to load the gpx library
 +++
+
 
 Nachdem ich nun mein Bachelorabschluss in Elektrotechnik und Informationstechnologie absolviert habe, ist es Zeit für eine Pause! Dieses Jahr gehe ich nach Japan!
 
