@@ -15,7 +15,7 @@ leaflet = true
 leaflet_gpx_file = true # just to load the gpx library
 +++
 
-<div style="justify-self: center; display: flex">
+<div style="justify-self: center; display: flex; margin-bottom: 20pt;">
 <span style="color: var(--color-accent); font-family:'tabler-icons'">&#xee4b;</span>
 <p style="justify-self: center;">
 Klick auf die farbigen Pfade um den entsprechenden Eintrag zu lesen!<br>
