@@ -1,27 +1,31 @@
+{% set element = [] %}
+{% if page %}
+{% set element = page %}
+{% elif section %}
+{% set element = section %}
+{% endif %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
-  {% if section %}
-  <title>{{ config.title }} - {{ section.title }}</title>
-  {% elif page %}
-  <title>{{ config.title }} - {{ page.title }}</title>
+  {% if element.title %}
+  <title>{{ config.title }} - {{ element.title }}</title>
+  {% else %}
+  <title>{{ config.title }}</title>
+  {% endif %}
 
-  {% if page.extra.leaflet %}
+  {% if element.extra.leaflet %}
   <link rel="stylesheet" href="/scripts/leaflet/leaflet.css" />
   <script src="/scripts/leaflet/leaflet.js"></script>
   <link rel="stylesheet" href="/scripts/leaflet-fullscreen/Control-FullScreen.css" />
   <script src="/scripts/leaflet-fullscreen/Control-FullScreen.js"></script>
-  {% if page.extra.leaflet_gpx_file %}
+    {% if element.extra.leaflet_gpx_file %}
   <script src="/scripts/leaflet-gpx-2.0.0/gpx.js"></script>
-  {% endif %}
-  {% endif %}
-  {% else %}
-  <title>{{ config.title }}</title>
+    {% endif %}
   {% endif %}
 
   <link rel="icon" type="image/x-icon" href="/favicon.png">
@@ -81,15 +85,10 @@
       </footer>
     </body>
 
-    {% if section %}
-    {% if section.extra.gallery %}
+    {% if element.extra.gallery %}
     <script src="/scripts/photo.js"></script>
     {% endif %}
-    {% elif page %}
-    {% if page.extra.gallery %}
-    <script src="/scripts/photo.js"></script>
-    {% endif %}
-    {% endif %}
+    
 
 
 
