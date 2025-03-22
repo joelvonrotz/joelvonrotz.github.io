@@ -36,8 +36,8 @@
     <h2>Journals</h2>
     <ul class="post-list fancy">
       {% for post in section.pages %}
-      <li>
-        <div {% if post.extra.pinned %}class="pinned" {% endif %}>
+      <li id="{{post.title | slugify}}">
+        <div{% if post.extra.pinned %}class="pinned" {% endif %}>
           {% if post.extra.pinned %}<img class="icon" src="/assets/icons/pinned.svg">{% endif %}
           <a class="less" href="{{ post.permalink }}">{{ post.title | markdown(inline=true) | safe }}</a>
           <time class="date" datetime="{{ post.date }}">{{ post.date | date(format="%d.%m.%Y") }}</time>
