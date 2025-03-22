@@ -26,15 +26,31 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
         var gpxFiles = [
-        {%- for post in section.pages -%}
+    {%- for post in section.pages -%}
         {%- if post.extra.leaflet_gpx_file -%}
-        { gpx: '{{ post.path | replace(from=section.path, to="./") |safe }}{{ post.extra.leaflet_gpx_file | safe }}', url: '{{ post.path | replace(from=section.path, to="./") |safe }}'},
+        { gpx: '{{ post.path | replace(from=section.path, to="./") |safe }}{{ post.extra.leaflet_gpx_file | safe }}', url: '{{ post.path | replace(from=section.path, to="./") |safe }}', popup: '<b>{{ post.title }}</b><br><a href="{{post.path}}">Journal Link</a>'},
         {%- endif %}
-        {%- endfor -%}
-        ]
+        {% endfor %}
+    ]
+        {%- for post in section.pages -%}
+        {% if post.extra.leaflet_nodes %}
+        // Adding some markers
+        {% for node in post.extra.leaflet_nodes %}
+        var marker = L.marker({{ node.coordinates }}).addTo(map);
+
+        marker.setIcon({{ node.icon | default(value = "iconDefault") }});
+        {% if node.description %}
+        marker.bindPopup("{{ node.description | replace(from="{{url}}", to=post.path) | markdown(inline=true) | safe }}").openPopup();
+        {% endif %}
+        {% if loop.first %}
+        map.setView(marker._latlng, 13);
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
 
         gpxFiles.forEach(function (gpxFile) {
-            new L.GPX(gpxFile.gpx, {
+            var gpx = new L.GPX(gpxFile.gpx, {
                 async: true,
                 gpx_options: {
                     joinTrackSegments: true
@@ -46,8 +62,8 @@
                     lineCap: 'round'
                 },
                 marker_options: {
-                    iconSize: [28, 28],
-                    iconAnchor: [16.5, 16.5],
+                    iconSize: [24, 24],
+                    iconAnchor: [12, 12],
                 },
                 markers: {
                     startIcon: '/assets/leaflet/point_start.svg',
@@ -62,27 +78,29 @@
                 }
                 map.fitBounds(bounds);
             }).on('addline', function(e) {
-                e.line.on('click', function() {
-                    location.href = gpxFile.url;
-                });
+                
             }).addTo(map);
+
+            gpx.on('loaded', function(e) {
+                var gpx = e.target;
+                // Register popup on click
+				gpx.getLayers()[0].bindPopup(gpxFile.popup)
+                
+                console.log(gpx.getLayers()[0])
+
+				// Mouseover Style;
+				gpx.getLayers()[0].on('mouseover', function(e) {
+
+					gpx.getLayers()[0].bringToFront();
+				});
+            })
             
             colorIndexer = (colorIndexer+1) & randomColors.length;
         });
 
-        {%- if section.extra.leaflet_nodes %}
-        // Adding some markers
-        {%- for node in section.extra.leaflet_nodes %}
-        var marker = L.marker({{ node.coordinates }}).addTo(map);
-        marker.setIcon({{ node.icon | default(value = "iconDefault") }});
-        {%- if node.description %}
-        marker.bindPopup("{{ node.description | markdown(inline=true) | safe }}").openPopup();
-        {%- endif %}
-        {%- if node.focus %}
-        map.setView(marker._latlng, 13);
-        {%- endif %}
-        {%- endfor %}
-        {%- endif %}
+        
+
+        
         L.control.scale().addTo(map); // adds a scale
     </script>
 </div>
