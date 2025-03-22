@@ -30,5 +30,6 @@
     "editor:redo",
     "editor:configure-toolbar"
   ],
-  "promptDelete": false
+  "promptDelete": false,
+  "showLineNumber": true
 }
