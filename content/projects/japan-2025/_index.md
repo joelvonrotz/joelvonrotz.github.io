@@ -27,7 +27,7 @@ Klick auf die farbigen Pfade um den entsprechenden Eintrag zu lesen!<br>
 
 Mit dem Elektrotechnik-Diplom im Sack ist es nun Zeit für eine (wahrscheinlich) verdiente Pause! Dieses Jahr gehe ich nach Japan, dem Land der aufgehenden Sonne!
 
-Warum Japan? <s>Weil ich Teil des Schweizer Hiveminds bin und nun Japan Ferien machen möchte!</s> Nun vielleicht stimmts schon, aber das Land hat mich schon seit einiger Zeit interessiert! Einerseits wegen den von uns betrachtet skurrilen Kultur, und anderseits möchte ich mal einen grossen Solo-Trip machen. Durch das Reisen mit einem Tourenvelo, bin ich dem Umfeld ausgelegt und bin instinktiv gezwungen, mit der vorliegenden Kulturen zu interagieren. Ebenfalls hab ich Ramen und Miso-Suppe gern :)
+Warum Japan? <s>Weil ich Teil des Schweizer Hiveminds bin und nun Japan Ferien machen möchte!</s> Nun vielleicht stimmts schon, aber das Land hat mich schon seit einiger Zeit interessiert! Einerseits wegen den von uns betrachtet skurrilen Kultur, und anderseits möchte ich mal einen grossen Solo-Trip machen. Durch das Reisen mit einem Tourenvelo, bin ich dem Umfeld ausgesetzt und bin instinktiv gezwungen, mit der vorliegenden Kulturen zu interagieren. Ebenfalls hab ich Ramen und Miso-Suppe gern :)
 
 So, die Karte oben ist mit dem Journal unten verknüpft, welches ich im Verlaufe der Tour schreibe (wöchentlich oder wenn ich Lust habe). Diese beinhalten meine Gedanken, Stimmung und coole Bilder von der Reise!
 
