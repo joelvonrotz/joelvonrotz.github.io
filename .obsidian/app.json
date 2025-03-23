@@ -31,5 +31,6 @@
     "editor:configure-toolbar"
   ],
   "promptDelete": false,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "alwaysUpdateLinks": true
 }
