@@ -1024,6 +1024,17 @@ body.dark div.callout.toc {--callout-color:        #45c4eb;
                             --callout-color-border: #069ee5;}
 
 
+div.callout.love {
+  --callout-color: #dc143c;
+  --callout-color-border: #8b0000;
+  --callout-color-icon: #dc143c;
+  --callout-icon-path: url('/assets/icons/callout/hearts.svg');
+}
+
+body.dark div.callout.love {--callout-color:        #8b0000;
+                            --callout-color-border: #dc143c;
+                            --callout-color-icon: #dc143c;}
+
 
 div.callout.wood {
   --callout-icon-path: url('/assets/icons/callout/wood.svg');
@@ -1101,7 +1112,7 @@ div.callout div.callout-content > *:last-child{
 }
 
 div.callout div.callout-title::before {
-  background-color: var(--callout-color);
+  background-color: var(--callout-color-icon,--callout-color);
   aspect-ratio: 1;
   content: '';
   height: 1.3rem;
