@@ -9,6 +9,7 @@ taxonomies:
   tags: ["japan", "preparation", "journaling", "biketouring", "travel"]
 
 extra:
+  menu: 'projects'
   #leaflet: true
   #leaflet_gpx_file: 'dummy.gpx'
   #leaflet_nodes: [
