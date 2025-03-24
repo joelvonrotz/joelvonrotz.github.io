@@ -4,7 +4,8 @@
     font-size: 16px;
   }
 
-  main, div.dark {
+  main,
+  div.dark {
     grid-template-columns: 8px 1fr 8px;
   }
 
@@ -16,26 +17,12 @@
     width: 100%;
   }
 
-
-  h1:target::before,
-  h2:target::before,
-  h3:target::before,
-  h4:target::before,
-  h1:target::after,
-  h2:target::after,
-  h3:target::after,
-  h4:target::after {
-    content: none;
-    padding-left: 0;
+  h1:hover a.zola-anchor,
+  h2:hover a.zola-anchor,
+  h3:hover a.zola-anchor,
+  h4:hover a.zola-anchor {
+    display: none;
   }
-
-  h1:target,
-  h2:target,
-  h3:target,
-  h4:target {
-    padding-left: 0;
-  }
-
 
   div.thumbnail .attribution {
     font-size: 0.7em;

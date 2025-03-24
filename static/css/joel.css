@@ -354,9 +354,18 @@ h2 {
   font-size: 1.8em;
 }
 
+
 h3 {
   font-size: 1.4em;
 }
+
+h2,h3 {
+  display: flex;
+  align-items: center;
+  gap: 5pt;
+}
+
+
 
 h4 {
   font-size: 1.1em;
@@ -373,51 +382,55 @@ h1:target,
 h2:target,
 h3:target,
 h4:target {
-  padding-left: 30px;
+  padding-left: 0.7em;
   position: relative;
-  text-decoration: underline wavy var(--color-accent) 2px;
+  /*text-decoration: underline wavy var(--color-accent) 2px;*/
+  transition: padding-left 0.5s ease-in-out;
 }
+
 
 h1:target::before,
 h2:target::before,
 h3:target::before,
 h4:target::before {
-  border-color: var(--color-accent);
-  border-style: solid;
-  border-width: 4px 4px 0 0;
-  content: "";
-  display: block;
-  left: 5px;
+  content: "\f7d8";
+  transition: left, 0.1s;
+  font-family: "tabler-icons";
+  font-weight: normal;
+  color: var(--color-accent);
   
   position: absolute;
 
-  height: 10px;
-  width: 10px;
-
-  /* These two lines vertically centre the point of the arrow */
-  margin-top: -5px;
-  top: 50%;
-
-  /* The arrow sprints to the left when the link is hovered */
-  transition: left 0.1s;
-  transform: rotate( 45deg );
+  left: 0em;
+  animation: fadeInLeft 0.5s ease-in-out 0s 1 normal forwards;
 }
 
-h1:target::after,
-h2:target::after,
-h3:target::after,
-h4:target::after {
-  background: var(--color-accent);
-  content: "";
-  display: block;
-  height: 4px;
-  left: 0px;
-  position: absolute;
-  top: 50%;
-  width: 20px;
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-0.7em);
+	}
 
-  /* We need to animate the shaft too, to be able to look at a moving arrow */
-  transition: left 0.1s;
+	100% {
+		opacity: 1;
+		transform: translateX(-0.25em);
+	}
+}
+
+a.zola-anchor {
+  font-family: "tabler-icons";
+  color: var(--color-accent);
+  display: none;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+h1:hover a.zola-anchor,
+h2:hover a.zola-anchor,
+h3:hover a.zola-anchor,
+h4:hover a.zola-anchor {
+  display: flex;
 }
 
 
