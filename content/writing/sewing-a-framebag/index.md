@@ -1,7 +1,7 @@
 ---
 title: Sewing a Frame Bag
 description: The MYOG trend is one of my favourite trends, since it puts self-made things into the spotlight. In this post I'll show you my slightly modified version of the framebag from Bikepacking.com.
-date: 2025-03-18
+date: 2025-03-24
 draft: true
 
 taxonomies:
@@ -174,6 +174,10 @@ To sew the zipper onto the cut side panel, first cut two pieces of outer fabric.
 {% end %}
 
 Do the exact same on the other side! Afterwards, attach the zipper to one of the side panel pieces. While sewing, you might need to move the zipper itself away from the presser foot (as seen in the <a href="#zippermove">image below</a>). Since the length of the zipper + fabrics are going over the edge, cut them away after you've sewn all side panel things together!
+
+{% callout(type="alert" title="Watch out for the zipper direction!")%}
+Before attaching the zipper to the side panel pieces, check in which direction the zipper should go. For example, in the pictures I have sewn it in the wrong direction (the zipper closes away from the handlebars instead of towards them).
+{% end %}
 
 
 {% figure(caption="I first attached the smaller side panel piece to the zipper. Look out for the correct side of the pieces!") %}
