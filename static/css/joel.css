@@ -352,14 +352,18 @@ h1 {
 h2 {
   color: var(--color-heading2);
   font-size: 1.8em;
+
+  border-bottom: 1pt solid var(--color-accent);
 }
 
 
 h3 {
   font-size: 1.4em;
+
+  border-bottom: 1pt dashed var(--color-accent);
 }
 
-h2,h3 {
+h2,h3, h4 {
   display: flex;
   align-items: center;
   gap: 5pt;
@@ -450,6 +454,14 @@ pre {
   margin: 20px 0px;
   overflow-x: auto;
   scrollbar-width: thin;
+}
+
+div.footnote-definition > * {
+  display: inline;
+}
+
+div.footnote-definition > .footnote-definition-label {
+  font-weight: bold;
 }
 
 /* ----------------------------------------
