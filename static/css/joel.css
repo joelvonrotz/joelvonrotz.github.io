@@ -1006,6 +1006,7 @@ div.callout {
   --callout-color: hsl(218, 0%, 46%);
   --callout-color-border: hsl(218, 0%, 60%);
   --callout-icon-path: url('/assets/icons/callout/info.svg');
+  --callout-color-icon: var(--callout-color);
 }
 
 body.dark div.callout {--callout-color:        hsl(218, 0%, 60%);
@@ -1125,7 +1126,7 @@ div.callout div.callout-content > *:last-child{
 }
 
 div.callout div.callout-title::before {
-  background-color: var(--callout-color-icon,--callout-color);
+  background-color: var(--callout-color-icon);
   aspect-ratio: 1;
   content: '';
   height: 1.3rem;
