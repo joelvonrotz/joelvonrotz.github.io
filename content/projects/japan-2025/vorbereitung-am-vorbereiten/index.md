@@ -51,25 +51,33 @@ Auch ist das Veloreisen gleichzeitig eine gemütliche und auch ungemütliche Sac
 
 Und doch gibt es Tage, an denen man jede Sekunde geniesst. Wo man freudig und neuigierig auf die Einwohner mit Fragen hineinstürzt oder einfach das Wetter geniesst. Wenn es sonnig ist und ein leichter Wind umherweht, das ist totaler Bliss!
 
-Eine tolle Sache an diesen Touren ist der Zwang, flexibel zu bleiben. "Toll" im (positiven) Sinne, dass es mich dazu zwingt. Jeden Tag muss man schauen, wie weit man fahren will, wo man etwas essen möchte, wo man schläft oder wo man ein bisschen länger sein möchte. Diese Flexibilität erleichtert auch das Planen von Touren. Man definiert die zu bereisenden Regionen, den Hin- und Rückflug, vielleicht noch das Hotel zum Jetlag ausnüchtern und der Rest ist das Problem vom Zukunfts-ich!
+Eine tolle Sache an diesen Touren ist der Zwang, flexibel zu bleiben. "Toll" im (positiven) Sinne, dass es mich dazu zwingt. Jeden Tag muss man schauen, wie weit man fahren will, wo man etwas essen möchte, wo man schläft oder wo man ein bisschen länger sein möchte. Diese Flexibilität erleichtert auch das Planen von Touren. Man definiert die zu bereisenden Regionen, den Hin- und Rückreise, vielleicht noch das Hotel zum Jetlag ausnüchtern und der Rest ist das Problem vom Zukunfts-ich!
 
 ## Die Planung
 
 Die Planung fing bereits im September/Oktober an. Anstatt im Unterricht an der Hochschule aufzupassen oder an meiner Bachelor-Thesis zu arbeiten, recherchierte ich über Japan. _Wann möchte ich nach Japan?_, _Was möchte ich sehen?_, _Wo gibts diese fancy Toiletten?_ und _Wie kann ich die Japaner nach bestimmten Orten fragen?_ waren Fragen, welche mir durch den Kopf schoss.
 
-Für den Hin- und Rückflug entschied ich mich für einen Direktflug, um die Transport-Logistik einfach zu halten. 
+Für den Hin- und Rückflug entschied ich mich für einen Direktflug, um die Transport-Logistik einfach zu halten.
 
 
-### Werkzeuge
+### Software
 
-Um die ungefähren Kilometern zu planen, verwende ich [Komoot](https://www.komoot.com/). Diese Tool ist sehr nützlich, denn man kann Strecken-Segmente von anderen Reisenden und Sportarten mit einbeziehen. Ich verwende es mehr um die Streckeninformationen (Länge, Höhenmeter, Streckentypen Aufteilung, etc.) zu ermitteln und Highlights mit einzubeziehen.  
+**Komoot**: Um die ungefähren Kilometern zu planen, verwende ich [Komoot](https://www.komoot.com/). Dieses Tool ist sehr nützlich, denn man kann Strecken-Segmente von anderen Reisenden und Sportarten mit einbeziehen und man erhält eine ungefähre Schätzung der Fahrzeit. Es gibt ein Premium-Abo, um mehrtägige Touren planen zu können, aber das war mir nicht so nützlich, da ich jeden Tag vorweg schaue, wie weit ich komme.
+
+**Organic Maps**: Sobald ich ein Ziel habe, wechsle ich meist auf [Organic Maps](https://organicmaps.app/). Nicht weil die App mehr Funktionalität, ganz im Gegenteil! Sie kommt am nähesten einer Papier-Karte ran, während es nützliche  Nebst dem Schauen, wo ich hinfahren
+
+{% callout(type="info" title="Neues ausprobieren") %}
+a
+{% end %}
+
+Ich verwende es mehr um die Streckeninformationen (Länge, Höhenmeter, Streckentypen Aufteilung, etc.) zu ermitteln und Highlights mit einzubeziehen.  
 
 ### Testfahrt
 
 Entweder zum Schauen ob alles Platz hat oder ob man eine Nacht durchhält, eine Testfahrt ist immer nützlich zum Schauen ob was fehlt oder was zu viel eingepackt wurde. Nachdem man ein paar Touren gemacht hat, weiss man ungefähr, was man braucht. Und doch ist es nützlich, vor der eigentlichen Abreise, eine eintägige oder mehrtägige Fahrt zu machen.
 
 {% figure(caption='Mein Velo "Bike Shiva" mit Testfahrt-Setup (nicht final)') %}
-![[testfahrt-setup.jpg]]
+![In the middle of the photo is a touring bicycle with bags attached. It has a handlebar bag with a pouch attached on top, two 5l dry bags as fork bags in the front, a self-made framebag and two red small panniers on the back of the bicycle.](testfahrt-setup.jpg)
 {% end %}
 
 Da mein Setup sich bei jeder Tour ändert, mit der Hoffnung auf _das_ Setup, ist das Packen des Velos sehr nützlich, um zu sehen ob überhaupt alles Platz hat. Bei meiner Testfahrt fuhr ich zu meinen Eltern nach Hause, wo noch den Camping-Kochtopf und mein Reiseadapter waren. Ich merkte jedoch, dass danach die Taschen sehr voll waren. Daher muss ich noch schauen, was ich eventuell nicht brauche oder anders packen kann.
