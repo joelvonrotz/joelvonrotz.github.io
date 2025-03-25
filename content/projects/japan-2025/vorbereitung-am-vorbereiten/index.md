@@ -23,13 +23,13 @@ extra:
 
 {% callout(type="love" title="Veloplus als Sponsor")%}
 
-Bevor der eigentliche Text kommt, möchte ich mich bei [Veloplus](https://www.veloplus.ch/) bedanken für das Sponsoring dieser Tour. Ich hatte zuvor bei meiner [_Suisse de Tour_](https://blog.veloplus.ch/2022/01/31/suisse-de-tour-eine-reise-durch-die-schweiz/) Tour sie als Sponsor gehabt und war sehr zu frieden (und bin immer noch)!
+Bevor der eigentliche Text kommt, möchte ich mich bei [Veloplus](https://www.veloplus.ch/) bedanken für das Sponsoring dieser Tour. Ich hatte zuvor bei meiner [_Suisse de Tour_](https://blog.veloplus.ch/2022/01/31/suisse-de-tour-eine-reise-durch-die-schweiz/) Tour sie als Sponsor gehabt und war sehr zufrieden (und bin immer noch)!
 
 {% end %}
 
 ## Warum Japan?
 
-Japan selbst war schon seit ein zwei Jahren ein Reiseziel und schon länger war der Begriff "Japan" im Kopf. Früher als Kind schaute ich gerne Studio Ghibli's Filme wie _Mein Nachbar Totoro_ und _Das Schloss im Himmel_  mit meinem Vater. Und als ich lernte, dass die Filme von Hand gezeichnet wurde, da flog mir schon der Hut vom Kopf vor lautem Staunen!
+Japan selbst war schon seit ein, zwei Jahren ein Reiseziel und schon länger war der Begriff "Japan" im Kopf. Früher als Kind schaute ich gerne Studio Ghibli's Filme wie _Mein Nachbar Totoro_ und _Das Schloss im Himmel_  mit meinem Vater. Und als ich lernte, dass die Filme von Hand gezeichnet wurde, da flog mir schon der Hut vom Kopf vor lautem Staunen!
 
 Eine grosse Faszination, welches ich für Japan habe, ist das Handwerk. Es werden immer noch viele Dinge von Hand gemacht, von Essstäbchen bis hin zu Animationsfilmen, meist über mehrere Generationen hinweg. Aber auch ist eine Veränderung in Japan zu erkennen. Das Land ist alt, wenn man die Altersverteilung anschaut, und die jungen Japaner:innen ziehen in die Grossstädte wie Tokyo oder Osaka, um sich zu verwirklichen, während wahrscheinlich die kleinen Dörfer verlottern. 
 
@@ -37,9 +37,9 @@ Es ist ein Land im Wandel. Diese Dinge, die dich ich irgendwo in Büchern, Dokum
 
 ## Aber warum mit dem Velo?
 
-Weil's eine der besten Arten ist, um ein Land kennen zu lernen, nebst dem Backpacking und im Land wohnen. Das heisst aber auch, dass man offen sein muss und sich mit der Kultur des Landes auseinandersetzen muss.
+Weil's eine der besten Arten ist, um ein Land kennenzulernen, nebst dem Backpacking und im Land wohnen. Das heisst aber auch, dass man offen sein muss und sich mit der Kultur des Landes auseinandersetzen muss.
 
-Mit dem Auto reisen verschwindet für mich die Anwesenheit im Hier und Jetzt. Man ist geschützt vom Unwetter und lebt dumm gesagt in einer kleinen Biosphäre, die ab und zu geöffnet wird. Man schaut sich die Reise "hinter einem Fenster" an. Als Velofahrer ist man der Natur ausgesetzt. Wenn es regnet, muss man mit dem Regen klar kommen. Wenn die Sonne scheint, muss man ebenfalls damit umgehen können.
+Im Vergleich zum Autoreisen (umgangssprachlich für Roadtrips), ist man mit dem Velo langsam unterwegs. Aus einer einstündigen Strecke wird plötzlich eine fünfstündige. Die Distanzen "verlängern" sich und man ist dem Wetter ausgesetzt. Wenn es regnet, muss man mit dem Regen klarkommen. Wenn die Sonne scheint, muss man auch damit umgehen können. Aber irgendwie hat es für mich auch einen Vorteil: als klatschnasser Tourist, komme ich viel leichter mit den Einheimischen ins Gespräch übers Unwetter!
 
 {% figure(caption="Bikepacking Trip in den Dolomiten im Sommer 2024") %}
 
@@ -47,11 +47,11 @@ Mit dem Auto reisen verschwindet für mich die Anwesenheit im Hier und Jetzt. Ma
 
 {% end %}
 
-Auch ist das Veloreisen gleichzeitig eine gemütliche und auch ungemütliche Sache. Jeden Tag sitzt man auf dem Velo und kommt nur so weit, wie man selbst mag. Meistens gibt es Tage, an denen die Beine schmerzen, und anderen, wo man mental erschöpft ist. Zum Beispiel, bei mir ist immer der vierte oder fünfte Tag ein Tiefpunkt. Mein Körper und Kopf möchten mit dieser abstrus dummen Idee aufhören. Und doch fahre ich weiter.
+Auch ist das Veloreisen gleichzeitig eine gemütliche und auch ungemütliche Sache. Jeden Tag sitzt man auf dem Velo und kommt nur so weit, wie man selbst mag. Meistens gibt es Tage, an denen die Beine schmerzen, und anderen, wo man mental erschöpft ist. Zum Beispiel, bei mir ist immer der vierte oder fünfte Tag ein Tiefpunkt. Mein Körper und Kopf möchten mit dieser abstrus dummen Idee namens "Velotour" aufhören. Trotzdem fahre ich weiter.
 
-Und doch gibt es Tage, an denen man jede Sekunde geniesst. Wo man freudig und neuigierig auf die Einwohner mit Fragen hineinstürzt oder einfach das Wetter geniesst. Wenn es sonnig ist und ein leichter Wind umherweht, das ist totaler Bliss!
+Und doch gibt es Tage, an denen man jede Sekunde geniesst. Wo man freudig und neugierig auf die Einwohner mit Fragen hineinstürzt oder einfach das Wetter geniesst. Wenn es sonnig ist und ein leichter Wind umher weht, das ist totaler Bliss!
 
-Eine tolle Sache an diesen Touren ist der Zwang, flexibel zu bleiben. "Toll" im (positiven) Sinne, dass es mich dazu zwingt. Jeden Tag muss man schauen, wie weit man fahren will, wo man etwas essen möchte, wo man schläft oder wo man ein bisschen länger sein möchte. Diese Flexibilität erleichtert auch das Planen von Touren. Man definiert die zu bereisenden Regionen, den Hin- und Rückreise, vielleicht noch das Hotel zum Jetlag ausnüchtern und der Rest ist das Problem vom Zukunfts-ich!
+Eine tolle Sache an diesen Touren ist der Zwang, flexibel bleiben zu müssen. Jeden Tag muss man schauen, wie weit man fahren will, wo man etwas essen möchte, wo man schläft oder wo man ein bisschen länger sein möchte. Diese Flexibilität erleichtert auch das Planen von Touren. Man definiert die zu bereisenden Regionen, die Hin- und Rückreise, vielleicht noch das Hotel zum Jetlag ausnüchtern und der Rest ist das Problem vom Zukunfts-ich!
 
 ## Die Planung
 
@@ -60,17 +60,24 @@ Die Planung fing bereits im September/Oktober an. Anstatt im Unterricht an der H
 Für den Hin- und Rückflug entschied ich mich für einen Direktflug, um die Transport-Logistik einfach zu halten.
 
 
-### Software
+### Software & Webseiten
 
-**Komoot**: Um die ungefähren Kilometern zu planen, verwende ich [Komoot](https://www.komoot.com/). Dieses Tool ist sehr nützlich, denn man kann Strecken-Segmente von anderen Reisenden und Sportarten mit einbeziehen und man erhält eine ungefähre Schätzung der Fahrzeit. Es gibt ein Premium-Abo, um mehrtägige Touren planen zu können, aber das war mir nicht so nützlich, da ich jeden Tag vorweg schaue, wie weit ich komme.
+Folgend sind ein paar Apps und Webseiten, welche ich für die Tour verwenden werde:
 
-**Organic Maps**: Sobald ich ein Ziel habe, wechsle ich meist auf [Organic Maps](https://organicmaps.app/). Nicht weil die App mehr Funktionalität, ganz im Gegenteil! Sie kommt am nähesten einer Papier-Karte ran, während es nützliche  Nebst dem Schauen, wo ich hinfahren
+#### Komoot
+Um die ungefähren Kilometern zu planen, verwende ich [Komoot](https://www.komoot.com/). Dieses Tool ist sehr nützlich, denn man kann Strecken-Segmente von anderen Reisenden und Sportarten mit einbeziehen und man erhält eine ungefähre Schätzung der Fahrzeit. Es gibt ein Premium-Abo, um mehrtägige Touren planen zu können, aber das war mir nicht so nützlich, da ich jeden Tag vorweg schaue, wie weit ich komme.
 
-{% callout(type="info" title="Neues ausprobieren") %}
-a
-{% end %}
+#### Organic Maps
+[Organic Maps](https://organicmaps.app/) ist eine schlanke, freie App mit Offline-Funktionalität. Karten können nach Region heruntergeladen werden und beinhalten sehr viele Informationen. Ich verwende die App grösstenteils um nach Trinkwasser zu suchen oder die Steigung einer Strecke einzuschätzen. Aber auch kann die App offline Routen berechnen für Velo und anderen Fortbewegungsmittel! 
 
-Ich verwende es mehr um die Streckeninformationen (Länge, Höhenmeter, Streckentypen Aufteilung, etc.) zu ermitteln und Highlights mit einzubeziehen.  
+#### myMizu
+Während der Japan-Recherche bin ich auf [myMizu](https://www.mymizu.co/home-en) gestossen, welche Wassernachfüllstationen anzeigt. Das wird nun auf dieser Tour ausprobiert!
+
+#### Warmshowers
+Zwar nicht so weit verbreitet in Japan, bleibt [Warmshowers](https://www.warmshowers.org/) eine nützliche Seite. Ich bin schon seit einiger Zeit auf dieser Plattform, zwar leider nicht als Host. Auf der Seite können, ähnlich wie Couchsurfer, Leute eine Schlafmöglichkeit anbieten (und eine warme Dusche), aber ist einfach mehr für Velofahrer ausgelegt. Als Bezahlung nimmt man entweder ein paar Zutaten für das Nachtessen mit, ein paar Biere oder einfach die bisher gesammelten Reise-Geschichten.
+
+#### Google Maps
+seit einiger Zeit hatte ich zwar eher Mühe mit Google Maps. Sucht man nach Hostels, erhält man Resultate für alles nebst Hostels. Doch hat es seine Vorteile beim Suchen von gewissen Orten oder Shops. Für diese Tour versuche ich mal Google Maps nur wenns sein muss zu verwenden! 
 
 ### Testfahrt
 
