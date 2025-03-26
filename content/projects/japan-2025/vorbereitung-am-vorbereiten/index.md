@@ -1,5 +1,5 @@
 ---
-title: "Woche `0` – Vorbereitung am vorbereiten" 
+title: "Vorbereitung am vorbereiten" 
 description: "Die Anzahl Tage werden immer weniger, bis ich dann im Flieger hocke und Zeit verplempern muss, bis ich in Japan ankomme. Bevor das alles geschiet, muss noch das Velo aufgefrischt werden und ich werde etwas über die Planung dieser Tour erzählen!"
 date: 2025-03-21
 draft: true
