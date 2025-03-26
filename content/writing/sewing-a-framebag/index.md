@@ -23,7 +23,7 @@ extra:
 
 Before getting into too many details, this guide is heavily based on the original frame bag guide [DIY: How to Make A Simple Frame Bag](https://bikepacking.com/gear/how-to-make-a-bikepacking-framebag-krampus/). Instead of using velcro on all the sides, I instead replaced the top side with laces, like shoelaces!
 
-# List of Materials
+## List of Materials
 
 {% callout(type="tools" title="Equipment & Tools") %}
 
@@ -55,9 +55,9 @@ All sides have seam allowances of ca. $1\text{cm}$ added!
 {% end %}
 
 
-# Sewing Steps
+## Sewing Steps
 
-## Creating the Design Pattern
+### Creating the Design Pattern
 
 Although I've got no photos of this step, I hope at least the written guide here is enough! It's easy!
 
@@ -90,7 +90,7 @@ To go a little further and have a reusable and nicer looking design pattern, red
 
 {% end %}
 
-## Cut Fabric
+### Cut Fabric
 
 With the design pattern done, next step is to create a _Mise en Place_ with the fabric.
 
@@ -118,7 +118,7 @@ With the design pattern done, next step is to create a _Mise en Place_ with the 
 ![](step_small_fabric_cut.jpg)
 {% end %}
 
-## Combine Outer and Inner Layer and Stiffener
+### Combine Outer and Inner Layer and Stiffener
 
 For inserting the stiffener, the outer and inner layer are sewn together, except for one side, where the stiffener will be inserted:
 
@@ -130,7 +130,7 @@ For inserting the stiffener, the outer and inner layer are sewn together, except
 ![](step_sidepanel_almost_closed.jpg)
 {% end %}
 
-## Prepare Lace Loops
+### Prepare Lace Loops
 
 The lace loops are a bit tricky, mostly because I wanted to be sturdy!
 
@@ -148,7 +148,7 @@ The lace loops are a bit tricky, mostly because I wanted to be sturdy!
 {% end %}
 
 
-## Sew Zipper to Sidepanel
+### Sew Zipper to Sidepanel
 
 To sew the zipper onto the cut side panel, first cut two pieces of outer fabric. The width are the same as the zipper. The length should long enough, for the whole thing to over the edge of the side panel (after the zipper is sewn on, the rest can be cut away).
 
@@ -199,7 +199,7 @@ Before attaching the zipper to the side panel pieces, check in which direction t
 <img src="step_zipper_done.jpg">
 {% end %}
 
-## Velcro Pieces
+### Velcro Pieces
 
 The frame bag is put on the bottom bar and sidebar using custom-made velcro straps. These consist of four pieces: both velcro sides and two pieces of fabric.
 
@@ -238,7 +238,7 @@ $$
 <img src="step_velcro_loops.jpg">
 {% end %}
 
-## Sew Everything together
+### Sew Everything together
 
 ![](step_belt_connect.jpg)
 ![](step_velcro_sewing_pattern.jpg)
