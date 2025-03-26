@@ -12,7 +12,7 @@
   
   --font-text: var(--font-serif);
 
-  --weight-text: normal;
+  --weight-text: 400;
   --font-title: "Outfit";
   --font-heading: "Alegreya Sans";
   --font-code: var(--font-monospace);
@@ -23,7 +23,7 @@
   --color-link-hover: #aed3f3;
   --color-link-visited: #1464aa;
   
-  --color-text-primary: #1b1b1b;
+  --color-text-primary: #202020;
   --color-text-secondary: #5f5f5f;
   
   --color-background-primary: #ffffff;
@@ -37,12 +37,9 @@
   --color-dark-background: #000000;
   --color-dark-text: #f3f3f3;  
   
-  --color-code-background: #daeeff;
+  --color-code-background: #e1f0fd;
 
   --color-quote: #8fe27b;
-
-  --color-heading1: #000000;
-  --color-heading2: #000000;
 
   --color-category-travel: #ce7501;
   --color-category-text: #ffffff;
@@ -109,8 +106,8 @@ body.dark {
   --color-link-hover: #aed3f3;
   --color-link-visited: #50a0e6;
   
-  --color-text-primary: #f7f7f7;
-  --color-text-secondary: #aaaaaa;
+  --color-text-primary: #eeeeee;
+  --color-text-secondary: #919191;
   
   --color-background-primary: #1d1d1d;
   --color-background-secondary: #303030;
@@ -120,12 +117,9 @@ body.dark {
   --color-dark-background: #000000;
   --color-dark-text: #f3f3f3;  
   
-  --color-code-background: #20272c;
+  --color-code-background: #262f36;
 
   --color-quote: #8fe27b;
-
-  --color-heading1: #ffffff;
-  --color-heading2: #ffffff;
 
   --color-category-travel: #ce7501;
   --color-category-text: #ffffff;
@@ -218,7 +212,7 @@ header {
   gap: 5px;
 }
 
-header h1 {
+header span {
   font-family: var(--font-title);
   font-weight: 600;
   text-decoration: none;
@@ -334,53 +328,44 @@ strong {
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
   font-variant-numeric: lining-nums;
-  font-weight: 600;
+  font-weight: bold;
   transition: 100ms border ease-in-out;
+  border-bottom: 1pt solid var(--color-background-secondary);
 }
 
 h1 {
-  font-size: 2.2em;
-  font-weight: bold;
-
-  color: var(--color-heading1);
-  
+  font-family: var(--font-title);
+  font-size: 2.35rem;
 
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
 h2 {
-  color: var(--color-heading2);
-  font-size: 1.8em;
-
-  border-bottom: 1pt solid var(--color-accent);
+  font-size: 1.85em;
 }
 
-
 h3 {
-  font-size: 1.4em;
+  font-size: 1.55em;
+}
 
-  border-bottom: 1pt dashed var(--color-accent);
+h4 {
+  font-size: 1.25em;
 }
 
 h2,h3, h4 {
   display: flex;
   align-items: center;
   gap: 5pt;
-}
 
-
-
-h4 {
-  font-size: 1.1em;
-}
-
-h2,
-h3,
-h4 {
   margin-top: 0.75em;
   margin-bottom: 10px;
 }
+
+
+
+
+
 
 h1:target,
 h2:target,
@@ -440,6 +425,7 @@ h4:hover a.zola-anchor {
 
 code, pre {
   font-family: var(--font-monospace);
+  font-weight: normal;
 }
 
 *:not(pre) > code {
@@ -1061,10 +1047,15 @@ body.dark div.callout.love {--callout-color:        #8b0000;
                             --callout-color-border: #dc143c;
                             --callout-color-icon: #dc143c;}
 
-
 div.callout.wood {
+  --callout-color: #A47449;
+  --callout-color-border: #A47449;
   --callout-icon-path: url('/assets/icons/callout/wood.svg');
 }
+
+body.dark div.callout.wood {
+  --callout-color: #A47449;
+  --callout-color-border: #704F32;}
 
 div.callout.important {
   --callout-color: #FC5200;
@@ -1114,7 +1105,7 @@ div.callout {
 }
 
 div.callout > * {
-  padding: 7px;
+  padding: 5px;
 }
 
 div.callout div.callout-title {
@@ -1122,11 +1113,12 @@ div.callout div.callout-title {
   border-top-left-radius: var(--callout-radius);
 
   display: flex;
+  align-items: center;
   gap: 6px;
 
   font-weight: bold;
   line-height: 1;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 div.callout div.callout-content > *:first-child{
@@ -1161,6 +1153,7 @@ section#title-block {
 time.date {
   font-size: 1.2em;
   color: var(--color-text-secondary);
+  font-weight: normal;
 }
 
 #title-block div.description {
@@ -1171,9 +1164,6 @@ time.date {
 
   border-bottom-style: dotted;
   border-bottom-color: var(--color-accent);
-  border-image-source: url('/assets/border.svg');
-  border-image-slice: 33.33% 33.33%;
-  border-image-repeat: round;
   border-width: 4pt;
 }
 
@@ -1285,16 +1275,6 @@ span.katex {
 sec:misc
 */
 
-#back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-}
-
-#back-to-top {
-  background-color: var(--color-background-primary);
-}
 
 input {
   background-color: transparent;
@@ -1310,120 +1290,17 @@ input {
   outline: none;
 }
 
-/* ----------------------------------------
-   _______      __
-  / ____\ \    / /
- | |     \ \  / / 
- | |      \ \/ /  
- | |____   \  /   
-  \_____|   \/    
-sec:cv
----------------------------------------- */
-
-body.menu-cv *:not(h1,h2,h3){
-  font-family: var(--font-monospace);
-}
-
-body.menu-cv h2::after {
-  background-image: linear-gradient(to right, var(--color-accent) 30%, rgba(0, 0, 0, 0) 70%);
-  width: 100%;
-  height: 1px;
-  content: "";
-  display: block;
-}
-
-
-body.menu-cv header {
-  height: 48px;
-  margin-bottom: 10px;
-}
-
-body.menu-cv header nav a:not(:nth-child(1)) {
-  display: none;
-}
-
-body.menu-cv header > h1 {
-  display: none;
-} 
-
-
-.experience.incomplete > div  {
-  background-image: linear-gradient(to right, red 30%, rgba(0, 0, 0, 0) 70%);
-}
-
-
-body.menu-cv{
-  
-  font-size: 16px;
-  --reader-width: 700px;
-}
-
-
-
-#resume-header-block {
-  display: grid;
-  gap: 40px;
-  grid-template-columns: 1fr 200px;
-}
-
-.resume-header h1 {
-  margin: 0;
-}
-
-.resume-image {
-  align-self: center;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0px -1px 35px -10px rgba(0,0,0,0.5)
-}
-
-.experience {
-  display: flex;
-  flex-flow: column;
-  margin-bottom: 20px;
-}
-
-.experience > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.experience .exp-duration,
-.experience .exp-company {
-  line-height: 1.1em;
-  font-size: 1.3em;
-
-}
-.experience .exp-company{
-  font-weight: bold;
-}
-
-
-.experience .exp-profession {
-  margin-bottom: 5px;
-}
-
-.experience .exp-description {
-  color: var(--color-text-secondary);
-  line-height: 1.2em;
-}
-
 hr {
-  margin: 10px 0px;
+  margin: 2rem 0px  0.5rem 0px;
+  border-width: 0pt;
+  border-bottom: 1pt solid var(--color-background-secondary);
 }
 
-#post-tags span, #post-categories span {
-  display: inline;
-  margin: 3px 0px;
-  font-size: 0.9rem;
-}
 
-#post-tags a,
-#post-categories a {
+#post-tags,
+#post-categories {
   font-size: 0.9em;
-  padding: 2px 4px;
-  margin: 2px 0px;
-  height: fit-content;
+  padding: 0px 4px;
 }
 
 
