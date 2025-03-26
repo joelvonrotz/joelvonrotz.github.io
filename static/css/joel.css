@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  paint-order: stroke fill;
 }
 /* end normalize stuff */
 
@@ -212,14 +213,15 @@ header {
   gap: 5px;
 }
 
-header span {
+header h1 {
   font-family: var(--font-title);
   font-weight: 600;
   text-decoration: none;
   font-size: 40px;
   margin: 0;
   line-height: 0;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.2em;
+  border: none;
 }
 
 header div.header-wrapper {
@@ -331,14 +333,21 @@ h1, h2, h3, h4 {
   font-weight: bold;
   transition: 100ms border ease-in-out;
   border-bottom: 1pt solid var(--color-background-secondary);
+
+
+  display: flex;
+  align-items: center;
+  gap: 5pt;
+
+  margin-top: 0.7em;
+  margin-bottom: 5px;
 }
 
 h1 {
   font-family: var(--font-title);
   font-size: 2.35rem;
+  padding-bottom: 2pt;
 
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 h2 {
@@ -353,14 +362,7 @@ h4 {
   font-size: 1.25em;
 }
 
-h2,h3, h4 {
-  display: flex;
-  align-items: center;
-  gap: 5pt;
 
-  margin-top: 0.75em;
-  margin-bottom: 10px;
-}
 
 
 
@@ -1150,10 +1152,17 @@ section#title-block {
   font-family: var(--font-sansserif);
 }
 
-time.date {
-  font-size: 1.2em;
+section#title-block .stats{
+  display: flex;
+  justify-content: space-between;
+}
+
+section#title-block .stats > *{
+  font-size: 1.2rem;
   color: var(--color-text-secondary);
   font-weight: normal;
+  line-height: 1;
+  font-family: inherit;
 }
 
 #title-block div.description {
