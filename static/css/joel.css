@@ -863,12 +863,6 @@ ul.post-list li a[data-category="travel"] {
 }
 
 
-
-
-ul.post-list li time {
-  font-family: var(--font-sansserif);
-}
-
 ul.post-list.fancy{
   padding: 0 10px;
 }
@@ -918,11 +912,9 @@ ul.post-list.fancy li > div time {
 
 ul.post-list.fancy li > div > * {
   font-family: var(--font-title);
-  font-size: 1.0em;
 }
 
 ul.post-list.fancy li > p{
-  font-size: 0.9em;
   padding: 0.3em 0;
 }
 
