@@ -10,11 +10,14 @@
   {% else %}
   <h1 class="title">{{ elem.title | markdown(inline=true) | safe }}</h1>
   {% endif %}
-  {% if elem.date %}
-  <time class="date" datetime="{{ elem.date }}">
-    {{ elem.date | date(format="%d.%m.%Y") }}
-  </time>
-  {% endif %}
+  <div class="stats">
+    {% if elem.date %}
+    <time class="date" datetime="{{ elem.date }}">
+      {{ elem.date | date(format="%d.%m.%Y") }}
+    </time>
+    <p class="readtime">{{ elem.reading_time}} min</p>
+    {% endif %}
+  </div>
   {% if elem.description %}
   <div class="description">
     {{ elem.description | markdown | safe }}
