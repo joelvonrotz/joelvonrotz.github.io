@@ -17,22 +17,24 @@
 <hr>
 
 {% if page.taxonomies.tags %}
-<section id="post-tags"><span>
+<section id="post-tags">
+  <p>
     <b>Tags</b>:
     {% for tag in page.taxonomies.tags %}
-    <a class="button" href="/tags/{{ tag | lower }}">{{ tag }}</a>{% if not loop.last%},{% endif %}
+    <a href="/tags/{{ tag | lower }}">{{ tag }}</a>{% if not loop.last%},{% endif %}
     {% endfor %}
-  </span>
+  </p>
 </section>
 {% endif %}
 
 {% if page.taxonomies.categories %}
-<section id="post-categories"><span>
+<section id="post-categories">
+  <p>
     <b>Categories</b>:
     {% for category in page.taxonomies.categories %}
-    <a class="button" href="/categories/{{ category | lower }}">{{ category }}</a>{% if not loop.last%},{% endif %}
+    <a href="/categories/{{ category | lower }}">{{ category }}</a>{% if not loop.last%},{% endif %}
     {% endfor %}
-  </span>
+  </p>
 </section>
 {% endif %}
 {% endif %}
