@@ -98,3 +98,7 @@ Entweder zum Schauen ob alles Platz hat oder ob man eine Nacht durchhält, eine 
 {% end %}
 
 Da mein Setup sich bei jeder Tour ändert, mit der Hoffnung auf **das** Setup, ist das Packen des Velos sehr nützlich, um zu sehen ob überhaupt alles Platz hat. Bei meiner Testfahrt fuhr ich zu meinen Eltern nach Hause, wo noch den Camping-Kochtopf und mein Reiseadapter waren. Ich merkte jedoch, dass danach die Taschen sehr voll waren. Daher muss ich noch schauen, was ich eventuell nicht brauche oder anders packen kann.
+
+---
+
+Puh, ziemlich langer Text, huh? Keine Angst, die Reise-Einträge werden wahrscheinlich nicht so lange sein!
