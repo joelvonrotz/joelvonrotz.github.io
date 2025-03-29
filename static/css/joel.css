@@ -694,7 +694,6 @@ figure {
 
 figure > *:first-child {
   margin: 0pt !important;
-  border-radius: 0pt;
 }
 
 figure > figcaption {
@@ -1302,6 +1301,10 @@ hr {
 #post-categories {
   font-size: 0.9em;
   padding: 0px 4px;
+}
+
+#post-categories {
+  margin-bottom: 15px;
 }
 
 
