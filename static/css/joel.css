@@ -327,6 +327,10 @@ strong {
   font-weight: bold;
 }
 
+time {
+  font-variant-numeric: tabular-nums;
+}
+
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
   font-variant-numeric: lining-nums;
