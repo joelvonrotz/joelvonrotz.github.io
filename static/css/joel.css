@@ -649,8 +649,10 @@ img:not([class*="leaflet-"]) {
   max-width: 100%;
 
   border-radius: 6px;
-  margin: 20px 0;
+  margin: 20px auto;
   justify-self: center;
+  align-self: center;
+  display: block;
 }
 
 img.full, div.dark img.full {
