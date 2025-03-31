@@ -1,8 +1,8 @@
 ---
 title: "Vorbereitung am vorbereiten" 
 description: "Die Anzahl Tage werden immer weniger, bis ich dann im Flieger hocke und Zeit verplempern muss, bis ich in Japan ankomme. Bevor das alles geschiet, muss noch das Velo aufgefrischt werden und ich werde etwas über die Planung dieser Tour erzählen!"
-date: 2025-03-21
-draft: true
+date: 2025-03-31
+draft: false
 
 taxonomies:
   categories: ["travel"]
@@ -51,7 +51,7 @@ Auch ist das Veloreisen gleichzeitig eine gemütliche und auch trostlose Sache. 
 
 Denn es gibt Tage, an denen man jede Sekunde geniesst. Wo man freudig und neugierig auf die Einwohner mit Fragen hineinstürzt oder einfach das Wetter geniesst. Wenn es sonnig ist und ein leichter Wind umher weht, das ist totaler Bliss!
 
-Für mich ist diese Art zum Reisen eine gute Ablenkung vom Alltag. Viel mehr bin ich mit dem Hier und Jetzt beschäftigt, als mit dem, was ich hätte tun können. Weniger Social Media, generell weniger Internet Konsum und man hat auch wieder mal Zeit zum Nachdenken (von der Langeweile während dem Fahren). "Raus gehen und Gras anfassen" könnte man sagen. Dies ist aber keine Provokation gegen betreffende Personen, sondern mehr, wie ich mit mir selber umgehe.
+Für mich ist diese Art zum Reisen eine gute Ablenkung vom Alltag. Viel mehr bin ich mit dem Hier und Jetzt beschäftigt, als mit dem, was ich hätte tun können. Weniger Social Media, generell weniger Internet Konsum und man hat auch wieder mal Zeit zum Nachdenken (von der Langeweile während dem Fahren). "Raus gehen und Gras anfassen" könnte man sagen. Dies ist aber keine Provokation gegen betreffende Personen, sondern mehr, wie ich mit mir selber umgehen möchte. In meiner Schweizer Tour beschäftigte ich mich mit meiner sozialen Angst und bei dieser Tour weiss ich noch nicht, was mich beschäftigen wird. 
 
 Vielleicht werde ich diese Thematik weiterführen während oder nach der Reise :)
 
@@ -60,15 +60,21 @@ Vielleicht werde ich diese Thematik weiterführen während oder nach der Reise :
 
 Ein bisschen was zur Planung. Die fing bereits im September/Oktober 2024 an. Anstatt im Unterricht an der Hochschule aufzupassen oder an meiner Bachelor-Thesis zu arbeiten, recherchierte ich über Japan. _Wann möchte ich nach Japan?_, _Was möchte ich sehen?_, _Wo gibts diese fancy Toiletten?_ und _Wie kann ich die Japaner nach bestimmten Orten fragen?_ waren Fragen, welche mir durch den Kopf schoss. Was genau aber will ich eigentlich in Japan machen?
 
-Mich selbst komplett ins kalte Wasser werfen! Also ausserhalb der Komfortzone sein und was neues erkunden. <span style="color: red; font-weight: bold;">[TODO]</span>
+Mich selbst komplett ins kalte Wasser werfen! Das ist es! Das (metaphorische) Pool mit dem kalten Wasser steht und ich werde Stück für Stück näher gebracht, bis ich drin bin. Aber um das nicht so unangenehm zu machen, habe ich bereits die wichtigsten Dinge gemacht: ein Hin- und Rückflug geplant und ein Jetlag-Ausnüchterungs-Hotel gebucht. Was nach dem Hotel kommt, muss ich noch schauen.
 
-Für den Hin- und Rückflug entschied ich mich für einen Direktflug, um die Transport-Logistik einfach zu halten. Den Velo-Karton hab ich, aber muss noch schauen, wie ich die einzelnen Tasche beim Check-In abgeben werde. Oder wie ich überhaupt das ganze Zeug zum Flughafen bringen kann... <span style="color: red; font-weight: bold;">[TODO]</span>
+Für den Hin- und Rückflug entschied ich mich für einen Direktflug, um die Transport-Logistik einfach zu halten. Den Velo-Karton hab ich, aber muss noch schauen, ob all meine Taschen auch noch in einer weiteren Karton-Schachtel Platz haben. Die Reise zum Flughafen ist zum Glück dank meines Bruders und meiner Mutter geregelt!
 
+### Packen
+
+Auf das Velo wird nur das Wesentliche gepackt, also Zelt, Schlafsack, Schlafmatte, Kocher, Besteck und Geschirr, Ersatzkleider und vielleicht ein, zwei Unterhosen. Aber doch erlaubt man sich hier und dort ein bisschen einen Luxus. Dieses Jahr ist der Luxus ein Kissen (_Aeros Premium Pillow_ von _Sea to Summit_) , denn ich hatte zuvor immer den Schlafsackbeutel mit einem Pullover oder ähnliches gefüllt, wobei der Beutel irgendwann einfach zu unangenehm und hart wurde.
+
+Ansonsten ja, kann ich nicht viel dazu sagen, ausser dann man Mut haben muss, weniger einzupacken, als man zu brauchen meint.
+
+Packliste gibt's vielleicht irgendwann mal... 
 
 ### Software & Webseiten
 
-Folgend sind ein paar Apps und Webseiten, welche ich für die Tour verwenden werde: <span style="color: red; font-weight: bold;">[TODO]</span>
-
+Im Zeitalter des digitalen Klatsch-und-Tratsch-Tablets werde ich auch einige Applikationen und Webseiten verwenden!
 #### Komoot
 
 Um die ungefähren Kilometern zu planen, verwende ich [Komoot](https://www.komoot.com/). Dieses Tool ist sehr nützlich, denn man kann Strecken-Segmente von anderen Reisenden und Sportarten mit einbeziehen und man erhält eine ungefähre Schätzung der Fahrzeit. Es gibt ein Premium-Abo, um mehrtägige Touren planen zu können, aber das war mir nicht so nützlich, da ich jeden Tag vorweg schaue, wie weit ich komme.
@@ -83,8 +89,16 @@ Während der Japan-Recherche bin ich auf [myMizu](https://www.mymizu.co/home-en)
 
 #### Warmshowers
 
-Zwar nicht so weit verbreitet in Japan, bleibt [Warmshowers](https://www.warmshowers.org/) eine nützliche Seite. Ich bin schon seit einiger Zeit auf dieser Plattform, zwar leider nicht als Host. Auf der Seite können, ähnlich wie Couchsurfer, Leute eine Schlafmöglichkeit anbieten (und eine warme Dusche), aber ist einfach mehr für Velofahrer ausgelegt. Als Bezahlung nimmt man entweder ein paar Zutaten für das Nachtessen mit, ein paar Biere oder einfach die bisher gesammelten Reise-Geschichten.
+Zwar nicht so weit verbreitet in Japan, bleibt [Warmshowers](https://www.warmshowers.org/) eine nützliche Seite. Ich bin schon seit einiger Zeit auf dieser Plattform, zwar leider nicht als Host. Auf der Seite können, ähnlich wie Couchsurfer, Hosts eine Schlafmöglichkeit anbieten (und eine warme Dusche), aber ist einfach mehr für Velofahrer ausgelegt. Als Bezahlung nimmt man entweder ein paar Zutaten für das Nachtessen mit, ein paar Biere oder einfach die bisher gesammelten Reise-Geschichten.
 
+#### tablog
+
+[tabélog](https://tabelog.com/en/) ist eine japanische Webseite, um Restaurant Reservationen zu machen und Bewertungen zu lesen. Auch dient es ein bisschen um sich zu orientieren. Das Interessante aber ist:
+
+![](verygood.png)
+
+Bewertung 3.5 und das _very good_ neben dran. Nah, dass hat nicht mit einem schlechten Restaurant zu tun, sondern die Japaner bewerten das ganze Zeug anders. Bewertung 5 ist etwas sehr grossartiges, schon fast unglaublich!
+ 
 #### Google Maps
 
 seit einiger Zeit hatte ich zwar eher Mühe mit Google Maps. Sucht man nach Hostels, erhält man Resultate für alles nebst Hostels. Doch hat es seine Vorteile beim Suchen von gewissen Orten oder Shops. Für diese Tour versuche ich mal Google Maps nur wenns sein muss zu verwenden! 
@@ -101,4 +115,4 @@ Da mein Setup sich bei jeder Tour ändert, mit der Hoffnung auf **das** Setup, i
 
 ---
 
-Puh, ziemlich langer Text, huh? Keine Angst, die Reise-Einträge werden wahrscheinlich nicht so lange sein!
+Puh, ziemlich langer Text, huh? Keine Angst, die Reise-Einträge werden wahrscheinlich nicht so lange sein! Das war's fürs Erste, bis bald!
