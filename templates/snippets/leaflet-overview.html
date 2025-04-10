@@ -53,7 +53,8 @@
             var gpx = new L.GPX(gpxFile.gpx, {
                 async: true,
                 gpx_options: {
-                    joinTrackSegments: true
+                    joinTrackSegments: true,
+                    parseElements: ['track','route']
                 },
                 polyline_options: {
                     color: randomColors[colorIndexer],
@@ -67,7 +68,7 @@
                 },
                 markers: {
                     startIcon: '/assets/leaflet/point_start.svg',
-                    endIcon: '/assets/leaflet/point_stop.svg',
+                    endIcon: '/assets/leaflet/point_stop.svg'
                 }
             }).on('loaded', function (e) {
                 var layerBounds = e.target.getBounds();

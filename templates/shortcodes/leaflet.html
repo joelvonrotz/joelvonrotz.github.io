@@ -3,13 +3,13 @@
   <div id="map"></div>
   <script>
     // prepare custom marker
-    var iconDefault = L.icon({iconUrl: '/assets/leaflet/marker_default.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
-    var iconSleep = L.icon({iconUrl: '/assets/leaflet/marker_sleep.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
-    var iconShop = L.icon({iconUrl: '/assets/leaflet/marker_shop.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
-    var iconWarning = L.icon({iconUrl: '/assets/leaflet/marker_warn.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
-    var iconForbid = L.icon({iconUrl: '/assets/leaflet/marker_forbidden.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
-    var iconStart = L.icon({iconUrl: '/assets/leaflet/marker_start.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
-    var iconStop = L.icon({iconUrl: '/assets/leaflet/marker_stop.svg', iconSize: [33, 45], iconAnchor: [16.5, 45],popupAnchor: [0, -47]});
+    var iconDefault = L.icon({iconUrl: '/assets/leaflet/marker_default.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconSleep = L.icon({iconUrl: '/assets/leaflet/marker_sleep.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconShop = L.icon({iconUrl: '/assets/leaflet/marker_shop.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconWarning = L.icon({iconUrl: '/assets/leaflet/marker_warn.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconForbid = L.icon({iconUrl: '/assets/leaflet/marker_forbidden.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconStart = L.icon({iconUrl: '/assets/leaflet/marker_start.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconStop = L.icon({iconUrl: '/assets/leaflet/marker_stop.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
     var map = L.map('map', {
       fullscreenControl: true,
       fullscreenControlOptions: {
@@ -29,18 +29,19 @@
       '': iconDefault,
       'Sleep': '/assets/leaflet/marker_sleep.svg',
       'Camp': '/assets/leaflet/marker_sleep.svg',
-      'Hotel': '/assets/leaflet/marker_sleep.svg'
+      'Hotel': '/assets/leaflet/marker_sleep.svg',
+      'Ryokan': '/assets/leaflet/marker_sleep.svg'
     },
     marker_options: {
-    iconSize: [28, 28],
-    iconAnchor: [16.5, 16.5],
+    iconSize: [22,22],
+    iconAnchor: [11, 11],
   },
       markers: {
         startIcon: '/assets/leaflet/point_start.svg',
         endIcon: '/assets/leaflet/point_stop.svg',
         pointMatchers: [
         {
-          regex: /camp|hotel|sleep|hostel|guesthouse/i,
+          regex: /camp|hotel|sleep|hostel|guesthouse|ryokan|futuba inn/i,
           icon: iconSleep
         },{
           regex: /shop|groceries|store|supermarket/i,
