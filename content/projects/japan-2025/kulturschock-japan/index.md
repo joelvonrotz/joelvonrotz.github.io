@@ -1,5 +1,5 @@
 ---
-title: "Woche 1 – Kulturschock Japan" 
+title: "Eintrag #1 – Kulturschock Japan" 
 description: "Irgendwie musste ich es erwarten, dass Japan ein Kulturschock sein wird. Und doch hatte es mich überrascht."
 date: 2025-04-10
 draft: false
@@ -26,7 +26,7 @@ Wo sind die Untertitel? Wo sind sie??? Ich versteh ja gar nichts und dann sind d
 
 Tja, da kann man fast alles aus dem Kopf werfen, was man im einen japanisch Sprachmodul während dem Studium gelernt hatte. Aber zum Glück kommt man mit einfachen Begriffen noch durch!
 
-Die Japaner sind scheu, anständig und wollen niemanden schlechtes antun. An ihre scheue Art musste ich mich angewöhnen und dass nicht alle reden wollten. Aber mit denen, welche ich in Kontakt kam, waren witzig und voller Freude. Meistens haperte es am Englisch bei Ihnen oder am Japanisch bei mir.
+Die Japaner sind scheu, anständig und wollen niemanden schlechtes antun. An ihre scheue Art muss ich mich immer noch angewöhnen und dass nicht alle reden wollen. Aber mit denen, welche ich in Kontakt kam, waren witzig und voller Freude. Meistens haperte es am Englisch bei Ihnen oder am Japanisch bei mir.
 
 ## Die gefahrene Strecke
 
@@ -60,7 +60,7 @@ Unterwegs zum Hotel in Tsuchiura hatte es mich einerseits verregnet, aber auch k
 
 Von Tsuchiura kommt man mit dem Velo über einen separierten Veloweg, welcher durch Reisfelder führt, zum *Mount Tsukuba* (oder auch *Tsubuka-san* genannt). Zwar ist der Berg nur ~880m hoch (von 20m am Bergfuss), ist aber mit einer Luftseilbahn und einer Standseilbahn ausgestattet **und** wenn man den Berg von einer bestimmten Seite anschaut, sieht man Katzenohren!
 
-{% figure(caption="Die Kathenohren von Tsukuba-san und Nantai-san") %}
+{% figure(caption="Die Katzenohren von Tsukuba-san und Nantai-san") %}
 
 ![](DSC00754.jpg)
 
