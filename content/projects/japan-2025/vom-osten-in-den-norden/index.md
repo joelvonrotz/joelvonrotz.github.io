@@ -258,7 +258,17 @@ Das Erstere aber, also die Einsamkeit, bereitet mir schon ein bisschen mehr Müh
 
 Würde gerne mehr dazu schreiben, wird vielleicht auf nächste Woche geschoben.
 
+## Wie weiter und wohin?
+
+Vorerst werde ich weiter nach Hokkaido fahren und schauen wie die Temperaturen werden. Es wird frisch sein, aber ich hoffe dass es sich gut aufwärmt mit der Zeit, die ich in Hokkaido verbinge. Falls es doch noch zu frisch sein wird, werden allenfalls ein Innenschlafsack und warme Kleider gekauft.
+
+Es kommen auch die Fragen, lohnt es sich überhaupt an den östlichsten oder nördlichsten Punkt von Hokkaido zu fahren, da es ja lediglich einen *Checkliste-Abhack*-Ort ist. Vielleicht gibts im Inland auch Interessantes! Aber ich hab mich auch noch nicht so gross befasst, was es überhaupt in Hokkaido zu sehen gibt.
+
+Aber zuerst mal nach Oma und dann schauen wie weiter!
+
 ## Sonstige Highlights
+
+So, wie vorher gibts ein paar Highlights ohne grossen Paragraphen!
 
 {% figure(caption="Japan ist sowohl in der Zukunft, als auch in der Vergangenheit") %}
 
