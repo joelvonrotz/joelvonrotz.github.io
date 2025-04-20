@@ -1,6 +1,6 @@
 ---
 title: "Eintrag #2 – Vom Osten in den Norden" 
-description: "Nach einer Pause in Ishinomaki gehts weiter Richtung Norden, insbesondere nach Aomori City. Zwar fuhr ich gegen meinen eigenen Willen weiter an der Ostküste entlang, weil es wärmer (kälter versus kalt) ist als im Inland. Trotzdem konnte jede Menge interessantes gesehen werden."
+description: "Nach einer Pause in Ishinomaki gehts weiter Richtung Norden, insbesondere nach Aomori City. Zwar fuhr ich gegen meinen eigenen Willen weiter an der Ostküste entlang, weil es wärmer (kälter versus kalt) ist als im Inland. Trotzdem konnte jede Menge Interessantes gesehen werden."
 date: 2025-04-19
 draft: false
 
@@ -22,7 +22,7 @@ extra:
   #pinned
 ---
 
-Ganz schön kalt im Frühling, huh? Das Wetter hat mich doch noch überrascht,  bzw. hatte nicht das genügende Kleiderschichten-Sortiment und musste daher ein bisschen investieren. Wahrschnlich wirds noch mehr brauchen...
+Ganz schön kalt im Frühling, huh? Das Wetter hat mich doch noch überrascht,  bzw. hatte nicht das genügende Kleiderschichten-Sortiment und musste daher ein bisschen investieren. Wahrscheinlich wirds noch mehr brauchen...
 
 Nebst wird noch die Titel der Einträge angepasst von _Woche X_ zu _Eintrag X_, da ich nicht regelmässig all 7 Tage einen Eintrag rausbringen kann. Aber nun zu den Gedanken und Highlights der letzten Tagen, geschrieben an einem Samstagabend in einem Gästehaus in Aomori City.
 ## Die gefahrene Strecke
@@ -40,7 +40,7 @@ Was kann man den so anschauen in Ishinomaki? Da gibts einerseits die Katzeninsel
 
 Sonst gibts noch das *Ishinomaki Manga Museum*, wo die Werke von Shotaro Ishinomori, dem *König von Mangas*, ausgestellt wurde. Die hab ich besucht!
 
-Ich kenne den Autor zwar nicht und habe keine seiner Werke gelesen, aber er gilt als einer der einflussreichsten Künstler von Japan und hat sogar einen Weltrekord mit den meist veröffentlichten Werken (im gesamten über 128'000 Seiten!). Er und *Gott von Mangas* Osamu Tezuka wandelten die Mangas als witzige und schusselige Comics/Cartoons zu Werken um, welche sich mit ernsteren Themen befassen (Disaster, Tod, Politik, Gesellschaft, etc.), oder schlicht stellten Mangas in ein anderes Licht.
+Ich kenne den Autor zwar nicht und habe keine seiner Werke gelesen, aber er gilt als einer der einflussreichsten Künstler von Japan und hat sogar einen Weltrekord mit den meist veröffentlichten Werken (im gesamten über 128'000 Seiten!). Er und *Manga-Gott* Osamu Tezuka wandelten die Mangas als witzige und schusselige Comics/Cartoons zu Werken um, welche sich mit ernsteren Themen befassen (Disaster, Tod, Politik, Gesellschaft, etc.), oder schlicht stellten Mangas in ein anderes Licht.
 
 {% figure(caption="Das *Ishinomaki Manga Museum* von Aussen sieht aus wie ein UFO!") %}
 
@@ -78,9 +78,9 @@ Auch die Strasse vom Bahnhof bis Museum ist geschmückt mit verschiedenen Charak
 {% end %}
 
 
-Ishinomaki ist ein kleine Stadt, welches sich mit Shotaro beschäftigt und nebenbei im Fisch-Business tätig ist. Ein interessanter Nachbar von Ishinomaki ist *Onagawa*. Dieses kleine Hafenstädtchen wurde stark von der 2011 Tsunami (& Erdbeben) getroffen und wurde fast komplett zerstörte. Heute wurde der Ort langsam neu aufgebaut und erhielt eine neue Identität. 
+Ishinomaki ist ein kleine Stadt, welches sich mit Shotaro beschäftigt und nebenbei im Fisch-Business tätig ist. Ein interessanter Nachbar von Ishinomaki ist *Onagawa*. Dieses kleine Hafenstädtchen wurde stark von der 2011 Tsunami (& Erdbeben) getroffen und wurde fast komplett zerstört. Heute wurde der Ort langsam neu aufgebaut und erhielt eine neue Identität. 
 
-Wie kommt man aber nach Onagawa? Mit dem Zug! Das war das erste Mal, dass ich mit dem Zug in Japan irgendwo hingefahren bin und es war eine Zugfahrt. Am Automaten beim Ishinomaki Bahnhof kaufte man sich ein Ticket und liess es von der Prüfmaschine gleich lochen. Der Zug kam sehr früh an, fast 15min vor der Abfahrtszeit (Ishinomaki ist eine Zwischenhaltestelle, daher war dies überraschend). Nach der Abfahrt, klapperte der Zug bei jedem neuen Schienensegment-Übergang und ich schaute mich im Zug um (positionsfixierte Nissage). Viele Japaner hielten ihre Tasche vor sich auf den Schoss als Kissen und schliefen! Was in der Schweiz weniger zu sehen ist, kommt mir fast als Standard in Japan vor. Ob das sicher ist oder nicht, denke ich Kommt auf die Region darauf an.
+Wie kommt man aber nach Onagawa? Mit dem Zug! Das war das erste Mal, dass ich mit dem Zug in Japan irgendwo hingefahren bin und es war eine Zugfahrt. Am Automaten beim Ishinomaki Bahnhof kaufte man sich ein Ticket und liess es von der Prüfmaschine gleich lochen. Der Zug kam sehr früh an, fast 15min vor der Abfahrtszeit (Ishinomaki ist eine Zwischenhaltestelle, daher war dies überraschend). Nach der Abfahrt, klapperte der Zug bei jedem neuen Schienensegment-Übergang und ich schaute mich im Zug um (positionsfixierte Nissage). Viele Japaner hielten ihre Tasche vor sich auf den Schoss als Kissen und schliefen! Was in der Schweiz weniger zu sehen ist, kommt mir fast als Standard in Japan vor. Ob das sicher ist oder nicht, denke ich kommt auf die Region darauf an.
 
 {% figure(caption="Die Einkaufsstrasse von Onagawa vom Bahnhof aus.") %}
 
@@ -98,7 +98,7 @@ Direkt vor dem Bahnhof wird von einem Ticketkontrolleur das gelochte Ticket abge
 
 {% end %}
 
-Das grosse Highlight von Onagawa ist die Shoppingstrasse. Von Kachelteil-Bemalen bis hin zu lokaler Brau-Degustation kann Onagawa für all ein bisschen etwas präsentieren!
+Das grosse Highlight von Onagawa ist die Shoppingstrasse. Von Kachelteil-Bemalen bis hin zu lokaler Brau-Degustation kann Onagawa für alle ein bisschen etwas präsentieren!
 
 {% figure(caption="An einem Gebäude kann eine Menge dieser von selbst gemalten Kachelteilchen gefunden werden.") %}
 
@@ -143,7 +143,7 @@ Nach dem Mittagessen endete der Tag in Kesennume, wo ich einerseits haufenweise 
 
 Die Reise an der Ostküste war immer wieder ähnlich. Man fuhr durch Tunnel, wurde von entweder kleinen Fischerdörfchen oder Grossindustrie begrüsst und man verschwand wieder in einem anderen Tunnel. Die Landschaft war sehr schön und man konnte noch eindrückliche Überbleibsel des Tsunamis entdecken, aber mit der Zeit wurde es auch ein bisschen langweilig.
 
-{% figure(caption="Ein Überlebender: dieses Hotel überlebte den Tsunami dank einer stabilen Metallstruktur. Es wurde leicht saniert, damit es für die Zukunft noch steht.") %}
+{% figure(caption="Ein Überlebender: dieses verlassene Hotel überlebte den Tsunami dank einer stabilen Metallstruktur. Es wurde leicht saniert, damit es für die Zukunft noch steht. Ich habe eigentlich noch im obersten Stock Licht gesehen,  wahrscheinlich ist es noch ein kleines Büro?") %}
 
 ![](Japan2025-Week2-54.jpg)
 
@@ -159,6 +159,7 @@ In Miyako übernachtete ich im *Guesthouse 3710*, nachdem der Besitzer das am Wo
 
 {% end %}
 
+Während dem Regentag konnte ich ein halbes Backup der Bilder machen und die weiteren Fahrsegmente plannen.
 
 {% figure(caption="Damit der Tag doch nicht so langweilig war, ging ich schnell warme Socken und einen SD Kartenleser fürs Handy kaufen. Es hat mich verregnet.") %}
 
@@ -180,7 +181,7 @@ Nach Kuji gings nach Gonohe, wo ich seit langem wieder einen Campingplatz hatte.
 
 {% end %}
 
-Nach einer gemütlichen Nacht, ging es in die Berge und nämlich über den *Kasamatsu* Pass ($1040\text{m}$). Da ich diesen Pass im Frühling anging, war die Strecke sehr cool und auch cool. Der Pass fing in Oirase an und man wurde bei steigendenden Höhenmeter einer stetig höheren Schneewand begrüsst (bis zu etwa 6m hoch). Gegen den höchsten Punkt kam noch der Wind dazu. 
+Nach einer gemütlichen Nacht, ging es in die Berge, nämlich über den *Kasamatsu* Pass ($1040\text{m}$). Da ich diesen Pass im Frühling anging, war die Strecke sehr cool und auch cool (kühl). Der Pass fing in Oirase an und man wurde bei steigendenden Höhenmeter einer stetig höheren Schneewand begrüsst (bis zu etwa 6m hoch). Gegen den höchsten Punkt kam noch der Wind dazu. 
 
 {% figure(caption="An der Schneewand könnte man wahrscheinlich die Höhenmeter ablesen") %}
 
@@ -196,7 +197,7 @@ Dafür wurde ich nach langem von Autofahrern bejubelt, nebst einem  Amerikaner g
 
 {% end %}
 
-Da die Strasse mit der Schneewand einen Kanal bildete, zog ein sehr kalter Wind durch. Ich fror mir das Arsch ab und musste schnellsten irgendwo aufwärmen. Ich wusste bereits, wo ich das *irgendwo* finde: das Sukayu Onsen. Dieses Badhaus war ein paar Kilometer nach der Passhöhe aufzufinden. Ich ging rein, genoss das Bad und fuhr Richtung Aomori City, die Apfel-Stadt.
+Da die Strasse mit der Schneewand einen Kanal bildete, zog ein sehr kalter Wind durch. Ich fror mir das Arsch ab und musste schnellsten irgendwo aufwärmen. Ich wusste bereits, wo ich das *irgendwo* finde: das Sukayu Onsen. Dieses Badhaus war ein paar Kilometer nach der Passhöhe aufzufinden. Ich ging rein, genoss das Bad und fuhr nachher aufgewärmt Richtung Aomori City, die Apfel-Stadt.
 
 {% figure(caption="Das Sukayu Onsen (welches auch ein Hotel/Ryokan ist) von aussen und ein Bild von mir drin.") %}
 
@@ -208,7 +209,7 @@ Da die Strasse mit der Schneewand einen Kanal bildete, zog ein sehr kalter Wind 
 
 ## Äpfel & Nebuta
 
-Die Aomori Präfektur ist bekannt für mindestens zwei Dingen: Nebuta und Äpfel. Es wäre eine Untertreibung, dass Äpfel eine grosse Rolle spielt in der Region. X hunderte Varianten Apfel gibt es und die werden als X verschiedene Produkte verkauft. In *Aomori City*, wo ich jetzt meine Pausentage verbracht hatte, gibt es die *A-Factory*. Dieser Laden verkauft hauptsächlich Apfel-Produkte. Apfel-Schnaps, Apfel-Ringe/-Chips, Apfel-Kartenhalter, Apfel-Kekse, Äpfel für fast 3 Franken pro Stück, Apfel-Kleider und so weiter. Man könnte, glaube ich, den gesamten Haushalt darin kaufen.
+Die Aomori Präfektur ist bekannt für mindestens zwei Dingen: Nebuta und Äpfel. Es wäre eine Untertreibung, dass Äpfel eine grosse Rolle spielt in der Region. >40 Varianten Äpfel gibt es und die werden als X verschiedene Produkte verkauft. In *Aomori City*, wo ich jetzt meine Pausentage verbracht hatte, gibt es die *A-Factory*. Dieser Laden verkauft hauptsächlich Apfel-Produkte. Apfel-Schnaps, Apfel-Ringe/-Chips, Apfel-Kartenhalter, Apfel-Kekse, Äpfel für fast 3 Franken pro Stück, Apfel-Kleider und so weiter. Man könnte, glaube ich, den gesamten Haushalt darin kaufen.
 
 
 <div class="dark-transition start"></div>
@@ -216,7 +217,7 @@ Die Aomori Präfektur ist bekannt für mindestens zwei Dingen: Nebuta und Äpfel
 
 ### Nebuta Festival
 
-*Nebuta* kommt wahrscheinlich von *Nemuri*, was Schlaf bedeutet (das brauch ich gleich). Nebuta aber ist das Gegenteil. Mit Grossen aus Draht, Lampen und Papier gebastelten Riesenlaternen, welche eine Szene darstellt inspieriert von *Kabuki* (traditionelles japanische Männer-Theaterspiel) wird getanzt und gefestet wie an der Fasnacht in der Schweiz, einfach im Sommer. Diese Laternen werden von einer Menschentruppe durch eine Strasse gestossen und gedreht, währenddessen Tänzer in Festival-Gewänder die Sommerhitze (und Müdigkeit) hinforttanzen/verscheuchen.
+*Nebuta* kommt wahrscheinlich von *Nemuri*, was Schlaf bedeutet (das brauch ich gleich). Nebuta aber ist das Gegenteil. Mit grossen aus Draht, Lampen und Papier gebastelten Riesenlaternen, welche eine Szene darstellt inspiriert von *Kabuki* (traditionelles japanische Männer-Theaterspiel) wird getanzt und gefestet wie an der Fasnacht in der Schweiz, einfach im Sommer. Diese Laternen werden von einer Menschentruppe durch eine Strasse gestossen (die Laterne ist auf einem zweirädrigen Wagen) und gedreht, währenddessen Tänzer in Festival-Gewänder die Sommerhitze (und Müdigkeit) hinforttanzen/verscheuchen.
 
 {% figure(caption="Das *Nebuta Museum Wa-Rasse*") %}
 
@@ -248,7 +249,7 @@ Die Aomori Präfektur ist bekannt für mindestens zwei Dingen: Nebuta und Äpfel
 
 ## Mentale Hürden
 
-Mit diesen Beiträgen möchte ich auch ein bisschen meine Gedanken während der Reise 'preisgeben'. Bei Solo-Veloreise hat man Zeit zum Nachdenken, meist aber wird dieses Nachdenken durch das Körpergefühl und Ängste verfärbt. Zwar gehts meinem Körper gut, aber aktuell treiben mich Ängste ein bisschen in die Knie.
+Mit diesen Beiträgen möchte ich auch ein bisschen meine Gedanken während der Reise 'preisgeben'. Bei Solo-Veloreise hat man Zeit zum Nachdenken, meist aber wird dieses Nachdenken durch das Körpergefühl und Ängste beeinflusst. Zwar gehts meinem Körper gut, aber aktuell treiben mich Ängste ein bisschen in die Knie.
 
 Diese Ängste sind Einsamkeit und Wildcamping.
 
@@ -276,19 +277,19 @@ So, wie vorher gibts ein paar Highlights ohne grossen Paragraphen!
 
 {% end %}
 
-{% figure(caption="Mein Go-To Menu beim Campen: Spaghetti mit Tomatensause und Thunfisch") %}
+{% figure(caption="Mein Go-To Menu beim Campen: Spaghetti mit Tomatensauce und Thunfisch") %}
 
 ![](food_gonohe.jpg)
 
 {% end %}
 
-{% figure(caption="Nach Gonohe fuhr ich viel durch das Hinterland und sah hier und dort japanische Bauernhöfe") %}
+{% figure(caption="Nach Gonohe fuhr ich viel durch das Hinterland und sah hier und dort japanische Bauernhöfe. Gewisse am auseinanderfallen und andere am glänzen!") %}
 
 ![](Japan2025-Week2-15.jpg)
 
 {% end %}
 
-{% figure(caption="Die Maskottchen haben einen Begriff: *yuru-kyara*, was gechillte Charakteren bedeutet.") %}
+{% figure(caption="Die Produkt-/Regions-Maskottchen haben einen Begriff: *yuru-kyara*, was gechillte Charaktere bedeutet.") %}
 
 ![](Japan2025-Week2-20.jpg)
 
@@ -300,7 +301,7 @@ So, wie vorher gibts ein paar Highlights ohne grossen Paragraphen!
 
 {% end %}
 
-{% figure(caption="Wenn man an Wälder vorbeifährt, stosst man ab und zu auf diese Konstrukte. Anscheinend werden diese Stöcke für Pilze aufgebaut.") %}
+{% figure(caption="Wenn man an Wälder vorbeifährt, stosst man ab und zu auf diese Holz Konstrukte. Anscheinend werden diese Stöcke für die Pilzzucht verwendet) %}
 
 ![](Japan2025-Week2-24.jpg)
 
@@ -369,3 +370,5 @@ So, wie vorher gibts ein paar Highlights ohne grossen Paragraphen!
 ![](china_food2.jpg)
 
 {% end %}
+
+Bis dennä!
