@@ -301,7 +301,7 @@ So, wie vorher gibts ein paar Highlights ohne grossen Paragraphen!
 
 {% end %}
 
-{% figure(caption="Wenn man an Wälder vorbeifährt, stosst man ab und zu auf diese Holz Konstrukte. Anscheinend werden diese Stöcke für die Pilzzucht verwendet) %}
+{% figure(caption="Wenn man an Wälder vorbeifährt, stosst man ab und zu auf diese Holz Konstrukte. Anscheinend werden diese Stöcke für die Pilzzucht verwendet") %}
 
 ![](Japan2025-Week2-24.jpg)
 
