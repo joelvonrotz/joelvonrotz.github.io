@@ -1,5 +1,5 @@
 {
-  "trashOption": "local",
+  "trashOption": "system",
   "propertiesInDocument": "source",
   "userIgnoreFilters": [
     "public/"
@@ -30,8 +30,10 @@
     "editor:redo",
     "editor:configure-toolbar"
   ],
-  "promptDelete": false,
+  "promptDelete": true,
   "showLineNumber": true,
   "alwaysUpdateLinks": true,
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "spellcheck": true
 }
