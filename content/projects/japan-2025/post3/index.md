@@ -34,13 +34,22 @@ extra:
 **Stimmung**: besser, da ich die Kilometer besser aufteilen konnte und noch interessantes erleben konnte
 
 **Tote Tiere**: 15 tote Tiere auf der Strasse entdeckt
+
+## Hokkaido(rt hingehen)
+
+Okay, extrem schlechter Wortwitz...
+
+Von Aomori City ging es Richtung Hokkaido, ein grosser Meilenstein meiner Reise, da ich dort einen oberwichtigen Termin habe, mehr dazu aber etwas später. Zuerst einmal war das Ziel _Oma_, den nördlichsten Punkt von _Honshu_ (die "Hauptinsel" Japans). Das Velo wurde gepackt und die Fahrt ging los! An meinem Abreisetag war ebenfalls der _Sakura Marathon_ in der Stadt und ich fuhr ein Segment des Marathons hindurch. Es war einiges los mit den Helfergruppen, welche das Gelände absperrten und Trinkstände aufbauten, und Polizisten, welche den Verkehr regelten.
+
+Sobald ich aus der Stadt war, ging es der Küste entlang mit dem Ziel nach 
+
 ## Wo sind die Mülleimer?
 
-Als Reisender ist das Entsorgen von Müll eine schmerzhafte Angelegenheit. Jeder leere Ecke in meinen Taschen ist gefühlt mit leeren Verpackungen von Gummibärchen, Onigiri oder anderem Zeug. Und ich werd das Zeug nicht (so einfach) los.
+Als Reisender ist das Entsorgen von Müll eine schmerzhafte Angelegenheit. Jede leere Ecke in meinen Taschen ist gefüllt mit leeren Verpackungen von Gummibärchen, Onigiri oder anderem Zeug. Und ich werd das Zeug nicht (so einfach) los.
 
 Warum ist das aber so?
 
-In Japan ist das Entsorgen des Mülls nicht etwa die Verantwortung der Regierung oder lokale Gemeinde, sondern bei **dir**, dem Bewohner/Konsument. Das bedeutet, dass es nicht viele öffentliche Mülleimer oder Recyclingstationen gibt. Nun, als Reisender, welcher nicht immer in ein
+In Japan ist das Entsorgen des Mülls nicht etwa die Verantwortung der Regierung oder lokale Gemeinde, sondern bei **dir**, dem Bewohner/Konsument. Das bedeutet, dass es nicht viele öffentliche Mülleimer oder Recyclingstationen gibt. Nun, als Reisender, welcher ja kein festen Wohnsitz hat, ist man ein bisschen im _Seich_. 
 
 ## Soon in your (Japanese) TV Schedule
 
@@ -56,3 +65,12 @@ An meinem Pausentagen in Sapporo lernte ich ganz kurz Aman kennen, ein Inder von
 
 ## Wie gehts der Einsamkeit?
 
+Im vorherigen Bericht habe ich mich ein bisschen mit meiner Gefühlslage befasst. Hat sich seitdem etwas geändert? Ungefähr.
+
+Ich habe das Gefühl, dass es besser geht mit dem Alleinsein als vorher. Natürlich nicht "perfekt", da es nicht umsonst einen instinktiv psychologischer Schmerz gibt, wenn man sich von den eigenen sozialen Kontakten (un-)freiwilling distanziert. Den wird man nicht los und ist auch gut so!
+
+Dieses Alleinsein hilft mir auf eine Art herauszufinden, wie wenig an sozialen Interaktionen ich noch verkraften kann bevor es dann Richtung Depression gehen könnte. Ob dies der definitive "Wert" ist, glaube ich nicht, aber es gibt mir eine gute Schätzung und daraus eine "No-Go" Zone!
+
+Ich habe angefangen, Smalltalks oder kleine Interaktionen mit den lokalen Japanern sehr wertzuschätzen. Mein Favorit bis jetzt ist immer noch mit Tomoko und Horikawa vom Futabaya Inn ([Eintrag Link](/projects/japan-2025/kulturschock-japan/#nebst-meer-und-lastwagen-noch-ein-kraftwerk))! 
+
+konnte auch neulich bei meinen Pausentagen kurz einen tollen Austausch mit drei Leuten machen.
