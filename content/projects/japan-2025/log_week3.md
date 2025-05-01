@@ -178,4 +178,7 @@ render: false
 	- Ticket kaufen
 	- Auswerten
 	- Am Schluss der Maschine zum verschlingen geben!
-- 
+- Internetcafe
+	- wie kann man den Geburtstag am besten verbringen? Garantiert nicht in einem Internetcafe
+	- es gab rirgendwie keine Wahl, denn ich musste ein Backup machen
+	- der unsichtbare Stundenzeiger lauft und ich sehe fast kein Ende.
