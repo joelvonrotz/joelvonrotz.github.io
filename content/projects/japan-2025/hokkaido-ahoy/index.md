@@ -2,7 +2,7 @@
 title: "Eintrag #3 - Auf die gefährliche & kalte Seite zum Seicomart" 
 description: "*Seicomart*...was ist den so gut an diesen Minimarkts? Die sind einfach geiler als diese 'Drecks' 7-11, FamilyMarts und Lawsons. Nein, Spass, ist ja nur ein Minimarkt exklusiv in Hokkaido, welcher zu Beginn haufenweise Billigwein verkaufte. Ich werde nie mehr darüber schreiben, daher geniesst jedes Wort, auch wenn es schmerzt."
 date: 2025-05-02
-draft: true
+draft: false
 
 taxonomies:
   categories: ["travel"]
@@ -288,15 +288,19 @@ Im vorherigen Bericht habe ich mich ein bisschen mit meiner Gefühlslage befasst
 
 Ich habe das Gefühl, dass es besser geht mit dem Alleinsein als vorher. Natürlich nicht "perfekt", da es nicht umsonst einen instinktiv psychologischer Schmerz gibt, wenn man sich von den eigenen sozialen Kontakten (un-)freiwilling distanziert. Den wird man nicht los und ist auch gut so!
 
-Dieses Alleinsein hilft mir auf eine Art herauszufinden, wie wenig an sozialen Interaktionen ich noch verkraften kann bevor es dann Richtung Depression gehen könnte. Ob dies der definitive "Wert" ist, glaube ich nicht, aber es gibt mir eine gute Schätzung und daraus eine "No-Go" Zone!
+Dieses Alleinsein hilft mir auf eine Art herauszufinden, wie wenig an sozialen Interaktionen ich noch verkraften kann bevor es dann Richtung Depression gehen könnte. Ob dies der definitive "Wert" ist, glaube ich nicht, aber es gibt mir eine gute Schätzung, um daraus eine "No-Go" Zone anzunehmen!
 
-Ich habe angefangen, Smalltalks oder kleine Interaktionen mit den lokalen Japanern sehr wertzuschätzen. Mein Favorit bis jetzt ist immer noch mit Tomoko und Horikawa vom Futabaya Inn ([Eintrag Link](/projects/japan-2025/kulturschock-japan/#nebst-meer-und-lastwagen-noch-ein-kraftwerk))! 
+Ich habe angefangen, Smalltalks oder kleine Interaktionen mit den lokalen Japanern sehr wertzuschätzen. Mein Favorit bis jetzt ist immer noch mit Tomoko und Horikawa vom Futabaya Inn ([Eintrag Link](/projects/japan-2025/kulturschock-japan/#nebst-meer-und-lastwagen-noch-ein-kraftwerk))! Aber auch möchte ich den vorher erwähneten Fragesatz mehr ausprobieren und ein bisschen Gespräche freestylen (mit meinem brüchigen Japanisch).
 
-konnte auch neulich bei meinen Pausentagen kurz einen tollen Austausch mit drei Leuten machen.
+Es blüht langsam auf und ich gewöhne mich immer ein bisschen mehr an Japan, aber auch freue ich mich immer noch über die Schweizer Gespräche!
+
+Was ich aber auch noch gut finde ist, dass man einfach zuhören kann. Aktuell sitze ich im Pausenraum einer Onsen. Es ist leer und das Einzige, das ich höre, sind der Kassierer, wie er Münzen zusammensammelt, und das Rauschen der Getränke-Automaten. Man fängt an die Geräusche rund um sich herum anzuhören. Plus die "Autonomie", die ich als Tourist ausleben kann, hilft extrem, sich in solchen Situationen irgendwie wohl zu fühlen. Ich geniesse solche Momente während meiner Reise sehr! Morgen bin ich dann weg von diesem Ort und das Onsen Team vergisst mich nach ein paar Minuten wieder.
+
+Ich würde wiederum gerne mehr meine Gedanken preisgeben, aber auch jetzt bin ich müde und gehe in den Schlafsack. Auf ein andermal!
 
 ## Weitere Highlights
 
-
+Hier entlang für mehr Highlights!
 
 {% figure(caption="Kirschblüten dürfen auch nicht vergessen werden!") %}
 
