@@ -353,14 +353,20 @@ Hier entlang für mehr Highlights!
 
 {% figure(caption="Nach dem Ticketkauf wird es bei der Schranke gelocht...") %}
 
-![](PXL_20250501_080649046.LS.mp4)
+<video width="800" height="500" controls>  
+  <source src="ticket_entry.mp4" type="video/mp4">  
+Your browser does not support the video tag.  
+</video>
 
 {% end %}
 
 
 {% figure(caption="...um beim herausgehen wird es gefressen, wenn es gültig ist. Ansonsten muss man den Betrag begleichen.") %}
 
-![](PXL_20250501_081429923.LS.mp4)
+<video width="800" height="500" controls>
+  <source src="ticket_exit.mp4" type="video/mp4">  
+Your browser does not support the video tag.  
+</video>
 
 {% end %}
 
