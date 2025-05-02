@@ -388,4 +388,4 @@ Als ich ins Hostel Yasube kam und am nächsten Tag an den Morgentisch sass, sah 
 
 Es gab noch so viel mehr, dass ich zeigen könnte, aber ich brauch ja noch was für den Fotoabend ;)
 
-Gute Nacht und bis dann!b
+Gute Nacht und bis dann!
