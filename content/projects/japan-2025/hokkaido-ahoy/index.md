@@ -382,7 +382,7 @@ Hier entlang für mehr Highlights!
 
 {% end %}
 
-Als ich ins Hostel Yasube kam und am nächsten Tag an den Morgentisch kam, sah ich eine Reihe von Mangas. Mehrheitlich dieser Bücher war eine Serie: *Space Brothers*. Ich bin schon ein langer Fan dieser Serie, denn es erzählt eine interessante Geschichte von zwei (fiktiven) Brüdern, die zusammen ins Weltall gehen möchten. Falls das Bedürfnis da ist eine wirklich tolle Geschichte zu lesen, kann ich diese Serie empfehlen! Leider gibt es noch keine Deutschauflagen oder in Buchform, daher muss man vielleicht den Piratenhut aufsetzen...
+Als ich ins Hostel Yasube kam und am nächsten Tag an den Morgentisch sass, sah ich eine Reihe von Mangas. Mehrheitlich dieser Bücher war eine Serie: *Space Brothers*. Ich bin schon ein langer Fan dieser Serie, denn es erzählt eine interessante Geschichte von zwei (fiktiven) Brüdern, die zusammen ins Weltall gehen möchten. Falls das Bedürfnis da ist eine wirklich tolle Geschichte zu lesen, kann ich diese Serie empfehlen! Leider gibt es noch keine Deutschauflagen oder in Buchform, daher muss man vielleicht den Piratenhut aufsetzen...
 
 ---
 
