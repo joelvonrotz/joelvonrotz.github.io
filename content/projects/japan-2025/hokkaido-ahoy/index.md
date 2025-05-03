@@ -62,7 +62,7 @@ Sobald ich aus der Stadt war, ging es der Küste entlang mit dem Ziel zwischen M
 
 Meine im Verlaufe dieser Ereignissen wechselnden Stimmung fing mit Anschiss an, wechselte zu Stress und endete mit Erleichterung. Ich weiss eigentlich, dass ich am Ende des Tages ein Schlafplatz finde werde, aber wo dieser sein wird bringt mir Stress.
 
-Nun zurück zur Reise. Weiter ging es zur Stadt Mutsu, wo ich in der Nähe auf einem Camping übernachtete. Direkt neben dem Camping gab es eine Onsen und die war extrem heiss! Das Badwasser war ca. 50°C und neben dem lebendig gekocht werden konnte man auch in ein Eisbad baden gehen. Aber das Onsen half, beim Schlafen Wärme zu geben, da man den Körper extrem aufwärmt (und angeblich helfen die Mineralien der Bäder, die Wärme zu halten).
+Nun zurück zur Reise. Weiter ging es zur Stadt Mutsu, wo ich in der Nähe auf einem Camping übernachtete. Direkt neben dem Camping gab es eine Onsen und die war extrem heiss! Das Badwasser war ca. 45°C und neben dem lebendig gekocht werden konnte man auch in ein Eisbad baden gehen. Aber das Onsen half, beim Schlafen Wärme zu geben, da man den Körper extrem aufwärmt (und angeblich helfen die Mineralien der Bäder, die Wärme zu halten).
 
 {% figure(caption="Küche und Zelt auf dem Camping *Mutsuyatate Hot Spring*") %}
 
