@@ -202,7 +202,7 @@ Der erste Reisende, Max von Italien und nun wohnhaft in Neuseeland, habe ich auf
 
 {% end %}
 
-Der zweite Reisende war David von Leipzig, Deutschland. Ihn traf ich im Hostel in Wakkanai. Ich wusste vorher, dass er von Europa sein musste, denn er hatte ein *Canyon* Gravelbike, von der deutschen Marke *Canyon*. Mit ihm kam ich schnell ins Gespräch, da wir beide Deutsch konnten. Wie bei Max unterhielten wir uns über die gleichen Themen, einfach noch mit einem Meckerfaktor dazu von uns beiden. Wir redeten über was uns gefiel von Japan und was nicht.
+Der zweite Reisende war David von Leipzig, Deutschland. Ihn traf ich im Hostel in Wakkanai. Ich wusste vorher, dass er von Europa sein musste, denn er hatte ein *Canyon* Gravelbike, von der deutschen Marke *Canyon*. Mit ihm kam ich schnell ins Gespräch, da wir beide Deutsch konnten. Wie bei Max unterhielten wir uns über die gleichen Themen, einfach noch mit einem Meckerfaktor dazu von uns beiden. Wir redeten über was uns gefiel an Japan und was nicht.
 
 Auch war es für David Endstation, denn er fuhr vom südlichsten Punkt Japans (ohne Okinawa) im März zum nördlichsten Punkt. Damit wir doch noch etwas machten, nahmen wir die Fähre nach Rishiri Island morgen früh und fuhren um die Insel umher.
 
@@ -273,7 +273,7 @@ Frische Highlights zum halben Preis! Schaut es euch jetzt an!
 
 {% end %}
 
-{% figure(caption="Meistens kam es mir vor, als würden die Japaner glampen, anstatt campen. Aber es ist in derag camping, einfach in Fancy-Form!") %}
+{% figure(caption="Meistens kam es mir vor, als würden die Japaner glampen, anstatt campen. Aber es ist Camping, einfach in Fancy-Form mit riesen Zelten, was zwar wieder nach Glamping klingt...") %}
 
 ![](japan2025_seg4-80.jpg)
 
