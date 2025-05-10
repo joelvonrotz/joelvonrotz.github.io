@@ -1,3 +1,7 @@
+---
+render: false
+---
+
 ## Friday 09.05.
 - Cape Soya
 	- Cool, hat Souvenirshops und hab noch ein Radfahrer gesehen, welcher aber auf den Bus wartete
