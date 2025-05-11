@@ -249,7 +249,7 @@ Frische Highlights zum halben Preis! Schaut es euch jetzt an!
 
 {% end %}
 
-{% figure(caption="Ein 'Rider House'in Teshio. Diese sind sehr simpel und dienen meist auch als Shelter.") %}
+{% figure(caption="Ein 'Rider House' in Teshio. Diese sind sehr simpel und dienen meist auch als Shelter.") %}
 
 ![](japan2025_seg4-27.jpg)
 
@@ -261,7 +261,7 @@ Frische Highlights zum halben Preis! Schaut es euch jetzt an!
 
 {% end %}
 
-{% figure(caption="Im Rider House war much noch Tatso-san. Er konnte brüchig Englisch und wir konnten aneinander gute Onsen empfehlen. Ein sehr interessanter Mann und wünsche ihm noch eine weitere gesunde Zeit!") %}
+{% figure(caption="Im Rider House war auch noch Tatso-san. Er konnte brüchig Englisch und wir konnten aneinander gute Onsen empfehlen. Ein sehr interessanter Mann und wünsche ihm noch eine weitere gesunde Zeit!") %}
 
 ![](japan2025_seg4-48.jpg)
 
@@ -292,4 +292,4 @@ Frische Highlights zum halben Preis! Schaut es euch jetzt an!
 {% end %}
 
 ---
-So, wieder ein Bericht durch. Nicht dass es mühsam ist, sondern eher das es Zeit braucht und ich habe Das Gefühl, Dass gewisse Kapitel ein bisschen zu kurz sind. Ich hoffe trotzdem, dass es euch Lesenden gefällt!
+So, wieder ein Bericht durch. Nicht dass es mühsam ist, sondern eher das es Zeit braucht und ich habe Das Gefühl, dass gewisse Kapitel ein bisschen zu kurz sind. Ich hoffe trotzdem, dass es euch Lesenden gefällt!
