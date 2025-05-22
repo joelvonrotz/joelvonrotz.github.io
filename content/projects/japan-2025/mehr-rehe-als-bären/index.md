@@ -1,7 +1,7 @@
 ---
 title: "Eintrag #5 – Mehr Rehe als Bären" 
 description: "Wie ist die Bären-Regel schon wieder? Die Schwarzbären kann man verprügeln, bei Braunbären muss man sich tot stellen und bei Polarbären kann man gleich das Testament schreiben?"
-date: 2025-05-15
+date: 2025-05-22
 draft: false
 
 taxonomies:
@@ -399,6 +399,8 @@ Sapperlot, da gibts noch mehr?!?!
 
 ---
 Mal positive Selbstreflexionen zu schreiben, scheint doch auch einen positiven Effekt zu haben! Ich werde dies in weiteren Einträge einbauen :)
+
+Eigentlich wollte ich den Post am 15.05. fertigschreiben, aber das Reisen kam dazwischen.
 
 {% figure(caption="Das bin ich mit einem stetig wachsenden Bart.") %}
 
