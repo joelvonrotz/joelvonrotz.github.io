@@ -75,7 +75,7 @@ Um nach Obihiro zu kommen, musste/wollte ich über den höchsten Pass Hokkaidos 
 
 Während dem Passfahren wurde ich wieder von Japans meistgeliebten Konstrukt begrüsst: dem Tunnel und eher mehrere davon. Beim Mikuni Pass fuhr ich den bis jetzt längsten Tunnel mit ungefähr $3.4\text{km}$ Länge. Es hatte zwar einen engen Gehweg, aber trotzdem wurde mein Trommelfell vom Lastwagen-Lärm gekitzelt. Aber das Tunnelfahren ist bei mir nichts mehr Neues, ich bin abgehärtet auf die!
 
-{% figure(caption="Irgendwann war Der Akku der Lampen auch sehr und musste mit der Handy-Taschenlampe weiterfahren.") %}
+{% figure(caption="Irgendwann war der Akku der Lampen auch leer und ich musste mit der Handy-Taschenlampe weiterfahren.") %}
 
 ![](japan2025_seg5-52.jpg)
 

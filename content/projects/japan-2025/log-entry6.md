@@ -62,3 +62,10 @@ render: false
 ## Wednesday 21.05.
 - Hong von Taiwan kennengelernt
 	- ist in Osaka gestartet, fü in den Süden und ist nun auf dem Weg um Hokkaido herum zu fahren
+
+
+## Thursday 22.05.
+- Wandern Hakodate-san
+	-  schöne Aussicht
+	- man sieht Honshu + Oma
+	- Tote Maus auf Wanderweg🥲
