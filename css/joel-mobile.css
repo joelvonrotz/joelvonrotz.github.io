@@ -1,0 +1,45 @@
+/* [MEDIA SPECIFIC STUFF] -------------- */
+@media only screen and (max-width: 800px) {
+  :root {
+    font-size: 16px;
+  }
+
+  main,
+  div.dark {
+    grid-template-columns: 8px 1fr 8px;
+  }
+
+  div.thumbnail {
+    height: 250px;
+  }
+
+  header div.header-wrapper {
+    width: 100%;
+  }
+
+  h1:hover a.zola-anchor,
+  h2:hover a.zola-anchor,
+  h3:hover a.zola-anchor,
+  h4:hover a.zola-anchor {
+    display: none;
+  }
+
+  div.thumbnail .attribution {
+    font-size: 0.7em;
+  }
+}
+
+
+@media only screen and (max-width: 540px) {
+  header div.header-wrapper {
+    flex-flow: column;
+  }
+
+  header {
+    height: 110px;
+  }
+
+  header h1 {
+    line-height: 1;
+  }
+}
