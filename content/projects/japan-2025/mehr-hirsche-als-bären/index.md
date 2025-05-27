@@ -1,5 +1,5 @@
 ---
-title: "Eintrag #5 – Mehr Rehe als Bären" 
+title: "Eintrag #5 – Mehr Hirsche als Bären" 
 description: "Wie ist die Bären-Regel schon wieder? Die Schwarzbären kann man verprügeln, bei Braunbären muss man sich tot stellen und bei Polarbären kann man gleich das Testament schreiben?"
 date: 2025-05-22
 draft: false
@@ -27,7 +27,7 @@ Bei diesem Eintrag bin ich ungefähr drei Wochen in Hokkaido. Auch wenn Hokkaido
 
 Auch egal, eigentlich auch gut, denn sonst müsste ich mein Essen noch verstecken und ich hab kein Seil zum Aufhängen der Taschen.
 
-Anstatt Bären gab es dafür haufenweise Rehe. Bei den Nationalpärken sind die meistens gleich neb der Strasse gestanden und nur so auf LKWs gewartet, als hätten die Tiere gerade Exit erfunden. Immer wieder wurde ich von denen erschreckt, weil die genau so leise unterwegs sind, wie ab und zu ich (wenn ich nicht keuchen musste) oder die alten Japanern, welche dann Bären erschrecken und drauf gehen. Aber, lieber ein Reh Schreck als Bärenklaue im Gesicht.
+Anstatt Bären gab es dafür haufenweise Hirsche. Bei den Nationalpärken sind die meistens gleich neb der Strasse gestanden und nur so auf LKWs gewartet, als hätten die Tiere gerade Exit erfunden. Immer wieder wurde ich von denen erschreckt, weil die genau so leise unterwegs sind, wie ab und zu ich (wenn ich nicht keuchen musste) oder die alten Japanern, welche dann Bären erschrecken und drauf gehen. Aber, lieber ein Hirsch Schreck als Bärenklaue im Gesicht.
 
 ## Die gefahrene Strecke
 
