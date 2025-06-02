@@ -303,7 +303,7 @@ Diese Velotour baut, wie bereits ein paar Mal vorher erwähnt, auf Flexibilität
 
 Ich werde nicht die ganze Welt sehen können, da hab ich schlicht zu wenig Geld & Zeit und einfach auch nicht das Bedürfnis. Auch möchte ich Velotouren in Zukunft noch machen, weil es mir erlaubt, kleinere Gebiete länger zu geniessen. Ich kann regelrecht kein *Speed-Tourism* machen, weil ich auf meine körperliche Fähigkeit limitiert bin, um das Velo zu fahren. Ich find das gut!
 
-## Weitere HHighlights
+## Weitere Highlights
 
 {% figure(caption="Diese Bewertung zur Pension *Puppy Tail*... habe ich erst nach dem Buchen gefunden.") %}
 
