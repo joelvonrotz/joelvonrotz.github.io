@@ -1,7 +1,7 @@
 ---
 title: "Eintrag #6 – Ainus und der Küstenwind" 
 description: "Die letzte Woche in Hokkaido, bevor es wieder nach Honshu geht. Die Fahrt führt in den Süden Hokkaidos an der Küste entlang, aber unterwegs werden noch ein paar Museen angeschaut. Die Ainus, die Ureinwohner Hokkaidos, sind der Fokus entlang der Küste mit grossen Ausstellungen über deren Kultur."
-date: 2025-05-24
+date: 2025-06-01
 draft: false
 
 taxonomies:
@@ -373,3 +373,5 @@ Ich werde nicht die ganze Welt sehen können, da hab ich schlicht zu wenig Geld 
 ---
 
 Einige Zeit her, seit dem letzten Bericht, aber ich bin glücklich, diesen Bericht fertig geschrieben zu haben! Die Berichte brauchen Zeit, mehrheitlich um das Geschriebene zu verdauen und wenn nötig anzupassen.
+
+Inhaltlich bin ich zwar so halbwegs glücklich, da ich noch ein paar mehr Dinge schreiben wollte, aber der gesamte Text wäre dann zu lange. Daher erst am Fotoabend mehr!
