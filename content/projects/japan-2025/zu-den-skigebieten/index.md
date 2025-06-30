@@ -1,8 +1,8 @@
 ---
 title: "Eintrag #7 – Zu den Skigebieten" 
 description: "Nach den paar Wochen in Hokkaido gehts wieder nach Honshu. Tschüss Seicomart, Braunbären & Ainus und Hallo Honshu!"
-date: 2025-06-29
-draft: true
+date: 2025-06-30
+draft: false
 
 taxonomies:
   categories: ["travel"]
