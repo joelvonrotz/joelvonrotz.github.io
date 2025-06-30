@@ -290,7 +290,6 @@ Was ich aber schräg fand in Iizaka, war dieses *Onsen Musume*. Ich entdeckte ei
 
 Eh was, Anime Mädchen/Frauen? Das ist ja so ein richtiges japanisches Ding. Man entdeckt es überall auf Plakaten wie zum Beispiel von der Polizei oder Feuerwehr. Man versucht dabei entweder die Figuren kurrlig, schräg, süss oder reizvoll zu gestalten, damit die Leute darüber reden (wie ich hier zum Beispiel).In Iizaka habe ich hier und dort Mahiro in Form von Getränkeautomaten oder Kartonfiguren und meistens im Yukata oder mal mit einem Glas Bier in der Hand entdeckt.
 
-- Collectathon erwähnen
 
 {% figure(caption="Hier zwei Beispiel mit Getränkeautomaten.") %}
 
