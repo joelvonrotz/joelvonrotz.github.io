@@ -1,0 +1,528 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  
+  <title>JvR - Eintrag #7 – Zu den Skigebieten</title>
+  
+
+  
+  <link rel="stylesheet" href="/scripts/leaflet/leaflet.css" />
+  <script src="/scripts/leaflet/leaflet.js"></script>
+  <link rel="stylesheet" href="/scripts/leaflet-fullscreen/Control-FullScreen.css" />
+  <script src="/scripts/leaflet-fullscreen/Control-FullScreen.js"></script>
+    
+  <script src="/scripts/leaflet-gpx-2.0.0/gpx.js"></script>
+    
+  
+
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+
+  
+  <link rel="stylesheet" href="/fonts/inconsolata.css">
+  <link rel="stylesheet" href="/fonts/lora.css">
+  <link rel="stylesheet" href="/fonts/outfit.css">
+  <link rel="stylesheet" href="/fonts/alegreya_sans.css">
+  <link rel="stylesheet" href="/fonts/atkinson-hyperlegible-next.css">
+  <link rel="stylesheet" href="/fonts/tabler-icons.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/joel.css">
+  <link rel="stylesheet" href="/css/joel-mobile.css">
+
+  <!--preload navigation and header images-->
+  <link rel="preload" href="/assets/icons/aperture.svg" as="image"/>
+<link rel="preload" href="/assets/icons/feather.svg" as="image"/>
+<link rel="preload" href="/assets/icons/home.svg" as="image"/>
+<link rel="preload" href="/assets/icons/lightbulb.svg" as="image"/>
+<link rel="preload" href="/assets/icons/search.svg" as="image"/>
+<link rel="preload" href="/assets/icons/sun.svg" as="image"/>
+<link rel="preload" href="/assets/icons/moon.svg" as="image"/>
+<link rel="preload" href="/assets/icons/download.svg" as="image"/>
+<link rel="preload" href="/assets/header.svg" as="image"/>
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        // • rendering keys, e.g.:
+        throwOnError: false
+      });
+    });
+  </script>
+</head>
+
+<body class="menu-projects">
+      <header>
+        <div class="header-wrapper">
+  <h1 class="site-title">
+    joel von rotz
+  </h1>
+  <div style="display: flex;
+              gap: 5px;
+                align-items: center;">
+    <nav>
+      <a class="button" id="nav-home" title="Home" href="/">
+        <img class="icon" src="/assets/icons/home.svg">
+      </a>
+      <a class="button" id="nav-writing" title="Writing" href="https://joelvonrotz.ch/writing/">
+        <img class="icon" src="/assets/icons/feather.svg">
+      </a>
+      <a class="button" id="nav-projects" title="Projects" href="https://joelvonrotz.ch/projects/">
+        <img class="icon" src="/assets/icons/lightbulb.svg">
+      </a>
+      <a class="button" id="nav-photos" title="Photography" href="https://joelvonrotz.ch/photos/">
+        <img class="icon" src="/assets/icons/aperture.svg">
+      </a>
+      <a class="button" id="nav-downloads" title="Downloads" href="https://joelvonrotz.ch/downloads/">
+        <img class="icon" src="/assets/icons/download.svg">
+      </a>
+      <!--<a class="button" id="nav-search" title="Search" href="https://joelvonrotz.ch/search/">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>-->
+    </nav>
+    <label class="container">
+      <a class="button less" id="nav-search" title="Search" href="/search">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>
+    </label>
+    <label class="container" title="Dark/Light Toggle">
+      <input id="darklight-toggler" type="checkbox" onclick="toggleDarkLight(this)">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</div>
+      </header>
+
+      <main>
+        
+
+
+
+
+
+
+
+
+<div class="thumbnail" style="background-image: url('thumbnail.jpg'); ">
+  
+  
+</div>
+
+
+
+
+  
+  
+
+
+
+
+<p class="breadcrumbs"><a class="button less breadcrumb" href="../../../"><img class="icon" src="/assets/icons/home.svg"><span>Home</span></a><span class="divider">/</span><a class="button less breadcrumb" href="../../">Projects</a><span class="divider">/</span><a class="button less breadcrumb" href="../">Japan 2025</a><span class="divider">/</span></p>
+
+
+
+
+
+
+<section id="title-block">
+  
+  <h1 class="title">Eintrag #7 – Zu den Skigebieten</h1>
+  
+  <div class="stats">
+    
+    <time class="date" datetime="2025-06-30">
+      30.06.2025
+    </time>
+    <p class="readtime">13 min</p>
+    
+  </div>
+  
+  <div class="description">
+    <p>Nach den paar Wochen in Hokkaido gehts wieder nach Honshu. Tschüss Seicomart, Braunbären &amp; Ainus und Hallo Honshu!</p>
+
+  </div>
+  
+</section>
+
+
+
+<p>Mit Hokkaido 'abgestempfelt' zieht sich die Reise wieder zur Hauptinsel. Dabei gehts nicht mehr an der Küste entlang, sondern durch die Japanischen Alpen, oder wenigstens in deren Richtung.</p>
+<h2 id="die-gefahrene-strecke">Die gefahrene Strecke<a class="zola-anchor" href="#die-gefahrene-strecke" aria-label="Anchor link for: die-gefahrene-strecke">&#xeade;</a></h2>
+<div>
+  <div id="map"></div>
+  <script>
+    // prepare custom marker
+    var iconDefault = L.icon({iconUrl: '/assets/leaflet/marker_default.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconSleep = L.icon({iconUrl: '/assets/leaflet/marker_sleep.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconShop = L.icon({iconUrl: '/assets/leaflet/marker_shop.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconWarning = L.icon({iconUrl: '/assets/leaflet/marker_warn.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconForbid = L.icon({iconUrl: '/assets/leaflet/marker_forbidden.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconStart = L.icon({iconUrl: '/assets/leaflet/marker_start.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconStop = L.icon({iconUrl: '/assets/leaflet/marker_stop.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var map = L.map('map', {
+      fullscreenControl: true,
+      fullscreenControlOptions: {
+        position: 'topleft'
+      }
+    });
+    //L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+    L.tileLayer('https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=c1361ae43a0f4e989709a01d869dd504', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);var url = 'japan2025_segment7.gpx'; // URL to your GPX file or the GPX itself
+    var gpx = new L.GPX(url, {
+      async: true,
+      wptIcons: {
+      '': iconDefault,
+      'Sleep': '/assets/leaflet/marker_sleep.svg',
+      'Camp': '/assets/leaflet/marker_sleep.svg',
+      'Hotel': '/assets/leaflet/marker_sleep.svg',
+      'Ryokan': '/assets/leaflet/marker_sleep.svg'
+    },
+    marker_options: {
+    iconSize: [22,22],
+    iconAnchor: [11, 11],
+  },
+      markers: {
+        startIcon: '/assets/leaflet/point_start.svg',
+        endIcon: '/assets/leaflet/point_stop.svg',
+        pointMatchers: [
+        {
+          regex: /camp|hotel|sleep|hostel|guesthouse|ryokan|futuba inn/i,
+          icon: iconSleep
+        },{
+          regex: /shop|groceries|store|supermarket/i,
+          icon: iconShop
+        },{
+          regex: /./,
+          icon: iconDefault
+        },
+      ]
+      }
+    }).on('loaded', function (e) {
+      map.fitBounds(e.target.getBounds());
+    }).addTo(map);
+L.control.scale().addTo(map); // adds a scale
+  </script>
+</div>
+<ul>
+<li><strong>Statistik</strong>: $8398\text{m}$ Höhe à $708.48\text{km}$ auf 8 Tage verteilt (via gpx Datei ausgelesen)</li>
+<li><strong>Stimmung</strong>: Glücklich für Den Szenenwechsel, aber Seicomart wird zu tiefst vermisst!</li>
+<li><strong>Tote Tiere</strong>: total $&gt;29$ tote Tiere auf der Strasse oder in der Nähe entdeckt (davon 3 Muscheln, 1 Seehund, 2 Seeigel, 3 asiatische Hornissen, 2 Mäuse, 1 Baseball und viele haarige Raupen).</li>
+</ul>
+<h2 id="warum-uberquerte-joel-die-tsugaru-strasse">Warum überquerte Joel die Tsugaru-Strasse?<a class="zola-anchor" href="#warum-uberquerte-joel-die-tsugaru-strasse" aria-label="Anchor link for: warum-uberquerte-joel-die-tsugaru-strasse">&#xeade;</a></h2>
+<p>Nah, um nach Honshu zu kommen! Nach den Pausentagen in Hakodate geht es mit der Fähre nach Aomori City und wieder zurück in die Aomori Präfektur und somit auch wieder nach Honshu. Zwar war Hokkaido eine tolle Präfektur, welche ein bisschen anders lebt als Honshu, so möchte ich auch langsam wieder in Richtung Süden fahren.</p>
+<figure>
+    <img src="japan2025_segment7.jpg" alt="" />
+    <figcaption><p>Die Fähre! Die war sogar Doppelstöckig für die Autos, aber die Velos wurden trotzdem an einer gepolsterten Stange montiert.</p>
+</figcaption>
+</figure>
+<p>Die Fährenfahrt dauerte drei Stunden und Max der Italiener war auch dabei. Während ich auf dem Teppichboden ein Nickerchen machen konnte, sass er beim Aussichtsfenster und schaute sich Serien an. Die Aussicht bot nicht viel an: viel Wasser, im weiten Horizont das Gebirge von Hokkaido auf der einen Seite und das Gebirge von Honshu auf der anderen Seite. Die Luftmatratze sei gemütlicher als der Teppichboden, sagte er, als ich in fragte. Nach den ewigen drei Stunden kamen wir in Aomori an, trafen noch zwei weitere Veloreisende und schlussendlich verabschiedete ich mich von Max.</p>
+<figure>
+    <img src="japan2025_segment7-35.jpg" alt="" />
+    <figcaption><p>So sieht Max aus! Er fährt schon mehr Kilometer als ich, ungefähr 130km am Tag.</p>
+</figcaption>
+</figure>
+<p>Nun ging es Richtung Inland nach Osaka durch die Hügellandschaft und Gebirge der Hauptinsel. Erster Stopp war bei einem Park östlich von Hirakawa, welcher als gratis Campingplatz dient. Die Fahrt dorthin war gemütlich, haufenweise Felder für Früchte und Gemüse und natürlich die Reisfelder selbst. Beim Park angekommen, war der Eingang gesperrt mit einem Schild mit der japanischen Aufschrift für <em>Geschlossen</em>. Schade, habe ich <s>vor mir hingeflucht</s> mir gedacht und die Fahrt ging weiter Richtung Owani, ein Skigebiet.</p>
+<figure>
+    <img src="japan2025_segment7-45.jpg" alt="" />
+    <figcaption><p>Ab und zu entdeckte man Katzen, die auf der Lauer sind!</p>
+</figcaption>
+</figure>
+<p>Im Campingplatz <em>Ajaranomori Camping Ground</em> in Owani angekommen, fragte ich nach einem Zeltplatz. Zwei ältere Herren sassen hinter der Theke und schauten mich an. Ob ich nicht lieber in ein Bungalow wechseln möchte, da es morgen regnen würde, teilten sie mir mit via Übersetzer. <em>Natürlich, mit einem hohen Preis dazu</em>, dachte ich mir und blieb hartnäckig, bis sie mir den Preis des Bungalows sagten. Der Campingplatz kostete 660 Yen (~4 Franken) und ein Bungalow nur 715 Yen (~4.50 Franken). Das Bungalow wurde genommen und im Trockenen geschlafen. Das Bungalow bietete nicht viel an und ähnelte einem Rider House: ein isoliertes Häuschen mit Fenster und Holzboden, aber mehr braucht man auch nicht.</p>
+<figure>
+    <img src="japan2025_segment7-21.jpg" alt="" />
+    <figcaption><p>Warum wohl die so günstig sind. Wahrscheinlich weil man diese selber putzen muss!</p>
+</figcaption>
+</figure>
+<p>Der nächste Tag war wie angekündigt regnerisch, aber ich konnte noch die <em>Akita Hunde</em> anschauen gehen in Odate und beendete den Tag in Kazuno klatschnass in einem Gästehaus, um meine Ware zu trocknen.</p>
+<p>Danach kam ein cooles Highlight, denn es war wieder mal Zeit für einen Pass. Ich fuhr den <em>Hachimantai Mikaeri</em> Pass, um vom Verkehr wegzukommen. Unterwegs machte ich einen Sightseeing-Stopp bei einem Schwefel-Gebiet und setzte die Fahrt fort zur Passhöhe. Kurz vor der Passhöhe kam der eher harmlosere Albtraum: Nebel. Plötzlich wurde ich von einem dicken Nebelschwaden umhüllt und die Aussicht war verschwunden. Dann kam noch ein Wind, welcher sich durch Schneehaufen zu den Passbesteigern zog. Es war sehr kalt, aber dafür wurde ich von einem Japaner angesprochen, auf Englisch sogar! Ryo von Tokyo machte Motorrad-Ferien und wir kamen schnell ins Gespräch, tauschten ein bisschen unsere Kulturen aus und gaben uns gegenseitig Reisetipps. Auf der Abfahrt begleitete er mich noch, bis sich unsere Wege teilten. Danach ging es noch schnell in eine Onsen und dann zu einem Campingplatz vor Morioka.</p>
+<figure>
+    <img src="japan2025_segment7-32.jpg" alt="" />
+    <figcaption><p>Die Schwefel-Onsen</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-65.jpg" alt="" />
+    <figcaption><p>Und im 'Hintergarten' hatte es Schlammvulkane und Schwefel!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-72.jpg" alt="" />
+    <figcaption><p>Ryo (rechts) auf dem Pass! Er sprach mich an und sein Englisch überraschte mich!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-46.jpg" alt="" />
+    <figcaption><p>Irgendeine Schwefel Anlage</p>
+</figcaption>
+</figure>
+<p>Am nächsten Tag fuhr ich nach Morioka für eine wichtige Challenge: die <em>Wanko Soba</em> Challenge. Nun, du fragst dich sicherlich, was den dieses <em>Schwankosoba</em> ist. Es ist ein Wettessen von Soba Nudeln. Man erhält kleine Portionen von Soba Nudeln (15 kleine Portionen entsprechen einer Portion Soba-Nudeln) und man gabelt (stäbelt?) diese runter, bis man nicht mehr mag. Dazu kann man noch Beläge wie Thunfisch oder geriebene Radieschen draufhauen. Ziel ist es, mindestens 100 von diese Portionen zu essen, was dann mit einem Zertifikat und einem Holzplättchen/-amulett belohnt wird. Ich konnte 135 Portiönchen schnabulieren, bevor ich ins Essenskoma fiel. Um die grossen Taten zu verdauen, ging ich in den <em>Castle Park</em> von Morioka und legte mich auf eine Bank hin.</p>
+<figure>
+    <img src="japan2025_segment7-51.jpg" alt="" />
+    <figcaption><p>Das Setup: Eimer für Restsuppe, Toppings, Tee und Stäbchen zum Schüsselchen zählen.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-37.jpg" alt="" />
+    <figcaption><p>Der Gewinner!</p>
+</figcaption>
+</figure>
+<p>Obwohl der Park mitten in der Stadt ist, hört man nicht viel von der Umgebung, ausser die Vögel und das Rauschen der Bäume. Ich hatte schon lange kein Powernap gemacht.</p>
+<figure>
+    <img src="japan2025_segment7-42.jpg" alt="" />
+    <figcaption><p>Man findet überall die Raupen, die sich hoch oder runterbewegen von den Ästen.</p>
+</figcaption>
+</figure>
+<p>Nach dem Nickerchen ging es dann noch zur <em>Backstube Hanamaki</em>, um von einem Deutschen Kuchen abzukaufen (Dank an David von Leipzig für diesen Tipp) und noch die Geschenke von Studio Ghibli an den Besitzer anschauen. Ich glaube er hat immer Freude diese zu zeigen, denn die sind auch wunderschön!</p>
+<figure>
+    <img src="japan2025_segment7-69.jpg" alt="" />
+    <figcaption><p>Die Backstube Hanamaki</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-14.jpg" alt="" />
+    <figcaption><p>Mmmmmh, deutscher Kuchen!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-56.jpg" alt="" />
+    <figcaption><p>Und das an ihn geschenkte Bild von Studio Ghibli</p>
+</figcaption>
+</figure>
+<p>Nach einer rastlosen Nacht im stickigen Internetcafé (wo ich das letzte Foto-Backup machte) ging es weiter nach Hiraizumi, um dort die riesen Tempelanlage anschauen zu gehen! Auch war dort die <em>Konjikido Pod Hall</em>, ein riesiger vergoldeter Schrein, welcher leider nicht fotografiert werden durfte und von einem weiteren Gebäude umhüllt war als Schutz. Der Schrein-Park war sehr schön und ich kam zur richtigen Zeit, da es noch wenig Leute hatte. Dort merkte ich erst, dass alle grösseren Schreine immer in Wäldern oder einer Waldfläche aufzufinden sind. Warum ist das so?</p>
+<figure>
+    <img src="japan2025_segment7-33.jpg" alt="" />
+    <figcaption><p>Das Internet-Café, nie mehr wieder dort schlafen (ausser bei Notfall)</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-88.jpg" alt="" />
+    <figcaption><p>Einer der vielen Chusonji Tempeln in Hiraizumi</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-86.jpg" alt="" />
+    <figcaption><p>Auch dürfen die Wunschplättchen nicht fehlen!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-89.jpg" alt="" />
+    <figcaption><p>Dort drin ist der goldige Schrein! Drin durfte man keine Bilder machen...</p>
+</figcaption>
+</figure>
+<p>Danach führte die Fahrt durch einsameren Strassen hindurch bis nach Yamagata. Die Stadt hatte einen Park mit einem gratis Campingplatz, welcher 300m Höhenmeter höher zur Stadt gelegen ist. Um die Erlaubnis für den Campingplatz zu brauchen, musste man beim Sportzentrum vorbei. Zum Glück war das Zentrum auf der Fahrt zum Park. Ich ging dort hin und holte mir die Erlaubnis. Danach musste ich ca. eineinhalb Stunden mit dem Velo dorthin fahren. Der Campingplatz ist eingeschlossen in einem Wald und ich hatte Bären-Warnschilder gesehen. Auch war ich alleine. Mir wars mulmig, da ich wiederum kein Besuch vom Mamabär wollte, auch wenn ich die Bärenkinder zu Waisenbären verwandeln könnte (Blöff). Aber ja, ich hatte keine Wahl und die einzige Geräusche, welche ich zuerst als Bärenlaute einstufen wollte, waren glücklicherweise die Schreie der Hirschen. Welch eine Erleichterung.</p>
+<figure>
+    <img src="japan2025_segment7-67.jpg" alt="" />
+    <figcaption><p>Der folgende Tag eher regnerisch auf dem Park</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-41.jpg" alt="" />
+    <figcaption><p>Das Zelt musste in der Küche getrocknet werden, da es draussen regnete. Ich hatte eher ein kleines Tief mit der Stimmung!</p>
+</figcaption>
+</figure>
+<p>Am nächsten Tag wünschte ich mir, dass der Sonnenschein mich aufwecken würde, aber anscheinend war das 1-yen-Gebet nicht gerade genügend. Der Regen tropfte auf das Aussenzelt wie Messer in meine Brust. <em>Gopferdammi numal</em> war der erste Gedanke und mit einem traurigen Seufzer drehte ich mich zur Seite und schlief für eine halbe Stunde weiter. Danach aufgestanden, gemerkt dass meine Leggings stanken wie die Sau und zog diese an, ass kurz Frühstück, nahm das Zelt mit unter den Unterstand wo das Frühstück war und nahm das meiste Wasser vom Zelt auf mit meinen Waschlappen, welcher normalerweise für die Badhäuser gedacht ist. Velo gepackt, Regenjacke an und Natel im Plastiksäckchen ging es nach Iizaka, das Pausenziel.</p>
+<p>Am morgen war der Regen nur ab und zu da, aber am Nachmittag ging er nicht weg. Gut war es, dass ich am Abend in Iizaka war, aber es ist doch immer wieder eklig, das Ziel möglichst schadenlos zu erreichen. Man muss schauen, dass die empfindlichere Elektronik wie mein Natel und Kamera vom Regen geschützt sind, damit kein Wasserschaden passiert. Gleichzeitig brauchte ich das Natel zum Navigieren und mit der Zeit war die Oberfläche des Plastikbeutels so nass von den Handschuhen, dass das Bedienen unmöglich war. Plötzlich erkannte das Natel einen Finger als gleich drei Finger. Aber ja, ich kam trotzdem ans Ziel, auch wenn ich komplett nass war.</p>
+<h2 id="akita-hunde-hachiko">Akita Hunde &amp; Hachiko<a class="zola-anchor" href="#akita-hunde-hachiko" aria-label="Anchor link for: akita-hunde-hachiko">&#xeade;</a></h2>
+<p>Die Akita Hunde sind die flauschigen, loyalen und irgendwie emotionslosen Hunde (die haben alle die gleiche Grimasse), welche aus der Akita Präfektur stammen. Diese Hunderasse machte einiges durch. Ursprünglich nutzte man sie als Jagdhunde, weil diese sehr loyal zu ihrem Besitzer sind, aber auch sehr aggressiv sein können. Später wurde die Rasse so fortgeplanzt, dass man sie in Hundkämpfe (also Hund gegen Hund) einsetzen konnte. In den Weltkriegen kreuzte man diese dann mit Schäferhunde, damit diese auch im Krieg taugen. Heutzutage versucht man die Akita-Rasse möglichst Nahe der Urrasse <em>zurückzukreuzen</em>.</p>
+<figure>
+    <img src="japan2025_segment7-77.jpg" alt="" />
+    <figcaption><p>Das Akita Dog Visitor Center</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-62.jpg" alt="" /></p>
+<p><img src="japan2025_segment7-50.jpg" alt="" />
+    <figcaption><p>Die Hunde im Visitor Center, abgelenkt vom Leckerbissen.</p>
+</figcaption>
+</figure>
+<p>Vielleicht kennst du den Film <em>Hachi: A Dog's Tale</em>, denn Hachiko, also der Hund, stammt aus Odate und hatte auch dieses Jahr seinen einhundertsten Geburtstag. Im <em>Akita Dog Visitor Center</em> konnte man, nebst dem Hachiko Andenken und Kupferstatue, zwei Akita Hunde anschauen gehen. In der Nähe im <em>Akita Dog Museum</em> konnte man über die Geschichte der Hunderasse erfahren.</p>
+<figure>
+    <img src="japan2025_segment7-25.jpg" alt="" />
+    <figcaption><p>Hachiko war als Kupferstatue vor dem Zentrum anwesend.</p>
+</figcaption>
+</figure><h2 id="pavianalarm">Pavianalarm<a class="zola-anchor" href="#pavianalarm" aria-label="Anchor link for: pavianalarm">&#xeade;</a></h2>
+<p>Gut, Chaos haben die bis jetzt nicht angerichtet und sind eher scheu. Da wir Schweizer ja keine wilden Paviane haben, war es cool diese in der Wildnis zu entdecken.</p>
+<p>Am See Moniwatsu Richtung Iizaka entdeckte ich beim Fahren in der Distanz Tiere, welche die Strasse überquerten. Nach dem Annähern, merkte ich, dass es keine Hühnern waren sondern Paviane!</p>
+<figure>
+    <img src="japan2025_segment7-19.jpg" alt="" />
+    <figcaption><p>Hatte nicht den Mut anzuhalten, daher ist das Bild ein bisschen unscharf. Aber man sieht die Affen!</p>
+</figcaption>
+</figure>
+<p>Ich hatte schon ein bisschen Schiss, denn ich wusste nicht, ob die frech und streich-freudig sind. Aber die waren sehr scheu. Sobald ich anhielt, rannten sie weg. Gut irgendwie hatten die anderes zu tun, wie unter dem Regen chillen und wahrscheinlich auf schöneres Wetter warten.</p>
+<h2 id="iizaka-onsen">Iizaka-Onsen<a class="zola-anchor" href="#iizaka-onsen" aria-label="Anchor link for: iizaka-onsen">&#xeade;</a></h2>
+<p>In Iizaka verbrachte ich meine Pausentage. Das kleine Onsenstädtchen nördlich von Fukushima City lebt von der Onsen-Kultur. Man findet öffentliche Fussbäder und gross verteilt verschiedene Badhäuser. Die Bäder in Iizaka sind eher heisser, also ab 42°C heisses Wasser bis auf 50°C. Ich besuchte eines davon, das <em>Sabakoyu</em>. Dieses Onsen ist schön aufgebaut und für mich war es ein witziger Besuch.</p>
+<figure>
+    <img src="japan2025_segment7-58.jpg" alt="" />
+    <figcaption><p>Durch Iizaka geht ein grosser Bach hindurch, was doch noch sehr cool aussieht!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7%20(1).jpg" alt="" />
+    <figcaption><p>Onsen <em>Sabakoyu</em>, das älteste Badhaus in Iizaka</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-66.jpg" alt="" />
+    <figcaption><p>Zwischen den Eingängen war der Empfang. Man kaufte sich ein Ticket am Automaten und gab es dem Herren ab.</p>
+</figcaption>
+</figure>
+<p>Also zuerst, Sabakoyu ist eine heisse Onsen mit ~43°C Quellwasser und hat keine weiteren Bäder. Man kommt hinein zum Umkleidebereich, welche ohne Zwischenwand zum Bad angeschlossen ist, und über eine Stufe gelangt man in den Badbereich. In der Mitte des Badbereiches ist das Bad selbst, welches Platz für sechs Personen drin hat. Rundherum sind die Waschstationen, damit man sich waschen kann, bevor man sich ins Bad setzt. Nun, da ja das Bad extrem heiss ist, sassen mehrheitlich alle um das Bad herum und schauten den mutigen Badgängern zu, wie lange die das Wasser aushalten konnten.</p>
+<figure>
+    <img src="japan2025_segment7-02.jpg" alt="" />
+    <figcaption><p>Da Iizaka in der Fukushima Präfektur ist, gibt es auch eine Fukushima Spezialität: <em>Gyoza no Terui</em> (ein Teller voll mit gebratenen Gyozas)</p>
+</figcaption>
+</figure>
+<p>Was ich aber schräg fand in Iizaka, war dieses <em>Onsen Musume</em>. Ich entdeckte eine Kartonfigur einer Anime-Figur, die sich <em>Iizaka Mahiro</em> nannte und drunter das Onsen Musume Label dran hatte. Man fand diese Figur über ganz Iizaka verteilt. Geht man auf die Webseite (<a href="https://onsen-musume.jp/">https://onsen-musume.jp/</a>) wirds dann schnell klar! Nun, wie kann man Onsens und Sentos (Bäder ohne Quellwasser) attraktiver gestalten? Mit Anime Figuren in Form von Mädchen und Fraunen natürlich!</p>
+<p>Eh was, Anime Mädchen/Frauen? Das ist ja so ein richtiges japanisches Ding. Man entdeckt es überall auf Plakaten wie zum Beispiel von der Polizei oder Feuerwehr. Man versucht dabei entweder die Figuren kurrlig, schräg, süss oder reizvoll zu gestalten, damit die Leute darüber reden (wie ich hier zum Beispiel).In Iizaka habe ich hier und dort Mahiro in Form von Getränkeautomaten oder Kartonfiguren und meistens im Yukata oder mal mit einem Glas Bier in der Hand entdeckt.</p>
+<figure>
+    <img src="japan2025_segment7-83.jpg" alt="" /></p>
+<p><img src="japan2025_segment7-84.jpg" alt="" />
+    <figcaption><p>Hier zwei Beispiel mit Getränkeautomaten.</p>
+</figcaption>
+</figure><h2 id="hochlichter-highlights">Hochlichter (Highlights)<a class="zola-anchor" href="#hochlichter-highlights" aria-label="Anchor link for: hochlichter-highlights">&#xeade;</a></h2>
+<figure>
+    <img src="japan2025_segment7-22.jpg" alt="" />
+    <figcaption><p>In Morioka erhielt ich vor dem Castle Park ein kleines Kunstwerk von einer alten Japanerin, welche von Okinawa ist. Sie wollte wissen, wo ich durchfahre und von wo ich herkomme.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-28.jpg" alt="" />
+    <figcaption><p>Langsam viel das Zelt auseinander. Das Gewinde im Teiler der Zeltstange ist stark abgenutzt. Glücklicherweise half das Klebeband!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-39.jpg" alt="" />
+    <figcaption><p>Ein Google Auto wurde entdeckt, aber es nahm nichts auf :(</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-40.jpg" alt="" />
+    <figcaption><p>In Naruko hatte es einen Vulkan mit einem See drin. Man merkte sehr schnell, dass es sich um einen Schwefelsee handelte, da es nach faulen Eiern stank.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-82.jpg" alt="" />
+    <figcaption><p>Die Städte in Japan sind meistens ruhig, ausser dem Autolärm. Ab und zu wird das Trommelfell aber gefoltert von den Politikern, die mit lauten Lautsprechern ihre Kandidatur werbten,</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-78.jpg" alt="" />
+    <figcaption><p>In Iizaka hatte es einen kleinen Park mit toller Aussicht. Das erste mal, wo ich hochgehen wollte, waren zwei Typen dort, welche Lieder sangen. Ich liess sie lieber alleine.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-68.jpg" alt="" />
+    <figcaption><p>Vogelnester an der Decke entdeckte man überall auf Japan.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_segment7-59.jpg" alt="" />
+    <figcaption><p>In einem Hokkaido Bericht erwähnte ich den Unterschied zwischen Mochi und Daifuku. Hier ist ein klassisches Mochi-Mittagessen. Auch die Misosuppe hatte ein Mochi drin.</p>
+</figcaption>
+</figure>
+<hr />
+<p>Geschrieben auf einem langweiligen Flug nach Hause. Und veröffentlicht von zu Hause aus.</p>
+
+
+
+
+
+<hr>
+
+
+<section id="post-tags">
+  <p>
+    <b>Tags</b>:
+    
+    <a href="/tags/japan">japan</a>,
+    
+    <a href="/tags/journaling">journaling</a>,
+    
+    <a href="/tags/biketouring">biketouring</a>,
+    
+    <a href="/tags/travel">travel</a>,
+    
+    <a href="/tags/honshu">honshu</a>
+    
+  </p>
+</section>
+
+
+
+<section id="post-categories">
+  <p>
+    <b>Categories</b>:
+    
+    <a href="/categories/travel">travel</a>
+    
+  </p>
+</section>
+
+
+
+
+
+<div id="remark42"></div>
+<script>
+	var remark_config = {
+		host: "https://remark42-server.nfshost.com/",
+        site_id: "joelcomments",
+        theme: localStorage.getItem('dark') === "true" ? "dark" : "light",
+	}
+
+    
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+
+
+      </main>
+
+      <footer>
+        <span>
+    Made with <a href="https://www.getzola.org/">Zola</a>
+    <b>/</b> 
+    <a href="/tags/">Tags</a>
+    <b>/</b> 
+    <a href="/categories/">Categories</a>
+    <b>/</b> 
+    <a href="/opensource/">Open Source</a>
+  </span>
+      </footer>
+    </body>
+
+    
+    
+
+
+
+    <script>
+      /*-------------------------- Dark/Light Mode --------------------------*/
+      comp = document.getElementById('darklight-toggler');
+      body = document.getElementsByTagName('body')[0];
+      function toggleDarkLight(comp) {
+        localStorage.setItem('dark', comp.checked);
+        if (comp.checked) {
+          body.classList.add('dark');
+          window.REMARK42.changeTheme("dark");
+        } else {
+          body.classList.remove('dark');
+          window.REMARK42.changeTheme("light");
+        }
+      }
+
+      if (localStorage.getItem('dark') === "true") {
+        body.classList.add('dark');
+        comp.checked = true;
+      } else {
+        body.classList.remove('dark');
+        comp.checked = false;
+      }
+    </script>
+
+</html>
