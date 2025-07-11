@@ -867,6 +867,12 @@ ul.post-list li a[data-category="travel"] {
   --category-bg: #ce7501;
 }
 
+ul.post-list li a[data-category="thoughts"] {
+  --category-color: white;
+  --category-bg: #358500;
+}
+
+
 
 ul.post-list.fancy{
   padding: 0 10px;
