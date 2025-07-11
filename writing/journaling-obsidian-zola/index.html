@@ -1,0 +1,332 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  
+  <title>JvR - Journaling with Obsidian.md &amp; Zola</title>
+  
+
+  
+
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+
+  
+  <link rel="stylesheet" href="/fonts/inconsolata.css">
+  <link rel="stylesheet" href="/fonts/lora.css">
+  <link rel="stylesheet" href="/fonts/outfit.css">
+  <link rel="stylesheet" href="/fonts/alegreya_sans.css">
+  <link rel="stylesheet" href="/fonts/atkinson-hyperlegible-next.css">
+  <link rel="stylesheet" href="/fonts/tabler-icons.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/joel.css">
+  <link rel="stylesheet" href="/css/joel-mobile.css">
+
+  <!--preload navigation and header images-->
+  <link rel="preload" href="/assets/icons/aperture.svg" as="image"/>
+<link rel="preload" href="/assets/icons/feather.svg" as="image"/>
+<link rel="preload" href="/assets/icons/home.svg" as="image"/>
+<link rel="preload" href="/assets/icons/lightbulb.svg" as="image"/>
+<link rel="preload" href="/assets/icons/search.svg" as="image"/>
+<link rel="preload" href="/assets/icons/sun.svg" as="image"/>
+<link rel="preload" href="/assets/icons/moon.svg" as="image"/>
+<link rel="preload" href="/assets/icons/download.svg" as="image"/>
+<link rel="preload" href="/assets/header.svg" as="image"/>
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        // • rendering keys, e.g.:
+        throwOnError: false
+      });
+    });
+  </script>
+</head>
+
+<body class="">
+      <header>
+        <div class="header-wrapper">
+  <h1 class="site-title">
+    joel von rotz
+  </h1>
+  <div style="display: flex;
+              gap: 5px;
+                align-items: center;">
+    <nav>
+      <a class="button" id="nav-home" title="Home" href="/">
+        <img class="icon" src="/assets/icons/home.svg">
+      </a>
+      <a class="button" id="nav-writing" title="Writing" href="https://joelvonrotz.ch/writing/">
+        <img class="icon" src="/assets/icons/feather.svg">
+      </a>
+      <a class="button" id="nav-projects" title="Projects" href="https://joelvonrotz.ch/projects/">
+        <img class="icon" src="/assets/icons/lightbulb.svg">
+      </a>
+      <a class="button" id="nav-photos" title="Photography" href="https://joelvonrotz.ch/photos/">
+        <img class="icon" src="/assets/icons/aperture.svg">
+      </a>
+      <a class="button" id="nav-downloads" title="Downloads" href="https://joelvonrotz.ch/downloads/">
+        <img class="icon" src="/assets/icons/download.svg">
+      </a>
+      <!--<a class="button" id="nav-search" title="Search" href="https://joelvonrotz.ch/search/">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>-->
+    </nav>
+    <label class="container">
+      <a class="button less" id="nav-search" title="Search" href="/search">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>
+    </label>
+    <label class="container" title="Dark/Light Toggle">
+      <input id="darklight-toggler" type="checkbox" onclick="toggleDarkLight(this)">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</div>
+      </header>
+
+      <main>
+        
+
+
+
+
+
+
+
+
+<div class="thumbnail" style="background-image: url('colton-sturgeon-N4fdQbMJ0nI-unsplash.jpg'); ">
+  
+  
+  <p class="attribution">Photo by <a href="https://unsplash.com/@coltonsturgeon?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Colton Sturgeon</a> on <a href="https://unsplash.com/photos/brown-book-beside-macbook-N4fdQbMJ0nI?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></p>
+  
+</div>
+
+
+
+
+  
+  
+
+
+
+
+<p class="breadcrumbs"><a class="button less breadcrumb" href="../../"><img class="icon" src="/assets/icons/home.svg"><span>Home</span></a><span class="divider">/</span><a class="button less breadcrumb" href="../">Writing</a><span class="divider">/</span></p>
+
+
+
+
+
+
+<section id="title-block">
+  
+  <h1 class="title">Journaling with Obsidian.md &amp; Zola</h1>
+  
+  <div class="stats">
+    
+    <time class="date" datetime="2024-07-19">
+      19.07.2024
+    </time>
+    <p class="readtime">4 min</p>
+    
+  </div>
+  
+  <div class="description">
+    <p>I'm thinking about writing and recording my bike travels and have been trying a workflow using Obsidian.md and its git plugin. My website is hosted on Github Pages and it uses the static site engine <em>Zola</em>. Changes are pushed to the website's git repository via the git plugin and the page is rebuilt.</p>
+
+  </div>
+  
+</section>
+
+
+
+<p>Following guide explains the setup to push content to a repository which uses the static site engine <a href="https://www.getzola.org/">Zola</a>.</p>
+<h2 id="setting-it-up">Setting it up!<a class="zola-anchor" href="#setting-it-up" aria-label="Anchor link for: setting-it-up">&#xeade;</a></h2>
+<p>Git on Android is a difficult story, in short: there are no "official" git GUI client apps for Android. There is an app called <a href="https://gitjournal.io/">GitJournal</a> which combines Git and a journal writer, which is neat, but it is not as customizable as <a href="https://obsidian.md/">Obsidian.md</a>. So I'm going with the more complicated setup by using <em>Obsidian.md</em>. Advantage is, Obsidian is very customizable and flexible!</p>
+<h3 id="preparation">Preparation<a class="zola-anchor" href="#preparation" aria-label="Anchor link for: preparation">&#xeade;</a></h3>
+<p>Before Obsidian is setup up, the website repository needs to be copied onto your phone via USB (or whatever you use to transfer data between Phone and PC)</p>
+<ol>
+<li>Connect your phone to your PC, where the repository of your Zola based website is located. (<strong>Important</strong>: the website repo needs to have a <code>.git</code> folder)</li>
+<li>Copy the website files onto your phone for example under <code>internal/Documents/Obsidian/vault_website</code></li>
+</ol>
+<p>This copy step is done to remove the hassle of having to initialize the repo inside Obsidian.md and adding the necessary remote repository. By simply copying the repo onto your phone, the git repo is already initialized and ready to go.</p>
+<h3 id="obsidian">Obsidian<a class="zola-anchor" href="#obsidian" aria-label="Anchor link for: obsidian">&#xeade;</a></h3>
+<ol>
+<li>Install Obsidian.md on your phone and open it</li>
+<li>Open the copied folder as an Obsidian-Vault</li>
+<li>Go to <strong>Settings &gt; Community plugins &gt; Browse &gt; Search for "Git" and install it &gt; Enable the plugin</strong></li>
+<li>(💻) Create a <em>Personal Access Token</em> (I did the <em>classic</em> variant) via https://github.com/settings/tokens
+<ul>
+<li>Select following scope group: "<strong>repo</strong>"</li>
+</ul>
+</li>
+<li>(💻) Copy or transfer the generated token onto your phone</li>
+<li>Back in Obsidian go to <strong>Settings &gt; open "Git" in the community plugins group in the sidebar &gt; insert the required information</strong>
+<ul>
+<li>instead of the password, you insert the token into it</li>
+</ul>
+</li>
+<li>Restart Obsidian</li>
+<li>Pull changes by pulling down and executing the <strong>Git: Pull</strong> command</li>
+</ol>
+<p><em>Alternative Guide</em>: <a href="https://forum.obsidian.md/t/the-easiest-way-to-setup-obsidian-git-to-backup-notes/51429">https://forum.obsidian.md/t/the-easiest-way-to-setup-obsidian-git-to-backup-notes/51429</a></p>
+<h2 id="template">Template<a class="zola-anchor" href="#template" aria-label="Anchor link for: template">&#xeade;</a></h2>
+<p>Templates are useful when writing notes in Obsidian to quickly have a general structure. This can also be used for posts!</p>
+<p>Fortunately Zola not only supports TOML, but also YAML, which makes it a lot easier on Obsidian. While Obsidian does support YAML, its fancy <em>Properties</em> feature does not support <strong>nested</strong> YAML:</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#65737e;"># supported in Properties view
+</span><span style="color:#bf616a;">key1</span><span>: </span><span style="color:#a3be8c;">value1
+</span><span style="color:#bf616a;">key2</span><span>: </span><span style="color:#a3be8c;">value2
+</span><span>
+</span><span style="color:#65737e;"># not supported :(
+</span><span style="color:#bf616a;">group</span><span>:
+</span><span>  </span><span style="color:#bf616a;">key1</span><span>: </span><span style="color:#a3be8c;">value1
+</span><span>  </span><span style="color:#bf616a;">key2</span><span>: </span><span style="color:#a3be8c;">value2
+</span></code></pre>
+<p>A workaround is to display the post frontmatter in source form. Under <strong>Settings &gt; Editor &gt; Under 'Display' the option 'Properties in document'</strong>, change the setting to <em>Source</em>. This way it displays the frontmatter in monospaced font.</p>
+<p>Going back to writing a post template, now that everything is configured correctly. Following template <code>post template.md</code> is saved locally under <code>obsidian/template/</code> and contains following:</p>
+<pre data-lang="markdown" style="background-color:#2b303b;color:#c0c5ce;" class="language-markdown "><code class="language-markdown" data-lang="markdown"><span style="background-color:#4f5b66;color:#c0c5ce;">---
+</span><span>title: &quot;&quot;
+</span><span>description: &quot;&quot;
+</span><span>date: {{date:YYYY-MM-DD}}
+</span><span>
+</span><span>taxonomies:
+</span><span>  categories: [&quot;&quot;]
+</span><span>  tags: [&quot;&quot;,&quot;&quot;] # 
+</span><span>
+</span><span>extra:
+</span><span>  thumbnail: &quot;&quot;
+</span><span style="color:#8fa1b3;">---
+</span><span>
+</span></code></pre>
+<p>It's mainly the frontmatter that is important!</p>
+<p>To be able to use the template, the Template core plugin needs to be configured!</p>
+<ol>
+<li>Go to <strong>Settings &gt; under sidebar group 'Core Plugins' select 'Templates'</strong></li>
+<li>Change the option <em>Template folder location</em> to the folder, where the post template is located (i.e. <code>obsidian/template</code>)</li>
+<li>It's recommended to extend the toolbar above your phone keyboard with the template button (can be changed in the settings) – <em>OR</em> pull down and search for "Templates: insert template"</li>
+</ol>
+<h2 id="stuff-to-keep-in-mind">Stuff to keep in mind<a class="zola-anchor" href="#stuff-to-keep-in-mind" aria-label="Anchor link for: stuff-to-keep-in-mind">&#xeade;</a></h2>
+<p><strong>Paths</strong>: Zola handles posts and images a bit weirdly, but once you get used to it, it's actually quite neat. When writing a post with images, the post is named <code>index.md</code> and placed into a folder (i.e. <code>/test/</code>) under the posts' root folder (my posts are saved under <code>content/writing/</code>), which corresponds to the URL. So if I want to use the following image <code>colton-sturgeon-N4fdQbMJ0nI-unsplash.jpg</code>, it is saved for example in the folder <code>/test/</code>. If multiple posts use the same image, it can be placed in the posts' root folder and a relative path to the image is used.</p>
+<p><img src="https://joelvonrotz.ch/writing/journaling-obsidian-zola/colton-sturgeon-N4fdQbMJ0nI-unsplash.jpg" alt="colton-sturgeon-N4fdQbMJ0nI-unsplash-min" /></p>
+
+
+
+
+
+<hr>
+
+
+<section id="post-tags">
+  <p>
+    <b>Tags</b>:
+    
+    <a href="/tags/workflow">workflow</a>,
+    
+    <a href="/tags/obsidian">obsidian</a>,
+    
+    <a href="/tags/markdown">markdown</a>,
+    
+    <a href="/tags/zola">zola</a>,
+    
+    <a href="/tags/android">android</a>
+    
+  </p>
+</section>
+
+
+
+<section id="post-categories">
+  <p>
+    <b>Categories</b>:
+    
+    <a href="/categories/guide">guide</a>
+    
+  </p>
+</section>
+
+
+
+
+
+<div id="remark42"></div>
+<script>
+	var remark_config = {
+		host: "https://remark42-server.nfshost.com/",
+        site_id: "joelcomments",
+        theme: localStorage.getItem('dark') === "true" ? "dark" : "light",
+	}
+
+    
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+
+
+      </main>
+
+      <footer>
+        <span>
+    Made with <a href="https://www.getzola.org/">Zola</a>
+    <b>/</b> 
+    <a href="/tags/">Tags</a>
+    <b>/</b> 
+    <a href="/categories/">Categories</a>
+    <b>/</b> 
+    <a href="/opensource/">Open Source</a>
+  </span>
+      </footer>
+    </body>
+
+    
+    
+
+
+
+    <script>
+      /*-------------------------- Dark/Light Mode --------------------------*/
+      comp = document.getElementById('darklight-toggler');
+      body = document.getElementsByTagName('body')[0];
+      function toggleDarkLight(comp) {
+        localStorage.setItem('dark', comp.checked);
+        if (comp.checked) {
+          body.classList.add('dark');
+          window.REMARK42.changeTheme("dark");
+        } else {
+          body.classList.remove('dark');
+          window.REMARK42.changeTheme("light");
+        }
+      }
+
+      if (localStorage.getItem('dark') === "true") {
+        body.classList.add('dark');
+        comp.checked = true;
+      } else {
+        body.classList.remove('dark');
+        comp.checked = false;
+      }
+    </script>
+
+</html>

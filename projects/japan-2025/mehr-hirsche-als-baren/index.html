@@ -1,0 +1,556 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  
+  <title>JvR - Eintrag #5 – Mehr Hirsche als Bären</title>
+  
+
+  
+  <link rel="stylesheet" href="/scripts/leaflet/leaflet.css" />
+  <script src="/scripts/leaflet/leaflet.js"></script>
+  <link rel="stylesheet" href="/scripts/leaflet-fullscreen/Control-FullScreen.css" />
+  <script src="/scripts/leaflet-fullscreen/Control-FullScreen.js"></script>
+    
+  <script src="/scripts/leaflet-gpx-2.0.0/gpx.js"></script>
+    
+  
+
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+
+  
+  <link rel="stylesheet" href="/fonts/inconsolata.css">
+  <link rel="stylesheet" href="/fonts/lora.css">
+  <link rel="stylesheet" href="/fonts/outfit.css">
+  <link rel="stylesheet" href="/fonts/alegreya_sans.css">
+  <link rel="stylesheet" href="/fonts/atkinson-hyperlegible-next.css">
+  <link rel="stylesheet" href="/fonts/tabler-icons.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/joel.css">
+  <link rel="stylesheet" href="/css/joel-mobile.css">
+
+  <!--preload navigation and header images-->
+  <link rel="preload" href="/assets/icons/aperture.svg" as="image"/>
+<link rel="preload" href="/assets/icons/feather.svg" as="image"/>
+<link rel="preload" href="/assets/icons/home.svg" as="image"/>
+<link rel="preload" href="/assets/icons/lightbulb.svg" as="image"/>
+<link rel="preload" href="/assets/icons/search.svg" as="image"/>
+<link rel="preload" href="/assets/icons/sun.svg" as="image"/>
+<link rel="preload" href="/assets/icons/moon.svg" as="image"/>
+<link rel="preload" href="/assets/icons/download.svg" as="image"/>
+<link rel="preload" href="/assets/header.svg" as="image"/>
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        // • rendering keys, e.g.:
+        throwOnError: false
+      });
+    });
+  </script>
+</head>
+
+<body class="menu-projects">
+      <header>
+        <div class="header-wrapper">
+  <h1 class="site-title">
+    joel von rotz
+  </h1>
+  <div style="display: flex;
+              gap: 5px;
+                align-items: center;">
+    <nav>
+      <a class="button" id="nav-home" title="Home" href="/">
+        <img class="icon" src="/assets/icons/home.svg">
+      </a>
+      <a class="button" id="nav-writing" title="Writing" href="https://joelvonrotz.ch/writing/">
+        <img class="icon" src="/assets/icons/feather.svg">
+      </a>
+      <a class="button" id="nav-projects" title="Projects" href="https://joelvonrotz.ch/projects/">
+        <img class="icon" src="/assets/icons/lightbulb.svg">
+      </a>
+      <a class="button" id="nav-photos" title="Photography" href="https://joelvonrotz.ch/photos/">
+        <img class="icon" src="/assets/icons/aperture.svg">
+      </a>
+      <a class="button" id="nav-downloads" title="Downloads" href="https://joelvonrotz.ch/downloads/">
+        <img class="icon" src="/assets/icons/download.svg">
+      </a>
+      <!--<a class="button" id="nav-search" title="Search" href="https://joelvonrotz.ch/search/">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>-->
+    </nav>
+    <label class="container">
+      <a class="button less" id="nav-search" title="Search" href="/search">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>
+    </label>
+    <label class="container" title="Dark/Light Toggle">
+      <input id="darklight-toggler" type="checkbox" onclick="toggleDarkLight(this)">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</div>
+      </header>
+
+      <main>
+        
+
+
+
+
+
+
+
+
+<div class="thumbnail" style="background-image: url('thumbnail.jpg'); ">
+  
+  
+  <p class="attribution">Keine Angst, kein Auto war unterwegs!</p>
+  
+</div>
+
+
+
+
+  
+  
+
+
+
+
+<p class="breadcrumbs"><a class="button less breadcrumb" href="../../../"><img class="icon" src="/assets/icons/home.svg"><span>Home</span></a><span class="divider">/</span><a class="button less breadcrumb" href="../../">Projects</a><span class="divider">/</span><a class="button less breadcrumb" href="../">Japan 2025</a><span class="divider">/</span></p>
+
+
+
+
+
+
+<section id="title-block">
+  
+  <h1 class="title">Eintrag #5 – Mehr Hirsche als Bären</h1>
+  
+  <div class="stats">
+    
+    <time class="date" datetime="2025-05-22">
+      22.05.2025
+    </time>
+    <p class="readtime">12 min</p>
+    
+  </div>
+  
+  <div class="description">
+    <p>Wie ist die Bären-Regel schon wieder? Die Schwarzbären kann man verprügeln, bei Braunbären muss man sich tot stellen und bei Polarbären kann man gleich das Testament schreiben?</p>
+
+  </div>
+  
+</section>
+
+
+
+<p>Bei diesem Eintrag bin ich ungefähr drei Wochen in Hokkaido. Auch wenn Hokkaido bekannt ist für die Braunbären, habe ich bis jetzt noch keinen, einzigen entdeckt. Wo die wohl sind?</p>
+<p>Auch egal, eigentlich auch gut, denn sonst müsste ich mein Essen noch verstecken und ich hab kein Seil zum Aufhängen der Taschen.</p>
+<p>Anstatt Bären gab es dafür haufenweise Hirsche. Bei den Nationalpärken sind die meistens gleich neb der Strasse gestanden und nur so auf LKWs gewartet, als hätten die Tiere gerade Exit erfunden. Immer wieder wurde ich von denen erschreckt, weil die genau so leise unterwegs sind, wie ab und zu ich (wenn ich nicht keuchen musste) oder die alten Japanern, welche dann Bären erschrecken und drauf gehen. Aber, lieber ein Hirsch Schreck als Bärenklaue im Gesicht.</p>
+<h2 id="die-gefahrene-strecke">Die gefahrene Strecke<a class="zola-anchor" href="#die-gefahrene-strecke" aria-label="Anchor link for: die-gefahrene-strecke">&#xeade;</a></h2>
+<div>
+  <div id="map"></div>
+  <script>
+    // prepare custom marker
+    var iconDefault = L.icon({iconUrl: '/assets/leaflet/marker_default.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconSleep = L.icon({iconUrl: '/assets/leaflet/marker_sleep.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconShop = L.icon({iconUrl: '/assets/leaflet/marker_shop.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconWarning = L.icon({iconUrl: '/assets/leaflet/marker_warn.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconForbid = L.icon({iconUrl: '/assets/leaflet/marker_forbidden.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconStart = L.icon({iconUrl: '/assets/leaflet/marker_start.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconStop = L.icon({iconUrl: '/assets/leaflet/marker_stop.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var map = L.map('map', {
+      fullscreenControl: true,
+      fullscreenControlOptions: {
+        position: 'topleft'
+      }
+    });
+    //L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+    L.tileLayer('https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=c1361ae43a0f4e989709a01d869dd504', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);var url = 'japan2025_segment5.gpx'; // URL to your GPX file or the GPX itself
+    var gpx = new L.GPX(url, {
+      async: true,
+      wptIcons: {
+      '': iconDefault,
+      'Sleep': '/assets/leaflet/marker_sleep.svg',
+      'Camp': '/assets/leaflet/marker_sleep.svg',
+      'Hotel': '/assets/leaflet/marker_sleep.svg',
+      'Ryokan': '/assets/leaflet/marker_sleep.svg'
+    },
+    marker_options: {
+    iconSize: [22,22],
+    iconAnchor: [11, 11],
+  },
+      markers: {
+        startIcon: '/assets/leaflet/point_start.svg',
+        endIcon: '/assets/leaflet/point_stop.svg',
+        pointMatchers: [
+        {
+          regex: /camp|hotel|sleep|hostel|guesthouse|ryokan|futuba inn/i,
+          icon: iconSleep
+        },{
+          regex: /shop|groceries|store|supermarket/i,
+          icon: iconShop
+        },{
+          regex: /./,
+          icon: iconDefault
+        },
+      ]
+      }
+    }).on('loaded', function (e) {
+      map.fitBounds(e.target.getBounds());
+    }).addTo(map);
+L.control.scale().addTo(map); // adds a scale
+  </script>
+</div>
+<ul>
+<li><strong>Statistik</strong>: $3861\text{m}$ Höhe à $457.36\text{km}$ auf 6 Tage verteilt (via gpx Datei ausgelesen)</li>
+<li><strong>Stimmung</strong>: Wunder Popo oder kommt das Radler-Leder? Sonst tiptop und glücklich nach dem warmen Wetter!</li>
+<li><strong>Tote Tiere</strong>: total 24 tote Tiere auf der Strasse oder in der Nähe entdeckt (davon 3 Muscheln, 1 Seehund, 2 Seeigel und 3 asiatische Hornissen)</li>
+</ul>
+<h2 id="schau-bin-ganz-im-norden">Schau! Bin ganz im Norden!<a class="zola-anchor" href="#schau-bin-ganz-im-norden" aria-label="Anchor link for: schau-bin-ganz-im-norden">&#xeade;</a></h2>
+<p>Vielleicht kannst du, der/die/das das hier liest, dich noch daran erinnern, wie ich einst schrieb, dass das Erreichen von den weitesten Orten in jegliche Himmelsrichtungen eher mehr mit einer Abhackliste zu tun hat, als einer kulturellen Wichtigkeit für den Reisenden. Tja, ich war jetzt doch am nördlichsten Punkt Japans, dem Cape Soya! Hat sichs gelohnt? Ja, irgendwie schon... hatte sogar eine schöne Aussicht und Souvenirshops! Auch wurde ich zugejubelt von ein zwei Japanern. Wenn die wüssten, dass ich nicht in einem Tag von Narita nach Cape Soya gefahren bin...</p>
+<figure>
+    <img src="japan2025_seg5-34.jpg" alt="" />
+    <figcaption><p>Das obligatorische Bild darf auch nicht fehlen!</p>
+</figcaption>
+</figure>
+<p>Das Coole daran, am nördlichsten Punkt zu sein, ist, dass es nur noch Richtung Süden geht und ich somit in die Wärme fahre! Bereits beim Schreiben dieses Berichtes kann ich endlich mit kurzen Hosen draussen sein.</p>
+<p><img src="https://joelvonrotz.ch/projects/japan-2025/mehr-hirsche-als-baren/japan2025_seg5-50.jpg" alt="" /></p>
+<p><img src="https://joelvonrotz.ch/projects/japan-2025/mehr-hirsche-als-baren/japan2025_seg5-28.jpg" alt="" /></p>
+<p>Nun, nebst dieser Errungenschaft gehts Richtung Süden wieder nach Honshu mit einem Abzweiger nach Obihiro, welche mir von Tatso-san aus dem einen Rider House empfohlen wurde. Obihiro ist ein ruhiges und müdes Städtchen, ausser sie haben ein Pferderennen.</p>
+<p>Um nach Obihiro zu kommen, musste/wollte ich über den höchsten Pass Hokkaidos fahren: dem <em>Mikuni Pass</em> mit 1139m Höhe. Und um zum Passstart zu kommen, ging die Route nach dem kurzen Küstenbesuch im Norden wieder Inland über Bifuka.</p>
+<figure>
+    <img src="japan2025_seg5-36.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-51.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-70.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-79.jpg" alt="" />
+    <figcaption><p>Die sonnigen Tage brachte auch sehr schöne Aussichten</p>
+</figcaption>
+</figure>
+<p>Während dem Passfahren wurde ich wieder von Japans meistgeliebten Konstrukt begrüsst: dem Tunnel und eher mehrere davon. Beim Mikuni Pass fuhr ich den bis jetzt längsten Tunnel mit ungefähr $3.4\text{km}$ Länge. Es hatte zwar einen engen Gehweg, aber trotzdem wurde mein Trommelfell vom Lastwagen-Lärm gekitzelt. Aber das Tunnelfahren ist bei mir nichts mehr Neues, ich bin abgehärtet auf die!</p>
+<figure>
+    <img src="japan2025_seg5-52.jpg" alt="" />
+    <figcaption><p>Irgendwann war der Akku der Lampen auch leer und ich musste mit der Handy-Taschenlampe weiterfahren.</p>
+</figcaption>
+</figure>
+<p>Trotz des Tunnelfahren ist die Aussicht entlang des Mikuni Passes sehr schön, da die Strasse durch den Daisetsuzan National Parks hindurchführt. Wälder wie das Auge reicht und verschneite Berge, unter anderem der höchste Berg Hokkaidos <em>Asahi-Dake</em> (2291m ;Ainu-isch: Kamui-mintara). Interessant ist der starke Wechsel der Landschaft auf beiden Seiten des Passhöhen-Tunnels!</p>
+<figure>
+    <img src="japan2025_seg5-13.jpg" alt="" />
+    <figcaption><p>Beim Herunterfahren des Passes sieht man schon sehr viele Bäume</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-38.jpg" alt="" />
+    <figcaption><p>Die Fahrt hoch dafür hatte mehr Bäche und Flüsse</p>
+</figcaption>
+</figure><h2 id="mikuni-passhohe-passtunnel">Mikuni <s>Passhöhe</s> Passtunnel<a class="zola-anchor" href="#mikuni-passhohe-passtunnel" aria-label="Anchor link for: mikuni-passhohe-passtunnel">&#xeade;</a></h2>
+<p>Japaner lieben Tunnels oder ich habe wenigstens das Gefühl. Denn beim Mikuni Pass gibt es keine Passhöhe wie in der Schweiz, wo der Himmel auf den Kopf fällt, sondern ein Tunnel.</p>
+<figure>
+    <img src="japan2025_seg5-91.jpg" alt="" />
+    <figcaption><p>Die Passhöhe des Mikuni Passes.</p>
+</figcaption>
+</figure>
+<p>Gut macht ja auch irgendwie Sinn, denn auf den Berggeraden hat es schlicht zu wenig Platz für einen Passhöhen-Platz und anstatt die Erde abzutragen, baut man lieber einen Tunnel.</p>
+<p>Aber die Tunnels in Japan sind für Velofahrer und Motorradfahrer einfach nicht so geeignet und anmachend. Besonders auf den "Liefer"-Strassen, wo die Lastwagen durchfahren, sind diese Krachmacher extrem nervend in Tunnels und schmerzen den Ohren. Aber, man kann es kaum glauben, geben die LKWs genügend Platz beim Überholen. Vielleicht muss man einfach den Kompromiss eingehen.</p>
+<h2 id="mochi-daifuku">Mochi &amp; Daifuku<a class="zola-anchor" href="#mochi-daifuku" aria-label="Anchor link for: mochi-daifuku">&#xeade;</a></h2>
+<p>Bevor es weiter geht mit der Reise, ein ganz kurzer Themenwechsel: Mochis &amp; Daifukus!</p>
+<p>Schon gewusst, Mochi ist eigentlich gar nicht das Dessert selbst, sondern der Reisteig um die Füllung herum. Und die Dinger, wenn sie süss schmecken, heissen <em>Daifuku</em> und bedeuten "Grosses Glück". Früher gabs die nur zum Neujahr, da die Herstellung sehr aufwendig ist:</p>
+<div style="width: 100%; margin: 2rem 0;"  >
+    <iframe style="width:100%;aspect-ratio: 3/2;" frameBorder="0"
+        src="https://www.youtube.com/embed/tmSrULDVRPc"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+    </iframe>
+</div>
+<p>Aber mit stetiger Weiterentwicklung und Verbesserung des Herstellungsverfahren, sind Daifukus heutzutage jederzeit erhältlich.</p>
+<p>Meine erste Mochi und Daifuku Bekanntschaft war im Michinoeki <em>Mochigome-no-sato Nayoro</em> (道の駅 もち米の里なよろ; Mochi Reis Dorf Nayoro). Es hatte sehr viele Daifukus zur Auswahl: mit Erdbeeren, Melonen, rote Bohnenpaste und eine Menge weitere. Auch war zum Zeitpunkt Muttertag und die Plastikverpackungen, wo man die Daifukus reinlegte, hatten einen Muttertags-Kleber drauf. "Leider" war meine Mutter nicht hier und musste "leider" die sechs gekauften Daifukus selber essen.</p>
+<figure>
+    <img src="japan2025_seg5-74.jpg" alt="" />
+    <figcaption><p>Daifukus! Von obenlinks nach rechts: Kürbis, irgend so ein Kraut, Pflaume, Honigmelone, Erdbeere und klassisch Rote Bohnenpaste.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-77.jpg" alt="" />
+    <figcaption><p>Ein Drink vom 'Mochi-Molch' (glaube ich)</p>
+</figcaption>
+</figure><h2 id="im-onsendorf-nukabiragensenkyon">Im Onsendorf Nukabiragensenkyon<a class="zola-anchor" href="#im-onsendorf-nukabiragensenkyon" aria-label="Anchor link for: im-onsendorf-nukabiragensenkyon">&#xeade;</a></h2>
+<p>Ziemlich langer Name für ein Onsendorf, aber das Dorf hatte es in sich oder wenigstens das Hotel, wo ich übernachtete. Nach dem Mikuni Pass fährt man irgendeinmal durch dieses Onsen-Dorf. Jedes Hotel hat eine Badhaus, welches auch von Auswärtigen besucht werden darf. Da ich von Tatso-san das Onsenhotel <em>Nukabira Onsen Nakamuraya</em> empfohlen wurde, traf ich die Entscheidung, dieses zu besuchen.</p>
+<figure>
+    <img src="japan2025_seg5-46.jpg" alt="" />
+    <figcaption><p>Eingang vom Onsenhotel</p>
+</figcaption>
+</figure>
+<p>Als ich eintrat, wurde es mir direkt gemütlich. Die Eingangshalle war geschmückt mit Haufenweisen Bücherregalen und neben jedem Regal gab es jeweils eine kleine Lounge mit älteren Sesseln. Jede Lounge hatte einen kleinen, offenen Ofen, wo ein Tee aufgesetzt wurde. Der Tee ist gratis für jede*n, teilte mir einer der Mitarbeiter des Hotels mit, aber der Kaffee kostet!</p>
+<figure>
+    <img src="japan2025_seg5-82.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-87.jpg" alt="" />
+    <figcaption><p>Die Eingangshalle ist einladend und sehr gemütlich</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-17.jpg" alt="" />
+    <figcaption><p>Bei jeder Couch-Kombi gabs auch Tee.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-73.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-02.jpg" alt="" />
+    <figcaption><p>Die Bücherregalen waren voll mit Mangas, unter anderem <em>JoJo's Bizarre Adventures</em> und <em>Yotsuba!</em>.</p>
+</figcaption>
+</figure>
+<p>Es gab drei Bäder: zwei davon wechseln täglich die Geschlechter und das dritte Bad ist ein gemischtes Aussenbad. Ich war noch nie in einem gemischten Bad und war zu Beginn auch ein bisschen verwirrt. Wie verhält man sich da? Braucht man ein weiteres Tuch für im Wasser? Ich war überfordert. Ich zog Unterhose, Hose und T-Shirt an und höselte zur Rezeption um zu fragen. Die Frage "Do I take the hand towel with me into the water?" wurde mit einem <strong>NO</strong> in Forme von verkreuzten Armen beantwortet. "<em>No towel, no trousers, no underwear, only naked!</em>" kam direkt danach (also das Handtuch wird einfach zum Verdecken gebraucht), ich bedankte mich und höselte zurück ins Aussenbad. Das Aussenbad war leer und ich genoss die Aussicht.</p>
+<figure>
+    <img src="japan2025_seg5-32.jpg" alt="" />
+    <figcaption><p>Der Weg zum Aussenbad führte durch diesen holzigen Gang</p>
+</figcaption>
+</figure>
+<p>Nach dem Onsenaufenthalt entschied ich mich gleich, die Nacht im Hotel zu verbringen, denn es war so gemütlich und skurril. Aber es war auch eine teure Nacht, welche sich doch irgendwie lohnte.</p>
+<figure>
+    <img src="japan2025_seg5-88.jpg" alt="" />
+    <figcaption><p>Das <em>Squirrel's Nest</em>, wo allerlei Dinge, wie Ladegerät, Yukatas und Seifen, aufzufinden sind.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-68.jpg" alt="" />
+    <figcaption><p>Vor dem Frühstück wird jedem Zimmer ein kleines Milch-Fläschchen vorbeigebracht vom lokalen Bauer.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-59.jpg" alt="" />
+    <figcaption><p>Auch gab es einen kleinen Shop mit allerlei Snacks, Büchern, Handgemachtem, etc.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-49.jpg" alt="" />
+    <figcaption><p>Das eher grosse Zimmer</p>
+</figcaption>
+</figure><h2 id="pause-in-obihiro">Pause in Obihiro<a class="zola-anchor" href="#pause-in-obihiro" aria-label="Anchor link for: pause-in-obihiro">&#xeade;</a></h2>
+<p>In Obihiro übernachtete ich im Hotel Nupka in einem Hostel-Zimmer. Beim hineinfahren in die Stadt, merkte ich wie ruhig die Stadt ist nebst dem Verkehrslärm. Es war nicht viel los und es gab auch keinen Stress.</p>
+<figure>
+    <img src="japan2025_seg5-22.jpg" alt="" />
+    <figcaption><p>Obihiro City</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-01.jpg" alt="" />
+    <figcaption><p>Hotel und Hostel in einem. Klein aber fein!</p>
+</figcaption>
+</figure>
+<p>Sobald ich im Hotel ankam, merkte ich wie sehr ich den Schlaf brauchte. Ich kollabierte auf dem Bett und war glaube sogar ein bisschen krank vom frischen Wetter. Aber ich konnte mich gut erholen und war nach dem Aufenthalt fitter als vorher. Nun, theoretisch müsste ich mich viel, viel länger erholen, damit mein Körper wieder auf Hochtouren ist, aber ich hab begrenzt Zeit und möchte auch Japan entdecken.</p>
+<figure>
+    <img src="japan2025_seg5-15.jpg" alt="" />
+    <figcaption><p>Die Zeit reichte noch, mich mit Max zum Abendessen treffen in diesem BBQ Restaurant.</p>
+</figcaption>
+</figure>
+<p>Abends ist meistens mehr los als am Tag. Die arbeitenden Japanern gehen in Izakayas (japanische Bars) um zu trinken, plaudern und den Arbeitsstress loszuwerden. Ich schlenderte durch die Strassen und suchte mir ein passendes Restaurant. Das Coole an der Stadt sind die ab und zu engeren Strassen, welche gefüllt sind mit Restaurants und Bars.</p>
+<figure>
+    <img src="japan2025_seg5-03.jpg" alt="" />
+    <figcaption><p>Kleine herzige Strassen, wobei das Auto (leider) auch nicht fehlen darf.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-89.jpg" alt="" />
+    <figcaption><p>Die Strassen werden abends und nachts von den Restaurant Beleuchtungen ein bisschen aufgehellt.</p>
+</figcaption>
+</figure>
+<p>Sonst gab es noch ein bisschen Sightseeing. Ziel war es schon, ja nicht zu viel zu machen, aber auch nicht nichts zu machen. Ich besuchte das Kunstmuseum von Obihiro und den Park, worin sich das Museum befindet. Gefühlt war mehr los auf dem Park als in der Stadt, gut es hatten auch Schulklassen ihren Sporttag, aber der Park war gemütlich.</p>
+<figure>
+    <img src="japan2025_seg5-06.jpg" alt="" />
+    <figcaption><p>Das Kunstmuseum von Obihiro mit zwei Ausstellungen</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-12.jpg" alt="" />
+    <figcaption><p>Die erste (kleine) Ausstellung war über gedruckte Kunstwerke (also die verschiedenen Druckvarianten). Reichte von skurrilen Werken bis hin zu unklaren hin!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-92.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-75.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-20.jpg" alt="" />
+    <figcaption><p>Die zweite und grössere Ausstellung war über die Sängerin und Songwriterin <em>Miyuki Nakajima</em>. Mehr kann ich auch nicht gerade sagen, da ich sie selber auch nicht wirklich kannte...</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-93.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-27.jpg" alt="" />
+    <figcaption><p>Der Park dark auch nicht fehlen mit den Golf spielenden Japanern.</p>
+</figcaption>
+</figure><h2 id="zeitgefuhl-und-die-flexibilitat-des-alleinreisens">Zeitgefühl und die Flexibilität des Alleinreisens<a class="zola-anchor" href="#zeitgefuhl-und-die-flexibilitat-des-alleinreisens" aria-label="Anchor link for: zeitgefuhl-und-die-flexibilitat-des-alleinreisens">&#xeade;</a></h2>
+<p>Achtung, ich habe eine Leserkritik erhalten! Und die ist sogar gut begründet, denn es fehlt ein bisschen an positiven persönlichen Erlebnissen! Aber zuerst etwas, dass ich in dieser Etappe gemerkt habe: das Zeitgefühl.</p>
+<p>Je länger man auf Reisen ist, desto kürzer werden die Tage. Nicht mehr bin ich nur einen Monat unterwegs, sondern zum ersten Mal drei und widersprüchlich fühlt es sich jetzt an, als hätte man die Reise erst begonnen. Man merkt sich aber Noch die Highlights und Ups &amp; Downs. Sobald man an die Tage dazwischen denkt, breitet sich die Zeit aus und man bemerkt dann doch die gesamte Reisezeit. Ich hab mal gelesen, dass wir Menschen sehr schlecht sind, grosse Zahlen exakt vorzustellen (z.B. 10000 Äpfel), vielleicht kann dies auch aufs Zeitgefühl angewendet werden?</p>
+<p>Nun zur Flexibilität des Alleinreisens. Das Tolle am Alleinreisen ist, dass man die Route selber wählen kann und man sichjederzeit kurzfristige Änderungen erlauben. Gibt es mal einen Tag, wo man nicht wirklich fit ist, kann man eine kürzere Distanz fahren. Man muss sich nicht auf ein Tempo einigen, sondern fährt einfach sein eigenes.</p>
+<p>Zwar hat man mit der Einsamkeits-Hürde zu tun, aber man kommt meiner Meinung nach schneller zu einem kurzen Gespräch mit den Einwohnern, egal ob die Sprachbarriere existiert. Mir passiert das fast täglich, besonders auf Campingplätze, dass ich doch noch regelmässig von den Japanern angesprochen werde. Viele werden neugierig, da ich mein Velo mit Taschen und Gurten beschmückt habe. Wie vorher erwähnt, sind dann die Gespräche meist kurz, aber es macht trotzdem Spass und Freude.</p>
+<p>Mit der Flexibilität kann man selber entscheiden, was man machen möchte. Zum Beispiel gehts für die nächste Etappe zu zwei Ainu Museen, um etwas über die Ureinwohner Hokkaidos (ehemalig <em>Ezo</em>) zu lernen. Auch werde ich die Hokkaido Tour ein bisschen kürzer halten, als gedacht, weil ich noch Süd-Honshu anschauen möchte.</p>
+<h2 id="sonstige-highlights">Sonstige Highlights<a class="zola-anchor" href="#sonstige-highlights" aria-label="Anchor link for: sonstige-highlights">&#xeade;</a></h2>
+<p>Sapperlot, da gibts noch mehr?!?!</p>
+<figure>
+    <img src="japan2025_seg5-21.jpg" alt="" />
+    <figcaption><p>Wieder zurück bei den Reisfeldern. Die Traktoren haben meistens Raupen montiert anstatt Räder.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-19.jpg" alt="" />
+    <figcaption><p>Godzilla zeigte sich auch! War leider nicht die reale Grösse :(</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-16.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-18.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-42.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-44.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-55.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-64.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-65.jpg" alt="" />
+    <figcaption><p>Auch wieder mal das Essen zeigen!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-37.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-48.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-04.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-72.jpg" alt="" />
+    <figcaption><p>Kirschblüten dürfen auch nicht fehlen!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-41.jpg" alt="" />
+    <figcaption><p>Asiatische Hornissen sind eher gefährlich mit ihrem Verhalten. Solange man aber vorsichtig umgeht mit ihnen und ihre Körpersprache liest (oder versucht), sollte es kein Problem sein.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-08.jpg" alt="" />
+    <figcaption><p>Veloweg und Bärenwarnung, perfekte Kombination!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-31.jpg" alt="" />
+    <figcaption><p>Was man nicht machen darf in einer Raststätte.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg5-60.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-26.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-67.jpg" alt="" /></p>
+<p><img src="japan2025_seg5-25.jpg" alt="" />
+    <figcaption><p>Auch die Wildtiere dürfen nicht fehlen!</p>
+</figcaption>
+</figure>
+<hr />
+<p>Mal positive Selbstreflexionen zu schreiben, scheint doch auch einen positiven Effekt zu haben! Ich werde dies in weiteren Einträge einbauen :)</p>
+<p>Eigentlich wollte ich den Post am 15.05. fertigschreiben, aber das Reisen kam dazwischen.</p>
+<figure>
+    <img src="japan2025_seg5-62.jpg" alt="" />
+    <figcaption><p>Das bin ich mit einem stetig wachsenden Bart.</p>
+</figcaption>
+</figure>
+
+
+
+
+<hr>
+
+
+<section id="post-tags">
+  <p>
+    <b>Tags</b>:
+    
+    <a href="/tags/japan">japan</a>,
+    
+    <a href="/tags/journaling">journaling</a>,
+    
+    <a href="/tags/biketouring">biketouring</a>,
+    
+    <a href="/tags/travel">travel</a>,
+    
+    <a href="/tags/hokkaido">hokkaido</a>
+    
+  </p>
+</section>
+
+
+
+<section id="post-categories">
+  <p>
+    <b>Categories</b>:
+    
+    <a href="/categories/travel">travel</a>
+    
+  </p>
+</section>
+
+
+
+
+
+<div id="remark42"></div>
+<script>
+	var remark_config = {
+		host: "https://remark42-server.nfshost.com/",
+        site_id: "joelcomments",
+        theme: localStorage.getItem('dark') === "true" ? "dark" : "light",
+	}
+
+    
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+
+
+      </main>
+
+      <footer>
+        <span>
+    Made with <a href="https://www.getzola.org/">Zola</a>
+    <b>/</b> 
+    <a href="/tags/">Tags</a>
+    <b>/</b> 
+    <a href="/categories/">Categories</a>
+    <b>/</b> 
+    <a href="/opensource/">Open Source</a>
+  </span>
+      </footer>
+    </body>
+
+    
+    
+
+
+
+    <script>
+      /*-------------------------- Dark/Light Mode --------------------------*/
+      comp = document.getElementById('darklight-toggler');
+      body = document.getElementsByTagName('body')[0];
+      function toggleDarkLight(comp) {
+        localStorage.setItem('dark', comp.checked);
+        if (comp.checked) {
+          body.classList.add('dark');
+          window.REMARK42.changeTheme("dark");
+        } else {
+          body.classList.remove('dark');
+          window.REMARK42.changeTheme("light");
+        }
+      }
+
+      if (localStorage.getItem('dark') === "true") {
+        body.classList.add('dark');
+        comp.checked = true;
+      } else {
+        body.classList.remove('dark');
+        comp.checked = false;
+      }
+    </script>
+
+</html>

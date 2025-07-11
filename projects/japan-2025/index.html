@@ -1,0 +1,428 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  
+  <title>JvR - Japan 2025</title>
+  
+
+  
+  <link rel="stylesheet" href="/scripts/leaflet/leaflet.css" />
+  <script src="/scripts/leaflet/leaflet.js"></script>
+  <link rel="stylesheet" href="/scripts/leaflet-fullscreen/Control-FullScreen.css" />
+  <script src="/scripts/leaflet-fullscreen/Control-FullScreen.js"></script>
+    
+  <script src="/scripts/leaflet-gpx-2.0.0/gpx.js"></script>
+    
+  
+
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+
+  
+  <link rel="stylesheet" href="/fonts/inconsolata.css">
+  <link rel="stylesheet" href="/fonts/lora.css">
+  <link rel="stylesheet" href="/fonts/outfit.css">
+  <link rel="stylesheet" href="/fonts/alegreya_sans.css">
+  <link rel="stylesheet" href="/fonts/atkinson-hyperlegible-next.css">
+  <link rel="stylesheet" href="/fonts/tabler-icons.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/joel.css">
+  <link rel="stylesheet" href="/css/joel-mobile.css">
+
+  <!--preload navigation and header images-->
+  <link rel="preload" href="/assets/icons/aperture.svg" as="image"/>
+<link rel="preload" href="/assets/icons/feather.svg" as="image"/>
+<link rel="preload" href="/assets/icons/home.svg" as="image"/>
+<link rel="preload" href="/assets/icons/lightbulb.svg" as="image"/>
+<link rel="preload" href="/assets/icons/search.svg" as="image"/>
+<link rel="preload" href="/assets/icons/sun.svg" as="image"/>
+<link rel="preload" href="/assets/icons/moon.svg" as="image"/>
+<link rel="preload" href="/assets/icons/download.svg" as="image"/>
+<link rel="preload" href="/assets/header.svg" as="image"/>
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        // • rendering keys, e.g.:
+        throwOnError: false
+      });
+    });
+  </script>
+</head>
+
+<body class="menu-projects">
+      <header>
+        <div class="header-wrapper">
+  <h1 class="site-title">
+    joel von rotz
+  </h1>
+  <div style="display: flex;
+              gap: 5px;
+                align-items: center;">
+    <nav>
+      <a class="button" id="nav-home" title="Home" href="/">
+        <img class="icon" src="/assets/icons/home.svg">
+      </a>
+      <a class="button" id="nav-writing" title="Writing" href="https://joelvonrotz.ch/writing/">
+        <img class="icon" src="/assets/icons/feather.svg">
+      </a>
+      <a class="button" id="nav-projects" title="Projects" href="https://joelvonrotz.ch/projects/">
+        <img class="icon" src="/assets/icons/lightbulb.svg">
+      </a>
+      <a class="button" id="nav-photos" title="Photography" href="https://joelvonrotz.ch/photos/">
+        <img class="icon" src="/assets/icons/aperture.svg">
+      </a>
+      <a class="button" id="nav-downloads" title="Downloads" href="https://joelvonrotz.ch/downloads/">
+        <img class="icon" src="/assets/icons/download.svg">
+      </a>
+      <!--<a class="button" id="nav-search" title="Search" href="https://joelvonrotz.ch/search/">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>-->
+    </nav>
+    <label class="container">
+      <a class="button less" id="nav-search" title="Search" href="/search">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>
+    </label>
+    <label class="container" title="Dark/Light Toggle">
+      <input id="darklight-toggler" type="checkbox" onclick="toggleDarkLight(this)">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</div>
+      </header>
+
+      <main>
+        
+
+
+
+
+
+
+
+<div class="thumbnail" style="background-image: url('tianshu-liu-aqZ3UAjs_M4-unsplash.jpg'); ">
+  
+  <p class="title-inside">Japan 2025</p>
+  
+  
+</div>
+
+
+
+
+  
+  
+
+
+
+
+<p class="breadcrumbs"><a class="button less breadcrumb" href="../../"><img class="icon" src="/assets/icons/home.svg"><span>Home</span></a><span class="divider">/</span><a class="button less breadcrumb" href="../">Projects</a><span class="divider">/</span></p>
+
+
+
+
+
+
+<section id="title-block">
+  
+  
+  <div class="stats">
+    
+  </div>
+  
+</section>
+
+
+<div>
+    <div id="map"></div>
+    <script>
+        // prepare custom marker
+        var bounds = null;
+        var iconDefault = L.icon({ iconUrl: '/assets/leaflet/marker_default.svg', iconSize: [33, 45], iconAnchor: [16.5, 45], popupAnchor: [0, -47] });
+        var iconSleep = L.icon({ iconUrl: '/assets/leaflet/marker_sleep.svg', iconSize: [33, 45], iconAnchor: [16.5, 45], popupAnchor: [0, -47] });
+        var iconShop = L.icon({ iconUrl: '/assets/leaflet/marker_shop.svg', iconSize: [33, 45], iconAnchor: [16.5, 45], popupAnchor: [0, -47] });
+        var iconWarning = L.icon({ iconUrl: '/assets/leaflet/marker_warn.svg', iconSize: [33, 45], iconAnchor: [16.5, 45], popupAnchor: [0, -47] });
+        var iconForbid = L.icon({ iconUrl: '/assets/leaflet/marker_forbidden.svg', iconSize: [33, 45], iconAnchor: [16.5, 45], popupAnchor: [0, -47] });
+        var iconStart = L.icon({ iconUrl: '/assets/leaflet/marker_start.svg', iconSize: [33, 45], iconAnchor: [16.5, 45], popupAnchor: [0, -47] });
+        var iconStop = L.icon({ iconUrl: '/assets/leaflet/marker_stop.svg', iconSize: [33, 45], iconAnchor: [16.5, 45], popupAnchor: [0, -47] });
+
+        var randomColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+        var colorIndexer = 0;
+
+        var map = L.map('map', {
+            fullscreenControl: true,
+            fullscreenControlOptions: {
+                position: 'topleft'
+            }
+        });
+        //L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+        L.tileLayer('https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=c1361ae43a0f4e989709a01d869dd504', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        var gpxFiles = [{ gpx: './zu-den-skigebieten/japan2025_segment7.gpx', url: './zu-den-skigebieten/', popup: '<b>Eintrag #7 – Zu den Skigebieten</b><br><a href="&#x2F;projects&#x2F;japan-2025&#x2F;zu-den-skigebieten&#x2F;">Journal Link</a>'},
+        { gpx: './ainus-und-kustenwind/japan2025_segment6.gpx', url: './ainus-und-kustenwind/', popup: '<b>Eintrag #6 – Ainus und der Küstenwind</b><br><a href="&#x2F;projects&#x2F;japan-2025&#x2F;ainus-und-kustenwind&#x2F;">Journal Link</a>'},
+        { gpx: './mehr-hirsche-als-baren/japan2025_segment5.gpx', url: './mehr-hirsche-als-baren/', popup: '<b>Eintrag #5 – Mehr Hirsche als Bären</b><br><a href="&#x2F;projects&#x2F;japan-2025&#x2F;mehr-hirsche-als-baren&#x2F;">Journal Link</a>'},
+        { gpx: './im-norden-wakkanai/japan2025_segment4_tagged.gpx', url: './im-norden-wakkanai/', popup: '<b>Eintrag #4 – Im nördlichsten Ort: Wakkanai</b><br><a href="&#x2F;projects&#x2F;japan-2025&#x2F;im-norden-wakkanai&#x2F;">Journal Link</a>'},
+        { gpx: './hokkaido-ahoy/japan2025_segment3_tagged.gpx', url: './hokkaido-ahoy/', popup: '<b>Eintrag #3 - Auf die gefährliche &amp; kalte Seite zum Seicomart</b><br><a href="&#x2F;projects&#x2F;japan-2025&#x2F;hokkaido-ahoy&#x2F;">Journal Link</a>'},
+        { gpx: './vom-osten-in-den-norden/japan2025_segment2_tagged.gpx', url: './vom-osten-in-den-norden/', popup: '<b>Eintrag #2 – Vom Osten in den Norden</b><br><a href="&#x2F;projects&#x2F;japan-2025&#x2F;vom-osten-in-den-norden&#x2F;">Journal Link</a>'},
+        { gpx: './kulturschock-japan/japan2025_segment1_tagged.gpx', url: './kulturschock-japan/', popup: '<b>Eintrag #1 – Kulturschock Japan</b><br><a href="&#x2F;projects&#x2F;japan-2025&#x2F;kulturschock-japan&#x2F;">Journal Link</a>'},
+        
+        
+    ]
+        
+        
+        
+        
+        
+        
+        
+        // Adding some markers
+        
+        var marker = L.marker([47.0507621319826, 8.310224275003634]).addTo(map);
+
+        marker.setIcon(iconDefault);
+        
+        marker.bindPopup("<b>Vorbereitung am vorbereiten!</b><br><a href='/projects/japan-2025/vorbereitung-am-vorbereiten/'>Journal Link</a>").openPopup();
+        
+        
+        map.setView(marker._latlng, 13);
+        
+        
+        
+        
+
+        gpxFiles.forEach(function (gpxFile) {
+            var gpx = new L.GPX(gpxFile.gpx, {
+                async: true,
+                gpx_options: {
+                    joinTrackSegments: true,
+                    parseElements: ['track','route']
+                },
+                polyline_options: {
+                    color: randomColors[colorIndexer],
+                    opacity: 0.75,
+                    weight: 6,
+                    lineCap: 'round'
+                },
+                marker_options: {
+                    iconSize: [24, 24],
+                    iconAnchor: [12, 12],
+                },
+                markers: {
+                    startIcon: '/assets/leaflet/point_start.svg',
+                    endIcon: '/assets/leaflet/point_stop.svg'
+                }
+            }).on('loaded', function (e) {
+                var layerBounds = e.target.getBounds();
+                if (bounds === null) {
+                    bounds = layerBounds;
+                } else {
+                    bounds.extend(layerBounds);
+                }
+                map.fitBounds(bounds);
+            }).on('addline', function(e) {
+                
+            }).addTo(map);
+
+            gpx.on('loaded', function(e) {
+                var gpx = e.target;
+                // Register popup on click
+				gpx.getLayers()[0].bindPopup(gpxFile.popup)
+                
+				// Mouseover Style;
+				gpx.getLayers()[0].on('mouseover', function(e) {
+
+					gpx.getLayers()[0].bringToFront();
+				});
+            })
+            
+            colorIndexer = (colorIndexer+1) & randomColors.length;
+        });
+
+        
+
+        
+        L.control.scale().addTo(map); // adds a scale
+    </script>
+</div>
+
+
+
+<div style="justify-self: center; display: flex; margin-bottom: 20pt;">
+<span style="color: var(--color-accent); font-family:'tabler-icons'">&#xee4b;</span>
+<p style="justify-self: center;">
+Klick auf die farbigen Pfade um den entsprechenden Eintrag zu lesen!<br>
+</p>
+<span style="color: var(--color-accent); font-family:'tabler-icons'">&#xee4d;</span>
+</div>
+<p>(I apologize for the English speaking people reading this, everything will be in German, so you might want to use a translator!)</p>
+<p>Mit dem Elektrotechnik-Diplom im Sack ist es nun Zeit für eine (wahrscheinlich) verdiente Pause! Dieses Jahr gehe ich nach Japan, dem Land der aufgehenden Sonne!</p>
+<p>Warum Japan? <s>Weil ich Teil des Schweizer Hiveminds bin und nun Japan Ferien machen möchte!</s> Nun vielleicht stimmts schon, aber das Land hat mich schon seit einiger Zeit interessiert! Einerseits wegen den von uns betrachtet skurrilen Kultur, und anderseits möchte ich mal einen grossen Solo-Trip machen. Durch das Reisen mit einem Tourenvelo, bin ich dem Umfeld ausgesetzt und bin instinktiv gezwungen, mit der vorliegenden Kulturen zu interagieren. Ebenfalls hab ich Ramen und Miso-Suppe gern :)</p>
+<p>So, die Karte oben ist mit dem Journal unten verknüpft, welches ich im Verlaufe der Tour schreibe (wöchentlich oder wenn ich Lust habe). Diese beinhalten meine Gedanken, Stimmung und coole Bilder von der Reise!</p>
+
+
+
+
+  
+
+  <section id="journals">
+    <h2>Journals</h2>
+    <ul class="post-list fancy">
+      
+      <li id="eintrag-7-zu-den-skigebieten">
+        <div>
+          
+          <a class="less" href="&#x2F;projects&#x2F;japan-2025&#x2F;zu-den-skigebieten&#x2F;">Eintrag #7 – Zu den Skigebieten</a>
+          <time class="date" datetime="2025-06-30">30.06.2025</time>
+        </div>
+        <p>Nach den paar Wochen in Hokkaido gehts wieder nach Honshu. Tschüss Seicomart, Braunbären &amp; Ainus und Hallo Honshu!</p>
+
+      </li>
+      
+      <li id="eintrag-6-ainus-und-der-kustenwind">
+        <div>
+          
+          <a class="less" href="&#x2F;projects&#x2F;japan-2025&#x2F;ainus-und-kustenwind&#x2F;">Eintrag #6 – Ainus und der Küstenwind</a>
+          <time class="date" datetime="2025-06-01">01.06.2025</time>
+        </div>
+        <p>Die letzte Woche in Hokkaido, bevor es wieder nach Honshu geht. Die Fahrt führt in den Süden Hokkaidos an der Küste entlang, aber unterwegs werden noch ein paar Museen angeschaut. Die Ainus, die Ureinwohner Hokkaidos, sind der Fokus entlang der Küste mit grossen Ausstellungen über deren Kultur.</p>
+
+      </li>
+      
+      <li id="eintrag-5-mehr-hirsche-als-baren">
+        <div>
+          
+          <a class="less" href="&#x2F;projects&#x2F;japan-2025&#x2F;mehr-hirsche-als-baren&#x2F;">Eintrag #5 – Mehr Hirsche als Bären</a>
+          <time class="date" datetime="2025-05-22">22.05.2025</time>
+        </div>
+        <p>Wie ist die Bären-Regel schon wieder? Die Schwarzbären kann man verprügeln, bei Braunbären muss man sich tot stellen und bei Polarbären kann man gleich das Testament schreiben?</p>
+
+      </li>
+      
+      <li id="eintrag-4-im-nordlichsten-ort-wakkanai">
+        <div>
+          
+          <a class="less" href="&#x2F;projects&#x2F;japan-2025&#x2F;im-norden-wakkanai&#x2F;">Eintrag #4 – Im nördlichsten Ort: Wakkanai</a>
+          <time class="date" datetime="2025-05-10">10.05.2025</time>
+        </div>
+        <p>Das ging irgendwie schnell von Sapporo nach Wakkanai, dem nördlichsten Ort Japans. Das Wetter wärmt langsam auf und nun geht die Tour wieder Richtung Süden. Aber den nördlichsten Punkt Japans (<em>Cape Sōya</em>) wird noch besucht bei der Fortsetzung der Tour!</p>
+
+      </li>
+      
+      <li id="eintrag-3-auf-die-gefahrliche-kalte-seite-zum-seicomart">
+        <div>
+          
+          <a class="less" href="&#x2F;projects&#x2F;japan-2025&#x2F;hokkaido-ahoy&#x2F;">Eintrag #3 - Auf die gefährliche &amp; kalte Seite zum Seicomart</a>
+          <time class="date" datetime="2025-05-02">02.05.2025</time>
+        </div>
+        <p><em>Seicomart</em>...was ist den so gut an diesen Minimarkts? Die sind einfach geiler als diese 'Drecks' 7-11, FamilyMarts und Lawsons. Nein, Spass, ist ja nur ein Minimarkt exklusiv in Hokkaido, welcher zu Beginn haufenweise Billigwein verkaufte. Ich werde nie mehr darüber schreiben, daher geniesst jedes Wort, auch wenn es schmerzt.</p>
+
+      </li>
+      
+      <li id="eintrag-2-vom-osten-in-den-norden">
+        <div>
+          
+          <a class="less" href="&#x2F;projects&#x2F;japan-2025&#x2F;vom-osten-in-den-norden&#x2F;">Eintrag #2 – Vom Osten in den Norden</a>
+          <time class="date" datetime="2025-04-19">19.04.2025</time>
+        </div>
+        <p>Nach einer Pause in Ishinomaki gehts weiter Richtung Norden, insbesondere nach Aomori City. Zwar fuhr ich gegen meinen eigenen Willen weiter an der Ostküste entlang, weil es wärmer (kälter versus kalt) ist als im Inland. Trotzdem konnte jede Menge Interessantes gesehen werden.</p>
+
+      </li>
+      
+      <li id="eintrag-1-kulturschock-japan">
+        <div>
+          
+          <a class="less" href="&#x2F;projects&#x2F;japan-2025&#x2F;kulturschock-japan&#x2F;">Eintrag #1 – Kulturschock Japan</a>
+          <time class="date" datetime="2025-04-10">10.04.2025</time>
+        </div>
+        <p>Irgendwie musste ich es erwarten, dass Japan ein Kulturschock sein wird. Und doch hatte es mich überrascht.</p>
+
+      </li>
+      
+      <li id="vorbereitung-am-vorbereiten">
+        <div>
+          
+          <a class="less" href="&#x2F;projects&#x2F;japan-2025&#x2F;vorbereitung-am-vorbereiten&#x2F;">Vorbereitung am vorbereiten</a>
+          <time class="date" datetime="2025-03-31">31.03.2025</time>
+        </div>
+        <p>Die Anzahl Tage werden immer weniger, bis ich dann im Flieger hocke und Zeit verplempern muss, bis ich in Japan ankomme. Bevor das alles geschiet, muss noch das Velo aufgefrischt werden und ich werde etwas über die Planung dieser Tour erzählen!</p>
+
+      </li>
+      
+    </ul>
+  </section>
+
+
+
+      </main>
+
+      <footer>
+        <span>
+    Made with <a href="https://www.getzola.org/">Zola</a>
+    <b>/</b> 
+    <a href="/tags/">Tags</a>
+    <b>/</b> 
+    <a href="/categories/">Categories</a>
+    <b>/</b> 
+    <a href="/opensource/">Open Source</a>
+  </span>
+      </footer>
+    </body>
+
+    
+    
+
+
+
+    <script>
+      /*-------------------------- Dark/Light Mode --------------------------*/
+      comp = document.getElementById('darklight-toggler');
+      body = document.getElementsByTagName('body')[0];
+      function toggleDarkLight(comp) {
+        localStorage.setItem('dark', comp.checked);
+        if (comp.checked) {
+          body.classList.add('dark');
+          window.REMARK42.changeTheme("dark");
+        } else {
+          body.classList.remove('dark');
+          window.REMARK42.changeTheme("light");
+        }
+      }
+
+      if (localStorage.getItem('dark') === "true") {
+        body.classList.add('dark');
+        comp.checked = true;
+      } else {
+        body.classList.remove('dark');
+        comp.checked = false;
+      }
+    </script>
+
+</html>

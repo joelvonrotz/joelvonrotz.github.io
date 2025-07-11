@@ -1,0 +1,576 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  
+  <title>JvR - Eintrag #3 - Auf die gefährliche &amp; kalte Seite zum Seicomart</title>
+  
+
+  
+  <link rel="stylesheet" href="/scripts/leaflet/leaflet.css" />
+  <script src="/scripts/leaflet/leaflet.js"></script>
+  <link rel="stylesheet" href="/scripts/leaflet-fullscreen/Control-FullScreen.css" />
+  <script src="/scripts/leaflet-fullscreen/Control-FullScreen.js"></script>
+    
+  <script src="/scripts/leaflet-gpx-2.0.0/gpx.js"></script>
+    
+  
+
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+
+  
+  <link rel="stylesheet" href="/fonts/inconsolata.css">
+  <link rel="stylesheet" href="/fonts/lora.css">
+  <link rel="stylesheet" href="/fonts/outfit.css">
+  <link rel="stylesheet" href="/fonts/alegreya_sans.css">
+  <link rel="stylesheet" href="/fonts/atkinson-hyperlegible-next.css">
+  <link rel="stylesheet" href="/fonts/tabler-icons.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/joel.css">
+  <link rel="stylesheet" href="/css/joel-mobile.css">
+
+  <!--preload navigation and header images-->
+  <link rel="preload" href="/assets/icons/aperture.svg" as="image"/>
+<link rel="preload" href="/assets/icons/feather.svg" as="image"/>
+<link rel="preload" href="/assets/icons/home.svg" as="image"/>
+<link rel="preload" href="/assets/icons/lightbulb.svg" as="image"/>
+<link rel="preload" href="/assets/icons/search.svg" as="image"/>
+<link rel="preload" href="/assets/icons/sun.svg" as="image"/>
+<link rel="preload" href="/assets/icons/moon.svg" as="image"/>
+<link rel="preload" href="/assets/icons/download.svg" as="image"/>
+<link rel="preload" href="/assets/header.svg" as="image"/>
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        // • rendering keys, e.g.:
+        throwOnError: false
+      });
+    });
+  </script>
+</head>
+
+<body class="menu-projects">
+      <header>
+        <div class="header-wrapper">
+  <h1 class="site-title">
+    joel von rotz
+  </h1>
+  <div style="display: flex;
+              gap: 5px;
+                align-items: center;">
+    <nav>
+      <a class="button" id="nav-home" title="Home" href="/">
+        <img class="icon" src="/assets/icons/home.svg">
+      </a>
+      <a class="button" id="nav-writing" title="Writing" href="https://joelvonrotz.ch/writing/">
+        <img class="icon" src="/assets/icons/feather.svg">
+      </a>
+      <a class="button" id="nav-projects" title="Projects" href="https://joelvonrotz.ch/projects/">
+        <img class="icon" src="/assets/icons/lightbulb.svg">
+      </a>
+      <a class="button" id="nav-photos" title="Photography" href="https://joelvonrotz.ch/photos/">
+        <img class="icon" src="/assets/icons/aperture.svg">
+      </a>
+      <a class="button" id="nav-downloads" title="Downloads" href="https://joelvonrotz.ch/downloads/">
+        <img class="icon" src="/assets/icons/download.svg">
+      </a>
+      <!--<a class="button" id="nav-search" title="Search" href="https://joelvonrotz.ch/search/">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>-->
+    </nav>
+    <label class="container">
+      <a class="button less" id="nav-search" title="Search" href="/search">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>
+    </label>
+    <label class="container" title="Dark/Light Toggle">
+      <input id="darklight-toggler" type="checkbox" onclick="toggleDarkLight(this)">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</div>
+      </header>
+
+      <main>
+        
+
+
+
+
+
+
+
+
+<div class="thumbnail" style="background-image: url('thumbnail.jpg'); ">
+  
+  
+  <p class="attribution">Ganz viel los im <em>Sam's Bike</em> Shop in Sapporo</p>
+  
+</div>
+
+
+
+
+  
+  
+
+
+
+
+<p class="breadcrumbs"><a class="button less breadcrumb" href="../../../"><img class="icon" src="/assets/icons/home.svg"><span>Home</span></a><span class="divider">/</span><a class="button less breadcrumb" href="../../">Projects</a><span class="divider">/</span><a class="button less breadcrumb" href="../">Japan 2025</a><span class="divider">/</span></p>
+
+
+
+
+
+
+<section id="title-block">
+  
+  <h1 class="title">Eintrag #3 - Auf die gefährliche &amp; kalte Seite zum Seicomart</h1>
+  
+  <div class="stats">
+    
+    <time class="date" datetime="2025-05-02">
+      02.05.2025
+    </time>
+    <p class="readtime">17 min</p>
+    
+  </div>
+  
+  <div class="description">
+    <p><em>Seicomart</em>...was ist den so gut an diesen Minimarkts? Die sind einfach geiler als diese 'Drecks' 7-11, FamilyMarts und Lawsons. Nein, Spass, ist ja nur ein Minimarkt exklusiv in Hokkaido, welcher zu Beginn haufenweise Billigwein verkaufte. Ich werde nie mehr darüber schreiben, daher geniesst jedes Wort, auch wenn es schmerzt.</p>
+
+  </div>
+  
+</section>
+
+
+
+<p>Puh, die Beine schmerzen schon noch sehr als ich in Sapporo ankam. Diese Etappe beinhaltet bis jetzt die meisten Fahrtage zwischen den Pausen. Ganze 9 Tage und das ist schon eher auf meiner oberen Grenze. Als Regel habe ich mir gesetzt, alle 5-10 Tagen mindestens ein Pausetag einzurichten. Damit sollte meine Freude am Velofahren noch existieren! Auch ist es ein Art Zwang, dass doch noch Sightseeing gemacht wird.</p>
+<p>Was gibt's sonst was... Ah ja, ich hatte ja noch Geburtstag (gestern). Den habe ich zum Teil in einem Internet-Café verbracht (<a class="internal" href="#photos-backup-station">Bilder</a>), da ich irgendwie die Bilder auf der Kamera effizient auf die Cloud übertragen musste. Nach etwa 3 Stunden konnte ich mit Erfolg alle Bilder hochladen und habe mich entschieden, ein bisschen weniger Bilder zu machen, damit der Speicherplatz noch reicht.</p>
+<p>Auch anzumerken ist die <em>Golden Week</em>, welche letztes Wochenende begonnen hatte und dieses Wochenende fertig ist. Plötzlich lebten die Campingplätze auf von Japanern mit ihren beneidenswerten Camping-Setups. Die Plätze sahen so gemütlich aus und die Zelte waren etwa 4-5 mal grösser als meins. Tja, kommt halt davon, wenn man mit dem Velo reisen möchte...</p>
+<h2 id="die-gefahrene-strecke">Die gefahrene Strecke<a class="zola-anchor" href="#die-gefahrene-strecke" aria-label="Anchor link for: die-gefahrene-strecke">&#xeade;</a></h2>
+<div>
+  <div id="map"></div>
+  <script>
+    // prepare custom marker
+    var iconDefault = L.icon({iconUrl: '/assets/leaflet/marker_default.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconSleep = L.icon({iconUrl: '/assets/leaflet/marker_sleep.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconShop = L.icon({iconUrl: '/assets/leaflet/marker_shop.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconWarning = L.icon({iconUrl: '/assets/leaflet/marker_warn.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconForbid = L.icon({iconUrl: '/assets/leaflet/marker_forbidden.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconStart = L.icon({iconUrl: '/assets/leaflet/marker_start.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconStop = L.icon({iconUrl: '/assets/leaflet/marker_stop.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var map = L.map('map', {
+      fullscreenControl: true,
+      fullscreenControlOptions: {
+        position: 'topleft'
+      }
+    });
+    //L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+    L.tileLayer('https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=c1361ae43a0f4e989709a01d869dd504', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);var url = 'japan2025_segment3_tagged.gpx'; // URL to your GPX file or the GPX itself
+    var gpx = new L.GPX(url, {
+      async: true,
+      wptIcons: {
+      '': iconDefault,
+      'Sleep': '/assets/leaflet/marker_sleep.svg',
+      'Camp': '/assets/leaflet/marker_sleep.svg',
+      'Hotel': '/assets/leaflet/marker_sleep.svg',
+      'Ryokan': '/assets/leaflet/marker_sleep.svg'
+    },
+    marker_options: {
+    iconSize: [22,22],
+    iconAnchor: [11, 11],
+  },
+      markers: {
+        startIcon: '/assets/leaflet/point_start.svg',
+        endIcon: '/assets/leaflet/point_stop.svg',
+        pointMatchers: [
+        {
+          regex: /camp|hotel|sleep|hostel|guesthouse|ryokan|futuba inn/i,
+          icon: iconSleep
+        },{
+          regex: /shop|groceries|store|supermarket/i,
+          icon: iconShop
+        },{
+          regex: /./,
+          icon: iconDefault
+        },
+      ]
+      }
+    }).on('loaded', function (e) {
+      map.fitBounds(e.target.getBounds());
+    }).addTo(map);
+L.control.scale().addTo(map); // adds a scale
+  </script>
+</div>
+<ul>
+<li><strong>Statistik</strong>: $6861\text{m}$ Höhe à $643.95\text{km}$ auf 9 Tage verteilt</li>
+<li><strong>Stimmung</strong>: besser, da ich die Kilometer besser aufteilen konnte und noch interessantes erleben konnte</li>
+<li><strong>Tote Tiere</strong>: 15 tote Tiere auf der Strasse entdeckt (davon 3 Muscheln)</li>
+</ul>
+<h2 id="hokkaido-rt-hingehen">Hokkaido(rt hingehen)<a class="zola-anchor" href="#hokkaido-rt-hingehen" aria-label="Anchor link for: hokkaido-rt-hingehen">&#xeade;</a></h2>
+<p>Okay, extrem schlechter Wortwitz...</p>
+<p>Nach zwei Pausentagen in Aomori City ging es nun Richtung Hokkaido, wo mein erster grosser Meilenstein der Reise ist. Ebenfalls habe ich dort einen oberwichtigen Termin, mehr dazu aber etwas später.</p>
+<figure>
+    <img src="japan2025_seg3-35.jpg" alt="" />
+    <figcaption><p>Je näher man zu Hokkaido kam, desto mehr erscheint die Insel. Bild wurde vor Oma gemacht.</p>
+</figcaption>
+</figure>
+<p>Zuerst einmal war das Ziel <em>Oma</em>, den nördlichsten Punkt von <em>Honshu</em> (die "Hauptinsel" Japans). Das Velo wurde gepackt und die Fahrt ging los! An meinem Abreisetag war ebenfalls der <em>Sakura Marathon</em> in der Stadt und ich fuhr ein Segment des Marathons hindurch. Es war einiges los mit den Helfergruppen, welche das Gelände absperrten und Trinkstände aufbauten, und Polizisten, welche den Verkehr regelten.</p>
+<p>Sobald ich aus der Stadt war, ging es der Küste entlang mit dem Ziel zwischen Mutsu und Aomori ungefähr in der Mitte der Route zu campieren. Nach Plan käme ich zu einem Campingplatz an der Küste, aber so wie Pläne halt sind, verlief er nicht wie gewollt. Der Wind war das Problem. Frühling scheint die Küsten windig zu machen wegen den Temperaturänderungen. Ich entschied mich Inland zu gehen, um dem Wind möglichst zu entkommen. Auf der Suche nach einem Platz fragte ich einen Spaziergänger nach einem <em>inoffiziellen</em> Campingplatz. Er wies mich zu einem Park hin, welcher mit einer Toilette ausgestattet war und fliessend Wasser hatte. Das Problem war gelöst.</p>
+<figure>
+    <img src="japan2025_seg3-07.jpg" alt="" />
+    <figcaption><p>Die Windräder drehten auch wie verrückt wegen dem Wind. Das Bild zeigt es einfach nicht.</p>
+</figcaption>
+</figure>
+<p>Meine im Verlaufe dieser Ereignissen wechselnden Stimmung fing mit Anschiss an, wechselte zu Stress und endete mit Erleichterung. Ich weiss eigentlich, dass ich am Ende des Tages ein Schlafplatz finde werde, aber wo dieser sein wird bringt mir Stress.</p>
+<p>Nun zurück zur Reise. Weiter ging es zur Stadt Mutsu, wo ich in der Nähe auf einem Camping übernachtete. Direkt neben dem Camping gab es eine Onsen und die war extrem heiss! Das Badwasser war ca. 45°C und neben dem lebendig gekocht werden konnte man auch in ein Eisbad baden gehen. Aber das Onsen half, beim Schlafen Wärme zu geben, da man den Körper extrem aufwärmt (und angeblich helfen die Mineralien der Bäder, die Wärme zu halten).</p>
+<figure>
+    <img src="japan2025_seg3-16.jpg" alt="" />
+    <figcaption><p>Küche und Zelt auf dem Camping <em>Mutsuyatate Hot Spring</em></p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg3-01.jpg" alt="" />
+    <figcaption><p>Und die Onsen Mutsuyatate nebendran. Angeblich ist das Wasser heiss wegen dem Eisengehalt und die Onsen wird viel besucht von Lokalen!</p>
+</figcaption>
+</figure>
+<p>Die Reise ging weiter bis nach Oma. Dort wollte ich wiederum campieren, aber der gottverdammte Wind hatte ein Problem mit mir. Oder war es Petrus? Egal, ich schlief als Alternative in einem Hotel, welches auch eine Onsen hatte. Am Tag danach ging es mit der Fähre nach Hokkaido!</p>
+<h2 id="im-bauern-restaurant-vom-topfer">Im Bauern-Restaurant vom Töpfer<a class="zola-anchor" href="#im-bauern-restaurant-vom-topfer" aria-label="Anchor link for: im-bauern-restaurant-vom-topfer">&#xeade;</a></h2>
+<blockquote>
+<p>Ausser Reisen erlebt man keine Freiheit.</p>
+</blockquote>
+<p>Dieser Spruch, zwar mit einer Übersetzer-App übersetzt, kam aus dem Mund eines 72 jährigen Restaurant Besitzer und Koch mit 45 Jahre Töpfer Erfahrung. Das war am dritten Tag der Etappe im Bauer-Restaurant Mokuba, welches nach Mutsu Richtung Oma aufzufinden ist. Das ganze Restaurant war ein skurriles Abenteuer, da nebst dem geilen Menü (1500 Yen für ein fünfgänger Menü) auch das gesamte Geschirr von ihm gemacht wurde. Jede Tasse und Teller sahen anders aus!</p>
+<figure>
+    <img src="japan2025_seg3-09.jpg" alt="" />
+    <figcaption><p>Der 72 jährige Restaurant Besitzer vom <em>Farmers Restaurant Mokuba</em> (<a href="https://maps.app.goo.gl/bniDBGofbfz8W1AB9">Google Maps</a>), welcher zuvor 45 Jahre mit Töpfern meistern verbracht hatte.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg3-08.jpg" alt="" />
+    <figcaption><p>Für ungefähr 9 Franken erhielt man ein fünfgänger Menü und jedes Geschirr wurde vom Chef selbst gemacht. Danach gab es noch die Lebensgeschichte von ihm. Coolstes Highlight dieser Etappe!</p>
+</figcaption>
+</figure>
+<p><em>Für ihn sei es Zeit, wieder zurückzugeben anstatt nur zu nehmen</em>, teilte er mir mit und rein die (etwas stockende) Konversation war einer der interessantesten Ereignisse auf der Tour. Ich hoffe er lebt noch viele Jahre und wünsche ihm grossen Erfolg bei seinem Wunsch.</p>
+<figure>
+    <img src="japan2025_seg3-66.jpg" alt="" />
+    <figcaption><p>Ein Kaffeelöfel gab es, aber das Holzstöckchen war amüsanter</p>
+</figcaption>
+</figure><h2 id="soon-in-your-japanese-tv-schedule">Soon in your (Japanese) TV Schedule<a class="zola-anchor" href="#soon-in-your-japanese-tv-schedule" aria-label="Anchor link for: soon-in-your-japanese-tv-schedule">&#xeade;</a></h2>
+<p>Was ich noch nicht so erwähnt habe ist, dass ich zu Beginn der Reise, im Internationalen Flughafen Narita, von einem Interview-Team kurz aufgegabelt wurde. Sie sind vom <em>TokyoTV</em> und befragen Reisende, warum sie nach Japan kommen!</p>
+<p>Naja, irgendwie war es klar, dass genau ich aufgegabelt werde: ich mit dem Gepäck-Wagen wo quer ein riesiges Velo-Paket drauflag und noch dazu die Gepäcksschachtel. Aber ich glaube, was das Team gepackt hatte ist, dass ich von der <em>Hokkaido Stamp Rally</em> schwärmte! Schwärmen war eher ein bisschen übertrieben, ich fand die Idee, ein Teil einer Raststätten-Stempelstafette mit dem Velo zu machen, einfach witzig. Folgend wurden Kontaktdaten ausgetauscht und ein Reminder, dass man sich dann in Hokkaido trifft.</p>
+<p>Nun ist die Zeit gekommen! Um 06:50 Uhr sass ich auf der Fähre in Oma und das Fahrrad war an einer Mickey Mouse-Decke an ein paar Rohren bei der Parkfläche festgebunden. Es regnete Hunde und Katzen. Die Fahrt war sehr gemütlich und als <em>Standard</em> Ticket (3.Klasse) konnte man auf eine Teppichfläche sich gemütlich ausbreiten.</p>
+<figure>
+    <img src="japan2025_seg3-34.jpg" alt="" />
+    <figcaption><p>Fähre Ahoy! Von Oma nach Hakodate dauerte es 90min.</p>
+</figcaption>
+</figure>
+<p>Schritt für Schritt kam der Südteil von  Hokkaido immer näher, bis ich ihn Hakodate ankam. Direkt am Ausgang wurde ich vom TV-Team begrüsst: Yuji der Direktor, Miwa die Dolmetscherin, ein Kameramann von Sapporo (sicherlich hiess er nicht Bruno) und <em>Audio-Guy</em> (er hatte sich am letzten Tag so verabschiedet). Sie interviewten mich und rüsteten mich mit einem Mikrofon aus und montierten eine GoPro an meinem Velo.</p>
+<figure>
+    <img src="japan2025_seg3-27.jpg" alt="" />
+    <figcaption><p>Aus der Fähre heraus und montiert mit der GoPro und Mikrofon</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg3-51.jpg" alt="" />
+    <figcaption><p>Meine 'Aussicht' für die folgenden Tagen</p>
+</figcaption>
+</figure>
+<p>So wurde ich für die nächsten fünf Tagen begleitet. Man fuhr mir hinten nach und filmte mich. Man fuhr mir davon, um mich dann zu filmen. Man filmte mich beim Essen. Man filmte ich, wenn ich Snacks irgendwo im Seich am essen war. Man filmte mich, wie ich mein Zelt aufbaute. Und man filmte mich bei Interviews.</p>
+<figure>
+    <img src="japan2025_seg3.jpg" alt="" />
+    <figcaption><p>Das TV Team von der Distanz. Links ist Miwa, dann Yuji und rechts der Kameramann von Sapporo.</p>
+</figcaption>
+</figure>
+<p>Wie können das bekannte Schauspieler und Weissichwas durchhalten? Auf eine Art war es sehr interessant und auch hilfreich, da Miwa beim Übersetzen sehr geholfen hatte. Aber durch die Erschöpfung vom Velofahren, machten mich die Interview-Fragen innerlich reizend. "<em>Why did you eat your Onigiri here, where it's not so beautiful</em>" wurde ich gefragt und der metaphorische Schirm ging mir zu. <em>Was ist das für eine Frage?!?!</em> schoss mir durch meinen erschöpften Kopf und ich antwortete ungefähr mit "<em>because I was feeling a bit hungry and didn't wann to hit a hunger-wall or get bonked</em>", also das ich keinen Hungerrast haben wollte.</p>
+<figure>
+    <img src="japan2025_seg3-20.jpg" alt="" /></p>
+<p><img src="PXL_20250427_050837798.jpg" alt="" />
+    <figcaption><p>Das Essen wurde vom TV Team gefilmt und elegant auseinandergenommen (und dabei gefilmt). Fokus des Teams nebst meiner Radreise war auch die Highlights bei den Raststätten selbst zu zeigen.</p>
+</figcaption>
+</figure>
+<p>Diese Gedankenblitze waren für mich meistens noch anstrengender als die Fragen selbst in diesen Momenten, denn ich wusste, dass ich mich zusammenreissen muss und das Team nichts dafür kann. Ich habe das Team sehr geschätzt, aber meistens wollte ein bisschen mehr <em>Ich</em>-Zeit, besonders am Abend. Aber die Begleitung war auch nur fünf Tage mit mir unterwegs und somit reiste ich mit ihnen umher. Aber wo war das <em>umher</em>?</p>
+<figure>
+    <img src="japan2025_seg3-05.jpg" alt="" /></p>
+<p><img src="japan2025_seg3-37.jpg" alt="" /></p>
+<p><img src="japan2025_seg3-55.jpg" alt="" />
+    <figcaption><p>Einige Raststätten</p>
+</figcaption>
+</figure>
+<p>Die Raststätten! Ich fuhr von Raststätte zu Raststätte, kaufte etwas ein oder ass die dortige Spezialität (wenn es eine gab) und wurde währenddessen vom TV-Team gefilmt.</p>
+<figure>
+    <img src="japan2025_seg3-47.jpg" alt="" />
+    <figcaption><p>Bei der geschlossenen Raststätte in Makkai. Anstatt einen Stempel gibts ein Bild!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg3-50.jpg" alt="" />
+    <figcaption><p>Es gibt 124 Raststätten, welche bei der Stafette mitmachen. Auf jeder Seite wird eine Raststätte gezeigt plus deren Spezialität, wenn es eine hat.</p>
+</figcaption>
+</figure>
+<p>Verabschiedet haben wir uns auf der Raststätte auf dem Nakayama Pass, wo es frittierte Kartoffeln gab, die, für das sie nur Kartoffeln in einem Teig waren und frittiert wurden, sehr geil waren! Falls du mal Lust auf drei frittierte Kartoffeln am Stiel hast, kauf dir ein Flugticket und geh schnell zur Raststätte "Bōyō-Nakayama" und hol dir für nur 3 Franken (aktueller Yen Franken Kurs) dieses Ding!</p>
+<figure>
+    <img src="japan2025_seg3-44.jpg" alt="" />
+    <figcaption><p>Die Götterspeise!</p>
+</figcaption>
+</figure>
+<p>Die Bye-Bye Szene wurde gedreht, die Royce Snacks wurden eingekauft und das Team begleitete mich noch zum Campingplatz, bevor ich dann wieder alleine war. Lustigerweise in einem Bärengebiet auf einem Campingplatz wurde ich alleine gelassen, aber dafür hatte es eine Onsen in der Nähe!</p>
+<figure>
+    <img src="japan2025_seg3-63.jpg" alt="" />
+    <figcaption><p>Durch den Tag ist es das <em>Bike Shiva</em>, am Abend wird es zum <em>Onsen-Mobil</em>. Damit düste ich durch den Wald zur Onsen und dann im Dunkeln mit Licht wieder zurück.</p>
+</figcaption>
+</figure>
+<p>Im Nachhinein war es ein tolles Erlebnis und bin sehr dankbar dafür. Würde ich es nochmals machen? Natürlich und besonders nachdem ich meine Lektionen gelernt habe beim ersten Mal.</p>
+<p>Und ein nützlicher Frage-Satz habe ich auch noch gelernt:</p>
+<blockquote>
+<p>Osusume no <strong>michi no eki</strong> doko desu ka (おすすめ の <strong>みちのえき</strong> どこ です か)</p>
+</blockquote>
+<p>Damit kann ich die lokalen Japanern nach empfehlenswerten Raststätten fragen. Aber nicht nur das, denn man kann das <em>michi no eki</em> einfach durch andere Wörter ersetzen (z.B. um nach guten Restaurants, Museen oder Bars zu fragen).</p>
+<h2 id="wo-sind-die-mulleimer">Wo sind die Mülleimer?<a class="zola-anchor" href="#wo-sind-die-mulleimer" aria-label="Anchor link for: wo-sind-die-mulleimer">&#xeade;</a></h2>
+<p>Senderwechsel! Als Reisender ist das Entsorgen von Müll eine schmerzhafte Angelegenheit. Jede leere Ecke in meinen Taschen ist gefüllt mit leeren Verpackungen von Gummibärchen, Onigiri oder anderem Zeug. Und ich werd das Zeug nicht (so einfach) los.</p>
+<p>Warum ist das aber so?</p>
+<p>In Japan ist das Entsorgen des Mülls nicht etwa die Verantwortung der Regierung oder lokale Gemeinde, sondern bei <strong>dir</strong>, dem Bewohner/Konsument. Das bedeutet, dass es nicht viele öffentliche Mülleimer oder Recyclingstationen gibt. Nun, als Reisender, welcher ja kein festen Wohnsitz hat, ist man ein bisschen im <em>Seich</em>. Aber meistens nehmen Campingplätze oder die Minimärkte den Müll ab, wenn man lieb fragt!</p>
+<figure>
+    <img src="ResizedImage_2025-05-02_21-02-12_1.jpg" alt="" />
+    <figcaption><p>Entweder der Koffer fiel aus dem Kofferraum und explodierte in tausend kleiderstücke oder es war eine Tragödie</p>
+</figcaption>
+</figure>
+<p>Ein Nebeneffekt von diesem System ist, dass der Müll "alternativ" entsorgt wird, nämlich einfach aus dem Fenster werfen während dem Fahren auf Nationalstrassen. Daher ist es ein bisschen schräg, dass Japan als sauberes Land gilt, wenn dies für Städte und Dörfer gilt, während die Strassen mühsam von Freiwilligen aufgeräumt werden muss. Es sind nicht nur leere Dosen oder die Plastikverpackung des Mittagessens, sondern auch Mikrowellen, Kleider, alte Röhrenfernseher und Zigaretten aufzufinden.</p>
+<figure>
+    <img src="PXL_20250421_034135460.jpg" alt="" />
+    <figcaption><p>Out of sight, out of mind. Nicht gerade die beste Entsorgungsstrategie.</p>
+</figcaption>
+</figure>
+<p>Bevor man den Sennenhut aufsetzt und sagt: "die haben uns ja komplett verarscht diese (unpassendes Wort, welches die Augen der Japaner beschreibt)", darf man nicht vergessen das es auch Orte in der Schweiz gibt, die so dreckig sind, und hier meiner Meinung nach die Regierung ein bisschen versagt hat. Wie kann man Müll entsorgen vereinfachen? Indem das Entsorgen leichter oder lohnenswerter gemacht wird, als das Wegwerfen!</p>
+<h2 id="internationale-austausch">Internationale Austausch<a class="zola-anchor" href="#internationale-austausch" aria-label="Anchor link for: internationale-austausch">&#xeade;</a></h2>
+<p>An meinem Pausentagen in Sapporo lernte ich ganz kurz Aman kennen, ein Inder von New Dehli, welcher in Tokyo an seinem Startup arbeitet. Danach, nach einer Nissage durch die Stadt traf ich Aman wieder (ich erkannte seinen orange Rucksack wieder)! Wir unterhielten uns und machten uns auf dem Weg zu einem Soup Curry Restaurant. Denn Sapporo ist bekannt für dieses Gericht. Und ja, es ist dumm gesagt eine Currysuppe, einfach geiler!</p>
+<p>Beim ersten Restaurant war alles voll und wir gingen zum nächsten Restaurant.  Dabei trafen wir zwei Singapurianer (schreibt man das so?), Joseph und Phoebe, und endeten schlussendlich zu viert im <em>Soup Curry Treasure</em>. Und das Curry war jetzt nicht weltbewegend, aber doch noch gut! Der Austausch untereinander war auch noch lustig und man lernte einander ein bisschen kennen.</p>
+<figure>
+    <img src="japan2025_seg3-74.jpg" alt="" />
+    <figcaption><p>Soup Curry!</p>
+</figcaption>
+</figure><h2 id="mini-velo-service-in-sapporo">Mini Velo Service in Sapporo<a class="zola-anchor" href="#mini-velo-service-in-sapporo" aria-label="Anchor link for: mini-velo-service-in-sapporo">&#xeade;</a></h2>
+<p>Ein Ziel in Sapporo war der Veloshop <em>Sam's Bike</em>, welcher von der Webseite HokkaidoWilds empfohlen wurde. Der Shop bietet nebst vielen Velokomponenten, Kleider und Taschen auch extrem begeisterte Mitarbeiter an. Als ich mit meinem Velo ankam, war die Frau (ich habe leider den Namen vergessen, werde evtl. nachfragen) im Laden begeistert. Leider konnte sie kein Englisch (beide im Laden konnten kein Englisch), aber mit der Übersetzer App konnten wir uns austauschen!</p>
+<figure>
+    <img src="japan2025_seg3-57.jpg" alt="" />
+    <figcaption><p>Das Duo-Team, welches den Laden am Laufen hält! Links Mechaniker, rechts Verkäuferin</p>
+</figcaption>
+</figure>
+<p>Am Velo gab es Probleme mit dem Gangschalten und der Hinterrad-Reifen musste gewechselt werden wegen einem Loch. Während das Velo geputzt wurde, konnte ich einen Inhouse-Kaffee ausprobieren und kaufte mir noch zwei Packgürtel für den Gepäckträger und eine Snacktasche!</p>
+<figure>
+    <img src="japan2025_seg3-59.jpg" alt="" />
+    <figcaption><p>Ich vor dem Shop mit meinem servierten Velo</p>
+</figcaption>
+</figure>
+<p>Das Faszinierende am Shop sind nicht Nur die faszinierende Besitzer des Ladens,  sondern auch die Einrichtung. Der Laden ist gefüllt mit Velos, Kleider, Taschen und anderem Krimskrams. Es hat fast keinen Platz und doch ist es gemütlich drin zu sein!</p>
+<figure>
+    <img src="japan2025_seg3-26.jpg" alt="" />
+    <figcaption><p>Der Laden vorne</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg3-39.jpg" alt="" />
+    <figcaption><p>Und die Werkstatt hinten</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg3-38.jpg" alt="" />
+    <figcaption><p>Schlussendlich wurde die Kassette und Kette gereinigt und es läuft ein bisschen besser.</p>
+</figcaption>
+</figure><h2 id="wie-gehts-der-einsamkeit">Wie gehts der Einsamkeit?<a class="zola-anchor" href="#wie-gehts-der-einsamkeit" aria-label="Anchor link for: wie-gehts-der-einsamkeit">&#xeade;</a></h2>
+<p>Im vorherigen Bericht habe ich mich ein bisschen mit meiner Gefühlslage befasst. Hat sich seitdem etwas geändert? Ungefähr.</p>
+<p>Ich habe das Gefühl, dass es besser geht mit dem Alleinsein als vorher. Natürlich nicht "perfekt", da es nicht umsonst einen instinktiv psychologischer Schmerz gibt, wenn man sich von den eigenen sozialen Kontakten (un-)freiwilling distanziert. Den wird man nicht los und ist auch gut so!</p>
+<p>Dieses Alleinsein hilft mir auf eine Art herauszufinden, wie wenig an sozialen Interaktionen ich noch verkraften kann bevor es dann Richtung Depression gehen könnte. Ob dies der definitive "Wert" ist, glaube ich nicht, aber es gibt mir eine gute Schätzung, um daraus eine "No-Go" Zone anzunehmen!</p>
+<p>Ich habe angefangen, Smalltalks oder kleine Interaktionen mit den lokalen Japanern sehr wertzuschätzen. Mein Favorit bis jetzt ist immer noch mit Tomoko und Horikawa vom Futabaya Inn (<a href="/projects/japan-2025/kulturschock-japan/#nebst-meer-und-lastwagen-noch-ein-kraftwerk">Eintrag Link</a>)! Aber auch möchte ich den vorher erwähneten Fragesatz mehr ausprobieren und ein bisschen Gespräche freestylen (mit meinem brüchigen Japanisch).</p>
+<p>Es blüht langsam auf und ich gewöhne mich immer ein bisschen mehr an Japan, aber auch freue ich mich immer noch über die Schweizer Gespräche!</p>
+<p>Was ich aber auch noch gut finde ist, dass man einfach zuhören kann. Aktuell sitze ich im Pausenraum einer Onsen. Es ist leer und das Einzige, das ich höre, sind der Kassierer, wie er Münzen zusammensammelt, und das Rauschen der Getränke-Automaten. Man fängt an die Geräusche rund um sich herum anzuhören. Plus die "Autonomie", die ich als Tourist ausleben kann, hilft extrem, sich in solchen Situationen irgendwie wohl zu fühlen. Ich geniesse solche Momente während meiner Reise sehr! Morgen bin ich dann weg von diesem Ort und das Onsen Team vergisst mich nach ein paar Minuten wieder.</p>
+<p>Ich würde wiederum gerne mehr meine Gedanken preisgeben, aber auch jetzt bin ich müde und gehe in den Schlafsack. Auf ein andermal!</p>
+<h2 id="weitere-highlights">Weitere Highlights<a class="zola-anchor" href="#weitere-highlights" aria-label="Anchor link for: weitere-highlights">&#xeade;</a></h2>
+<p>Hier entlang für mehr Highlights!</p>
+<figure>
+    <img src="japan2025_seg3-75.jpg" alt="" /></p>
+<p><img src="japan2025_seg3-65.jpg" alt="" /></p>
+<p><img src="japan2025_seg3-32.jpg" alt="" /></p>
+<p><img src="japan2025_seg3-29.jpg" alt="" />
+    <figcaption><p>Kirschblüten dürfen auch nicht vergessen werden!</p>
+</figcaption>
+</figure>
+<p><figure>
+    <img src="japan2025_seg3-11.jpg" alt="" /></p>
+<p><img src="japan2025_seg3-68.jpg" alt="" /></p>
+<p><img src="japan2025_seg3-42.jpg" alt="" />
+    <figcaption><p>In Sapporo besuchte ich noch das Olympia Museum. War sehr nice!</p>
+</figcaption>
+</figure>
+<span id="photos-backup-station" ></span>
+<figure>
+    <img src="japan2025_seg3-76.jpg" alt="" /></p>
+<p><img src="japan2025_seg3-71.jpg" alt="" />
+    <figcaption><p>An meinem Geburtstag kam ich auf die grandiose Idee in ein Internet-Café zu gehen und die Bilder von der Kamera auf die (Schweizer) Cloud zu laden. Dauerte länger als erwartet. Auch das Café selbst war speziell: keine Fenster und man konnte dummgesagt dort leben, da es Toiletten und Duschen hatte</p>
+</figcaption>
+</figure></p>
+<figure>
+    <img src="japan2025_seg3-73.jpg" alt="" />
+    <figcaption><p>Der Hokkaido Schrein. Es hatte eine Menge Leute, aber der Schrein war wunderschön!</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg3-53.jpg" alt="" />
+    <figcaption><p>An jedem grossen Schrein hat man die Möglichkeit, seinen/ihren Wunsch zu äussern. Hier schrieb man es auf ein Holzplättchen und montierte es an einem Holzgerüst vor dem Tempel.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg3-12.jpg" alt="" />
+    <figcaption><p>Die Metro in Sapporo war beeindruckend! Schnell, regelmässig und immer pünktlich!</p>
+</figcaption>
+</figure><figure>
+    <video width="800" height="500" controls>  
+  <source src="ticket_entry.mp4" type="video/mp4">  
+Your browser does not support the video tag.  
+</video>
+    <figcaption><p>Nach dem Ticketkauf wird es bei der Schranke gelocht...</p>
+</figcaption>
+</figure><figure>
+    <video width="800" height="500" controls>
+  <source src="ticket_exit.mp4" type="video/mp4">  
+Your browser does not support the video tag.  
+</video>
+    <figcaption><p>...um beim herausgehen wird es gefressen, wenn es gültig ist. Ansonsten muss man den Betrag begleichen.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg3-13.jpg" alt="" />
+    <figcaption><p>In Hokkaido Richtung Sapporo gingen wir in das Restaurant <em>Subaru</em></p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg3-10.jpg" alt="" />
+    <figcaption><p>Aussenrum war es eine Blockhütte und drin war es sehr gemütlich eingerichtet mit handgeschnitzten Holzfiguren und bequemen Möbel.</p>
+</figcaption>
+</figure><figure>
+    <img src="japan2025_seg3-58.jpg" alt="" />
+    <figcaption><p>Achtung Nerd-Moment!</p>
+</figcaption>
+</figure>
+<p>Als ich ins Hostel Yasube kam und am nächsten Tag an den Morgentisch sass, sah ich eine Reihe von Mangas. Mehrheitlich dieser Bücher war eine Serie: <em>Space Brothers</em>. Ich bin schon ein langer Fan dieser Serie, denn es erzählt eine interessante Geschichte von zwei (fiktiven) Brüdern, die zusammen ins Weltall gehen möchten. Falls das Bedürfnis da ist eine wirklich tolle Geschichte zu lesen, kann ich diese Serie empfehlen! Leider gibt es noch keine Deutschauflagen oder in Buchform, daher muss man vielleicht den Piratenhut aufsetzen...</p>
+<hr />
+<p>Es gab noch so viel mehr, dass ich zeigen könnte, aber ich brauch ja noch was für den Fotoabend ;)</p>
+<p>Gute Nacht und bis dann!</p>
+
+
+
+
+
+<hr>
+
+
+<section id="post-tags">
+  <p>
+    <b>Tags</b>:
+    
+    <a href="/tags/japan">japan</a>,
+    
+    <a href="/tags/journaling">journaling</a>,
+    
+    <a href="/tags/biketouring">biketouring</a>,
+    
+    <a href="/tags/travel">travel</a>,
+    
+    <a href="/tags/hokkaido">hokkaido</a>
+    
+  </p>
+</section>
+
+
+
+<section id="post-categories">
+  <p>
+    <b>Categories</b>:
+    
+    <a href="/categories/travel">travel</a>
+    
+  </p>
+</section>
+
+
+
+
+
+<div id="remark42"></div>
+<script>
+	var remark_config = {
+		host: "https://remark42-server.nfshost.com/",
+        site_id: "joelcomments",
+        theme: localStorage.getItem('dark') === "true" ? "dark" : "light",
+	}
+
+    
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+
+
+      </main>
+
+      <footer>
+        <span>
+    Made with <a href="https://www.getzola.org/">Zola</a>
+    <b>/</b> 
+    <a href="/tags/">Tags</a>
+    <b>/</b> 
+    <a href="/categories/">Categories</a>
+    <b>/</b> 
+    <a href="/opensource/">Open Source</a>
+  </span>
+      </footer>
+    </body>
+
+    
+    
+
+
+
+    <script>
+      /*-------------------------- Dark/Light Mode --------------------------*/
+      comp = document.getElementById('darklight-toggler');
+      body = document.getElementsByTagName('body')[0];
+      function toggleDarkLight(comp) {
+        localStorage.setItem('dark', comp.checked);
+        if (comp.checked) {
+          body.classList.add('dark');
+          window.REMARK42.changeTheme("dark");
+        } else {
+          body.classList.remove('dark');
+          window.REMARK42.changeTheme("light");
+        }
+      }
+
+      if (localStorage.getItem('dark') === "true") {
+        body.classList.add('dark');
+        comp.checked = true;
+      } else {
+        body.classList.remove('dark');
+        comp.checked = false;
+      }
+    </script>
+
+</html>

@@ -1,0 +1,552 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  
+  <title>JvR - Eintrag #2 – Vom Osten in den Norden</title>
+  
+
+  
+  <link rel="stylesheet" href="/scripts/leaflet/leaflet.css" />
+  <script src="/scripts/leaflet/leaflet.js"></script>
+  <link rel="stylesheet" href="/scripts/leaflet-fullscreen/Control-FullScreen.css" />
+  <script src="/scripts/leaflet-fullscreen/Control-FullScreen.js"></script>
+    
+  <script src="/scripts/leaflet-gpx-2.0.0/gpx.js"></script>
+    
+  
+
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+
+  
+  <link rel="stylesheet" href="/fonts/inconsolata.css">
+  <link rel="stylesheet" href="/fonts/lora.css">
+  <link rel="stylesheet" href="/fonts/outfit.css">
+  <link rel="stylesheet" href="/fonts/alegreya_sans.css">
+  <link rel="stylesheet" href="/fonts/atkinson-hyperlegible-next.css">
+  <link rel="stylesheet" href="/fonts/tabler-icons.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/joel.css">
+  <link rel="stylesheet" href="/css/joel-mobile.css">
+
+  <!--preload navigation and header images-->
+  <link rel="preload" href="/assets/icons/aperture.svg" as="image"/>
+<link rel="preload" href="/assets/icons/feather.svg" as="image"/>
+<link rel="preload" href="/assets/icons/home.svg" as="image"/>
+<link rel="preload" href="/assets/icons/lightbulb.svg" as="image"/>
+<link rel="preload" href="/assets/icons/search.svg" as="image"/>
+<link rel="preload" href="/assets/icons/sun.svg" as="image"/>
+<link rel="preload" href="/assets/icons/moon.svg" as="image"/>
+<link rel="preload" href="/assets/icons/download.svg" as="image"/>
+<link rel="preload" href="/assets/header.svg" as="image"/>
+  
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+    integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+    integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+    crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        // customised options
+        // • auto-render specific keys, e.g.:
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$', right: '$', display: false },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        // • rendering keys, e.g.:
+        throwOnError: false
+      });
+    });
+  </script>
+</head>
+
+<body class="menu-projects">
+      <header>
+        <div class="header-wrapper">
+  <h1 class="site-title">
+    joel von rotz
+  </h1>
+  <div style="display: flex;
+              gap: 5px;
+                align-items: center;">
+    <nav>
+      <a class="button" id="nav-home" title="Home" href="/">
+        <img class="icon" src="/assets/icons/home.svg">
+      </a>
+      <a class="button" id="nav-writing" title="Writing" href="https://joelvonrotz.ch/writing/">
+        <img class="icon" src="/assets/icons/feather.svg">
+      </a>
+      <a class="button" id="nav-projects" title="Projects" href="https://joelvonrotz.ch/projects/">
+        <img class="icon" src="/assets/icons/lightbulb.svg">
+      </a>
+      <a class="button" id="nav-photos" title="Photography" href="https://joelvonrotz.ch/photos/">
+        <img class="icon" src="/assets/icons/aperture.svg">
+      </a>
+      <a class="button" id="nav-downloads" title="Downloads" href="https://joelvonrotz.ch/downloads/">
+        <img class="icon" src="/assets/icons/download.svg">
+      </a>
+      <!--<a class="button" id="nav-search" title="Search" href="https://joelvonrotz.ch/search/">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>-->
+    </nav>
+    <label class="container">
+      <a class="button less" id="nav-search" title="Search" href="/search">
+        <img class="icon" src="/assets/icons/search.svg">
+      </a>
+    </label>
+    <label class="container" title="Dark/Light Toggle">
+      <input id="darklight-toggler" type="checkbox" onclick="toggleDarkLight(this)">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</div>
+      </header>
+
+      <main>
+        
+
+
+
+
+
+
+
+
+<div class="thumbnail" style="background-image: url('thumbnail.jpg'); ">
+  
+  
+  <p class="attribution">Noch kein Licht am Ende des Tunnels gesichtet!</p>
+  
+</div>
+
+
+
+
+  
+  
+
+
+
+
+<p class="breadcrumbs"><a class="button less breadcrumb" href="../../../"><img class="icon" src="/assets/icons/home.svg"><span>Home</span></a><span class="divider">/</span><a class="button less breadcrumb" href="../../">Projects</a><span class="divider">/</span><a class="button less breadcrumb" href="../">Japan 2025</a><span class="divider">/</span></p>
+
+
+
+
+
+
+<section id="title-block">
+  
+  <h1 class="title">Eintrag #2 – Vom Osten in den Norden</h1>
+  
+  <div class="stats">
+    
+    <time class="date" datetime="2025-04-19">
+      19.04.2025
+    </time>
+    <p class="readtime">13 min</p>
+    
+  </div>
+  
+  <div class="description">
+    <p>Nach einer Pause in Ishinomaki gehts weiter Richtung Norden, insbesondere nach Aomori City. Zwar fuhr ich gegen meinen eigenen Willen weiter an der Ostküste entlang, weil es wärmer (kälter versus kalt) ist als im Inland. Trotzdem konnte jede Menge Interessantes gesehen werden.</p>
+
+  </div>
+  
+</section>
+
+
+
+<p>Ganz schön kalt im Frühling, huh? Das Wetter hat mich doch noch überrascht,  bzw. hatte nicht das genügende Kleiderschichten-Sortiment und musste daher ein bisschen investieren. Wahrscheinlich wirds noch mehr brauchen...</p>
+<p>Nebst wird noch die Titel der Einträge angepasst von <em>Woche X</em> zu <em>Eintrag X</em>, da ich nicht regelmässig all 7 Tage einen Eintrag rausbringen kann. Aber nun zu den Gedanken und Highlights der letzten Tagen, geschrieben an einem Samstagabend in einem Gästehaus in Aomori City.</p>
+<h2 id="die-gefahrene-strecke">Die gefahrene Strecke<a class="zola-anchor" href="#die-gefahrene-strecke" aria-label="Anchor link for: die-gefahrene-strecke">&#xeade;</a></h2>
+<div>
+  <div id="map"></div>
+  <script>
+    // prepare custom marker
+    var iconDefault = L.icon({iconUrl: '/assets/leaflet/marker_default.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconSleep = L.icon({iconUrl: '/assets/leaflet/marker_sleep.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconShop = L.icon({iconUrl: '/assets/leaflet/marker_shop.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconWarning = L.icon({iconUrl: '/assets/leaflet/marker_warn.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconForbid = L.icon({iconUrl: '/assets/leaflet/marker_forbidden.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconStart = L.icon({iconUrl: '/assets/leaflet/marker_start.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var iconStop = L.icon({iconUrl: '/assets/leaflet/marker_stop.svg', iconSize: [22, 30], iconAnchor: [10, 30],popupAnchor: [0, -34]});
+    var map = L.map('map', {
+      fullscreenControl: true,
+      fullscreenControlOptions: {
+        position: 'topleft'
+      }
+    });
+    //L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+    L.tileLayer('https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=c1361ae43a0f4e989709a01d869dd504', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);var url = 'japan2025_segment2_tagged.gpx'; // URL to your GPX file or the GPX itself
+    var gpx = new L.GPX(url, {
+      async: true,
+      wptIcons: {
+      '': iconDefault,
+      'Sleep': '/assets/leaflet/marker_sleep.svg',
+      'Camp': '/assets/leaflet/marker_sleep.svg',
+      'Hotel': '/assets/leaflet/marker_sleep.svg',
+      'Ryokan': '/assets/leaflet/marker_sleep.svg'
+    },
+    marker_options: {
+    iconSize: [22,22],
+    iconAnchor: [11, 11],
+  },
+      markers: {
+        startIcon: '/assets/leaflet/point_start.svg',
+        endIcon: '/assets/leaflet/point_stop.svg',
+        pointMatchers: [
+        {
+          regex: /camp|hotel|sleep|hostel|guesthouse|ryokan|futuba inn/i,
+          icon: iconSleep
+        },{
+          regex: /shop|groceries|store|supermarket/i,
+          icon: iconShop
+        },{
+          regex: /./,
+          icon: iconDefault
+        },
+      ]
+      }
+    }).on('loaded', function (e) {
+      map.fitBounds(e.target.getBounds());
+    }).addTo(map);
+L.control.scale().addTo(map); // adds a scale
+  </script>
+</div>
+<p><strong>Statistik</strong>: $6994\text{m}$ Höhe à $506.17\text{km}$ auf 6 Tage verteilt<br>
+<strong>Stimmung</strong>: abnehmend, weil ich wahrscheinlich viel fahre, aber nicht viel sehe.</p>
+<h2 id="nissage-in-onigawa-ishinomaki">Nissage in Onigawa &amp; Ishinomaki<a class="zola-anchor" href="#nissage-in-onigawa-ishinomaki" aria-label="Anchor link for: nissage-in-onigawa-ishinomaki">&#xeade;</a></h2>
+<p>Während dem Pausentag in Ishinomaki ging ich ein bisschen Sachen anschauen, in Obwalden auch hoffentlich bekannt als "eine <em>Nissage</em> machen" (Nomen von <em>nissä</em>, bedeutet etwas neugierig erkunden).</p>
+<p>Was kann man den so anschauen in Ishinomaki? Da gibts einerseits die Katzeninsel <em>Tashirojima</em>, wo viele Streuner Katzen auf einer Insel leben. Leider wusste ich von der Insel erst um etwa 09:15, die Fähre zur Insel fuhr um 09:00 ab. Es gab zwar eine um 12:00, aber man hätte dann nur 2 Stunden Zeit die Insel anzuschauen.</p>
+<p>Sonst gibts noch das <em>Ishinomaki Manga Museum</em>, wo die Werke von Shotaro Ishinomori, dem <em>König von Mangas</em>, ausgestellt wurde. Die hab ich besucht!</p>
+<p>Ich kenne den Autor zwar nicht und habe keine seiner Werke gelesen, aber er gilt als einer der einflussreichsten Künstler von Japan und hat sogar einen Weltrekord mit den meist veröffentlichten Werken (im gesamten über 128'000 Seiten!). Er und <em>Manga-Gott</em> Osamu Tezuka wandelten die Mangas als witzige und schusselige Comics/Cartoons zu Werken um, welche sich mit ernsteren Themen befassen (Disaster, Tod, Politik, Gesellschaft, etc.), oder schlicht stellten Mangas in ein anderes Licht.</p>
+<figure>
+    <img src="Japan2025-Week2-13.jpg" alt="" />
+    <figcaption><p>Das <em>Ishinomaki Manga Museum</em> von Aussen sieht aus wie ein UFO!</p>
+</figcaption>
+</figure><figure>
+    <img src="Japan2025-Week2-11.jpg" alt="" />
+    <figcaption><p>Ein kleiner Einblick in die Ausstellung der Serie <em>Cyborg 009</em></p>
+</figcaption>
+</figure><figure>
+    <img src="museum_inside.jpg" alt="museum_inside" />
+    <figcaption><p>Eingangsbereich des Museums</p>
+</figcaption>
+</figure>
+<p>Auch die Strasse vom Bahnhof bis Museum ist geschmückt mit verschiedenen Charakteren von Shotaros Werken!</p>
+<figure>
+    <img src="museum_wall1.jpg" alt="museum_wall1" /></p>
+<p><img src="museum_wall2.jpg" alt="museum_wall2" />
+    <figcaption><p>Eine Gedenkwand mit Zeichnungen von verschiedenen Manga-Künstlern. Eventuell kommt der eine oder andere Stil bekannt for.</p>
+</figcaption>
+</figure>
+<p><strong>Fun Fact</strong>: das <em>Futaba Inn</em>, in welchem ich übernachtet habe, ist mit Werken von Shotaro dekoriert und angeblich sei er ein regelmässiger Gast dieses Inns gewesen!</p>
+<figure>
+    <img src="futaba_inn.jpg" alt="futaba_inn" />
+    <figcaption><p>Im Inn im Obergeschoss, wo verschiedene Shotaro Mangaausschnitte aufgehängt wurden, insbesondere von <em>Cyborg 009</em></p>
+</figcaption>
+</figure>
+<p>Ishinomaki ist ein kleine Stadt, welches sich mit Shotaro beschäftigt und nebenbei im Fisch-Business tätig ist. Ein interessanter Nachbar von Ishinomaki ist <em>Onagawa</em>. Dieses kleine Hafenstädtchen wurde stark von der 2011 Tsunami (&amp; Erdbeben) getroffen und wurde fast komplett zerstört. Heute wurde der Ort langsam neu aufgebaut und erhielt eine neue Identität.</p>
+<p>Wie kommt man aber nach Onagawa? Mit dem Zug! Das war das erste Mal, dass ich mit dem Zug in Japan irgendwo hingefahren bin und es war eine Zugfahrt. Am Automaten beim Ishinomaki Bahnhof kaufte man sich ein Ticket und liess es von der Prüfmaschine gleich lochen. Der Zug kam sehr früh an, fast 15min vor der Abfahrtszeit (Ishinomaki ist eine Zwischenhaltestelle, daher war dies überraschend). Nach der Abfahrt, klapperte der Zug bei jedem neuen Schienensegment-Übergang und ich schaute mich im Zug um (positionsfixierte Nissage). Viele Japaner hielten ihre Tasche vor sich auf den Schoss als Kissen und schliefen! Was in der Schweiz weniger zu sehen ist, kommt mir fast als Standard in Japan vor. Ob das sicher ist oder nicht, denke ich kommt auf die Region darauf an.</p>
+<figure>
+    <img src="DSC01413.jpg" alt="" />
+    <figcaption><p>Die Einkaufsstrasse von Onagawa vom Bahnhof aus.</p>
+</figcaption>
+</figure>
+<p>Onagawa versucht wieder aufzublühen und ist eigentlich auch erfolgreich. Den Ort habe ich von der SRF Doku <a href="https://www.srf.ch/play/tv/sendung/fokus-japan?id=9518b1cc-9edf-4939-b3ec-8e48f0fd7811">Fokus Japan</a> gehört und wollte Onagawa selbst erkunden!</p>
+<p>Direkt vor dem Bahnhof wird von einem Ticketkontrolleur das gelochte Ticket abgenommen und man spaziert in Onagawa ein. Direkt vor dem Bahnhof nebst irgendeiner grossen Shoppingstrasse gab es ein Fussbad! Eigentlich ist der Bahnhof selbst ein Onsen, hab es leider nicht besucht (nicht so getraut).</p>
+<figure>
+    <img src="Japan2025-Week2-30.jpg" alt="" />
+    <figcaption><p>Am Hafen sind auch ein paar Leute am Fischen! Was ja halt normal ist, wenn man an der Küste lebt.</p>
+</figcaption>
+</figure>
+<p>Das grosse Highlight von Onagawa ist die Shoppingstrasse. Von Kachelteil-Bemalen bis hin zu lokaler Brau-Degustation kann Onagawa für alle ein bisschen etwas präsentieren!</p>
+<figure>
+    <img src="Japan2025-Week2-36.jpg" alt="" />
+    <figcaption><p>An einem Gebäude kann eine Menge dieser von selbst gemalten Kachelteilchen gefunden werden.</p>
+</figcaption>
+</figure><figure>
+    <img src="Japan2025-Week2%20(1).jpg" alt="" />
+    <figcaption><p>Auch darf die Erinnerung an den Tsunami nicht fehlen. Das ehemalige Polizeigebäude von Onagawa wurde bei der Rekonstruktion als Andenken gelassen.</p>
+</figcaption>
+</figure><h2 id="an-der-ostkuste">An der Ostküste<a class="zola-anchor" href="#an-der-ostkuste" aria-label="Anchor link for: an-der-ostkuste">&#xeade;</a></h2>
+<p>Nach dem Pausentag in Ishinomaki ging die Tour weiter. Dazu ging es zuerst Inland an der Route 45 entlang nach Minami-Sanriku, wo die Mittagspause gemacht wurde. Dort war wieder eine Raststätte (Michi-no-eki, nicht vergessen, kommt am nächsten Test dran) und dient auch als Zwischenstation für die Michinoku Coastal Trail Wanderer.</p>
+<figure>
+    <img src="Japan2025-Week2-52.jpg" alt="" /></p>
+<p><img src="food_minamisanriku.jpg" alt="" />
+    <figcaption><p>Michi no eki in Minami-Sanriku. Und drunter das Mittagessen!</p>
+</figcaption>
+</figure>
+<p>Der Michinoku Coastal Trail ist ein segmentierter Wanderweg, welcher in Hachinoe startet und in Soma endet. Beim Entlangfahren des Weges hatte ich mir erhofft, dass ich mich mit ein paar Wanderer austauschen könnte. Mit halbwegs Erfolg, konnte ich mich ganz kurz mit einem Spanier (glaube ich) austauschen, bevor dieser wieder losflitzte.</p>
+<p>Tja, man muss auch alleine auskommen können, was aber immer noch hier und dort Mühe bereitet.</p>
+<figure>
+    <img src="Japan2025-Week2-58.jpg" alt="" />
+    <figcaption><p>Natürlich darf das Tunnelfahren nicht vergessen werden. Japan ist sehr stolz auf diese Trommelfell-Reizer-Röhren.</p>
+</figcaption>
+</figure>
+<p>Nach dem Mittagessen endete der Tag in Kesennume, wo ich einerseits haufenweise Fischerboote sah und die erste Kirche! Ich schlief auf einem Campingplatz von einem Hotel und wurde morgens von einem kleinen Ungetier geweckt: eine Schnudernasen-Katze. Ich selbst war auch verkältet, vielleicht war die Katze mein Zwillingsgeschwister!</p>
+<figure>
+    <img src="Japan2025-Week2-63.jpg" alt="" />
+    <figcaption><p>Die Schnudernase wurde nach einem sehr ekligen Niesen mit Toilettenpapier geputzt.</p>
+</figcaption>
+</figure>
+<p>Die Reise an der Ostküste war immer wieder ähnlich. Man fuhr durch Tunnel, wurde von entweder kleinen Fischerdörfchen oder Grossindustrie begrüsst und man verschwand wieder in einem anderen Tunnel. Die Landschaft war sehr schön und man konnte noch eindrückliche Überbleibsel des Tsunamis entdecken, aber mit der Zeit wurde es auch ein bisschen langweilig.</p>
+<figure>
+    <img src="Japan2025-Week2-54.jpg" alt="" />
+    <figcaption><p>Ein Überlebender: dieses verlassene Hotel überlebte den Tsunami dank einer stabilen Metallstruktur. Es wurde leicht saniert, damit es für die Zukunft noch steht. Ich habe eigentlich noch im obersten Stock Licht gesehen,  wahrscheinlich ist es noch ein kleines Büro?</p>
+</figcaption>
+</figure><h2 id="inland-oder-ostkuste">Inland oder Ostküste<a class="zola-anchor" href="#inland-oder-ostkuste" aria-label="Anchor link for: inland-oder-ostkuste">&#xeade;</a></h2>
+<p>In Miyako übernachtete ich im <em>Guesthouse 3710</em>, nachdem der Besitzer das am Wochenende geschlossene Hostel für mich aufmachte (ich war überglücklich und dankbar). Der nächste Tag präsentierte aber grossen Regenschauer und ich "musste" eine weitere Nacht im Hostel verbringen.</p>
+<figure>
+    <img src="Japan2025-Week2-27.jpg" alt="" />
+    <figcaption><p>Das Hostel <em>Guesthouse 3710</em> in Miyako</p>
+</figcaption>
+</figure>
+<p>Während dem Regentag konnte ich ein halbes Backup der Bilder machen und die weiteren Fahrsegmente plannen.</p>
+<figure>
+    <img src="Japan2025-Week2-07.jpg" alt="" />
+    <figcaption><p>Damit der Tag doch nicht so langweilig war, ging ich schnell warme Socken und einen SD Kartenleser fürs Handy kaufen. Es hat mich verregnet.</p>
+</figcaption>
+</figure>
+<p>Im Hostel hatte ich es eigentlich satt, weiter an der Ostküste zu fahren. Immer wieder windete es mir gegen Fahrtrichtung, war dadurch auch kalt und es machte mich gefühlt schrittweise kaputt. Als ich aber nach dem Wetter vom Inland schaute, war die Ostküste plötzlich die angenehmere Route. Auch war ich ein bisschen gefangen in der Iwate Präfektur, denn der grösste Teil der Präfektur lebte entweder im Westen im Inland oder an der Ostküste. Dazwischen gab es nur Wald und lange Strassen.</p>
+<p>Und daher fuhr ich weiter bis nach Kuji, wo ich dann Richtung Inland fuhr nach Aomori.</p>
+<h2 id="in-die-apfel-stadt-uber-einen-pass">In die Apfel-Stadt über einen Pass<a class="zola-anchor" href="#in-die-apfel-stadt-uber-einen-pass" aria-label="Anchor link for: in-die-apfel-stadt-uber-einen-pass">&#xeade;</a></h2>
+<p>Nach Kuji gings nach Gonohe, wo ich seit langem wieder einen Campingplatz hatte. Zwar musste ich zwei mal quer durch Gonohe radeln, weil ich im falschen Büro nach einer Camping-Bewilligung gefragt habe, aber dafür kostete es nur 210 Yen (ungefähr Fr. 1.25).</p>
+<figure>
+    <img src="Japan2025-Week2-45.jpg" alt="" />
+    <figcaption><p>Gonohe Campingplatz war eigentlich ein Park. Neben dem Zelt war das Toilettenhaus, wo das Licht nicht funktionierte</p>
+</figcaption>
+</figure>
+<p>Nach einer gemütlichen Nacht, ging es in die Berge, nämlich über den <em>Kasamatsu</em> Pass ($1040\text{m}$). Da ich diesen Pass im Frühling anging, war die Strecke sehr cool und auch cool (kühl). Der Pass fing in Oirase an und man wurde bei steigendenden Höhenmeter einer stetig höheren Schneewand begrüsst (bis zu etwa 6m hoch). Gegen den höchsten Punkt kam noch der Wind dazu.</p>
+<figure>
+    <img src="Japan2025-Week2-09.jpg" alt="" />
+    <figcaption><p>An der Schneewand könnte man wahrscheinlich die Höhenmeter ablesen</p>
+</figcaption>
+</figure>
+<p>Dafür wurde ich nach langem von Autofahrern bejubelt, nebst einem  Amerikaner gab es auch Japaner, welche  jeweils zwei grosse Daumen-Hoch zeigten. Das munterte mich auf und ich fing auch die Absurdität des Passfahrens ein bisschen zu geniessen.</p>
+<figure>
+    <img src="pass_aomori_joel.jpg" alt="" />
+    <figcaption><p>Und das Passfoto darf auch nicht fehlen!</p>
+</figcaption>
+</figure>
+<p>Da die Strasse mit der Schneewand einen Kanal bildete, zog ein sehr kalter Wind durch. Ich fror mir das Arsch ab und musste schnellsten irgendwo aufwärmen. Ich wusste bereits, wo ich das <em>irgendwo</em> finde: das Sukayu Onsen. Dieses Badhaus war ein paar Kilometer nach der Passhöhe aufzufinden. Ich ging rein, genoss das Bad und fuhr nachher aufgewärmt Richtung Aomori City, die Apfel-Stadt.</p>
+<figure>
+    <img src="Japan2025-Week2-10.jpg" alt="" /></p>
+<p><img src="onsen_sukayu.jpg" alt="" />
+    <figcaption><p>Das Sukayu Onsen (welches auch ein Hotel/Ryokan ist) von aussen und ein Bild von mir drin.</p>
+</figcaption>
+</figure><h2 id="apfel-nebuta">Äpfel &amp; Nebuta<a class="zola-anchor" href="#apfel-nebuta" aria-label="Anchor link for: apfel-nebuta">&#xeade;</a></h2>
+<p>Die Aomori Präfektur ist bekannt für mindestens zwei Dingen: Nebuta und Äpfel. Es wäre eine Untertreibung, dass Äpfel eine grosse Rolle spielt in der Region. &gt;40 Varianten Äpfel gibt es und die werden als X verschiedene Produkte verkauft. In <em>Aomori City</em>, wo ich jetzt meine Pausentage verbracht hatte, gibt es die <em>A-Factory</em>. Dieser Laden verkauft hauptsächlich Apfel-Produkte. Apfel-Schnaps, Apfel-Ringe/-Chips, Apfel-Kartenhalter, Apfel-Kekse, Äpfel für fast 3 Franken pro Stück, Apfel-Kleider und so weiter. Man könnte, glaube ich, den gesamten Haushalt darin kaufen.</p>
+<div class="dark-transition start"></div>
+<div class="dark"  markdown="1">
+<h3 id="nebuta-festival">Nebuta Festival<a class="zola-anchor" href="#nebuta-festival" aria-label="Anchor link for: nebuta-festival">&#xeade;</a></h3>
+<p><em>Nebuta</em> kommt wahrscheinlich von <em>Nemuri</em>, was Schlaf bedeutet (das brauch ich gleich). Nebuta aber ist das Gegenteil. Mit grossen aus Draht, Lampen und Papier gebastelten Riesenlaternen, welche eine Szene darstellt inspiriert von <em>Kabuki</em> (traditionelles japanische Männer-Theaterspiel) wird getanzt und gefestet wie an der Fasnacht in der Schweiz, einfach im Sommer. Diese Laternen werden von einer Menschentruppe durch eine Strasse gestossen (die Laterne ist auf einem zweirädrigen Wagen) und gedreht, währenddessen Tänzer in Festival-Gewänder die Sommerhitze (und Müdigkeit) hinforttanzen/verscheuchen.</p>
+<figure>
+    <img src="Japan2025-Week2-83.jpg" alt="" />
+    <figcaption><p>Das <em>Nebuta Museum Wa-Rasse</em></p>
+</figcaption>
+</figure>
+<p><img src="https://joelvonrotz.ch/projects/japan-2025/vom-osten-in-den-norden/Japan2025-Week2-81.jpg" alt="" /></p>
+<p><img src="https://joelvonrotz.ch/projects/japan-2025/vom-osten-in-den-norden/Japan2025-Week2-79.jpg" alt="" /></p>
+<figure>
+    <img src="Japan2025-Week2-82.jpg" alt="" />
+    <figcaption><p>Das Innere eines solchen Konstrukts.</p>
+</figcaption>
+</figure>
+<p><img src="https://joelvonrotz.ch/projects/japan-2025/vom-osten-in-den-norden/Japan2025-Week2-74.jpg" alt="" /></p>
+<p><img src="https://joelvonrotz.ch/projects/japan-2025/vom-osten-in-den-norden/Japan2025-Week2-72.jpg" alt="" /></p>
+<p><img src="https://joelvonrotz.ch/projects/japan-2025/vom-osten-in-den-norden/Japan2025-Week2-77.jpg" alt="" /></p>
+</div>
+<div class="dark-transition end"></div>
+<h2 id="mentale-hurden">Mentale Hürden<a class="zola-anchor" href="#mentale-hurden" aria-label="Anchor link for: mentale-hurden">&#xeade;</a></h2>
+<p>Mit diesen Beiträgen möchte ich auch ein bisschen meine Gedanken während der Reise 'preisgeben'. Bei Solo-Veloreise hat man Zeit zum Nachdenken, meist aber wird dieses Nachdenken durch das Körpergefühl und Ängste beeinflusst. Zwar gehts meinem Körper gut, aber aktuell treiben mich Ängste ein bisschen in die Knie.</p>
+<p>Diese Ängste sind Einsamkeit und Wildcamping.</p>
+<p>Das Letztere ist dumm gesagt einfach lösbar: Platz am Abend suchen, der mir passt (aber nicht perfekt sein muss) und <em>stealth camping</em> machen (am Abend Zelt aufstellen und morgen früh wieder abbauen, ohne gross bemerkt zu werden) unter Einhaltung des <a href="https://bikepacking.com/plog/seven-principles-for-bikepackers/">Leave No Trace</a> Prinzips. Wenn ich morgen noch aufwachen kann, dann verlief es problemlos. Die Angst hat aber eher mit der Fauna zu tun. In Hokkaido gibts Bären, welche ich nicht unbedingt kennenlernen möchte. Die sind zwar nicht so gross wie ein Grizzly, aber sind halt immer noch Bären!</p>
+<p>Das Erstere aber, also die Einsamkeit, bereitet mir schon ein bisschen mehr Mühe. Natürlich ist es normal, dass man bei Solo-Reisen mit diesem Problem zu tun hat und doch ist es schwierig, es einfach zu akzeptieren. Ich rede mir bei diesen Reisen immer wieder ein, dass ich auf Leute zugehen kann und meinen sozialen Austauschsdrang stillen kann. Doch in Japan ist es schwierig. Sie sind eher zurückhaltend und daher gehen sie auch nicht direkt auf einen zu. Dazu kommt auch die Sprachbarriere. Telefonanrufe mit Familie hilft sehr, aber ich muss auch lernen, in der Einsamkeit eine gewissen Zufriedenheit zu finden (für die Fälle, wo ein Anruf nicht möglich ist). Dies ist mehr auf der Ebene "Alleine unterwegs sein" zu betrachten und ich schätze den Kontakt mit Freunden, Kollegen und Familie sehr.</p>
+<p>Würde gerne mehr dazu schreiben, wird vielleicht auf nächste Woche geschoben.</p>
+<h2 id="wie-weiter-und-wohin">Wie weiter und wohin?<a class="zola-anchor" href="#wie-weiter-und-wohin" aria-label="Anchor link for: wie-weiter-und-wohin">&#xeade;</a></h2>
+<p>Vorerst werde ich weiter nach Hokkaido fahren und schauen wie die Temperaturen werden. Es wird frisch sein, aber ich hoffe dass es sich gut aufwärmt mit der Zeit, die ich in Hokkaido verbinge. Falls es doch noch zu frisch sein wird, werden allenfalls ein Innenschlafsack und warme Kleider gekauft.</p>
+<p>Es kommen auch die Fragen, lohnt es sich überhaupt an den östlichsten oder nördlichsten Punkt von Hokkaido zu fahren, da es ja lediglich einen <em>Checkliste-Abhack</em>-Ort ist. Vielleicht gibts im Inland auch Interessantes! Aber ich hab mich auch noch nicht so gross befasst, was es überhaupt in Hokkaido zu sehen gibt.</p>
+<p>Aber zuerst mal nach Oma und dann schauen wie weiter!</p>
+<h2 id="sonstige-highlights">Sonstige Highlights<a class="zola-anchor" href="#sonstige-highlights" aria-label="Anchor link for: sonstige-highlights">&#xeade;</a></h2>
+<p>So, wie vorher gibts ein paar Highlights ohne grossen Paragraphen!</p>
+<figure>
+    <img src="ishinomaki_future.jpg" alt="" />
+    <figcaption><p>Japan ist sowohl in der Zukunft, als auch in der Vergangenheit</p>
+</figcaption>
+</figure><figure>
+    <img src="food_gonohe.jpg" alt="" />
+    <figcaption><p>Mein Go-To Menu beim Campen: Spaghetti mit Tomatensauce und Thunfisch</p>
+</figcaption>
+</figure><figure>
+    <img src="Japan2025-Week2-15.jpg" alt="" />
+    <figcaption><p>Nach Gonohe fuhr ich viel durch das Hinterland und sah hier und dort japanische Bauernhöfe. Gewisse am auseinanderfallen und andere am glänzen!</p>
+</figcaption>
+</figure><figure>
+    <img src="Japan2025-Week2-20.jpg" alt="" />
+    <figcaption><p>Die Produkt-/Regions-Maskottchen haben einen Begriff: <em>yuru-kyara</em>, was gechillte Charaktere bedeutet.</p>
+</figcaption>
+</figure><figure>
+    <img src="Japan2025-Week2-17.jpg" alt="" />
+    <figcaption><p>Eine einsame Tür. Ist eine Werbung für den Anime-Film <em>Suzume</em></p>
+</figcaption>
+</figure><figure>
+    <img src="Japan2025-Week2-24.jpg" alt="" /></p>
+<p><img src="Japan2025-Week2-53.jpg" alt="" />
+    <figcaption><p>Wenn man an Wälder vorbeifährt, stosst man ab und zu auf diese Holz Konstrukte. Anscheinend werden diese Stöcke für die Pilzzucht verwendet</p>
+</figcaption>
+</figure><figure>
+    <img src="Japan2025-Week2-25.jpg" alt="" />
+    <figcaption><p>Diese Kei-Trucks packen einiges an Kraft!</p>
+</figcaption>
+</figure><figure>
+    <img src="Japan2025-Week2-47.jpg" alt="" /></p>
+<p><img src="Japan2025-Week2-56.jpg" alt="" />
+    <figcaption><p>In Kuji hatte ich einen Platten und konnte zum Glück in der Nähe zu einem Velo-Mechaniker! Der reparierte meine Platten (&amp; Reifen) und bot mir noch ein Kaffee an. Ich sei nicht der erste Europäer, teilte er mir mit und zeigte ein Bild von einem Franzosen-Pärchen,  welche ein Problem mit einer Velo-Kassette hatte.</p>
+</figcaption>
+</figure><figure>
+    <img src="Japan2025-Week2-42.jpg" alt="" />
+    <figcaption><p>Das Contemporary Art Museum in Hirosaki. Themen waren über die Verschmutzung der Umwelt</p>
+</figcaption>
+</figure><figure>
+    <img src="Japan2025-Week2-35.jpg" alt="" />
+    <figcaption><p>Bereits 6 tote Tiere gesehen. Nicht wirklich passend zu 'Highlights'</p>
+</figcaption>
+</figure>
+<p><img src="https://joelvonrotz.ch/projects/japan-2025/vom-osten-in-den-norden/Japan2025-Week2-28.jpg" alt="" /></p>
+<p><img src="https://joelvonrotz.ch/projects/japan-2025/vom-osten-in-den-norden/Japan2025-Week2-48.jpg" alt="" /></p>
+<figure>
+    <img src="Japan2025-Week2-32.jpg" alt="" />
+    <figcaption><p>Einen Pokemon Sightseeing Zug!</p>
+</figcaption>
+</figure><figure>
+    <img src="Japan2025-Week2-31.jpg" alt="" />
+    <figcaption><p>Holz aus der Iwate Region</p>
+</figcaption>
+</figure><figure>
+    <img src="food_miyako.jpg" alt="" /></p>
+<p><img src="brot_mit_teletubbie_bruhe.jpg" alt="" /></p>
+<p><img src="china_food3.jpg" alt="" /></p>
+<p><img src="food_yamada.jpg" alt="" /></p>
+<p><img src="food_tanohata.jpg" alt="" /></p>
+<p><img src="food_kujI.jpg" alt="" /></p>
+<p><img src="china_food2.jpg" alt="" />
+    <figcaption><p>Das viele Essen</p>
+</figcaption>
+</figure>
+<p>Bis dennä!</p>
+
+
+
+
+
+<hr>
+
+
+<section id="post-tags">
+  <p>
+    <b>Tags</b>:
+    
+    <a href="/tags/japan">japan</a>,
+    
+    <a href="/tags/journaling">journaling</a>,
+    
+    <a href="/tags/biketouring">biketouring</a>,
+    
+    <a href="/tags/travel">travel</a>
+    
+  </p>
+</section>
+
+
+
+<section id="post-categories">
+  <p>
+    <b>Categories</b>:
+    
+    <a href="/categories/travel">travel</a>
+    
+  </p>
+</section>
+
+
+
+
+
+<div id="remark42"></div>
+<script>
+	var remark_config = {
+		host: "https://remark42-server.nfshost.com/",
+        site_id: "joelcomments",
+        theme: localStorage.getItem('dark') === "true" ? "dark" : "light",
+	}
+
+    
+</script>
+<script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+
+
+      </main>
+
+      <footer>
+        <span>
+    Made with <a href="https://www.getzola.org/">Zola</a>
+    <b>/</b> 
+    <a href="/tags/">Tags</a>
+    <b>/</b> 
+    <a href="/categories/">Categories</a>
+    <b>/</b> 
+    <a href="/opensource/">Open Source</a>
+  </span>
+      </footer>
+    </body>
+
+    
+    
+
+
+
+    <script>
+      /*-------------------------- Dark/Light Mode --------------------------*/
+      comp = document.getElementById('darklight-toggler');
+      body = document.getElementsByTagName('body')[0];
+      function toggleDarkLight(comp) {
+        localStorage.setItem('dark', comp.checked);
+        if (comp.checked) {
+          body.classList.add('dark');
+          window.REMARK42.changeTheme("dark");
+        } else {
+          body.classList.remove('dark');
+          window.REMARK42.changeTheme("light");
+        }
+      }
+
+      if (localStorage.getItem('dark') === "true") {
+        body.classList.add('dark');
+        comp.checked = true;
+      } else {
+        body.classList.remove('dark');
+        comp.checked = false;
+      }
+    </script>
+
+</html>
